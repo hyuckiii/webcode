@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>사전예약 선물받기</title>
+<meta charset="utf-8">
+<meta id="viewport" name="viewport" content="width=960,user-scalable=no">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="fWrap">
+
+    <div id="header">
+      <div class="wrap_header">
+        <h1>
+          <span>사전예약</span> 선물받기
+        </h1>
+        <div class="date">
+          <p>2016.09.29 ~ 2016.10.31</p>
+          <span class="l_side"></span>
+          <span class="r_side"></span>
+        </div>
+      </div>
+    </div>
+    <!-- // #header -->
+
+  <div id="container">
+    <form>
+
+      <div class="title">
+        사전예약에 참여한 휴대전화번호를 입력해주세요.
+      </div>
+
+      <div id="mobileForm">
+        <fieldset>
+          <legend>사전예약 정보 입력</legend>
+          <div class="type1">       <!-- 인증번호 사용 시 .type1, 미사용 시 .type2 -->
+            <div class="inp_mobile">
+              <div class="wrap_inp">
+              <span class="mobile1">
+                <label for="hp1">010</label>
+                <select id="hp1" title="휴대폰 번호 첫번째 자리">
+                  <option>010</option>
+                  <option>011</option>
+                  <option>016</option>
+                  <option>017</option>
+                  <option>018</option>
+                  <option>019</option>
+                </select>
+              </span>
+                <span class="mobile2"><input type="tel" id="hp2" maxlength="8" placeholder="휴대전화번호"></span>
+                <button type="button" class="btn_comm btn_send"><img src="images/btn-mobile.gif" alt="인증번호 발송"></button>
+              </div>
+            </div>
+
+            <div class="inp_auth">
+              <div class="wrap_auth">
+              <span class="auth">
+                <input type="number" placeholder="인증번호를 입력해주세요">
+              </span>
+                <button class="btn_comm btn_auth" type="button"><img src="images/btn-chk.gif" alt="인증번호 확인"></button>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <!-- // #mobileForm -->
+
+      <div id="reward">
+        <!-- 보상이미지 등록 -->
+        <img src="images/img-temp.jpg" alt="사전예약 보상">
+      </div>
+      <!-- // #reward -->
+
+      <div id="submitArea">
+        <button type="button" class="btn_comm btn_reward" title="선물 받기"></button>
+      </div>
+      <!-- // #btnArea -->
+    </form>
+
+  </div>
+  <!-- // #container -->
+
+  <div id="footer">
+    <ul>
+      <li><span class="bu"></span>지급된 아이템은 우편함에서 확인할 수 있습니다.</li>
+      <li><span class="bu"></span>보상이 지급되지 않았으면, 재접속 후 다시 확인해보세요.</li>
+      <li><span class="bu"></span>입력하신 전화번호는 사전예약시 참여한 번호와 동일여부를 확인하며 저장되지 않습니다.</li>
+    </ul>
+  </div>
+  <!-- // #info -->
+
+  <div id="fLayer">
+    <div class="wrap_layer">
+
+      <div class="msg_layer">
+        <div class="wrap_msg">
+          <div class="msg">
+            <div></div>
+          </div>
+          <div class="btn_area">
+            <button type="button" class="btn_comm btn_confirm" title="확인"></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- layer BG -->
+      <div class="bg_layer"></div>
+    </div>
+  </div>
+  <!-- // #fLayer -->
+  
+  <div class="test">
+    <button type="button" class="sendAuth">인증번호 발송 성공</button>
+    <button type="button" class="wrongNum1">휴대폰번호 잘못입력(미등록자)</button>
+    <button type="button" class="wrongNum2">휴대폰번호 잘못입력(양식)</button>
+    <button type="button" class="emptyNum">휴대폰번호 미입력</button>
+    <button type="button" class="errorAuth1">인증번호 발송안함</button>
+    <button type="button" class="errorAuth2">인증버튼 미입력</button>
+    <button type="button" class="wrongAuth">잘못된 인증번호</button>
+    <button type="button" class="successAuth">인증번호 성공</button>
+    <button type="button" class="emptyAuth">인증번호 미입력</button>
+    <button type="button" class="success">지급성공</button>
+    <button type="button" class="error">에러발생</button>
+    <button type="button" class="already">지급받은유저</button>
+  </div>
+  
+</div>
+<!-- // #fWrap -->
+
+<script src="https://static.four33.co.kr/event/common/js/jquery-1.8.1.min.js"></script>
+<script src="https://static.four33.co.kr/event/common/js/jquery.actual.min.js"></script>  <!-- jquery.actual(hidden ele size) -->
+<script type="text/javascript">
+// ios css fix
+(function(){
+  if( /iPhone|iPad|iPod/i.test(navigator.userAgent) ) $("#fWrap").addClass("ios")
+})();
+
+var btnStatus = 1,    // 아이템받기 상태(0/1)
+  msgList = {
+    wrongNum1: '<p>휴대폰번호를 확인해 주세요.<span>(사전예약에 참여한 휴대폰 번호만 가능합니다.)</span><p>',
+    wrongNum2: '<p>휴대폰번호를 확인해 주세요.</p>',
+    emptyNum: '<p>휴대폰번호를 입력해 주세요.</p>',
+    sendAuth: '<p>인증번호가 발송되었습니다.<span>(3분 내에 입력해주세요.)</span><span class="caution">인증번호를 못받은 경우 스팸메시지함을 확인해 주세요.<br>발신번호 (1566-4340)</span></p>',
+    errorAuth1: '<p>인증번호 발송을 해주세요.</p>',
+    errorAuth2: '<p>인증번호 확인 버튼을 클릭해 주세요.</p>',
+    wrongAuth: '<p>잘못된 인증번호 입니다.</p>',
+    successAuth: '<p>인증번호가 확인되었습니다.</p>',
+    emptyAuth: '<p>인증번호를 입력해 주세요.</p>',
+    success: '<p>사전예약 선물이 지급되었습니다.<span>(<strong>우편함</strong>을 확인해 주세요.)<span></p>',
+    error: '<p>죄송합니다.<span>(알수 없는 오류가 발생하였습니다.<br>잠시 후에 다시 시도해 주세요.)<span></p>',
+    already: '<p>휴대폰 번호를 확인해 주세요.<span>(이미 선물을 지급받은 번호입니다.)<span></p>',
+  };
+
+// selectBox
+$('#mobileForm .inp_mobile select').change(function(){
+  var select_name = $(this).children('option:selected').text();
+  $(this).siblings('label').text(select_name);
+});
+
+function layoutSet(status){
+  if(status == 1) $('#submitArea .btn_reward').addClass('ready');
+}
+// 초기실행
+layoutSet(btnStatus);
+
+
+// func openLayer
+function openLayer(msg){
+  var target = $('#fLayer .msg_layer'),
+  targetMsg = $('#fLayer .msg_layer .msg div'),
+  targetHeight = $(target).actual('height'),
+  winHeight = $(window).height(),
+  layerPos = (winHeight - targetHeight) / 2;
+
+  $(targetMsg).html(msg);
+
+  if(target.length){
+    $("#fLayer").show();
+    if(targetHeight < winHeight){ // 레이어가 윈도우보다 크지 않은 경우
+      $(target).css('top',layerPos).show();
+    }else{
+      $(window).scrollTop(0);
+      $(target).css('top', 20).show();
+    }
+    return false;
+  }
+}
+
+// closeLayer
+$("#fLayer button").bind('click',function(){
+  var target = $('#fLayer .wrap_layer > div:visible').not('.bg_layer');
+  $(document).unbind('touchmove');
+  $("#fLayer").hide();
+  $(target).hide();
+  layoutSet(btnStatus);
+});
+
+//인증번호발송
+$("#mobile .inp_mobile button").bind('click',function(){
+  alert('1');
+});
+
+//인증번호확인
+$("#mobile .inp_auth button").bind('click',function(){
+  alert('2');
+});
+
+// 아이템 지급
+$("#submitArea .btn_reward").on('click',function(){
+  var target = $(this).hasClass('ready');
+  if(target){
+    openLayer(msgList.wrongNum1);   // 사전예약 미참여 번호
+    /*
+    openLayer(msgList.wrongNum2);   // 잘못된 번호 입력
+    openLayer(msgList.emptyNum);    // 전화번호를 입력하지 않음
+    openLayer(msgList.sendAuth);    // 인증번호 발송 성공
+    openLayer(msgList.errorAuth1);  // 인증번호 발송하지 않음
+    openLayer(msgList.errorAuth2);  // 인증번호 버튼을 눌러주세요
+    openLayer(msgList.wrongAuth);   // 잘못된 인증번호
+    openLayer(msgList.successAuth); // 인증번호 확인 성공
+    openLayer(msgList.emptyAuth);   // 인증번호를 입력하지 않은 경우
+    openLayer(msgList.success);     // 지급성공
+    openLayer(msgList.error);       // 에러 발생
+    openLayer(msgList.already);     // 이미 발급 받은 번호
+    */
+  }else{
+    return false;
+  }
+});
+
+// layer test(확인 후 삭제해주세요)
+$(".test button").bind("click",function(){
+  var btnName = $(this).attr("class");
+  btnName = eval('msgList .'+btnName);
+  openLayer(btnName);
+})
+
+</script>
+
+</body>
+
+</html>

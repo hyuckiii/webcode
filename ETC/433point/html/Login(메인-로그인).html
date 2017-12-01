@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>4:33 포인트사이트</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/bootstrap-expend.min.css" rel="stylesheet">
+  <link href="../css/ui.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="../js/jquery-1.11.3.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/bootstrap-expend.js"></script>
+  <script src="../js/jquery.expend.js"></script>
+  <script src="../js/ui.js"></script>
+</head>
+<body>
+<div id="fWrap">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 ftt-header">
+        <nav class="navbar navbar-default ftt-navbar" role="navigation">
+          <div class="pull-left">
+            <a href="#" class="ftt-point-logo ftt-blind">4:33 Point logo</a>
+          </div>
+          <ul class="list-inline list-unstyled pull-right">
+            <li>
+              <!-- <a href="#">로그인</a> -->
+              <a href="#">로그아웃</a>
+            </li>
+            <li>
+              <a href="#">문의</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div><!-- //row -->
+  </div><!-- //container-fluid -->
+  <div class="container">
+    <div class="row ftt-login-wrap">
+      <div class="col-md-8 col-md-offset-2">
+        <h2 class="ftt-play433 ftt-fitimg"><img src="../images/common/logo-play433.png"  alt="Play 433 포인트"/></h2>
+        <fieldset>
+          <legend>로그인하기</legend>
+           <div class="row">
+              <div class="col-md-12 text-center">
+                <h1 class="ftt-subtit">4:33 포인트 사이트에 오신 것을 환영합니다.</h1>
+              </div>
+           </div>
+           <div class="row ftt-logform">
+              <div class="col-md-8">
+                <input type="text" class="form-control" placeholder="아이디" data-placement="top" data-toggle="tooltip" title="아이디를 입력해주세요."><!-- 아이디 미입력시 data-toggle 동적호출 -->
+                <input type="password" class="form-control" placeholder="비밀번호" data-placement="bottom" data-toggle="tooltip" title="비밀번호를 입력해주세요."><!-- 비밀번호 미입력시 data-toggle 동적호출 -->
+              </div>
+              <div class="col-md-4">
+                <button type="button" class="btn ftt-btn-login" data-toggle="modal" data-target="#login_pop">로그인</button>
+              </div>
+           </div><!-- //row -->
+          </fieldset>
+          
+          <div class="row">
+            <div class="col-md-8 text-center ftt-logfnc">
+              <ul class="list-inline list-unstyled">
+                <li>
+                  <a href="#">계정발급 안내</a>
+                </li>
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#password-email">비밀번호 재발급</a>
+                </li>
+               </ul>
+            </div>
+          </div>
+
+          <div class="row ftt-lognotice">
+            <div class="col-md-10 col-md-offset-1">
+              <h3>계정발급 안내</h3>
+              <ul>
+                <li>신규입사자의 경우 정직원 승인절차에 따라 계정이 활성화됩니다.</li>
+                <li>433포인트 사이트 계정은 임직원 <span class="ftt-point">이메일 주소</span>를 사용합니다.</li>
+                <li><span class="ftt-point">최초 로그인 후 반드시 비밀번호</span>를 변경해주세요.</li>
+              </ul>
+            </div>
+          </div>
+
+      </div>
+     </div><!-- //row -->
+  </div><!-- //container -->
+</div><!-- #fWrap -->
+<div class="container-fluid ftt-footer">
+  <div class="row">
+    <div class="col-md-12">
+      <p>Copyright © 4:33 Creative Lab. All Rights Reserved.</p>          
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="password-email" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="blind">close</span></button>
+        <h4 class="modal-title" id="myModalLabel">비밀번호 재발급</h4>
+      </div>
+      <div class="modal-body">
+        <div class="ftt-poptit ">
+          <p class="row-two">433 이메일주소를입력해주세요.<br/>이메일로 비밀번호 <span class="point">재발급 URL</span>이발송됩니다.</p>
+        </div>
+        <div class="ftt-popnoti-default">
+          <form>
+            <input type="email" class="form-control" placeholder="이메일 주소를 입력해주세요." value="@433.co.kr"><!-- 아이디 미입력시 data-toggle 동적호출 -->
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-popup" data-dismiss="modal">확인</button>
+      </div>
+    </div><!-- //modal-content -->
+  </div><!-- //modal-dialog -->
+</div><!-- //modal -->
+
+
+<!-- Dev Request : 
+        아래 코드는 개발시 삭제처리 부탁드립니다. 
+        UI확인용코드입니다.
+-->
+<style>
+#ui-test { position:absolute;top:50%;right:0;}
+#ui-test a,
+#ui-test button { display:block;width:120px;margin:2px;font-size:0.875em;white-space:nowrap;overflow:hidden;-o-text-overflow:ellipsis;-ms-text-overflow:ellipsis;text-overflow:ellipsis;word-break:normal;word-wrap:normal;}
+#ui-test a { }
+</style>
+<div id="ui-test">
+
+  <button type="button" class="modal-show ftt-cursor btn btn-primary" data-type="msg" data-tit="비밀번호 재발급" data-subtit="입력하신 이메일주소로<br/> 비밀번호 재발급 URL이 발송되었습니다." data-desc="">비밀번호 URL발송</button>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#password-email">비밀번호 메일 입력</button>
+  <a href="Login-passwd(첫접속).html" class="btn btn-primary" title="비밀번호 재설성(초기,URL)" target="_blank">비밀번호 재설성(초기,URL)</a>
+  <a href="Login-reset(비밀번호재발급).html" class="btn btn-primary" title="비밀번호 재발급" target="_blank">비밀번호 재발급</a>
+</div>
+
+</body>
+</html>

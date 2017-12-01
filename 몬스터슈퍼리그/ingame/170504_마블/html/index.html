@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="ko"> <!-- 한국어 -->
+<!-- <html lang="en"> 영어 -->
+<!-- <html lang="ja"> 일본어 -->
+<!-- <html lang="th"> 태국어 -->
+<!-- <html lang="zh-Hans"> 중국어(간체) -->
+<!-- <html lang="zh-Hant"> 중국어(번체) -->
+<head>
+<title>MonsterSuperLeague - Summoning is always welcome!</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=980">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="https://static.four33.com/event/game/monstersl/ingame/170504_marble/css/style.min.css">
+<script src="https://static.four33.com/event/common/js/jquery-1.8.1.min.js"></script>
+</head>
+<!--
+  언어에 따라 #fwrap에 class추가
+    - ko(한국어)
+    - en(영어)
+    - ja(일본어)
+    - th(태국어)
+    - zh-CN(중국어 - 간체)
+    - zh-TW(중국어 - 번체)
+-->
+<body>
+<div id="fWrap" class="ko">
+
+  <div id="header"></div>
+  <!-- // #header -->
+
+  <div id="container">
+
+    <div id="info">
+      <div class="wrap_info">
+        <div id="currentPoint">
+          <!-- 보유 포인트 -->
+          <span class="value"></span>
+        </div>
+        <div id="usePoint">
+          <!-- 누적 사용 -->
+          <span class="value"></span>
+        </div>
+        <div id="totalPoint">
+          <!-- 누적 획득 -->
+          <span class="value"></span>
+        </div>
+      </div>
+      <button type="button" id="btnDice">
+        <span class="wrap_dice">
+          <span class="bg dice1">
+            <img src="" alt="dice animation">
+          </span>
+        </span>
+      </button>
+    </div>
+    <!-- #info(포인트 안내) -->
+
+    <div id="questMap">
+      <div class="wrap_quest">
+        <div class="top">
+          <div class="wrap_map">
+            <ul>
+              <li class="btn_quest1 map" data-step="0">
+                <span class="bg"></span>
+                <span class="reward-title"></span>
+              </li>
+              <li class="btn_quest2 map" data-step="1">
+                <span class="bg"></span>
+                <span class="reward-title"></span>
+              </li>
+              <li class="btn_quest3 map" data-step="2">
+                <span class="bg"></span>
+                <span class="reward-title"></span>
+              </li>
+              <li class="btn_quest4 map" data-step="3">
+                <span class="bg"></span>
+                <span class="reward-title"></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="r_side">
+          <div class="wrap_map">
+            <ul>
+              <li class="btn_quest5 map" data-step="4">
+                <span class="bg"></span>
+                <span class="reward-title"></span>
+              </li>
+              <li class="btn_quest6 map" data-step="5">
+                <span class="bg"></span>
+                <span class="reward-title"></span>
+              </li>
+              <li class="btn_quest7 map" data-step="6">
+                <span class="bg"></span>
+                <span class="reward-title"></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="wrap_map">
+            <ul>
+              <li class="btn_quest8 map" data-step="7">
+                <span class="bg"></span>
+                <span class="reward-title"></span>
+              </li>
+              <li class="btn_quest9 map" data-step="8">
+                <span class="bg"></span>
+                <span class="reward-title"></span>
+              </li>
+              <li class="btn_quest10 map" data-step="9">
+                <span class="bg"></span>
+                <span class="reward-title"></span>
+              </li>
+              <li class="btn_quest11 map" data-step="10">
+                <span class="bg"></span>
+                <span class="reward-title"></span>
+              </li>
+              <li class="btn_quest12 map" data-step="11">
+                <span class="bg"></span>
+                <span class="reward-title"></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="l_side">
+          <div class="wrap_map">
+            <ul>
+              <li class="btn_quest13 map" data-step="12">
+                <span class="bg"></span>
+                <span class="reward-title"></span>
+              </li>
+              <li class="btn_quest14 map" data-step="13">
+                <span class="bg"></span>
+                <span class="reward-title"></span>
+              </li>
+              <li class="btn_quest15 map" data-step="14">
+                <span class="bg"></span>
+                <span class="reward-title"></span>
+              </li>
+              <li class="btn_quest16 map" data-step="15">
+                <span class="bg"></span>
+                <span class="reward-title"></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // #questMap -->
+
+    <div id="questTotal" class="quest">
+      <div class="tit"></div>
+      <ul>
+        <li quest-num="0">
+          <div class="wrap_title"><div class="quest-title"></div></div>
+          <div class="wrap_reward"><div class="reward-title"></div></div>
+          <div class="wrap_btn"><div class="btn"></div></div>
+        </li>
+        <li quest-num="1">
+          <div class="wrap_title"><div class="quest-title"></div></div>
+          <div class="wrap_reward"><div class="reward-title"></div></div>
+          <div class="wrap_btn"><div class="btn"></div></div>
+        </li>
+        <li quest-num="2">
+          <div class="wrap_title"><div class="quest-title"></div></div>
+          <div class="wrap_reward"><div class="reward-title"></div></div>
+          <div class="wrap_btn"><div class="btn"></div></div>
+        </li>
+        <li quest-num="3">
+          <div class="wrap_title"><div class="quest-title"></div></div>
+          <div class="wrap_reward"><div class="reward-title"></div></div>
+          <div class="wrap_btn"><div class="btn"></div></div>
+        </li>
+        <li quest-num="4">
+          <div class="wrap_title"><div class="quest-title"></div></div>
+          <div class="wrap_reward"><div class="reward-title"></div></div>
+          <div class="wrap_btn"><div class="btn"></div></div>
+        </li>
+      </ul>
+    </div>
+    <!-- // #quest1 -->
+
+  </div>
+  <!-- // #container -->
+
+  <div id="footer"></div>
+  <!-- // #footer -->
+
+  <!-- 확인 후 삭제해주세요 -->
+  <div class="test">
+    <button class="lang_ko" type="button" lang-data="ko">한국어</button>
+    <button class="lang_en" type="button" lang-data="en">영어</button>
+    <button class="lang_ja" type="button" lang-data="ja">일본어</button>
+    <button class="lang_th" type="button" lang-data="th">태국어</button>
+    <button class="lang_zh-CN" type="button" lang-data="zh-CN">중국어 - 간체</button>
+    <button class="lang_zh-TW" type="button" lang-data="zh-TW">중국어 - 번체</button>
+  </div>
+  <!-- // 확인 후 삭제해주세요 -->
+
+</div>
+<!-- // #fWrap -->
+
+<script type="text/javascript" src="https://static.four33.com/event/common/js/ftt.jquery.marble.1.1.min.js"></script>
+<script type="text/javascript" src="https://static.four33.com/event/common/js/webevent/ftt.webevent.0.2.js"></script>
+<script type="text/javascript" src="https://static.four33.com/event/game/monstersl/ingame/common/js/commonLang.js"></script>
+<script type="text/javascript" src="https://static.four33.com/event/common/js/ftt.jquery.xhr.modal.0.3.js"></script>
+<script type="text/javascript" src="https://static.four33.com/event/game/monstersl/ingame/170504_marble/js/evLang.min.js"></script>
+
+<script type="text/javascript">
+var quest = [$('#questMap'), $('#questTotal')],
+  langLayout = evLang( $('#fWrap').attr('class') ),     // 이벤트 사용언어
+  langLayer = commonLang( $('#fWrap').attr('class') ),  // 공통사용(레이어) 언어
+  // 마블관련 값
+  currentPoint = 50,     // 보유 포인트
+  usePoint = 500,         // 누적 사용 포인트
+  totalPoint = 500,       // 누적 획득 포인트
+  diceCount = 5,          // 게임 참여 횟수
+  needPoint = 50,         // 1회 참여시 포인트
+  diceScore = 0,          // 주사위 값(수동으로 지정하지 않는 경우 js에서 랜덤 생성)
+  startNum = 1,           // 시작 위치(0 ~ n)
+  // 최종보상 값
+  totalRewardStep = [100, 500, 1000, 2000, 3000],    // 추가보상 미션 기준
+  totalRewardStatus = [0, 0, 0, 0, 0],               // 추가보상 미션 상태 값(0/1/2)
+  BoardgameData = {
+    diceSet: 6,                              // 주사위 단위(1부터)
+    pauseStart: 3400,                        // 말 이동시작까지 시간
+    pauseMove: 500,                          // 말 이동 시간 간격(1칸당의 시간)
+    onStart: function (data) {               // 주사위 굴리기 시작
+      $('#questMap').addClass('play');
+      $('#info #btnDice').attr('class', 'loading');
+      $('#info #btnDice img').attr('src', 'https://static.four33.com/event/game/monstersl/ingame/170504_marble/images/ani-dice.gif').show();
+    }, onMove: function (data) {             // 말 이동 시작
+      $('#info #btnDice img').attr('src', '').hide();
+      $('#info #btnDice .bg').attr('class', 'bg dice'+data.diceScore);
+    }, onAfter: function(data){              // 말 이동 종료
+      setTimeout( function () {
+        $('#questMap').removeClass('play');
+        $('#info #btnDice').removeClass('loading');
+        evResult.modalMsg('success', false);
+      }, 700 );
+    }
+  };
+
+var questData = {
+    questStatus: ['', totalRewardStatus],
+    otherItem: {
+      // 보유 포인트
+      currentPoint:{
+        target: $('#info #currentPoint .value'),
+        value: addComma(currentPoint)
+      },
+      // 누적 사용
+      usePoint: {
+        target: $('#info #usePoint .value'),
+        value: addComma(usePoint)
+      },
+      // 누적 획득
+      totalPoint:{
+        target: $('#info #totalPoint .value'),
+        value: addComma(totalPoint)
+      },
+      btnName:{
+        target: $('#fWrap li .btn'),
+        once: true,
+        value: langLayout.btnName
+      },
+      eventInfo:{
+        target: $('#footer'),
+        value: langLayout.eventInfo
+      }
+    }
+  },
+  mableRewardXhr = {
+    options: {
+      debug: true,        // ajax 통신관련 정보 console로 출력
+      refresh: false,     // 새로고침 미사용
+      langData: langLayer // 다국어 데이터
+    }
+  };
+
+// func addComma
+function addComma(num) {
+  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+// FttXhrModal - 선언
+var evResult = new FttXhrModal();
+
+// FttXhrModal - 옵션등 데이터 적용
+evResult.set(mableRewardXhr);
+
+// 초기실행
+$(quest).webEventUI(questData, langLayout);
+
+// 마블 - 초기위치 설정
+$('#questMap').Boardgame( { mapSet: startNum } );
+
+// 주사위 굴리기
+$('body').on('click','#btnDice',function () {
+  var isDisabled = ( $(this).hasClass('loading') || $('#questMap').hasClass('disable') );
+
+  $('#questMap').Boardgame(BoardgameData, 0, 6, 6);
+  if ( !isDisabled && currentPoint >= 50) {
+    //$('#questMap').addClass('disable');
+
+    /*
+    $.post(
+      "/ingame/main/rpc_get_reward/1127?ssn=58&ftt_ptype=4&ftt_pusn=0&ftt_world=1&lang=ko&ftt_gusn=1&ftt_fp=989164f5e2793d8f632e3879202c63db" + str
+      , {
+        "pick_no": 'dice'
+        , "view_data": 'dice'
+      }
+      , function (event_data, status) {
+        if (status == 'success' && event_data.code == 0) {
+          var arrayData = event_data.data.split(":");
+
+          var dice = $('#questMap').Boardgame(BoardgameData, 0, diceCount, arrayData[0]);
+          $('#fWrap').removeClass('ready');
+          if (typeof(dice) == 'object') {
+            currentPoint = currentPoint - needPoint;  // 보유 포인트
+            usePoint = usePoint + needPoint;          // 누적 사용 포인트
+            diceScore = arrayData[1];                 // 주사위 값
+            questData.otherItem.currentPoint.value = addComma(currentPoint);  // 남은 포인트 출력용
+            questData.otherItem.usePoint.value = addComma(usePoint);          // 누적 사용 포인트 출력용
+
+            $('#questMap').removeClass('disable');
+            // UISET
+            $(quest).webEventUI(questData, langLayout);
+            $('#questMap').Boardgame(BoardgameData, 0, 6, 6);
+          }
+        }
+        else if (status == 'success' && event_data.code == 100) {
+          $('#questMap').removeClass('disable');
+          //evResult.modalMsg('success', false);  // 정상수령
+          //evResult.modalMsg('fail', false);     // 비정상 접근
+          //evResult.modalMsg('error', false);    // 에러 발생
+        }
+        else if (status == 'success' && event_data.code == 2) {
+          $('#questMap').removeClass('disable');
+          //evResult.modalMsg('success', false);  // 정상수령
+          //evResult.modalMsg('fail', false);     // 비정상 접근
+          //evResult.modalMsg('error', false);    // 에러 발생
+        }
+        else {
+          $('#questMap').removeClass('disable');
+          //evResult.modalMsg('success', false);  // 정상수령
+          //evResult.modalMsg('fail', false);     // 비정상 접근
+          //evResult.modalMsg('error', false);    // 에러 발생
+        }
+      }
+    );
+  */
+  }
+});
+
+// 누적보상(누적보상은 강제 새로고침)
+$('#container').on('click','li.ready .btn',function () {
+  var questNum = $(this).closest('li').attr('quest-num');   // quest-num 속성 값
+  mableRewardXhr.options.refresh = true;
+  evResult.set(mableRewardXhr);
+  $.post(
+    "/ingame/main/rpc_get_reward/1127?ssn=58&ftt_ptype=4&ftt_pusn=0&ftt_world=1&lang=ko&ftt_gusn=1&ftt_fp=989164f5e2793d8f632e3879202c63db"+str
+    ,{
+      "pick_no": questNum
+    }
+    ,function(data, status) {
+      if (status == 'success' && data.code == 0)
+      {
+        evResult.modalMsg('success', false);  // 정상수령
+      }
+      else if(status == 'success' && data.code == 100)
+      {
+        //evResult.modalMsg('success', false);  // 정상수령
+        //evResult.modalMsg('fail', false);     // 비정상 접근
+        //evResult.modalMsg('error', false);    // 에러 발생
+      }
+      else if(status == 'success' && data.code == 2)
+      {
+        //evResult.modalMsg('success', false);  // 정상수령
+        //evResult.modalMsg('fail', false);     // 비정상 접근
+        //evResult.modalMsg('error', false);    // 에러 발생
+      }
+      else
+      {
+        //evResult.modalMsg('success', false);  // 정상수령
+        //evResult.modalMsg('fail', false);     // 비정상 접근
+        //evResult.modalMsg('error', false);    // 에러 발생
+      }
+    }
+  );
+
+});
+
+// 다국어 테스트
+$('.test button').bind('click', function () {
+  var langType = $(this).attr('lang-data');
+
+  langLayout = evLang(langType);
+  langLayer = commonLang(langType);
+  questData.otherItem.btnName.target = $('#container li .btn');
+  questData.otherItem.btnName.once = true;
+  questData.otherItem.btnName.value = langLayout.btnName;
+  questData.otherItem.eventInfo.target = $('#footer');
+  questData.otherItem.eventInfo.value = langLayout.eventInfo;
+  mableRewardXhr.options.langData = langLayer;
+
+  $('.test button').removeClass('active');
+  $(this).addClass('active');
+  $('#fWrap').attr('class', langType);
+  $(quest).webEventUI(questData, langLayout);
+  evResult.set(mableRewardXhr);
+});
+
+</script>
+
+</body>
+
+</html>

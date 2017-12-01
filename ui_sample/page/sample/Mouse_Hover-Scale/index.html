@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko" >
+<head>
+    <title>Mouse_Hover-Scale width cubic-bezier</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head
+<body>
+
+
+					
+					
+<style>
+  .container { margin:0px auto; max-width:640px;font-family:'Malgun Gothic', '막은 고딕', sans-serif;color:#666;}
+</style>
+<div class="container" style="height:750px;">
+  <h1>Mouse_Hover-Scale width cubic-bezier</h1>					
+
+ 
+<!-- ===================== -->
+
+<!--   각주 Sarari 브라우저 적용시 반드시 -webkit- 속성 추가 -->
+  <style>
+  .movie-items { position: relative;overflow: hidden;}
+  .movie-items-link {display:block;width:100%;}
+  .movie-items-link:hover .movie-items-thumb { transform:scale(1.1);-o-transform:scale(1.1);-moz-transform:scale(1.1);-webkit-transform:scale(1.1);}
+  .movie-items-thumb {
+    max-width:100%;
+    transform-origin: center center 0px;
+    -webkit-transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -moz-transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -o-transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);  
+  }
+  </style>  
+  <div class="movie-items">
+    <a href="https://www.youtube.com/watch?v=EJot7YazVnc" class="movie-items-link">
+      <img src="resource/rk_movie_0120161208091412.jpg" class="movie-items-thumb" alt="">
+      <div class="movie-items-title"></div>
+    </a>
+  </div>
+
+<!-- ===================== -->
+
+  <style>
+  .shadow{width:100%;overflow:hidden;margin-top:8px;}
+  .shadow img{ max-width:100%;
+    transform-origin: center center 0px;
+    -webkit-transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -moz-transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -o-transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+   }
+  .shadow img:hover{cursor:pointer;transform:scale(1.1);-o-transform:scale(1.1);-moz-transform:scale(1.1);-webkit-transform:scale(1.1);}
+  </style>
+  <div class="shadow">
+    <img src="resource/bg-header.jpg" alt="">
+  </div>
+
+
+
+
+
+
+
+</div>
+
+
+</body>
+</html>					

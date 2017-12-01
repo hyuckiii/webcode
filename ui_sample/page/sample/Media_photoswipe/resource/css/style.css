@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+*{margin:0;padding:0;list-style:none}
+
+/** common **/
+h1{padding:30px 0;text-align:center}
+h1 a{display:block;margin-top:10px;font-size:13px}
+.container {margin:0px auto; max-width:640px;font-family:'Malgun Gothic', '막은 고딕', sans-serif;color:#666}
+.container div{margin-bottom:20px}
+.container div h2.tit{padding:10px 10px;border-bottom:2px solid #AAD6F9;color:#333;font-size:20px;background:#E7E7E7}
+.container ul li img{width:100%;height:auto;cursor:pointer}
+.container ul li iframe{width:100%;height:126.36px}
+
+.container #photoSwipe div{padding:1px;background:#ccc}
+.container div ul{padding:20px 2% 0 2%;background:#fff}
+.container div ul:after{display:block;content:'';clear:both}
+.container div ul li{float:left;width:32%;margin:0 2% 20px 0}
+.container div ul li:nth-of-type(3n){float:right;margin-right:0}
+
+.pswp__video{position:absolute;width:915px;height:588px;top:50%;left:50%;margin:-294px 0 0 -457px}

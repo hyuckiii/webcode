@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ko"> <!-- 한국어 -->
+<!-- <html lang="en"> 영어 -->
+<!-- <html lang="ja"> 일본어 -->
+<!-- <html lang="th"> 태국어 -->
+<!-- <html lang="zh-Hans"> 중국어(간체) -->
+<!-- <html lang="zh-Hant"> 중국어(번체) -->
+<head>
+<title>MonsterSuperLeague - Use Energy and let it all be good!</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=980">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="https://static.four33.com/event/game/monstersl/ingame/170518_point/css/style.min.css">
+<script src="https://static.four33.com/event/common/js/jquery-1.8.1.min.js"></script>
+</head>
+<!--
+  언어에 따라 #fwrap에 class추가
+    - ko(한국어)
+    - en(영어)
+    - ja(일본어)
+    - th(태국어)
+    - zh-CN(중국어 - 간체)
+    - zh-TW(중국어 - 번체)
+-->
+<body>
+<div id="fWrap" class="ko">
+
+  <div id="header">
+    <div id="pointInfo">
+
+      <div id="point">
+        <div>
+          <span class="value"></span><span class="unit"></span>
+        </div>
+      </div>
+      <div id="chance">
+        <div>
+          <span class="current_value"></span>
+          /
+          <span class="max_value"></span>
+          <span class="unit"></span>
+        </div>
+      </div>
+
+    </div>
+    <!-- #pointInfo -->
+  </div>
+  <!-- // #header -->
+
+  <div id="container">
+
+    <div id="btnArea">
+      <button class="btn_comm btn_play" type="button"></button>
+    </div>
+    <!-- // #btnArea -->
+
+    <div id="rewardInfo">
+      <div class="wrap_info">
+        <ul>
+          <li><div class="wrap_reward"><div class="reward-title"></div></div></li>
+          <li><div class="wrap_reward"><div class="reward-title"></div></div></li>
+          <li><div class="wrap_reward"><div class="reward-title"></div></div></li>
+          <li><div class="wrap_reward"><div class="reward-title"></div></div></li>
+          <li><div class="wrap_reward"><div class="reward-title"></div></div></li>
+          <li><div class="wrap_reward"><div class="reward-title"></div></div></li>
+        </ul>
+        <ul>
+          <li><div class="wrap_reward"><div class="reward-title"></div></div></li>
+          <li><div class="wrap_reward"><div class="reward-title"></div></div></li>
+          <li><div class="wrap_reward"><div class="reward-title"></div></div></li>
+          <li><div class="wrap_reward"><div class="reward-title"></div></div></li>
+          <li><div class="wrap_reward"><div class="reward-title"></div></div></li>
+          <li><div class="wrap_reward"><div class="reward-title"></div></div></li>
+        </ul>
+      </div>
+    </div>
+    <!-- // #rewardInfo -->
+
+  </div>
+  <!-- // #content -->
+
+  <div id="footer"></div>
+  <!-- // #footer -->
+
+  <!-- 확인 후 삭제해주세요 -->
+  <div class="test">
+    <button class="lang_ko" type="button" lang-data="ko">한국어</button>
+    <button class="lang_en" type="button" lang-data="en">영어</button>
+    <button class="lang_ja" type="button" lang-data="ja">일본어</button>
+    <button class="lang_th" type="button" lang-data="th">태국어</button>
+    <button class="lang_zh-CN" type="button" lang-data="zh-CN">중국어 - 간체</button>
+    <button class="lang_zh-TW" type="button" lang-data="zh-TW">중국어 - 번체</button>
+  </div>
+  <!-- // 확인 후 삭제해주세요 -->
+
+</div>
+<!-- // #fWrap -->
+
+<script type="text/javascript" src="https://static.four33.com/event/game/monstersl/ingame/common/js/commonLang.js"></script>
+<script type="text/javascript" src="https://static.four33.com/event/common/js/webevent/ftt.modalLayer.0.2.js"></script>
+<script type="text/javascript" src="https://static.four33.com/event/game/monstersl/ingame/170518_point/js/evLang.min.js"></script>
+<script type="text/javascript">
+var langLayer = commonLang( $('#fWrap').attr('class') );
+var questData = {
+  point: 999999,
+  currentChance: 5,
+  maxChance: 5,
+  langLayout: evLang( $('#fWrap').attr('class') )     // 이벤트 사용언어
+};
+// 성공 시 아이템 명을 포함한 성공 메시지 출력
+var successMsg = function ( itemNo ) {
+  var itemName = ( questData.langLayout.rewardTitle[itemNo] !== undefined ) ? questData.langLayout.rewardTitle[itemNo] : '';
+  var msg = '[ ' + itemName +' ]<br>' + langLayer.success;
+
+  return msg;
+};
+// func layoutSet
+var layoutSet = function (data) {
+  var questData = data;
+
+  // constructor
+  (function(){
+    // init fixedData
+    $('#pointInfo #point .unit').html(questData.langLayout.unit[0]);
+    $('#pointInfo #chance .unit').html(questData.langLayout.unit[1]);
+    $(questData.langLayout.rewardTitle).each(function (i, rewardTitle) {
+      $('#rewardInfo li').eq(i).find('.reward-title').html(rewardTitle);
+    });
+    $('#footer').html(questData.langLayout.eventInfo);
+
+    // init commonData
+    layoutRefresh(questData);
+  })();
+
+  // addComma
+  function addComma(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+  // setBtn
+  function layoutRefresh(data) {
+    $('#pointInfo #point .value').html( addComma(data.point) );
+    $('#pointInfo #chance .current_value').html(data.currentChance);
+    $('#pointInfo #chance .max_value').html(data.maxChance);
+    // init point
+    ( data.point >= 50 && data.currentChance > 0 ) ? $('#btnArea .btn_play').addClass('ready') : $('#btnArea .btn_play').removeClass('ready');
+  }
+
+  // commonData chance method
+  this.refresh = function (data) {
+    return layoutRefresh(data);
+  };
+
+};
+
+
+// layoutSet(page ui)
+var mslLayout = new layoutSet(questData);
+
+// 보상수령
+$('body').on('click', '#btnArea .btn_play.ready', function () {
+  var isDisabled = $(this).hasClass('disabled');
+
+  $(this).addClass('disabled');
+  if ( !isDisabled ) {
+    // 변경 데이터 적용(테스트용)
+    var pick_no = 6;
+    questData.point = questData.point - 50;
+    questData.currentChance = questData.currentChance - 1;
+
+    // 변경 값 적용 및 레이어 출력
+    questData.point = 10;
+    questData.currentChance = 4;
+    mslLayout.refresh(questData);
+    modalLayer.openLayer(successMsg(pick_no), 'normal', langLayer);
+    //evResult.modalMsg(successMsg(pick_no), true);    // 성공(새로고침 사용 시 매개변수 true로 변경)
+    //evResult.modalMsg(successMsg(pick_no), false);    // 성공
+    $(this).removeClass('disabled');
+  }else if ( 0 ) {
+    questData.point = 10;
+    questData.currentChance = 4;
+    mslLayout.refresh(questData);
+    modalLayer.openLayer('error', 'normal', langLayer);  // 비정상 접근
+    $(this).removeClass('disabled');
+  }else if ( 0 ) {
+    questData.point = 10;
+    questData.currentChance = 4;
+    mslLayout.refresh(questData);
+    modalLayer.openLayer('fail', 'normal', langLayer);   // 에러 발생
+    $(this).removeClass('disabled');
+  }
+});
+
+// 다국어 테스트 - 확인 후 삭제해주세요
+$('.test button').bind('click', function () {
+  var langType = $(this).attr('lang-data');
+
+  questData.langLayout = evLang(langType);
+  langLayer = commonLang(langType);
+  mslLayout = new layoutSet(questData);
+
+  $('.test button').removeClass('active');
+  $(this).addClass('active');
+  $('#fWrap').attr('class', langType);
+
+});
+// 다국어 테스트 - 확인 후 삭제해주세요
+
+</script>
+
+</body>
+
+</html>

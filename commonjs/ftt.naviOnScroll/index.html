@@ -1,0 +1,76 @@
+﻿<!doctype html>
+<html class="no-js" lang="ko">
+<head>
+<title>navigation on scrolling plug-in</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="http://img.four33.co.kr/event/common/js/jquery-1.8.1.min.js"></script>
+<style>
+*{margin:0;padding:0;list-style:none}
+#fWrap{padding-top:60px;}
+#header{position:fixed;left:0;top:0;width:100%}
+#header #mainNav{width:798px;height:60px;margin:0 auto;border:1px solid #ccc;background:#fff}
+#header #mainNav:after{display:block;content:'';clear:both}
+#header #mainNav li{float:left;width:157px}
+#header #mainNav li a{display:block;height:60px;line-height:60px;text-align:center}
+#header #mainNav li a.active{color:red;font-weight:bold}
+#header #mainNav li:last-of-type{float:right}
+#container{width:800px;margin:0 auto}
+#container .section{display:table;width:100%;height:800px;text-align:center;font-weight:bold;font-size:20px}
+#container .section div{display:table-cell;width:100%;height:800px;border:1px solid #cccccc;border-top:none;vertical-align:middle}
+</style>
+</head>
+
+<body>
+<div id="fWrap">
+
+  <div id="header">
+    <div id="mainNav">
+      <ul>
+        <li><a href="#section1">#section1</a></li>
+        <li><a href="#section2">#section2</a></li>
+        <li><a href="#section3">#section3</a></li>
+        <li><a href="#section4">#section4</a></li>
+        <li><a href="#section5">링크메뉴</a></li>
+      </ul>
+    </div>
+    <!-- // #mainNav -->
+  </div>
+  <!-- // #header -->
+
+
+  <div id="container">
+    <div id="section1" class="section"><div>section1</div></div>
+    <div id="section2" class="section"><div>section2</div></div>
+    <div id="section3" class="section"><div>section3</div></div>
+    <div id="section4" class="section"><div>section4</div></div>
+  </div>
+  <!-- // #container -->
+
+</div>
+<!-- // #fWrap -->
+
+<script src="js/ftt.jquery.navScroll.0.3.js"></script>
+<script type="text/javascript">
+
+/*
+  메뉴의 구조는 상단의 예제와 동일하게 가져가는 것을 추천
+  스크롤과 매칭되지 않는 메뉴는 menuNum 다음으로 오는 항목(menuNum.length == 4이면 5번째 항목이 예외처리 됨)
+  detailPos의 값은 반응형에 대한 대응이 되지 않으므로 반응형에서는 사용하지 않는 것을 추천
+  마지막항목의 높이가 창의 높이보다 작은 경우 페이지의 최하단에서 가장 마지막 메뉴에 강제매칭
+*/
+
+$('#mainNav').navPos({
+  menuNum: 4,             // 사용되는 스크롤과 매칭되는 메뉴의 갯수(기본 값은 대상 하위의 li의 갯수)
+  menuHeight: 60,         // menu의 높이 값(기본값 - css로 선언한 대상의 높이)
+  menuClass: 'step',      // 스크롤 위치에 따라 선택된 대상에 추가될 class명으로 'step1~4'의 형태로 추가 됩니다.
+  detailPos: 0,           // 메뉴와 스크롤 매칭 값이 달라져야하는 경우(기본 값 - 0)
+  aniDuration: 600,       // 메뉴 클릭 시 scroll 애니메이션 시간(기본 값 - 600)
+  aniEase: 'linear'       // 클릭 스크롤 애니메이션 easing설정 'swing'과 'linear'는 기본 사용할 수 있으며 plug-in사용 시 더 추가가능, 기본 값은 'swing'
+})
+
+</script>
+
+</body>
+
+</html>

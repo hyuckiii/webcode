@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+/* ie */
+
+/* common */
+#fWrap{min-width:1080px;padding-top:60px}
+#fWrap .wrap_section{position:relative;width:1080px;margin:0 auto;z-index:10}
+#container .section{padding:70px 0 80px 0}
+#container .section .tit_section .tit{font-size:70px;letter-spacing:-4px}
+#container .section .tit_section .sub_tit{padding-top:20px;font-size:30px;letter-spacing:-0.5px}
+
+
+/* #header */
+#header{height:60px}
+#header .wrap_header{width:100%}
+#header .logo_433{margin:17px 0 0 30px}
+#header .logo_433 img{height:auto}
+#header .sns{margin:15px 30px 0 0}
+#header .sns a{width:30px;height:30px}
+#header .sns a.btn_youtube{margin-left:10px}
+#header .sns a.btn_facebook:hover{background-position:left bottom}
+#header .sns a.btn_youtube:hover{background-position:right bottom}
+
+
+/* #sectionMain */
+/* normal type */
+#sectionMain.type_normal{overflow:hidden;position:relative;height:1317px}
+#sectionMain.type_normal #typeNormal{background:none !important}
+#sectionMain.type_normal .wrap_section{position:static}
+#sectionMain.type_normal span.bg{height:1317px}
+#sectionMain.type_normal .tit_main{position:relative;padding-top:67px;font-size:42px;z-index:3}
+#sectionMain.type_normal .tit_main .logo_game img{height:auto}
+#sectionMain.type_normal .tit_main .copy{padding-top:45px}
+#sectionMain.type_normal .tit_main .copy strong{padding-top:10px;font-size:60px}
+#sectionMain.type_normal .tit_main .date{font-size:36px;padding-top:38px}
+#sectionMain.type_normal .tit_main .main_video{height:512px;padding:25px;margin-top:80px}
+#sectionMain.type_normal .tit_main .main_video .video_yt{height:512px}
+#sectionMain.type_normal .tit_main .reg{padding-top:56px}
+#sectionMain.type_normal .tit_main .reg button.btn_reg{height:76px;padding:0 38px;border-width:2px}
+#sectionMain.type_normal .tit_main .reg button.btn_reg span{padding-right:50px;font-size:34px;letter-spacing:-0.7px;background-size:auto}
+
+/* bg_video type */
+#sectionMain.type_bg{overflow:hidden;position:relative;height:1050px;border-width:4px;background:url(../images/common/bg-main.jpg) center top no-repeat}
+#sectionMain.type_bg #typeBg{background:none !important}
+#sectionMain.type_bg .wrap_section{position:static}
+#sectionMain.type_bg .tit_main{position:relative;padding-top:67px;font-size:42px;z-index:3}
+#sectionMain.type_bg .tit_main .logo_game img{height:auto}
+#sectionMain.type_bg .tit_main .copy{padding-top:36px}
+#sectionMain.type_bg .tit_main .copy strong{padding-top:8px;font-size:60px}
+#sectionMain.type_bg .tit_main .date{font-size:36px;padding-top:27px}
+#sectionMain.type_bg .tit_main .video{padding-top:74px}
+#sectionMain.type_bg .tit_main .video button.btn_play{width:189px;height:189px;background-position:left top}
+#sectionMain.type_bg .tit_main .video button.btn_play:hover{background-position:left bottom}
+#sectionMain.type_bg .tit_main .reg{padding-top:73px}
+#sectionMain.type_bg .tit_main .reg button.btn_reg{height:118px;padding:0 51px 0 39px;border-width:2px}
+#sectionMain.type_bg .tit_main .reg button.btn_reg span{padding-right:70px;font-size:44px;letter-spacing:-0.7px;background-size:auto}
+#sectionMain.type_bg .bg_video{display:block;z-index:1}
+#sectionMain.type_bg .bg_video{position:absolute;left:0;top:0;width:100%;height:1050px}
+#sectionMain.type_bg .bg_video .video_yt{display:block;z-index:1}
+#sectionMain.type_bg .bg_video .bg{position:absolute;left:0;top:0;width:100%;height:1050px;background:url(../images/common/bg-video.png) repeat;z-index:2}
+
+/* #sectionReg */
+#sectionReg .wrap_section{width:910px}
+#sectionReg #regForm{padding-top:40px}
+#sectionReg #regForm .input_area{width:908px}
+#sectionReg #regForm .input_area .mobile{height:88px;padding:10px 9px;line-height:110px;}
+#sectionReg #regForm .input_area .mobile .inp_mobile1{width:157px;height:60px;margin-top:-23px;}
+#sectionReg #regForm .input_area .mobile .inp_mobile1 label{width:157px;height:60px;padding-left:30px;font-size:38px;line-height:60px;background-position:110px center;background-size:auto}
+#sectionReg #regForm .input_area .mobile .inp_mobile1 select{height:60px;min-height:60px;line-height:60px;padding:0 10px}
+#sectionReg #regForm .input_area .mobile .inp_mobile2 input{width:422px;height:60px;padding:0 20px;font-size:34px;line-height:60px;background-size:auto}
+#sectionReg #regForm .input_area .auth{height:88px;padding:10px 9px}
+#sectionReg #regForm .input_area .auth .inp_auth input{width:579px;height:60px;padding:0 20px;font-size:34px;line-height:60px;background-size:auto}
+#sectionReg #regForm .agree{padding:30px 0}
+#sectionReg #regForm .agree .ez-checkbox{width:60px;height:60px}
+#sectionReg #regForm .agree .ez-hide{width:60px;height:60px}
+#sectionReg #regForm .agree label{margin-left:15px;font-size:34px}
+#sectionReg #regForm .agree button{margin-left:30px;letter-spacing:-0.5px;border-radius:2px}
+#sectionReg #regForm .submit,
+#sectionReg #download .btn_area{padding-top:40px}
+#sectionReg #regForm .caution,
+#sectionReg #download .caution{padding-top:20px}
+#sectionReg #regForm .caution span,
+#sectionReg #download .caution span{padding-left:16px;font-size:28px;background-size:auto}
+#sectionReg #regForm button.btn_send,
+#sectionReg #regForm button.btn_confirm{width:270px;height:88px;font-size:34px;line-height:88px;letter-spacing:-2px;border-radius:2px}
+#sectionReg #regForm button.btn_detail{width:176px;height:58px;font-size:30px;line-height:58px;letter-spacing:-2px;border-radius:2px}
+#sectionReg #regForm button.btn_submit,
+#sectionReg #download .btn_download{width:500px;height:120px;font-size:44px;line-height:120px;letter-spacing:-2px;border-radius:2px}
+
+/* #sectionPreview */
+#sectionPreview{height:720px;border-width:1px}
+#sectionPreview #slide{height:567px;padding-top:40px}
+#sectionPreview #slide .wrap_slide{width:908px;height:510px;border-width:1px;margin:0 auto}
+#sectionPreview #slide .bx-viewport{min-height:340px}
+#sectionPreview #slide .bx-controls-direction a{display:block;position:absolute;top:212px;width:65px;height:170px;background:url(../images/common/btn-slide2.png) no-repeat}
+#sectionPreview #slide .bx-wrapper .bx-prev{left:-19px;background-position:left top}
+#sectionPreview #slide .bx-wrapper .bx-next{right:-19px;background-position:left bottom}
+#sectionPreview #slide .bx-viewport li img{width:908px;height:510px}
+#sectionPreview #slide .bx-wrapper .bx-pager .bx-pager-item{margin-right:10px}
+#sectionPreview #slide .bx-wrapper .bx-pager .bx-pager-item a {width:24px;height:24px}
+
+/* .section_event */
+#container .section_event{padding:80px 0}
+#container .section_event .tit_section .tit{font-size:70px;line-height:80px;letter-spacing:-4px;}
+#container .section_event .tit_section .tit .num{min-width:60px;height:74px;padding:0 39px;margin-left:5px;border-width:3px;border-radius:60px;font-size:50px;line-height:74px}
+#container .section_event .tit_section .sub_tit{padding-top:20px;font-size:30px;letter-spacing:-0.5px}
+#container .section_event .reward{width:910px;padding-top:19px}
+#container .section_event .reward .item_list{min-height:320px;margin-top:21px}
+#container .section_event .reward .item_list.type1{height:360px}
+#container .section_event .reward .item_list.type2{width:450px;margin-right:10px}
+#container .section_event .reward .item_list.type3{width:294px;margin-right:14px}
+#container .section_event .reward .item_list.type4{width:220px;margin-right:10px}
+#container .section_event .reward div .tit{height:60px}
+#container .section_event .reward div .tit .wrap_tit{height:60px;font-size:29px;padding:0;letter-spacing:-1px}
+#container .section_event .reward div .name{bottom:25px;font-size:24px;line-height:28px}
+#container .section_event .btn_area{padding-top:60px}
+#container .section_event .btn_area button.side{margin-left:15px}
+#container .section_event .btn-type2{width:400px;height:120px;font-size:44px;line-height:120px;letter-spacing:-5px;border-radius:2px}
+#container .section_event .info{padding-top:30px;}
+#container .section_event .info p{font-size:23px;line-height:26px;}
+#container .section_event .notice{padding-top:30px;}
+#container .section_event .notice span{font-size:27px;line-height:36px;}
+#container .section_event .notice span.icon{width:27px;height:27px;margin-right:6px;}
+
+/* #sectionInfo */
+#sectionInfo.section{padding:55px 0}
+#sectionInfo .wrap_section{width:920px}
+#sectionInfo li{padding-left:18px;margin-bottom:6px;font-size:24px;line-height:29px;font-weight:300;background-position:3px 12px;background-size:auto}
+
+/* #sectionPromo */
+#sectionPromo{padding:60px 0 90px 0}
+#sectionPromo img{width:auto}
+
+/* #footer */
+#footer{padding:84px 0 50px 0}
+#footer .btn_top{top:-119px;width:136px;height:68px;margin-left:-68px}
+#footer .copyright{font-size:20px;text-align:center;font-weight:300}
+
+/* alert, common */
+#fLayer .alert,
+#fLayer .policy,
+#fLayer .apply{width:720px;margin-left:-360px}
+#fLayer .head{height:80px}
+#fLayer .head .logo{margin:22px 0 0 30px}
+#fLayer .head .logo img{height:auto}
+#fLayer .head .btn_close{margin:15px 30px 0 0}
+#fLayer .head .btn_close img{height:auto}
+#fLayer .contain{padding:70px 30px 50px 30px}
+#fLayer .cont{padding-bottom:70px}
+#fLayer .cont .tit{font-size:54px}
+#fLayer .cont .msg{padding-top:20px;font-size:34px}
+#fLayer .foot{padding-top:50px}
+#fLayer .foot .btn_confirm,
+#fLayer .foot .btn_close{width:360px;height:100px;font-size:44px;letter-spacing:-2px;border-radius:2px}
+
+/* video */
+#fLayer .video{width:910px;margin-left:-455px}
+#fLayer .video .viewer{width:910px;height:512px}
+#fLayer .video .viewer iframe{width:910px;height:512px}
+#fLayer .video .list{padding-top:38px}
+#fLayer .video .list li{width:294px;height:165px;margin-right:14px}
+#fLayer .video .list li button{width:294px;height:165px}
+#fLayer .video .list li button .bg{width:294px;height:165px}
+#fLayer .video .list li button.active .bg{top:-18px;height:183px}
+#fLayer .video .btn_close{right:0;top:-64px;width:48px;height:48px}
+
+/* policy */
+#fLayer .policy .tit{font-size:38px}
+#fLayer .policy .cont .msg{padding-top:30px;font-size:16px}
+
+/* apply */
+#fLayer .apply .cont .msg{padding-bottom:50px;font-size:34px;line-height:20px}
+#fLayer .apply .cont .mobile{padding:10px}
+#fLayer .apply .cont .mobile .wrap_mobile{padding:19px}
+#fLayer .apply .cont .mobile .inp_mobile1{width:147px;height:58px}
+#fLayer .apply .cont .mobile .inp_mobile1 label{width:127px;height:58px;padding-left:20px;font-size:38px;line-height:58px;background-position:119px center;background-size:auto}
+#fLayer .apply .cont .mobile .inp_mobile1 select{height:58px;min-height:58px;line-height:58px}
+#fLayer .apply .cont .mobile .inp_mobile2 input{width:412px;height:58px;padding:0 20px;font-size:38px;line-height:58px}

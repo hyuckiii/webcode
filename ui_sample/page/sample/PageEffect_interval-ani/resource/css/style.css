@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+/* reset */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video
+{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {display:block}
+body {line-height:1}
+ol, ul {list-style:none}
+blockquote, q {quotes:none}
+blockquote:before, blockquote:after,
+q:before, q:after {content:'';content:none}
+table {border-collapse:collapse;border-spacing:0}
+input[type=checkbox], input[type=radio]{vertical-align:middle;position:relative}
+input[type=radio]{bottom:2px}
+#accessibility, .skip, hr, legend, caption{display:block;overflow:hidden;position:absolute;top:-1000em;left:0}
+.btn_comm{padding:0;margin:0;border:0;background:0;line-height:auto;cursor:pointer}
+.clearfix{*zoom:1}
+.clearfix:after{display:block;content:'';clear:both;}
+button{padding:0;margin:0;border:0;background:0; cursor:pointer;}
+button:focus,a:focus{outline:0}
+
+/* layout */
+body,html{height:100%;background:#000}
+
+
+/* #snowDemo */
+#fWrap{}
+#cartoon{overflow:hidden;position:absolute;left:50%;top:50%;width:1600px;height:875px;margin:-437px 0 0 -800px;background:url(../images/bg-body.jpg) no-repeat;box-shadow:0 0 20px #111}
+#cartoon .wrap_cartoon{position:relative;height:875px}
+
+#cartoon .wrap_cartoon div .msg{display:table;position:absolute;width:500px;height:250px;background:#ddd;border-radius:60px;opacity:0}
+#cartoon .wrap_cartoon div .msg p{display:table-cell;padding:20px;color:#000;font-size:25px;line-height:35px;font-weight:bold;text-align:center;vertical-align:middle}
+#cartoon .wrap_cartoon div .msg:after{display:block;content:'';position:absolute;border:30px solid transparent}
+
+#cartoon .l_side{float:left;position:relative;width:40%;height:875px}
+#cartoon .l_side .char{overflow:hidden;position:absolute;left:0;bottom:0;width:540px;height:750px;background:url(../images/char.png) no-repeat;background-size:auto 100%;opacity:0}
+#cartoon .l_side .msg{left:510px;top:440px}
+#cartoon .l_side .msg:after{left:-60px;top:70px;border-right:30px solid #ddd !important}
+
+#cartoon .r_side{float:right;position:relative;width:40%;height:875px}
+#cartoon .r_side .char{overflow:hidden;position:absolute;right:0px;bottom:0;width:500px;height:720px;background:url(../images/char2.png) no-repeat;background-size:auto 100%}
+#cartoon .r_side .msg{right:370px;top:100px}
+#cartoon .r_side .msg:after{right:-60px;top:110px;border-left:30px solid #ddd !important}

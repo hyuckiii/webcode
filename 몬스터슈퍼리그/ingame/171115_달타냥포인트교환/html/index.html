@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="ko"> <!-- 한국어 -->
+<!-- <html lang="en"> 영어 -->
+<!-- <html lang="ja"> 일본어 -->
+<!-- <html lang="th"> 태국어 -->
+<!-- <html lang="zh-Hans"> 중국어(간체) -->
+<!-- <html lang="zh-Hant"> 중국어(번체) -->
+<head>
+<title>MonsterSuperLeague - D'Artagnan Point Event</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=980">
+<meta name="format-detection" content="telephone=no">
+<script src="//static.four33.com/event/common/js/jquery-1.8.1.min.js"></script>
+</head>
+
+<!--
+  언어에 따라 #fwrap에 class추가
+    - ko(한국어)
+    - en(영어)
+    - ja(일본어)
+    - th(태국어)
+    - zh-CN(중국어 - 간체)
+    - zh-TW(중국어 - 번체)
+-->
+
+<body>
+<div id="fWrap" class="ko">
+
+
+
+  <link rel="stylesheet" href="//static.four33.com/event/game/monstersl/ingame/171115_point/css/style.min.css">
+  <div id="header"></div>
+  <!-- // #header -->
+
+  <div id="container">
+
+    <div id="event1">
+      <div class="point">
+        <span class="use"></span>
+        <span class="status">
+            <span class="now"></span>/<span class="max"></span>
+          </span>
+      </div>
+      <div class="btn"></div>
+      <div class="bg"></div>
+    </div>
+
+    <div id="quest" class="quest">
+
+      <div class="wrap_quest">
+        <ul>
+          <li quest-num="0" class="quest1">
+            <div class="wrap_reward">
+              <div class="reward-title"></div>
+            </div>
+            <div class="wrap_title">
+              <div class="cell">
+                <span class="quest-title"></span>
+                <div class="status">
+                  (<span class="ing"></span>/<span class="max"></span>)
+                </div>
+              </div>
+            </div>
+            <div class="wrap_btn">
+              <div class="btn"></div>
+            </div>
+          </li>
+          <li quest-num="1" class="quest1">
+            <div class="wrap_reward">
+              <div class="reward-title"></div>
+            </div>
+            <div class="wrap_title">
+              <div class="cell">
+                <span class="quest-title"></span>
+                <div class="status">
+                  (<span class="ing"></span>/<span class="max"></span>)
+                </div>
+              </div>
+            </div>
+            <div class="wrap_btn">
+              <div class="btn"></div>
+            </div>
+          </li>
+          <li quest-num="2" class="quest1">
+            <div class="wrap_reward">
+              <div class="reward-title"></div>
+            </div>
+            <div class="wrap_title">
+              <div class="cell">
+                <span class="quest-title"></span>
+                <div class="status">
+                  (<span class="ing"></span>/<span class="max"></span>)
+                </div>
+              </div>
+            </div>
+            <div class="wrap_btn">
+              <div class="btn"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    <!-- #quest -->
+
+  </div>
+  <!-- // #container -->
+
+  <div id="footer"></div>
+  <!-- // #footer -->
+
+  <!-- 확인 후 삭제해주세요 -->
+  <div class="test">
+    <button class="lang_ko" type="button" lang-data="ko">한국어</button>
+    <button class="lang_en" type="button" lang-data="en">영어</button>
+    <button class="lang_ja" type="button" lang-data="ja">일본어</button>
+    <button class="lang_th" type="button" lang-data="th">태국어</button>
+    <button class="lang_zh-CN" type="button" lang-data="zh-CN">중국어 - 간체</button>
+    <button class="lang_zh-TW" type="button" lang-data="zh-TW">중국어 - 번체</button>
+  </div>
+  <!-- // 확인 후 삭제해주세요 -->
+
+</div>
+<!-- // #fWrap -->
+
+
+<script type="text/javascript" src="//static.four33.com/event/common/js/webevent/ftt.webevent.0.3.js"></script>
+<script type="text/javascript" src="//static.four33.com/event/common/js/webevent/ftt.jquery.modalLayer.0.3.min.js"></script>
+<script type="text/javascript" src="//static.four33.com/event/game/monstersl/ingame/common/js/commonLang.js"></script>
+<script type="text/javascript" src="//static.four33.com/event/game/monstersl/ingame/171115_point/js/evLang.min.js"></script>
+<script type="text/javascript">
+  var quest = $('#container'),
+    usePoint =4500,                // 사용 가능 포인트
+    evIng = 2,                        // 일일 뽑기 횟수 Count
+    evMax = 3,                      // 일일 뽑기 횟수 Max
+    questStatus = [0, 2, 3],    // 미션 상태 값 ( 0 / 2 / 3 )
+    questIng = [100, 100, 100],
+    questMax = [500, 2000, 4500],
+    langLayout = evLang( $('#fWrap').attr('class') ),     // 이벤트 사용언어
+    langLayer = commonLang( $('#fWrap').attr('class') ),  // 공통사용(레이어) 언어
+    questData = {
+      questIng: questIng,
+      questMax: questMax,
+      questStatus: questStatus,
+      otherItem:{
+        btnName:{
+          target: $('#fWrap li .btn'),
+          once: true,
+          value: langLayout.btnName
+        },
+        upoint: {
+          target: $('#event1 .use'),
+          value: addComma(usePoint)
+        },
+        pointIng: {
+          target: $('#event1 .status .now'),
+          value: evIng
+        },
+        pointMax: {
+          target: $('#event1 .status .max'),
+          value: evMax
+        }
+      }
+    };
+
+  // func addComma
+  function addComma(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+  // 초기실행
+  $(quest).webEventUI(questData, langLayout);
+
+  // layout
+  (function(){
+    if(evIng >= evMax){
+      $('#event1 .status .now').text(evMax);
+    }
+    // 선물받기
+    if ( usePoint >= 100 && evIng < 3 ) {
+      $('#event1').addClass("ready");
+    }
+  })();
+
+  // 뽑기
+  $("#container").on("click", "#event1.ready .btn", function(){
+    $("#event1.ready").removeClass("ready").addClass('loading');
+
+    if (!$(this).hasClass('disabled')){   // 중복 클릭 방지
+      $(this).addClass('disabled');
+      setTimeout(function() {
+        // 레이어 출력
+        if (1){
+          
+          // ## 메세지 표시후 refresh만 필요한 경우
+          modalLayer.openLayer(layerMsg.success, 'refresh');
+
+          // ## 메세지 표시후 redirect필요한 경우
+          //modalLayer.openLayer(layerMsg.success, {type:'redirect', url:'http://www.naver.com'});
+
+          // ## 아이템명이 표시되어야하는 경우 아래처럼 호출해주세요.
+          //modalLayer.openLayer("<p class='item'><strong>\"아이템명\"</strong><br/>보상이 지급되었습니다.<br/><span>서신함을 확인해 주세요.</span></p>", 'refresh');
+
+        }else if (0){
+          modalLayer.openLayer(layerMsg.fail, 'refresh');
+        }else{
+          modalLayer.openLayer(layerMsg.error, 'refresh');
+        }
+        // 통신 성공 후
+        $("#event1.ready").removeClass('loading');
+      }, 2000);
+    }
+  });
+
+  // 보상수령
+  $('#container').on('click','li.ready .btn',function () {
+    var questNum = $(this).closest('li').attr('quest-num'),   // quest-num 속성 값
+      isDisabled = $(this).hasClass('disabled');
+
+    $(this).addClass('disabled');
+    if ( !isDisabled ) {
+      modalLayer.openLayer('success', 'normal', langLayer);  // 보상획득
+      /*
+       modalLayer.openLayer('fail', 'normal', langLayer);     // 지급실패
+       modalLayer.openLayer('error', 'normal', langLayer);    // 비정상 접근
+       */
+      // 새로고침 미사용 시 레이아웃 새로 그림(값 갱신 필요)
+      $(quest).webEventUI(questData, langLayout);
+    }
+    $('#fWrap li .btn').removeClass('disabled');
+  });
+
+</script>
+
+
+
+
+
+
+<!-- ################ -->
+<!-- 확인 후 삭제해주세요 -->
+<script>
+$(document).ready(function(){ 
+    // 다국어 테스트
+    $('.test button').on('click', function () {
+      var btnFnc = $(this).attr('data-fnc');
+      var langType = $(this).attr('lang-data');
+      if(langType) {
+        langLayout = evLang(langType);
+        langLayer = commonLang(langType);
+        questData.otherItem.btnName.target = $('#container li .btn');
+        questData.otherItem.btnName.once = true;
+        questData.otherItem.btnName.value = langLayout.btnName;
+        $('.test button').removeClass('active');
+        $(this).addClass('active');
+        $('#fWrap').attr('class', langType);
+        $(quest).webEventUI(questData, langLayout);
+      }
+      if(btnFnc){
+        $('.test button[data-fnc]').removeClass('active');
+        $(this).addClass('active');
+        $('#event1, .quest li').removeClass('ready end').addClass(btnFnc);
+      }
+    });
+});
+</script>
+<style>
+  .test{position:fixed;right:0;top:120px;z-index:10;}
+  .test button{display:block;width:120px;padding:10px 0;border-right:2px solid #000;border-bottom:2px solid #000;margin-bottom:5px;color:#000;font-size:13px;text-align:center;background:#ccc}
+  .test button.active{font-weight:bold;background:#666;color:#000;}
+  .test br { font-size:12px;}
+</style>
+
+<div class="test">
+  <button class="lang_ko" type="button" lang-data="ko">한국어</button>
+  <button class="lang_en" type="button" lang-data="en">영어</button>
+  <button class="lang_ja" type="button" lang-data="ja">일본어</button>
+  <button class="lang_th" type="button" lang-data="th">태국어</button>
+  <button class="lang_zh-CN" type="button" lang-data="zh-CN">중국어 - 간체</button>
+  <button class="lang_zh-TW" type="button" lang-data="zh-TW">중국어 - 번체</button>
+  <br/><br/>
+  <button data-fnc="reset" type="button">초기화</button>
+  <button data-fnc="ready" type="button">보상받기</button>
+  <button data-fnc="end" type="button">지급완료</button>
+</div>
+  <!-- // 확인 후 삭제해주세요 -->
+<!-- ################ -->
+
+</body>
+</html>

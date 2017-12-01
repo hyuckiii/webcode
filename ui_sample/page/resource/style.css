@@ -1,0 +1,108 @@
+.cbp-caption-activeWrap { padding:20px 0;}
+.cbp-l-caption-body { position:relative;}
+.page-view { position:absolute;width:20px;height:20px;right:12px;bottom:-4px;background:url('img/ico-link-s.png') no-repeat;background-size:45px 20px;margin-top:-10px;}
+.new-window { position:absolute;width:20px;height:20px;right:12px;bottom:-4px;background:url('img/ico-link-s.png') no-repeat;background-size:45px 20px;background-position:-25px -0;margin-top:-10px;}
+.cbp-tech-desc { color:#aaa;font:400 11px/16px "Noto Sans", sans-serif;}
+
+.cbp-browser-support { padding-top:12px;opacity:0.6;}
+.cbp-browser-support span { display:inline-block;vertical-align:top;width:26.5px;height:26px;background:url('img/ico-browser.png') no-repeat;background-size:271px 52px;overflow:hidden;text-indent:-99em;}
+.cbp-browser-support span.chrome { background-position:0 0;}
+.cbp-browser-support span[disable].chrome { background-position:0 -26px;}
+.cbp-browser-support span.iexploer { background-position:-70px 0;}
+.cbp-browser-support span[disable].iexploer { background-position:-70px -26px;}
+.cbp-browser-support span.safari { background-position:-35px 0;}
+.cbp-browser-support span[disable].safari { background-position:-35px -26px;}
+.cbp-browser-support span.firefox { background-position:-105px 0;}
+.cbp-browser-support span[disable].firefox { background-position:-105px -26px;}
+.cbp-browser-support span.opera { background-position:-140px 0;}
+.cbp-browser-support span[disable].opera { background-position:-140px -26px;}
+.cbp-browser-support span.ie9 { background-position:-175px 0;}
+.cbp-browser-support span[disable].ie9 { background-position:-175px -26px;}
+.cbp-browser-support span.ie10 { background-position:-210px 0;}
+.cbp-browser-support span[disable].ie10 { background-position:-210px -26px;}
+.cbp-browser-support span.ie11 { background-position:-245px 0;}
+.cbp-browser-support span[disable].ie11 { background-position:-245px -26px;}
+
+.cbp-device { position:absolute;right:12px;top:-12px;}
+.cbp-device span { display:inline-block;vertical-align:top;height:29.75px;background:url('img/ico-mobile.png') no-repeat;background-size:50px  59.5px;overflow:hidden;text-indent:-99em;}
+.cbp-device span.pc { width:30.75px;background-position:0 0;}
+.cbp-device span[disable].pc { background-position:0 -29.75px;opacity:0.5;}
+.cbp-device span.mobile { width:17px;background-position:-33px 0;}
+.cbp-device span[disable].mobile { background-position:-33px -29.75px;opacity:0.5;}
+
+.cbp-note{display:none}
+
+.cbp-popup-next,
+.cbp-popup-prev { display:none !important;}
+
+.wb-center { position:relative;}
+span.help-icon { position:fixed;left:50%;top:50px;width:50px;height:50px;background:url('img/ico-help.png') no-repeat;background-size:50px 50px;margin-left:45%;display:block;text-indent:-99em;overflow:hidden;cursor:pointer;z-index:100;}
+
+.overlay { position:fixed;width:100%;height:100%;background-color:#000;z-index:200;opacity:0.7;overflow:hidden;display:none;}
+.help-layer { position:fixed;top:50%;left:50%;width:743px;height:667px;background:url('img/img-help-bg.png') 50% 50% no-repeat;z-index:201;margin-left:-371.5px;margin-top:-333.5px;display:none;} 
+.help-layer span.ani { position:absolute;width:268px;height:277px;
+  opacity:0;
+  animation-duration: 1.2s;
+  animation-name: fadein;
+  animation-fill-mode: forwards;
+  cursor:pointer;
+}
+.help-layer .info { left:0px;top:38px;background:url('img/img-help-info.png')  no-repeat;
+  animation-delay: 0.6s;
+}
+.help-layer .device { right:-12px;top:0px;background:url('img/img-help-device.png') no-repeat;
+  animation-delay: 1.6s;
+}
+.help-layer .link { right:-12px;bottom:-10px;background:url('img/img-help-link.png') no-repeat;
+  animation-delay: 2.6s;
+}
+.help-layer .browser { left:0px;bottom:0px;background:url('img/img-help-browser.png') no-repeat;
+  animation-delay: 3.6s;
+}
+
+
+
+
+@keyframes fadein{
+    0% { opacity:0;transform: scale(0.1);}
+    66% { opacity:1;transform: scale(1.2);}
+    100% { opacity:1;transform: scale(1);}
+}
+.help-layer button.close { position:absolute;left:48%;top:30%;display:block;border:0;outline:0;width:30px;height:30px;background:url('img/icon-close.png') no-repeat;text-indent:-99em;overflow:hidden;cursor:pointer;opacity:0.4}
+
+/* .form_checkbox */
+.form_checkbox { position:absolute;left:40%;bottom:180px;width:20px;margin:20px auto;}
+.form_checkbox label {width:20px;height:20px;cursor:pointer;position:absolute;top:0;left:0;
+	background:#fcfff4;
+	background:-webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background:linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	border-radius:4px;box-shadow:inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.form_checkbox label:after {content:'';width:12px;height:8px;position:absolute;top:4px;left:4px;border:3px solid red;border-top:none;border-right:none;background:transparent;opacity:0;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);}
+.form_checkbox label:hover::after {opacity:0.5;}
+.form_checkbox label:before { content:'다음번에 표시하지 않음';color:#fff;width:250px;position:absolute;left:25px;top:2px;font-size:14px;}
+.form_checkbox input[type=checkbox] {visibility:hidden;}
+.form_checkbox input[type=checkbox]:checked + label:after {opacity:1;}
+
+/* .cbp-popup-singlePage */
+.cbp-popup-singlePage{}
+.cbp-popup-singlePage .cbp-popup-content{position:relative;width:1024px;padding:145px 0 20px 0;margin:0 auto}
+.cbp-popup-singlePage .cbp-popup-content .title .cbp-l-caption-title{display:block;margin-bottom:30px;padding:20px;border-bottom:2px solid #AAD6F9;color: #333;font-size:30px;background:none repeat scroll 0 0 #E7E7E7;}
+
+.cbp-popup-singlePage .cbp-popup-content .content{float:left;position:relative;width:700px;margin-bottom:50px;box-shadow:0 0 10px #999;font-size:0}
+.cbp-popup-singlePage .cbp-popup-content .content iframe{width:100%;padding:0;margin:0px 0}
+.cbp-popup-singlePage .cbp-popup-content .content img{width:100%;height:auto}
+.cbp-popup-singlePage .cbp-popup-content .content .new-window{right:16px;bottom:15px;width:40px;height:40px;background-position:right top;background-size:auto}
+
+.cbp-popup-singlePage .cbp-popup-content .info{float:right;width:300px}
+.cbp-popup-singlePage .cbp-popup-content .info ul{}
+.cbp-popup-singlePage .cbp-popup-content .info ul li{position:relative;padding:12px 0 12px 100px;border-bottom:1px solid #ccc}
+.cbp-popup-singlePage .cbp-popup-content .info ul li.browser{padding-top:0}
+.cbp-popup-singlePage .cbp-popup-content .info ul li.browser span{margin-right:5px;}
+.cbp-popup-singlePage .cbp-popup-content .info ul li strong.tit{position:absolute;left:0;top:50%;height:16px;margin-top:-8px;font:600 12px/16px "Noto Sans", sans-serif;color:#696969}
+.cbp-popup-singlePage .cbp-popup-content .info .cbp-l-caption-desc{}
+.cbp-popup-singlePage .cbp-popup-content .info .cbp-tech-desc{}
+.cbp-popup-singlePage .cbp-popup-content .info .cbp-browser-support{font-size:0}
+.cbp-popup-singlePage .cbp-popup-content .info .cbp-device{}
+.cbp-popup-singlePage .cbp-popup-content .note{float:left;width:100%;padding:10px;color:#555;font-size:13px;line-height:20px}
+.cbp-popup-singlePage .cbp-popup-content .note .cbp-note{display:block;}

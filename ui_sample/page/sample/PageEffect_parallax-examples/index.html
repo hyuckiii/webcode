@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Parallax.js | Simple Example</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<body>
+
+
+
+<link rel="stylesheet" type="text/css" href="resource/styles.css"/>
+<style>
+  .container { margin:0px auto; max-width:640px;font-family:'Malgun Gothic', '막은 고딕', sans-serif;color:#666;}
+</style>
+<div class="container" style="min-height:710px;">
+  <h1>Parallax.js Simple Example</h1>
+	<div id="container" class="container">
+		<ul id="scene" class="scene">
+			<li class="layer" data-depth="1.00"><img src="resource/layer1.png"></li>
+			<li class="layer" data-depth="0.80"><img src="resource/layer2.png"></li>
+			<li class="layer" data-depth="0.60"><img src="resource/layer3.png"></li>
+			<li class="layer" data-depth="0.40"><img src="resource/layer4.png"></li>
+			<li class="layer" data-depth="0.20"><img src="resource/layer5.png"></li>
+			<li class="layer" data-depth="0.00"><img src="resource/layer6.png"></li>
+		</ul>
+	</div>
+	<script src="resource/parallax.js"></script>
+	<script>
+	var scene = document.getElementById('scene');
+	var parallax = new Parallax(scene);
+	</script>
+
+
+
+
+</body>
+</html>

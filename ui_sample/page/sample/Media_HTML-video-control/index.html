@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="kr">
+<head>
+<meta charset="utf-8">
+<title>HTML5 Video</title>
+</head>
+<body>
+
+
+<style>
+  .container { margin:0px auto; max-width:640px;font-family:'Malgun Gothic', '막은 고딕', sans-serif;color:#666;}
+</style>
+<div id="fWrap" style="min-height:3560px;">
+  <h1>HTML5 Video Events and API</h1>
+<!--   
+  http://www.w3.org/TR/html5/embedded-content-0.html#the-video-element
+  http://www.w3.org/TR/html5/embedded-content-0.html#htmlmediaelement
+  http://www.w3.org/TR/html5/embedded-content-0.html#mediaevents
+-->
+
+  <link href="resource/style.css" rel="stylesheet" type="text/css">
+  <script src="resource/script.js"></script>
+  <div class="container">
+    <div id="sectionVideo">
+      <video id="video" controls="" preload="none" mediagroup="myVideoGroup" poster="resource/poster.png" width="0" height="0">
+        <source id="webm" src="http://media.w3.org/2010/05/video/movie_300.webm" type="video/webm">
+        <source id="mp4" src="http://media.w3.org/2010/05/video/movie_300.mp4" type="video/mp4">
+        <source id="ogv" src="https://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg">
+        <p>Your user agent does not support the HTML5 Video element.</p>
+      </video>
+    </div>
+    <div id="buttons" class="btn-design">
+      <button onclick="getController().load()">로드</button>
+      <button onclick="getController().play()">재생</button>
+      <button onclick="getController().pause()">정지</button><br>
+      <button onclick="getController().currentTime+=10">10초 다음</button>
+      <button onclick="getController().currentTime-=10">10초 전</button>
+      <button onclick="getController().currentTime=50">50초 재생</button><br>
+      <button onclick="getController().playbackRate++">빠르게재생</button>
+      <button onclick="getController().playbackRate--">느리게재생</button>
+      <button onclick="getController().playbackRate+=0.1">0.1배 빠르게</button>
+      <button onclick="getController().playbackRate-=0.1">0.1배 느리게</button><br>
+      <button onclick="getController().volume+=0.1">볼륨증가</button>
+      <button onclick="getController().volume-=0.1">볼륨축소</button>
+      <button onclick="getController().muted=true">무음</button>
+      <button onclick="getController().muted=false">무음 해제</button>
+    </div>
+    <div id="movie-list" class="btn-design">
+      <button onclick="switchVideo(0);" class="mov">Sintel teaser 영상보기</button>
+      <button onclick="switchVideo(1);">Bunny trailer 영상보기</button>
+      <button onclick="switchVideo(2);">Bunny movie 영상보기</button>
+      <button onclick="switchVideo(3);">Test movie 영상보기</button>
+    </div>
+
+    <br/><br/>
+    <h2>Media Events</h2>
+    <table>
+       <tbody id="events">
+          <tr>
+             <th>loadstart</th>
+             <td id="e_loadstart" class="true">6</td>
+             <th>progress</th>
+             <td id="e_progress" class="true">47</td>
+             <th>suspend</th>
+             <td id="e_suspend" class="true">37</td>
+          </tr>
+          <tr>
+             <th>abort</th>
+             <td id="e_abort" class="true">5</td>
+             <th>error</th>
+             <td id="e_error" class="false">0</td>
+             <th>emptied</th>
+             <td id="e_emptied" class="true">5</td>
+          </tr>
+          <tr>
+             <th>stalled</th>
+             <td id="e_stalled" class="false">0</td>
+             <th>loadedmetadata</th>
+             <td id="e_loadedmetadata" class="true">6</td>
+             <th>loadeddata</th>
+             <td id="e_loadeddata" class="true">6</td>
+          </tr>
+          <tr>
+             <th>canplay</th>
+             <td id="e_canplay" class="true">12</td>
+             <th>canplaythrough</th>
+             <td id="e_canplaythrough" class="true">12</td>
+             <th>playing</th>
+             <td id="e_playing" class="true">7</td>
+          </tr>
+          <tr>
+             <th>waiting</th>
+             <td id="e_waiting" class="true">4</td>
+             <th>seeking</th>
+             <td id="e_seeking" class="true">17</td>
+             <th>seeked</th>
+             <td id="e_seeked" class="true">6</td>
+          </tr>
+          <tr>
+             <th>ended</th>
+             <td id="e_ended" class="true">2</td>
+             <th>durationchange</th>
+             <td id="e_durationchange" class="true">6</td>
+             <th>timeupdate</th>
+             <td id="e_timeupdate" class="true">46</td>
+          </tr>
+          <tr>
+             <th>play</th>
+             <td id="e_play" class="true">6</td>
+             <th>pause</th>
+             <td id="e_pause" class="true">4</td>
+             <th>ratechange</th>
+             <td id="e_ratechange" class="false">0</td>
+          </tr>
+          <tr>
+             <th>resize</th>
+             <td id="e_resize" class="true">6</td>
+             <th>volumechange</th>
+             <td id="e_volumechange" class="false">0</td>
+          </tr>
+       </tbody>
+    </table>
+
+
+    <h2>Media Properties</h2>
+    <table>
+       <tbody id="properties">
+          <tr>
+             <th>error</th>
+             <td id="p_error" class="true"></td>
+          </tr>
+          <tr>
+             <th>src</th>
+             <td id="p_src" class="true"></td>
+          </tr>
+          <tr>
+             <th>srcObject</th>
+             <td id="p_srcObject" class="true"></td>
+          </tr>
+          <tr>
+             <th>currentSrc</th>
+             <td id="p_currentSrc" class="true">http://media.w3.org/2010/05/video/movie_300.webm</td>
+          </tr>
+          <tr>
+             <th>crossOrigin</th>
+             <td id="p_crossOrigin" class="true"></td>
+          </tr>
+          <tr>
+             <th>networkState</th>
+             <td id="p_networkState" class="true">1</td>
+          </tr>
+          <tr>
+             <th>preload</th>
+             <td id="p_preload" class="true">none</td>
+          </tr>
+          <tr>
+             <th>buffered</th>
+             <td id="p_buffered" class="true">[object TimeRanges]</td>
+          </tr>
+          <tr>
+             <th>readyState</th>
+             <td id="p_readyState" class="true">4</td>
+          </tr>
+          <tr>
+             <th>seeking</th>
+             <td id="p_seeking" class="true">false</td>
+          </tr>
+          <tr>
+             <th>currentTime</th>
+             <td id="p_currentTime" class="true">102.472065</td>
+          </tr>
+          <tr>
+             <th>duration</th>
+             <td id="p_duration" class="true">300.016</td>
+          </tr>
+          <tr>
+             <th>paused</th>
+             <td id="p_paused" class="true">true</td>
+          </tr>
+          <tr>
+             <th>defaultPlaybackRate</th>
+             <td id="p_defaultPlaybackRate" class="true">1</td>
+          </tr>
+          <tr>
+             <th>playbackRate</th>
+             <td id="p_playbackRate" class="true">1</td>
+          </tr>
+          <tr>
+             <th>played</th>
+             <td id="p_played" class="true">[object TimeRanges]</td>
+          </tr>
+          <tr>
+             <th>seekable</th>
+             <td id="p_seekable" class="true">[object TimeRanges]</td>
+          </tr>
+          <tr>
+             <th>ended</th>
+             <td id="p_ended" class="true">false</td>
+          </tr>
+          <tr>
+             <th>autoplay</th>
+             <td id="p_autoplay" class="true">false</td>
+          </tr>
+          <tr>
+             <th>loop</th>
+             <td id="p_loop" class="true">false</td>
+          </tr>
+          <tr>
+             <th>mediaGroup</th>
+             <td id="p_mediaGroup" class="false"></td>
+          </tr>
+          <tr>
+             <th>controller</th>
+             <td id="p_controller" class="false"></td>
+          </tr>
+          <tr>
+             <th>controls</th>
+             <td id="p_controls" class="true">true</td>
+          </tr>
+          <tr>
+             <th>volume</th>
+             <td id="p_volume" class="true">1</td>
+          </tr>
+          <tr>
+             <th>muted</th>
+             <td id="p_muted" class="true">false</td>
+          </tr>
+          <tr>
+             <th>defaultMuted</th>
+             <td id="p_defaultMuted" class="true">false</td>
+          </tr>
+          <tr>
+             <th>audioTracks</th>
+             <td id="p_audioTracks" class="false"></td>
+          </tr>
+          <tr>
+             <th>videoTracks</th>
+             <td id="p_videoTracks" class="false"></td>
+          </tr>
+          <tr>
+             <th>textTracks</th>
+             <td id="p_textTracks" class="true">[object TextTrackList]</td>
+          </tr>
+          <tr>
+             <th>width</th>
+             <td id="p_width" class="true">0</td>
+          </tr>
+          <tr>
+             <th>height</th>
+             <td id="p_height" class="true">0</td>
+          </tr>
+          <tr>
+             <th>videoWidth</th>
+             <td id="p_videoWidth" class="true">320</td>
+          </tr>
+          <tr>
+             <th>videoHeight</th>
+             <td id="p_videoHeight" class="true">240</td>
+          </tr>
+          <tr>
+             <th>poster</th>
+             <td id="p_poster" class="true">http://media.w3.org/2010/05/video/poster.png</td>
+          </tr>
+       </tbody>
+    </table>
+
+    <h2>MediaController Events</h2>
+    <table>
+      <caption></caption>
+      <tbody id="mc_events">
+      <tr><td>Not implemented</td></tr></tbody>
+    </table>
+
+    <h2>MediaController Properties</h2>
+    <table>
+      <tbody id="mc_properties">
+      <tr><td>Not implemented</td></tr></tbody>
+    </table>
+
+    <h2>CanPlayType</h2>
+    <table id="canPlayType">
+      <tbody id="m_video">
+      <tr>
+        <th>video/mp4</th>
+        <th>video/webm</th>
+       </tr>
+       <tr>
+        <td class="true">"maybe"</td>
+        <td class="true">"maybe"</td>
+       </tr>
+      </tbody>
+    </table>
+  
+    <h2>Tracks</h2>
+    <table id="tracks">
+      <tbody>
+    <tr>
+      <th>Audio</th>
+      <th>Video</th>
+      <th>Text</th>
+    </tr>
+    <tr>
+      <td id="m_audiotracks" class="false">?</td>
+      <td id="m_videotracks" class="false">?</td>
+      <td id="m_texttracks" class="true">0</td>
+    </tr>
+    </tbody>
+    </table>
+  </div><!-- //container -->
+
+
+
+
+</div>
+
+
+
+</body>
+</html>

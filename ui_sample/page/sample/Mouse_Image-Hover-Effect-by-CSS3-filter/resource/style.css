@@ -1,0 +1,18 @@
+  * { margin: 0; padding: 0;}
+  #gallery {clear:both;position:relative;width: 100%;margin: 25px auto;overflow:hidden;}
+  #gallery a {display: block;float: left;margin-bottom: 25px;position: relative;
+    -webkit-box-shadow: 0 2px 15px 1px rgba(0, 0, 0, 0.5);-moz-box-shadow: 0 2px 15px 1px rgba(0, 0, 0, 0.5);box-shadow: 0 2px 15px 1px rgba(0, 0, 0, 0.5);}
+  #gallery a:nth-child(2n+2) {margin: 0 25px 25px 25px;}
+  #gallery a img {display: block;-webkit-transition: all 0.5s;}
+  #gallery a img:hover {-webkit-filter: none;}
+  #gallery a img.brightness:hover {-webkit-filter: brightness(0);}
+  .title {color: #fff;font-size: 13px;font-weight: bold;position: absolute;left: 0;bottom: 15px;z-index: 1;padding: 5px 7px;background: rgba(0, 0, 0, 0.6);}
+  .saturate {-webkit-filter: saturate(3);}
+  .grayscale {-webkit-filter: grayscale(100%);}
+  .contrast {-webkit-filter: contrast(160%);}
+  .brightness {-webkit-filter: brightness(0.25);}
+  .blur {-webkit-filter: blur(3px);}
+  .invert {-webkit-filter: invert(100%);}
+  .sepia {-webkit-filter: sepia(100%);}
+  .huerotate {-webkit-filter: hue-rotate(180deg);}
+  .opacity {-webkit-filter: opacity(50%);}

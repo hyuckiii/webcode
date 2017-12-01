@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <title>4:33 포인트사이트</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/bootstrap-expend.min.css" rel="stylesheet">
+  <link href="../css/ui.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="../js/jquery-1.11.3.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/bootstrap-expend.js"></script>
+  <script src="../js/jquery.expend.js"></script>
+  <script src="../js/ui.js"></script>
+</head>
+<body>
+<div id="fWrap">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 ftt-header-main"><!-- subpage class -->
+        <nav class="navbar navbar-default navbar-fixed-top ftt-navbar" role="navigation">
+          <div class="ftt-navbar-wrap">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+              <a class="navbar-brand" href="#"><img src="../images/common/logo-play433-s.png" alt="play 4:33 point"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav ftt-menu">
+               <li ><a href="#">계정/등업관리</a></li>
+               <li class="active"><a href="#">포인트지급관리</a></li>
+               <li ><a href="#">상품지급관리</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right ftt-navbar-fnc">
+                <!-- 관리자 권한 부여시 노출 -->
+                <li class="dropdown">
+                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">사용자메뉴<strong class="caret"></strong></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">소개</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                    <li><a href="#">포인트상품</a></li>
+                  </ul>
+                </li>
+                <!-- //관리자 권한 부여시 노출 -->
+                <li><a href="#">로그아웃</a></li>
+                <li><a href="#">내정보변경</a></li>
+                <li><a href="mailto:someone@433.co.kr?subject=4:33포인트 문의"  target="_top" title="someone@433.co.kr">문의</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div><!-- //row -->
+  </div><!-- //container-fluid -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="ftt-pointis">
+          <h1>포인트 지급관리</h1>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="ftt-pointadmin-wrap">
+                <ul class="nav nav-tabs ftt-tabs">
+                  <li ><a data-toggle="tab" href="#home">매월 포인트</a></li>
+                  <li ><a data-toggle="tab" href="#menu1">생일 포인트</a></li>
+                  <li class="active"><a data-toggle="tab" href="#home">개별지급/회수</a></li>
+                </ul>
+                <div class="tab-content">
+                  <div id="home" class="tab-pane fade in active">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="search-opt text-left">
+                          <h2>해당 월</h2>
+                          <div class="datepicker-wrap">
+                            <div class="date-wrap">
+                              <div class="input-group date ftt-datepicker ftt-mm">
+                                <input type="text" class="form-control" value="2017-03"><span class="input-group-addon"><span class="ico ico-cal">달력선택</span></span>
+                              </div>
+                            </div>
+                          </div><!-- //datepicker-wrap -->
+                          <button type="button" class="btn btn-primary btn-md">조회</button>
+                        </div><!-- //search-opt -->
+                      </div><!-- //col-md-12 -->
+                    </div>
+                    <div class="ftt-account-wrap">
+                      <div class="list-fnc">
+                        <button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#point-each-add">개별지급</button>
+                        <button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#point-each-return">개별회수</button>
+                      </div><!-- list-fnc -->
+                      <div class="tit-select">
+                        <h3>총 5명</h3>
+                      </div>
+                      <table id="example" class="table ftt-table ftt-admin-each "><!-- no-data ##필수## Dev Request 신청내역 없을때 꼭 "no-data" 클래스 추가해주세요. -->
+                        <colgroup>
+                          <col width="25%">
+                          <col width="*%">
+                          <col width="20%">
+                          <col width="20%">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th class="text-center">이름</th>
+                            <th class="text-center">내용</th>
+                            <th class="text-center">포인트</th>
+                            <th class="text-center">포인트 지급일</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="text-center">정이랑</td>
+                            <td class="">추천 포인트</td>
+                            <td class="text-center"><span class="add">+1300P</span></td>
+                            <td class="text-center"><span class="date">2017.02.05</span></td>
+                          </tr>
+                          <tr>
+                            <td class="text-center">한비광</td>
+                            <td class="">추천 포인트</td>
+                            <td class="text-center"><span class="add">+1330P</span></td>
+                            <td class="text-center"><span class="date">2017.02.05</span></td>
+                          </tr>
+                          <tr>
+                            <td class="text-center">정사랑</td>
+                            <td class="">사내테스트</td>
+                            <td class="text-center"><span class="add">+1230P</span></td>
+                            <td class="text-center"><span class="date">2017.02.05</span></td>
+                          </tr>
+                          <tr>
+                            <td class="text-center">정사우</td>
+                            <td class="">사내테스트</td>
+                            <td class="text-center"><span class="add">+230P</span></td>
+                            <td class="text-center"><span class="date">2017.02.05</span></td>
+                          </tr>
+                          <tr>
+                            <td class="text-center">사삼삼</td>
+                            <td class="">지급오류</td>
+                            <td class="text-center"><span class="remove">-1330P</span></td>
+                            <td class="text-center"><span class="date">2017.02.01</span></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div><!-- //ftt-mypoint-list-wrap -->
+                    <script>
+                    $(document).ready(function() {
+                        $('#example').DataTable({
+                          order: [[ 1, "desc" ]],
+                          info: false,
+                          paging: false,
+                          searching: false
+                        });
+                    } );
+                    </script>
+
+
+                  </div>
+                  <!-- div id="menu1" class="tab-pane fade">
+
+                  
+                  </div -->
+                  <!-- div id="menu2" class="tab-pane fade">
+
+                  
+                  </div -->
+                </div>
+              </div><!-- //ftt-mypoint-wrap -->
+            </div><!-- //col -->
+          </div>
+
+        </div><!-- //ftt-pointis -->
+
+      </div><!-- //col -->
+    </div><!-- //row -->
+  </div><!-- //container -->
+</div><!-- #fWrap -->
+<div class="container-fluid ftt-footer">
+  <div class="row">
+    <div class="col-md-12">
+      <p>Copyright © 4:33 Creative Lab. All Rights Reserved.</p>          
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="point-each-add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="blind">close</span></button>
+        <h4 class="modal-title" id="myModalLabel">계정등록</h4>
+      </div>
+      <div class="modal-body">
+        <div class="ftt-account-form">
+          <dl>
+            <dt>이름</dt>
+            <dd><input type="text" class="form-control size-md" /><span class="ico-plus">추가</span></dd>
+          </dl>
+          <dl>
+            <dt>내용</dt>
+            <dd><input type="text" class="form-control size-md" /></dd>
+          </dl>
+          <dl>
+            <dt>포인트</dt>
+            <dd><input type="text" class="form-control size-md" /></dd>
+          </dl>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-popup" data-dismiss="modal">지급</button>
+      </div>
+    </div><!-- //modal-content -->
+  </div><!-- //modal-dialog -->
+</div><!-- //modal -->
+
+<div class="modal fade" id="point-each-return" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="blind">close</span></button>
+        <h4 class="modal-title" id="myModalLabel">계정등록</h4>
+      </div>
+      <div class="modal-body">
+        <div class="ftt-account-form">
+          <dl>
+            <dt>이름</dt>
+            <dd><input type="text" class="form-control size-md" /><span class="ico-plus">추가</span></dd>
+          </dl>
+          <dl>
+            <dt>내용</dt>
+            <dd><input type="text" class="form-control size-md" /></dd>
+          </dl>
+          <dl>
+            <dt>포인트</dt>
+            <dd><input type="text" class="form-control size-md" /></dd>
+          </dl>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-popup" data-dismiss="modal">회수</button>
+      </div>
+    </div><!-- //modal-content -->
+  </div><!-- //modal-dialog -->
+</div><!-- //modal -->
+
+<script>
+//UI 예시를 위하여 넣었습니다. 필요에 따라 삭제, 추가해주세요.
+$(document).ready(function(){
+    $(".ftt-account-form span.ico-plus").on("click",function() {
+      var morepeple = '<dl class="more-people">'+
+            '<dt></dt>'+
+            '<dd><input type="text" class="form-control size-md" /></dd>'+
+          '</dl>';
+      var addobj = $(this).closest("dl");
+      $(morepeple).clone().insertAfter(addobj);
+    });
+
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>datedropper jQuery UI datepicker plugin</title>
+</head>
+<body style="min-height:560px;">
+
+
+
+<link href="resource/datedropper.css" type="text/css" rel="stylesheet">
+<link href="resource/style.css" type="text/css" rel="stylesheet">
+<style>
+    .container { margin:0px auto; max-width:640px;font-family:'Malgun Gothic', '막은 고딕', sans-serif;color:#666;}
+</style>
+<div class="container">
+    <h1>UIO - DateDropper</h1>
+    <ul class="r slider text-center">
+        <li>
+            <div class="phone">
+                <div class="scrn rel">
+                    <h6 class="r f x1 mb16">Flight booking</h6> <input type="text" class="r input full datedropper" data-large-mode="true" placeholder="Try it yourself!" data-translate-mode="true" />
+                    <div class="ill" id="ill1"> <img onload="get_img_src(this,'http://felicegattuso.com/projects/datedropper/src/imgs/booking@1x.png',287)" class="mb8" data-parallax="-0.1" /> </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="phone">
+                <div class="scrn rel">
+                    <h6 class="r f x1 mb16">Online payments</h6> <input type="text" class="r input short datedropper" placeholder="Try it yourself!" data-format="m" data-translate-mode="true" /> <input type="text" class="r input short datedropper" placeholder="Try it yourself!" data-format="Y" data-min-year="2016" data-max-year="2030" />
+                    <div class="ill" id="ill1"> <img onload="get_img_src(this,'http://felicegattuso.com/projects/datedropper/src/imgs/credit-card@1x.png',340)" class="mb8" data-parallax="-0.1" /> </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="phone">
+                <div class="scrn rel">
+                    <h6 class="r f x1 mb16">Social integrations</h6> <input type="text" class="r input full datedropper" placeholder="Try it yourself!" data-translate-mode="true" data-modal="true" data-large-default="true" data-large-mode="true" />
+                    <div class="ill" id="ill1"> <img onload="get_img_src(this,'http://felicegattuso.com/projects/datedropper/src/imgs/profile-page@1x.png',275)" class="mb8" data-parallax="-0.1" /> </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<script src="https://static.four33.co.kr/event/common/js/jquery-1.8.1.min.js"></script>
+<script src="resource/datedropper.min.js"></script>
+<script src="resource/site.js"></script>
+
+
+
+
+</body>
+
+</html>

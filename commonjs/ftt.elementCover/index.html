@@ -1,0 +1,33 @@
+﻿<!doctype html>
+<html class="no-js" lang="ko">
+<head>
+<title>element cover(like background-size:cover)</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="http://img.four33.co.kr/event/common/js/jquery-1.8.1.min.js"></script>
+<style>
+*{margin:0;padding:0;list-style:none}
+html,body{overflow:hidden;width:100%;height:100%}
+#wrap{position:relative;overflow:hidden;width:100%;height:500px;border-top:2px solid #CCC;border-bottom:2px solid #CCC;margin-top:100px;}
+</style>
+</head>
+
+<body>
+<div id="fWrap">
+  <div id="wrap">
+    <iframe id="videoMain" width="2560" height="1193" src="https://www.youtube.com/embed/AihdAyp5VFw?autoplay=1&showinfo=0&controls=0&modestbranding=0&loop=1&wmode=transparent&enablejsapi=1&playlist=AihdAyp5VFw" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+<!-- // #fWrap -->
+
+<script src="js/cover.js"></script>
+<script type="text/javascript">
+$('#videoMain').cover({
+  parentsEle: $('#wrap')    // 입력하지 않을 경우 대상의 부모 'div'를 선택
+})
+
+</script>
+
+</body>
+
+</html>

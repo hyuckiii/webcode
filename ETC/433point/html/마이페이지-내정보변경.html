@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <title>4:33 포인트사이트</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/bootstrap-expend.min.css" rel="stylesheet">
+  <link href="../css/ui.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="../js/jquery-1.11.3.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/bootstrap-expend.js"></script>
+  <script src="../js/jquery.expend.js"></script>
+  <script src="../js/ui.js"></script>
+</head>
+<body>
+<div id="fWrap">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 ftt-header-main"><!-- subpage class -->
+        <nav class="navbar navbar-default navbar-fixed-top ftt-navbar" role="navigation">
+          <div class="ftt-navbar-wrap">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+              <a class="navbar-brand" href="#"><img src="../images/common/logo-play433-s.png" alt="play 4:33 point"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav ftt-menu">
+               <li ><a href="#">소개</a></li>
+               <li class="active"><a href="#">마이페이지</a></li>
+               <li ><a href="#">포인트상품</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right ftt-navbar-fnc">
+                <!-- 관리자 권한 부여시 노출 -->
+                <li class="dropdown">
+                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">관리자<strong class="caret"></strong></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">계정/등업관리</a></li>
+                    <li><a href="#">포인트 지급관리</a></li>
+                    <li><a href="#">상품지급관리</a></li>
+                  </ul>
+                </li>
+                <!-- //관리자 권한 부여시 노출 -->
+                <li><a href="#">로그아웃</a></li>
+                <li><a href="#">내정보변경</a></li>
+                <li><a href="mailto:someone@433.co.kr?subject=4:33포인트 문의"  target="_top" title="someone@433.co.kr">문의</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div><!-- //row -->
+  </div><!-- //container-fluid -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="ftt-mypage">
+          <h1>마이 페이지</h1>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="ftt-mypoint-wrap">
+                <ul class="nav nav-tabs ftt-tabs">
+                  <li><a data-toggle="tab" href="#home">포인트 내역</a></li>
+                  <li ><a data-toggle="tab" href="#menu1">상품신청 현황</a></li>
+                  <li class="active"><a data-toggle="tab" href="#menu2">내정보 변경</a></li>
+                </ul>
+                <div class="tab-content">
+                  <div id="home" class="tab-pane fade in active">
+                    <div class="ftt-myinfo-wrap">
+                      <dl>
+                        <dt>이름</dt>
+                        <dd><span class="name">정이랑</span></dd>
+                      </dl>
+                      <dl>
+                        <dt>이메일주소</dt>
+                        <dd><span class="email">erjung@433.co.kr</span></dd>
+                      </dl>
+                      <dl>
+                        <dt>생일</dt>
+                        <dd>
+                          <span class="birth">10월 11일</span>
+                          <a href="#" id="birth-change" class="btn btn-default btn-sm ">생일변경</a>
+                          <span>(생일은 최대 1번까지만 변경됩니다.)</span>
+                          <div class="b-change" style="display:none;">
+                              <select class="selectpicker size-date" title="월선택">
+                                <option>1월</option>
+                                <option>2월</option>
+                                <option>3월</option>
+                                <option>4월</option>
+                                <option>5월</option>
+                                <option>6월</option>
+                                <option>7월</option>
+                                <option>8월</option>
+                                <option>9월</option>
+                                <option>10월</option>
+                                <option>11월</option>
+                                <option>12월</option>
+                              </select>
+                              <select class="selectpicker size-date" title="일선택">
+                                <option>1일</option>
+                                <option>2일</option>
+                                <option>3일</option>
+                                <option>4일</option>
+                                <option>5일</option>
+                                <option>6일</option>
+                                <option>7일</option>
+                                <option>8일</option>
+                                <option>9일</option>
+                                <option>10일</option>
+                                <!-- 뽀문돌려주세요!! -->
+                              </select>
+                          </div>
+                        </dd>
+                      </dl>
+                      <dl>
+                        <dt>비밀번호 변경</dt>
+                        <dd>
+                          <a href="#" id="passwd-change" class="btn btn-default btn-sm">비밀번호 변경</a>
+                          <div style="display:none;">
+                            <dl>
+                              <dt>현재 비밀번호</dt>
+                              <dd><input type="text" class="form-control ftt-width-text" placeholder="현재 비밀번호를 정확히 입력해주세요."></dd>
+                            </dl>
+                            <dl>
+                              <dt>새 비밀번호</dt>
+                              <dd><input type="text" class="form-control ftt-width-text" placeholder="대문자 + 소문자 + 숫자 + 특수문자 조합으로 입력해주세요."></dd>
+                            </dl>
+                            <dl>
+                              <dt>새 비밀번호 확인</dt>
+                              <dd><input type="text" class="form-control ftt-width-text" placeholder="변경되는 비밀번호를 다시 한번 입력해주세요."></dd>
+                            </dl>
+                            </dl>
+                          </div>
+                        </dd>
+                      </dl>
+                      <div class="btn-apply text-center">
+                        <button type="button" class="btn btn-primary btn-lg">저장</button>
+                      </div><!-- //btn-apply -->
+                    </div><!-- //ftt-myinfo-wrap -->
+
+                  </div>
+                  <!-- div id="menu1" class="tab-pane fade">
+
+                  
+                  </div -->
+                  <!-- div id="menu2" class="tab-pane fade">
+
+                  
+                  </div -->
+                </div>
+              </div><!-- //ftt-mypoint-wrap -->
+            </div><!-- //col -->
+          </div>
+
+        </div><!-- //ftt-pointis -->
+
+      </div><!-- //col -->
+    </div><!-- //row -->
+  </div><!-- //container -->
+</div><!-- #fWrap -->
+<div class="container-fluid ftt-footer">
+  <div class="row">
+    <div class="col-md-12">
+      <p>Copyright © 4:33 Creative Lab. All Rights Reserved.</p>          
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

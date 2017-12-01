@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Auth - 사용자 등록</title>
+
+  <link rel="stylesheet" type="text/css" href="http://auth2.webcook.de-php-api.fttinc.kr/res/css/register.css" />
+<!--   <link rel="stylesheet" type="text/css" href="http://auth2.webcook.de-php-api.fttinc.kr/res/css/style.css" /> -->
+  <link rel="stylesheet" type="text/css" href="http://auth2.webcook.de-php-api.fttinc.kr/res/css/style.css" />
+
+  <script language="javascript" src="https://auth2.webcook.de-php-api.fttinc.kr/res/user/js/jquery.min.js"></script>
+<!--   <script language="javascript" src="https://auth2.webcook.de-php-api.fttinc.kr/res/user/js/jquery-ui.min.js"></script>
+  <script language="javascript" src="https://auth2.webcook.de-php-api.fttinc.kr/res/user/js/bootstrap.min.js"></script> -->
+  <style>
+
+  </style>
+</head>
+<body>
+  <div id="fWrap">
+    <div id="header">
+      <h1 class="logo"><img src="https://img.four33.co.kr/event/common/images/logo433.png" alt="433"></h1>
+      <!-- h2 class="tit">사용자 등록</h2 -->
+    </div>
+    <!-- // #header -->
+    
+    <div id="container">
+
+      <div class="steps_wrap steps_login">
+        <div class="steps ">
+          <ul>
+            <li ><a>가입하기</a></li>
+            <li  class="active"><a>이메일 인증</a></li>
+            <li ><a>완료</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="content">
+          <div class="notice">
+            <h2>입력하신 이메일로 인증메일을 발송하였습니다.</h2>
+            <p class="desc">
+              이메일 주소 인증을 하셔야만 가입하기가 완료됩니다.<br/> 
+              <span class="email">test@433.co.kr</span>로 발송된 <span class="point">인증메일의 승인URL 클릭</span>해주세요.<br/> 
+              <br/> 
+              <small>인증메일을 수신하지 못하셨다면 메일함의 스팸 편지함으로 분류되지 않는지 확인해주시기 바랍니다</small>
+            </p>
+          </div>
+
+          <br/><br/><br/>
+
+          <div class="notice">
+            <h2>이메일 인증을 완료했습니다.</h2>
+            <div class="info">
+              <dl>
+                  <dt>ID :</dt>
+                  <dd>hongildong</dd>
+              </dl>
+              <dl>
+                  <dt>E-mail :</dt>
+                  <dd>hongildong@433.co.kr</dd>
+              </dl>
+            </div>
+            <p class="desc">
+              입력하신 계정으로 로그인이 가능합니다.<br/> 
+              <small>권한은 소속부서의 권한 담당자에게 요청하시면 됩니다. <a href="/user/notice" target="_top" class="point">[권한신청안내]</a></small>
+            </p>
+          </div>
+
+          <br/><br/><br/>
+
+          <div class="notice">
+            <h2>올바르지 않은 경로로 접근하였거나<br/>이메일 인증시간 만료되었습니다.</h2>
+            <p class="desc">
+                가입한 아이디와 비밀번호로 로그인하신 뒤<br/>
+                인증메일 보내기를 통해 다시 이메일주소 인증을 완료해주세요.
+            </p>
+          </div>
+
+
+
+      </div><!-- // #content -->
+    </div><!-- // #container -->
+  </div><!-- //#fWrap -->
+</body>
+<script>
+  (function() {
+    $("#registBtn").click(function() {
+      authSignup();
+    });
+  })();
+
+  function validatePw(pw)
+  {
+      if (pw.length < 8) {
+      
+        alert("비밀번호는 8자리 이상, 영문,숫자,특수문자 중 2가지 이상을 조합하여 입력해주세요.");
+        return false;
+      }
+
+      var specialChars = [
+        '!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-',
+        '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', '\'', ']', '^', 
+        '_', '`', '{', '|', '}', '~'];
+
+      var hasLowerCase = false;
+      //var hasUpperCase = false;
+      var hasNumber    = false;
+      var hasSpecialChar = false;
+
+      for (var i = 0; i < pw.length; i++)
+      {
+        var ch = pw.charAt(i);
+        if (!hasLowerCase && ( ('a' <= ch && ch <= 'z') || ('A' <= ch && ch <= 'Z'))) hasLowerCase = true;
+        //if (!hasUpperCase && 'A' <= ch && ch <= 'Z') hasUpperCase = true;
+        if (!hasNumber    && '0' <= ch && ch <= '9') hasNumber    = true;
+        if (!hasSpecialChar && $.inArray(ch, specialChars) >= 0) hasSpecialChar = true;
+      }
+	  
+      //if (hasLowerCase && hasUpperCase && hasNumber && hasSpecialChar) return true;
+      if ((hasLowerCase && hasNumber)||(hasLowerCase && hasSpecialChar)||(hasNumber && hasSpecialChar)) {
+		return true;
+	  }
+
+      alert("비밀번호는 8자리 이상, 영문,숫자,특수문자 중 2가지 이상을 조합하여 입력해주세요.");
+      return false;
+  }
+
+  function authSignup()
+  {
+    var id = $("#id").val().trim();
+    if (id == "" || id.length < 4)
+    {
+      alert("ID를 확인 해주세요");
+      return;
+    }
+
+    var pw = $("#pw").val().trim();
+    if (!validatePw(pw)) return;
+    if (pw != $("#chkPw").val().trim())
+    {
+      alert("비밀번호가 일치하지 않습니다.");
+      return;
+    }
+
+    var name = $("#name").val().trim();
+    if (name == "")
+    {
+      alert("이름을 확인 해주세요");
+      return;
+    }
+
+    var dept = $("#dept").val().trim();
+    if (dept == "")
+    {
+      alert("소속을 확인 해주세요");
+      return;
+    }
+
+    var email = $("#email").val().trim();
+    if (email == "" || email.indexOf("@") < 0)
+    {
+      alert("이메일 주소를 확인 해주세요.");
+      return;
+    }
+	
+    var success = function(resp) {
+      if (resp)
+      {
+        if (resp.result == 'OK')
+        {
+          alert(resp.message);
+
+                      location.href = "/user/notice";
+          
+
+        }
+        else
+        {
+          alert(resp.message);
+        }
+      }
+      else
+      {
+        alert("실패하였습니다. 다시 시도 해주세요.");
+      }
+    };
+
+    $.ajax({
+      type: "POST",
+      url: "/user/ajax/signup",
+      data: {"id":id, "pw":pw, "name":name, "dept":dept, "email":email},
+      success: success,
+      dataType: "json"
+    });
+
+  }
+</script>
+</html>

@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <title>4:33 포인트사이트</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/bootstrap-expend.min.css" rel="stylesheet">
+  <link href="../css/ui.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="../js/jquery-1.11.3.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/bootstrap-expend.js"></script>
+  <script src="../js/jquery.expend.js"></script>
+  <script src="../js/ui.js"></script>
+</head>
+<body>
+<div id="fWrap">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 ftt-header-main"><!-- subpage class -->
+        <nav class="navbar navbar-default navbar-fixed-top ftt-navbar" role="navigation">
+          <div class="ftt-navbar-wrap">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+              <a class="navbar-brand" href="#"><img src="../images/common/logo-play433-s.png" alt="play 4:33 point"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav ftt-menu">
+               <li ><a href="#">계정/등업관리</a></li>
+               <li ><a href="#">포인트지급관리</a></li>
+               <li class="active"><a href="#">상품지급관리</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right ftt-navbar-fnc">
+                <!-- 관리자 권한 부여시 노출 -->
+                <li class="dropdown">
+                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">사용자메뉴<strong class="caret"></strong></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">소개</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                    <li><a href="#">포인트상품</a></li>
+                  </ul>
+                </li>
+                <!-- //관리자 권한 부여시 노출 -->
+                <li><a href="#">로그아웃</a></li>
+                <li><a href="#">내정보변경</a></li>
+                <li><a href="mailto:someone@433.co.kr?subject=4:33포인트 문의"  target="_top" title="someone@433.co.kr">문의</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div><!-- //row -->
+  </div><!-- //container-fluid -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="ftt-pointis">
+          <h1>상품 지급관리</h1>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="ftt-pointadmin-wrap">
+                <div class="tab-content">
+                  <div id="home" class="tab-pane fade in active">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="search-opt no-tab">
+                          <h2>기간</h2>
+                          <div class="btn-group btn-group-md">
+                            <button class="btn btn-default" type="button">1개월</button> 
+                            <button class="btn btn-default" type="button">3개월</button> 
+                            <button class="btn btn-default" type="button">6개월</button> 
+                            <button class="btn btn-default" type="button">9개월</button> 
+                            <button class="btn btn-default" type="button">12개월</button> 
+                          </div>
+                          <div class="datepicker-wrap">
+                            <div class="date-wrap start-date">
+                              <div class="input-group date ftt-datepicker ftt-dd">
+                                <input type="text" class="form-control" value="2016.10.31"><span class="input-group-addon"><span class="ico ico-cal">달력선택</span></span>
+                              </div>
+                            </div>
+                            <span class="dash">~</span>
+                            <div class="date-wrap end-date">
+                              <div class="input-group date ftt-datepicker ftt-dd">
+                                <input type="text" class="form-control" value="2017.01.31"><span class="input-group-addon"><span class="ico ico-cal">달력선택</span></span>
+                              </div>
+                            </div>
+                           </div><!-- //datepicker-wrap -->
+                            <button type="button" class="btn btn-primary btn-md">조회</button>
+                        </div><!-- //search-opt -->
+                      </div><!-- //col-md-12 -->
+                    </div>
+                    <div class="ftt-account-wrap">
+                      <div class="tit-select">
+                        <h3>총 5건</h3>
+                        <div class="select-opt">
+                          <select class="selectpicker size-sm" title="상태">
+                            <option>상품준비중</option>
+                            <option>상품준비완료</option>
+                            <option>지급완료</option>
+                            <option class="cancel">상품취소</option>
+                          </select>
+                        </div><!-- //select-opt -->
+                      </div>
+                      <table id="example" class="table ftt-table ftt-admin-gift no-data"><!-- ##필수## Dev Request 신청내역 없을때 꼭 "no-data" 클래스 추가해주세요. -->
+                        <colgroup>
+                          <col width="15%">
+                          <col width="*%">
+                          <col width="10%">
+                          <col width="25%">
+                          <col width="20%">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th class="text-center">신청자</th>
+                            <th class="text-center">신청상품</th>
+                            <th class="text-center">수량</th>
+                            <th class="text-center">상태변경</th>
+                            <th class="text-center">상품수령일</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="text-center">정이랑</td>
+                            <td class=""><p class="ellipsis">토프레 리얼포스 104UG-hi pro</p></td>
+                            <td class="text-center"><span class="num">1개</span></td>
+                            <td class="text-center">
+                              <div class="gift-status-wrap">
+                                <div class="select-opt">
+                                  <select class="selectpicker size-sm" title="상태 선택" disabled="disabled">
+                                    <option>상품준비중</option>
+                                    <option>상품준비완료</option>
+                                    <option>지급완료</option>
+                                    <option  selected="selected" class="cancel">상품취소</option>
+                                  </select>
+                                </div><!-- //select-opt -->
+                                <button type="button" class="modal-show ftt-cursor btn btn-primary btn-md" data-type="msg" data-tit="상태변경" data-subtit="정상적으로 변경되었습니다." data-desc="">변경</button>
+                              </div><!-- //gift-status-wrap -->
+                            </td>
+                            <td class="text-center"><span class="ftt-point">수령전</span></td>
+                          </tr>
+                          <tr>
+                            <td class="text-center">한비광</td>
+                            <td class=""><p class="ellipsis">[코엑스 점] JAMESGYM FITNESS (4개월 이용권)</p></td>
+                            <td class="text-center"><span class="num">2개</span></td>
+                            <td class="text-center">
+                              <div class="gift-status-wrap">
+                                
+                                <div class="select-opt" style="display:none;">
+                                  <select class="selectpicker size-sm" title="상태 선택">
+                                    <option selected="selected">상품준비중</option>
+                                    <option>상품준비완료</option>
+                                    <option>지급완료</option>
+                                    <option class="cancel">상품취소</option>
+                                  </select>
+                                </div><!-- //select-opt -->
+
+                                <span class="cancel">상품취소</span>
+
+                                <button type="button" class="modal-show ftt-cursor btn btn-primary btn-md" data-type="msg" data-tit="상태변경" data-subtit="정상적으로 변경되었습니다." data-desc="">변경</button>
+                              </div><!-- //gift-status-wrap -->
+                            </td>
+                            <td class="text-center"><span class="ftt-point">수령전</span></td>
+                          </tr>
+                          <tr>
+                            <td class="text-center">담화린</td>
+                            <td class=""><p class="ellipsis">[소니]플레이스테이션4 (CUH-1205A)500GB</p></td>
+                            <td class="text-center"><span class="num">3개</span></td>
+                            <td class="text-center">
+                              <div class="gift-status-wrap">
+                                <div class="select-opt">
+                                  <select class="selectpicker size-sm" title="상태 선택">
+                                    <option selected="selected">상품준비중</option>
+                                    <option>상품준비완료</option>
+                                    <option>지급완료</option>
+                                    <option class="cancel">상품취소</option>
+                                  </select>
+                                </div><!-- //select-opt -->
+                                <button type="button" class="modal-show ftt-cursor btn btn-primary btn-md" data-type="msg" data-tit="상태변경" data-subtit="정상적으로 변경되었습니다." data-desc="">변경</button>
+                              </div><!-- //gift-status-wrap -->
+                            </td>
+                            <td class="text-center"><span class="date">2017.02.01</span></td>
+                          </tr>
+                          <tr>
+                            <td class="text-center">사음민</td>
+                            <td class=""><p class="ellipsis">Apple Watch 42mm (스포츠 밴드형)</p></td>
+                            <td class="text-center"><span class="num">4개</span></td>
+                            <td class="text-center">
+                              <div class="gift-status-wrap">
+                                <div class="select-opt">
+                                  <select class="selectpicker size-sm" title="상태 선택">
+                                    <option selected="selected">상품준비중</option>
+                                    <option>상품준비완료</option>
+                                    <option>지급완료</option>
+                                    <option class="cancel">상품취소</option>
+                                  </select>
+                                </div><!-- //select-opt -->
+                                <button type="button" class="modal-show ftt-cursor btn btn-primary btn-md" data-type="msg" data-tit="상태변경" data-subtit="정상적으로 변경되었습니다." data-desc="">변경</button>
+                              </div><!-- //gift-status-wrap -->
+                            </td>
+                            <td class="text-center"><span class="date">2017.02.01</span></td>
+                          </tr>
+                          <tr>
+                            <td class="text-center">정이랑</td>
+                            <td class=""><p class="ellipsis">iPad Pro wi-fi + cellular (128GB)</p></td>
+                            <td class="text-center"><span class="num">5개</span></td>
+                            <td class="text-center">
+                              <div class="gift-status-wrap">
+                                <div class="select-opt">
+                                  <select class="selectpicker size-sm" title="상태 선택" disabled="disabled">
+                                    <option >상품준비중</option>
+                                    <option>상품준비완료</option>
+                                    <option selected="selected">지급완료</option>
+                                    <option class="cancel">상품취소</option>
+                                  </select>
+                                </div><!-- //select-opt -->
+                                <button type="button" class="ftt-cursor btn btn-primary btn-md disabled">변경</button>
+                              </div><!-- //gift-status-wrap -->
+                            </td>
+                            <td class="text-center"><span class="date">2017.02.01</span></td>
+                          </tr>
+                          <tr>
+                            <td class="text-center">정이랑</td>
+                            <td class=""><p class="ellipsis">iPad Pro wi-fi + cellular (128GB)</p></td>
+                            <td class="text-center"><span class="num">5개</span></td>
+                            <td class="text-center">
+                              <div class="gift-status-wrap">
+                                <div class="select-opt">
+                                  <select class="selectpicker size-sm" title="상태 선택" disabled="disabled">
+                                    <option >상품준비중</option>
+                                    <option>상품준비완료</option>
+                                    <option selected="selected">지급완료</option>
+                                  </select>
+                                </div><!-- //select-opt -->
+                                <button type="button" class="ftt-cursor btn btn-primary btn-md disabled">변경</button>
+                              </div><!-- //gift-status-wrap -->
+                            </td>
+                            <td class="text-center"><span class="date">2017.02.01</span></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div><!-- //ftt-mypoint-list-wrap -->
+                    <script>
+                    $(document).ready(function() {
+                        $('#example').DataTable({
+                          order: [[ 4, "desc" ]],
+                          info: false,
+                          paging: false,
+                          searching: false
+                        });
+                    } );
+                    </script>
+                  </div>
+                  <!-- div id="menu1" class="tab-pane fade">
+
+                  
+                  </div -->
+                  <!-- div id="menu2" class="tab-pane fade">
+
+                  
+                  </div -->
+                </div>
+              </div><!-- //ftt-mypoint-wrap -->
+            </div><!-- //col -->
+          </div>
+
+        </div><!-- //ftt-pointis -->
+
+      </div><!-- //col -->
+    </div><!-- //row -->
+  </div><!-- //container -->
+</div><!-- #fWrap -->
+<div class="container-fluid ftt-footer">
+  <div class="row">
+    <div class="col-md-12">
+      <p>Copyright © 4:33 Creative Lab. All Rights Reserved.</p>          
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

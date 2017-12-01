@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <title>4:33 포인트사이트</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/bootstrap-expend.min.css" rel="stylesheet">
+  <link href="../css/ui.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="../js/jquery-1.11.3.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/bootstrap-expend.js"></script>
+  <script src="../js/jquery.expend.js"></script>
+  <script src="../js/ui.js"></script>
+</head>
+<body>
+<div id="fWrap">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 ftt-header-main"><!-- subpage class -->
+        <nav class="navbar navbar-default navbar-fixed-top ftt-navbar" role="navigation">
+          <div class="ftt-navbar-wrap">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+              <a class="navbar-brand" href="#"><img src="../images/common/logo-play433-s.png" alt="play 4:33 point"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav ftt-menu">
+               <li ><a href="#">소개</a></li>
+               <li class="active"><a href="#">마이페이지</a></li>
+               <li ><a href="#">포인트상품</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right ftt-navbar-fnc">
+                <!-- 관리자 권한 부여시 노출 -->
+                <li class="dropdown">
+                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">관리자<strong class="caret"></strong></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">계정/등업관리</a></li>
+                    <li><a href="#">포인트 지급관리</a></li>
+                    <li><a href="#">상품지급관리</a></li>
+                  </ul>
+                </li>
+                <!-- //관리자 권한 부여시 노출 -->
+                <li><a href="#">로그아웃</a></li>
+                <li><a href="#">내정보변경</a></li>
+                <li><a href="mailto:someone@433.co.kr?subject=4:33포인트 문의"  target="_top" title="someone@433.co.kr">문의</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div><!-- //row -->
+  </div><!-- //container-fluid -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="ftt-mypage">
+          <h1>마이 페이지</h1>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="ftt-mypoint-wrap">
+                <ul class="nav nav-tabs ftt-tabs">
+                  <li><a data-toggle="tab" href="#home">포인트 내역</a></li>
+                  <li  class="active"><a data-toggle="tab" href="#menu1">상품신청 현황</a></li>
+                  <li><a data-toggle="tab" href="#menu2">내정보 변경</a></li>
+                </ul>
+                <div class="tab-content">
+                  <div id="home" class="tab-pane fade in active">
+                    <div class="search-opt">
+                      <h2>기간</h2>
+                      <div class="btn-group btn-group-md">
+                        <button class="btn btn-default" type="button">1개월</button> 
+                        <button class="btn btn-default" type="button">3개월</button> 
+                        <button class="btn btn-default" type="button">6개월</button> 
+                        <button class="btn btn-default" type="button">9개월</button> 
+                        <button class="btn btn-default" type="button">12개월</button> 
+                      </div>
+                      <div class="datepicker-wrap">
+                        <div class="date-wrap start-date">
+                          <div class="input-group date ftt-datepicker ftt-dd">
+                            <input type="text" class="form-control" value="2017-01-13"><span class="input-group-addon"><span class="ico ico-cal">달력선택</span></span>
+                          </div>
+                        </div>
+                        <span class="dash">~</span>
+                        <div class="date-wrap end-date">
+                          <div class="input-group date ftt-datepicker ftt-dd">
+                            <input type="text" class="form-control" value="2017-02-12"><span class="input-group-addon"><span class="ico ico-cal">달력선택</span></span>
+                          </div>
+                        </div>
+                       </div><!-- //datepicker-wrap -->
+                        <button type="button" class="btn btn-primary btn-md">조회</button>
+                    </div><!-- //search-opt -->
+                    <div class="ftt-mypoint-list-wrap">
+                      <h3>총 12건</h3>
+                      <table id="example" class="table ftt-table ftt-my-gift no-data"><!-- ##필수## Dev Request 신청내역 없을때 꼭 "no-data" 클래스 추가해주세요. -->
+                        <colgroup>
+                          <col width="*%">
+                          <col width="10%">
+                          <col width="10%">
+                          <col width="10%">
+                          <col width="20%">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th class="text-center">상품명</th>
+                            <th class="text-center">수량</th>
+                            <th class="text-center">포인트</th>
+                            <th class="text-center">신청일</th>
+                            <th class="text-center">상태/수령일</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                         <tr>
+                          <td >토프레 리얼포스 104UG-hi pro</td>
+                          <td class="text-center">1개</td>
+                          <td class="text-center"><span class="point">520p</span></td>
+                          <td class="text-center">2017.02.01</td>
+                          <td class="text-center"><span class="remove">신청완료</span></td>
+                        </tr>
+                         <tr>
+                          <td >[코엑스 점] JAMESGYM FITNESS (4개월 이용권)</td>
+                          <td class="text-center">1개</td>
+                          <td class="text-center"><span class="point">730p</span></td>
+                          <td class="text-center">2017.02.01</td>
+                          <td class="text-center"><span class="remove">상품준비중</span></td>
+                        </tr>
+                         <tr>
+                          <td >[소니]플레이스테이션4 (CUH-1205A)500GB</td>
+                          <td class="text-center">1개</td>
+                          <td class="text-center"><span class="point">600p</span></td>
+                          <td class="text-center">2017.02.01</td>
+                          <td class="text-center"><span class="remove">상품준비중</span></td>
+                        </tr>
+                         <tr>
+                          <td >Apple Watch 42mm (스포츠 밴드형)</td>
+                          <td class="text-center">1개</td>
+                          <td class="text-center"><span class="point">1100p</span></td>
+                          <td class="text-center">2017.02.01</td>
+                          <td class="text-center"><span class="add">상품준비완료</span></td>
+                        </tr>
+                         <tr>
+                          <td >iPad Pro wi-fi + cellular</td>
+                          <td class="text-center">5개</td>
+                          <td class="text-center"><span class="point">2030p</span></td>
+                          <td class="text-center">2016.10.11</td>
+                          <td class="text-center">2016.10.15</td>
+                        </tr>
+                        <!-- 신청한 내역이 하나도 없을때 -->
+                        <!-- tr id="no-data">
+                          <td colspan="5" class="no-data">
+                            <p >상품신청 내역이 없습니다.</p>
+                          </td>
+                        </tr -->
+                        <!-- //신청 내역이 하나도 없을때 -->
+
+                        </tbody>
+                      </table>
+                    </div><!-- //ftt-mypoint-list-wrap -->
+                      <script>
+                      $(document).ready(function() {
+                          $('#example').DataTable({
+                            order: [[ 3, "desc" ]],
+                            info: false,
+                            paging: false,
+                            searching: false
+                          });
+                      } );
+                      </script>
+                  </div>
+                  <!-- div id="menu1" class="tab-pane fade">
+
+                  
+                  </div -->
+                  <!-- div id="menu2" class="tab-pane fade">
+
+                  
+                  </div -->
+                </div>
+              </div><!-- //ftt-mypoint-wrap -->
+            </div><!-- //col -->
+          </div>
+
+        </div><!-- //ftt-pointis -->
+
+      </div><!-- //col -->
+    </div><!-- //row -->
+  </div><!-- //container -->
+</div><!-- #fWrap -->
+<div class="container-fluid ftt-footer">
+  <div class="row">
+    <div class="col-md-12">
+      <p>Copyright © 4:33 Creative Lab. All Rights Reserved.</p>          
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

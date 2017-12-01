@@ -1,0 +1,28 @@
+body {  color: #666; font-family: Arial, sans-serif; }
+
+
+a { color: #666;}
+
+table { width:100%;border: none; margin: auto; margin-top: 1ex;table-layout: fixed;}
+th {  text-align: center; }
+thead th {  color: #666;}
+#events td { text-align: center; width: 4ex;}
+#properties th { width:20%;text-overflow:ellipsis; overflow:hidden;}
+#properties td {  text-overflow:ellipsis; overflow:hidden;padding:2px 8px;}
+hr { clear: both; margin-top: 2em;}
+.true { background-color: #fff; color: #666; }
+.false { background-color: #ff7777; color: #666; }
+
+#fWrap{width:640px;margin:0 auto}
+#sectionVideo{text-align:center;padding:10px 0}
+#sectionVideo video {border: 1px solid black;padding: 0; margin: 0 auto;width: 427px;height: 240px;background-color: black;margin: auto; }
+#buttons{font-size:0}
+
+
+
+#m_video td, #m_video th, #tracks td, #tracks tth { text-align: center; padding-left: 0.5ex; padding-right: 0.5ex;}
+.btn-design {clear:both;padding:10px 0 20px 0}
+.btn-design button{float:left;width:24%;min-height:35px;margin-right:5px;margin-bottom:5px;border:0;border-radius:4px;}
+.btn-design button.mov { clear:both;}
+
+#movie-list.btn-design button { width:100%;border:0;background-color:#8ED5E7;color:#fff;}

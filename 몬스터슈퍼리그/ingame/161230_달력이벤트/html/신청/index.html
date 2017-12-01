@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ko"> <!-- 한국어 -->
+<!-- <html lang="en"> 영어 -->
+<!-- <html lang="ja"> 일본어 -->
+<!-- <html lang="th"> 태국어 -->
+<!-- <html lang="zh-Hans"> 중국어(간체) -->
+<!-- <html lang="zh-Hant"> 중국어(번체) -->
+<head>
+<title>MonsterSuperLeague - 2017 calendar Event</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=960">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="https://static.four33.co.kr/event/game/monstersl/ingame/161228_calendar1/css/style.css">
+<script src="https://static.four33.co.kr/event/common/js/jquery-1.8.1.min.js"></script>
+</head>
+<body>
+<!--
+  [ msl calendar event - Registration ]
+  언어에 따라 #fwrap에 class추가
+    - ko(한국어)
+    - en(영어)
+    - ja(일본어)
+    - th(태국어)
+    - zh-CN(중국어 - 간체)
+    - zh-TW(중국어 - 번체)
+-->
+<div id="fWrap" class="ko">
+
+  <div id="header">
+    <h2 class="title1"></h2>
+    <h1 class="title2"></h1>
+    <div class="date">
+      <div class="date1"></div>
+      <div class="date2"></div>
+    </div>
+  </div>
+  <!-- // #header -->
+
+  <div id="container">
+    <div id="sectionInfo">
+      <div class="info1"></div>
+    </div>
+    <!-- #sectionInfo -->
+
+    <div id="sectionReg">
+      <div class="country">
+        <div class="inp_country">
+          <label for="countryList"><div class="btn_country"></div></label>
+          <select id="countryList">
+            <option>나라1</option>
+            <option>나라2</option>
+            <option>나라3</option>
+          </select>
+        </div>
+      </div> <!-- 국가 선택 시에만 출력 -->
+      <div class="enter"><button class="btn_enter" type="button"></button></div>     <!-- 신청 버튼 -->
+    </div>
+    <!-- // #sectionReg -->
+    
+    <div id="sectionItem"></div>
+    <!-- // #sectionItem -->
+
+    <div id="sectionCaution"></div>
+    <!-- // #sectionCaution -->
+
+  </div>
+  <!-- // #container -->
+
+  <div id="fLayer">
+    <div class="modal_layer">
+      <div class="wrap_layer">
+        <span class="bg top"></span>
+        <span class="bg bottom"></span>
+        <div class="layer_cont">
+          <div class="title"></div>
+          <div class="msg">
+            <div class="wrap_msg"></div>
+          </div>
+          <div class="btn_area">
+            <button class="btn_close" type="button" close-type="normal"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg_layer"></div>
+  </div>
+  <!-- // #fLayer -->
+
+  <!-- 확인 후 삭제해주세요 -->
+  <div class="test">
+    <button class="lang_ko" type="button" lang-data="ko">한국어</button>
+    <button class="lang_en" type="button" lang-data="en">영어</button>
+    <button class="lang_ja" type="button" lang-data="ja">일본어</button>
+    <button class="lang_th" type="button" lang-data="th">태국어</button>
+    <button class="lang_zh-CN" type="button" lang-data="zh-CN">중국어 - 간체</button>
+    <button class="lang_zh-TW" type="button" lang-data="zh-TW">중국어 - 번체</button>
+  </div>
+
+  <div class="test_layer">
+    <button class="success" type="button">정상응모</button>
+    <button class="already" type="button">이미 응모한 경우</button>
+    <button class="country" type="button">국가 미선택</button>
+  </div>
+
+  <!-- // 확인 후 삭제해주세요 -->
+
+</div>
+<!-- // #fWrap -->
+
+<script type="text/javascript" src="https://static.four33.co.kr/event/game/monstersl/ingame/161228_calendar1/js/commonLang.js"></script>
+<script type="text/javascript" src="https://static.four33.co.kr/event/game/monstersl/ingame/161228_calendar1/js/evLang.js"></script>
+<script type="text/javascript" src="https://static.four33.co.kr/event/game/monstersl/ingame/161228_calendar1/js/ui.js"></script>
+<script type="text/javascript">
+var lang = {
+  layout: evLang( $('#fWrap').attr('class') ),
+  layer: commonLang( $('#fWrap').attr('class') )
+};
+
+// layout set
+layoutSet(lang);
+
+// country select hide
+if ( 0 ) $('#sectionReg .country').hide();
+
+// 응모
+$('#container .enter .btn_enter').on('click', function () {
+  var isDisabled = $(this).hasClass('disabled');
+
+  if (!isDisabled) {
+    $(this).addClass('disabled');
+    // btnLock
+    /*
+     [layer msgList]
+     layerOpen(lang.layer.success)   // 정상응모
+     layerOpen(lang.layer.already)   // 이미 응모한 경우
+     layerOpen(lang.layer.country)   // 국가를 선택하지 않은 경우
+     */
+    layerOpen(lang.layer.success);
+
+    if ( 1 ){
+      // 이벤트가 정상적으로 작동한 경우에만 실행
+      $('#container .enter .btn_enter').removeClass('disabled');
+    }
+  }
+});
+
+// closeLayer
+$('body').on('click','#fLayer .btn_area button, #fLayer .bg_layer',function () {
+    layerClose();
+    //layerClose('refresh');  // 새로고침 필요 시
+});
+
+// test buttons(확인 후 삭제)
+$('.test button').bind('click', function () {
+  var langType = $(this).attr('lang-data');
+  lang.layout = evLang(langType);
+  lang.layer = commonLang(langType);
+
+  layoutSet(lang);
+  $('.test button').removeClass('active');
+  $(this).addClass('active');
+  $('#fWrap').attr('class', langType);
+});
+$('.test_layer button').bind('click', function () {
+  if ( $(this).hasClass('active') ) $(this).removeClass('active');
+  var layerType = 'lang.layer.'+$(this).attr('class');
+
+  if ( layerType == 'lang.layer.win' ) {
+    layerOpen( eval(layerType) , 'win');  // openLayer
+  }else{
+    layerOpen( eval(layerType) );  // openLayer
+  }
+  $('.test_layer button').removeClass('active');
+  $(this).addClass('active');
+});
+
+</script>
+
+</body>
+
+</html>

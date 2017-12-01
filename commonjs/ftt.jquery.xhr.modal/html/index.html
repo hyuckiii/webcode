@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="ko"> <!-- 한국어 -->
+<!-- <html lang="en"> 영어 -->
+<!-- <html lang="ja"> 일본어 -->
+<!-- <html lang="th"> 태국어 -->
+<!-- <html lang="zh-Hans"> 중국어(간체) -->
+<!-- <html lang="zh-Hant"> 중국어(번체) -->
+<head>
+<title>FttXhrModal - Sample</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=980">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="https://static.four33.co.kr/event/game/monstersl/ingame/170405_rare/css/style.css">
+<script src="https://static.four33.co.kr/event/common/js/jquery-1.8.1.min.js"></script>
+</head>
+
+<!--
+  언어에 따라 #fwrap에 class추가
+    - ko(한국어)
+    - en(영어)
+    - ja(일본어)
+    - th(태국어)
+    - zh-CN(중국어 - 간체)
+    - zh-TW(중국어 - 번체)
+-->
+<body>
+<div id="fWrap" class="ko">
+
+  <div id="header">
+  </div>
+  <!-- // #header -->
+
+  <div id="container">
+    <div id="totalQuest">
+      <ul>
+        <li quest-num="0">
+          <div class="wrap_title"><div class="quest-title"></div></div>
+          <div class="wrap_reward"><div class="reward-title"></div></div>
+          <div class="wrap_btn"><div class="btn"></div></div>
+        </li>
+        <li quest-num="1">
+          <div class="wrap_title"><div class="quest-title"></div></div>
+          <div class="wrap_reward"><div class="reward-title"></div></div>
+          <div class="wrap_btn"><div class="btn"></div></div>
+        </li>
+      </ul>
+    </div>
+    <!-- // #totalQuest -->
+    <div id="normalQuest">
+      <div id="normalQuest1" class="quest">
+        <ul>
+          <li quest-num="2">
+            <div class="bg"></div>
+            <div class="wrap_title"><div class="quest-title"></div></div>
+            <div class="status">
+              (<span class="ing"></span>/<span class="max"></span>)
+            </div>
+            <div class="wrap_reward"><div class="reward-title"></div></div>
+            <div class="wrap_btn"><div class="btn"></div></div>
+          </li>
+          <li quest-num="3">
+            <div class="bg"></div>
+            <div class="wrap_title"><div class="quest-title"></div></div>
+            <div class="status">
+              (<span class="ing"></span>/<span class="max"></span>)
+            </div>
+            <div class="wrap_reward"><div class="reward-title"></div></div>
+            <div class="wrap_btn"><div class="btn"></div></div>
+          </li>
+          <li quest-num="4">
+            <div class="bg"></div>
+            <div class="wrap_title"><div class="quest-title"></div></div>
+            <div class="status">
+              (<span class="ing"></span>/<span class="max"></span>)
+            </div>
+            <div class="wrap_reward"><div class="reward-title"></div></div>
+            <div class="wrap_btn"><div class="btn"></div></div>
+          </li>
+        </ul>
+      </div>
+      <!-- // #normalQuest1 -->
+
+      <div id="normalQuest2" class="quest">
+        <ul>
+          <li quest-num="5">
+            <div class="bg"></div>
+            <div class="wrap_title"><div class="quest-title"></div></div>
+            <div class="status">
+              (<span class="ing"></span>/<span class="max"></span>)
+            </div>
+            <div class="wrap_reward"><div class="reward-title"></div></div>
+            <div class="wrap_btn"><div class="btn"></div></div>
+          </li>
+          <li quest-num="6">
+            <div class="bg"></div>
+            <div class="wrap_title"><div class="quest-title"></div></div>
+            <div class="status">
+              (<span class="ing"></span>/<span class="max"></span>)
+            </div>
+            <div class="wrap_reward"><div class="reward-title"></div></div>
+            <div class="wrap_btn"><div class="btn"></div></div>
+          </li>
+          <li quest-num="7">
+            <div class="bg"></div>
+            <div class="wrap_title"><div class="quest-title"></div></div>
+            <div class="status">
+              (<span class="ing"></span>/<span class="max"></span>)
+            </div>
+            <div class="wrap_reward"><div class="reward-title"></div></div>
+            <div class="wrap_btn"><div class="btn"></div></div>
+          </li>
+        </ul>
+      </div>
+      <!-- // #normalQuest2 -->
+
+      <div id="normalQuest3" class="quest">
+        <ul>
+          <li quest-num="8">
+            <div class="bg"></div>
+            <div class="wrap_title"><div class="quest-title"></div></div>
+            <div class="status">
+              (<span class="ing"></span>/<span class="max"></span>)
+            </div>
+            <div class="wrap_reward"><div class="reward-title"></div></div>
+            <div class="wrap_btn"><div class="btn"></div></div>
+          </li>
+          <li quest-num="9">
+            <div class="bg"></div>
+            <div class="wrap_title"><div class="quest-title"></div></div>
+            <div class="status">
+              (<span class="ing"></span>/<span class="max"></span>)
+            </div>
+            <div class="wrap_reward"><div class="reward-title"></div></div>
+            <div class="wrap_btn"><div class="btn"></div></div>
+          </li>
+          <li quest-num="10">
+            <div class="bg"></div>
+            <div class="wrap_title"><div class="quest-title"></div></div>
+            <div class="status">
+              (<span class="ing"></span>/<span class="max"></span>)
+            </div>
+            <div class="wrap_reward"><div class="reward-title"></div></div>
+            <div class="wrap_btn"><div class="btn"></div></div>
+          </li>
+        </ul>
+      </div>
+      <!-- // #normalQuest3 -->
+
+      <div id="normalQuest4" class="quest">
+        <ul>
+          <li quest-num="11">
+            <div class="bg"></div>
+            <div class="wrap_title"><div class="quest-title"></div></div>
+            <div class="status">
+              (<span class="ing"></span>/<span class="max"></span>)
+            </div>
+            <div class="wrap_reward"><div class="reward-title"></div></div>
+            <div class="wrap_btn"><div class="btn"></div></div>
+          </li>
+          <li quest-num="12">
+            <div class="bg"></div>
+            <div class="wrap_title"><div class="quest-title"></div></div>
+            <div class="status">
+              (<span class="ing"></span>/<span class="max"></span>)
+            </div>
+            <div class="wrap_reward"><div class="reward-title"></div></div>
+            <div class="wrap_btn"><div class="btn"></div></div>
+          </li>
+          <li quest-num="13">
+            <div class="bg"></div>
+            <div class="wrap_title"><div class="quest-title"></div></div>
+            <div class="status">
+              (<span class="ing"></span>/<span class="max"></span>)
+            </div>
+            <div class="wrap_reward"><div class="reward-title"></div></div>
+            <div class="wrap_btn"><div class="btn"></div></div>
+          </li>
+        </ul>
+      </div>
+      <!-- // #normalQuest4 -->
+    </div>
+
+  </div>
+  <!-- // #container -->
+
+  <div id="footer"></div>
+  <!-- // #footer -->
+
+  <!-- 확인 후 삭제해주세요 -->
+  <div class="test">
+    <button class="lang_ko" type="button" lang-data="ko">한국어</button>
+    <button class="lang_en" type="button" lang-data="en">영어</button>
+    <button class="lang_ja" type="button" lang-data="ja">일본어</button>
+    <button class="lang_th" type="button" lang-data="th">태국어</button>
+    <button class="lang_zh-CN" type="button" lang-data="zh-CN">중국어 - 간체</button>
+    <button class="lang_zh-TW" type="button" lang-data="zh-TW">중국어 - 번체</button>
+  </div>
+  <!-- // 확인 후 삭제해주세요 -->
+
+</div>
+<!-- // #fWrap -->
+
+<script type="text/javascript" src="https://static.four33.co.kr/event/common/js/webevent/ftt.webevent.0.2.js"></script>
+<script type="text/javascript" src="https://static.four33.co.kr/event/game/monstersl/ingame/common/js/commonLang.js"></script>
+<script type="text/javascript" src="https://static.four33.co.kr/event/game/monstersl/ingame/170405_rare/js/evLang.js"></script>
+<script type="text/javascript" src="js/ftt.jquery.xhr.modal.1.0.js"></script>
+<script type="text/javascript">
+var quest = [$('#totalQuest'), $('.quest')],
+  questStatus = [   // 미션 상태 값(0/1/2/)
+    0, 1, 2,
+    0, 1, 2,
+    0, 1, 2,
+    0, 1, 2
+  ],
+  questIng = [  // 미션 현재 진행 값(num)
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0
+  ],
+  questMax = [  // 미션 목표 값(num)
+    1, 3, 5,
+    10, 20, 30,
+    1000, 2000, 3000,
+    10, 20, 30
+  ],
+  totalQuestStatus = [0, 0],                            // 최종 미션 상태 값 ( 0 / 1 / 2 )
+  langLayout = evLang( $('#fWrap').attr('class') ),     // 이벤트 사용언어
+  langLayer = commonLang( $('#fWrap').attr('class') );  // 공통사용(레이어) 언어
+var questData = {
+  questIng: [[''], questIng],
+  questMax: [[''], questMax],
+  questStatus: [totalQuestStatus, questStatus],
+  otherItem:{
+    btnName:{
+      target: $('#fWrap li .btn'),
+      once: true,
+      value: langLayout.btnName
+    },
+    eventInfo:{
+      target: $('#footer'),
+      value: langLayout.eventInfo
+    }
+  }
+};
+
+$(quest).webEventUI(questData, langLayout);
+
+/*
+  [ ftt.jquery.xhr.modal.js ]
+  웹 페이지 내 xhr(ajax) 통신을 편리하게 사용하기 위해 제작되었으며 공통 사용되는 특성 상 modalLayer.js가 통합되었습니다.
+
+  [ 초기 선언 ]
+  var sample = new FttXhrModal();
+
+  [ 메서드 ]
+  sample.set(object);                 // 옵션 값 적용(변경된 값을 갱신할때도 사용)
+  sample.init(number, boolean);       // ajax통신 후 조건에 따라 모달레이어 출력 (변수명.init(아이템번호, 모달사용여부(boolean/기본 값은 true));
+  sample.modalMsg(string, boolean);   // 모달 레이어 출력( 변수명.modalMsg('레이어메시지', '새로고침 여부(boolean/기본값은 true) )
+
+  [ 옵션 및 기본 값 ( 표기된 값은 기본 값 ) ]
+  {
+    url: null,              // location이 아닌 별도의 url이 입력되야하는 경우(입력하지 않으면 사용자의 url을 기반으로 값을 자동으로 생성)
+    options:{
+      refresh: true,        // 모달 레이어의 확인 버튼 클릭 시 새로고침 여부
+      langData: null,       // 모달 레이어 메시지가 다국어로 존재하는 경우( 몬슈리 등 ) 다국어 값을 객체로 전달 ( 자세한 내용은 몬슈리 웹이벤트 참고 )
+      useLayer: true,       // ajax 실행 후 모달레이어 사용 여부
+      debug: false          // ajax URL및 data, status를 console.log()를 통해 출력
+    },
+    modalMsg: {             // 모달 레이어의 메시지 지정 ( js내 기본 값이 설정되어 있으므로 특별히 다르게 출력되야하는 경우 외에는 선언 X )
+      success: 'success',   // 보상 정상 획득 시
+      end: 'end',           // 종료된 이벤트에 방문했을 경우 ( 사용 빈도 낮음 )
+      denied: 'denied',     // 이벤트 참여 대상자가 아닌 경우 ( 사용 빈도 낮음 )
+      fail: 'fail',         // 보상 획득 실패 시
+      error: 'error'        // 어뷰징으로 의심되는 경우
+    },
+    callback: {                              // ajax 통신 시 사용되는 callback 함수
+      success: function () { return true },  // 통신 성공 시 실행 ( data.code가 0인 경우 )
+      fail: function () { return true },     // 통신은 성공하였으나 반환된 데이터 값에 이상이 있는 경우 ( data.code가 2인 경우 )
+      error: function(){ return true },      // 통신에 실패한 경우
+      always: function () { return true }    // ajax 통신을 시도하는 경우 언제든 실행될 함수
+    }
+  }
+*/
+
+// FttXhrModal - 옵션 선언
+var xhrData = {
+  url: 'ajaxtest.json', // test용 url
+  options: {
+    refresh: false,
+    langData: langLayer,
+    useLayer: true,
+    debug: true
+  },
+  callback: {
+    always: function () {
+      // 데이터 및 UI갱신
+      questData.questStatus[1] = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+      $(quest).webEventUI(questData, langLayout);
+    }
+  }
+};
+
+// FttXhrModal - 선언
+var evResult = new FttXhrModal();
+
+// FttXhrModal - 옵션등 데이터 적용
+evResult.set(xhrData);
+
+// 보상수령
+$('#container').on('click','li.ready .btn',function () {
+  var questNum = $(this).closest('li').attr('quest-num');   // quest-num 속성 값
+
+  evResult.init(questNum, true);
+  // 레이어 테스트
+  //evResult.modalMsg('테스트용ㅇㅇㅇ', false);
+});
+
+// 다국어 테스트
+$('.test button').bind('click', function () {
+  var langType = $(this).attr('lang-data');
+
+  langLayout = evLang(langType);
+  langLayer = commonLang(langType);
+  questData.otherItem.btnName.target = $('#container li .btn');
+  questData.otherItem.btnName.once = true;
+  questData.otherItem.btnName.value = langLayout.btnName;
+  questData.otherItem.eventInfo.target = $('#footer');
+  questData.otherItem.eventInfo.value = langLayout.eventInfo;
+  xhrData.options.langData = langLayer;
+
+  $('.test button').removeClass('active');
+  $(this).addClass('active');
+  $('#fWrap').attr('class', langType);
+  $(quest).webEventUI(questData, langLayout);
+  evResult.set(xhrData);
+});
+
+</script>
+
+</body>
+
+</html>

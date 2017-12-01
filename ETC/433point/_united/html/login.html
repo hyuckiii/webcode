@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <title>4:33 포인트사이트</title>
+  <meta charset="utf-8">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/bootstrap_modify.css" rel="stylesheet">
+<!--   <link href="../css/ui.jqgrid-bootstrap.css" rel="stylesheet"> -->
+<!--   <link href="../css/daterangepicker.css" rel="stylesheet"> -->
+  <link href="../css/style.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="../js/jquery-1.11.3.min.js"></script>
+  <script src="../js/jquery-ui.min.js"></script>
+  <script src="../js/bootstrap.js"></script>
+<!--   <script src="../js/jquery.jqGrid.min.js"></script> -->
+<!--   <script src="../js/moment.min.js"></script> -->
+<!--   <script src="../js/daterangepicker.js"></script> -->
+  <script src="../js/common.js"></script>
+</head>
+<body>
+  <div id="fWrap">
+    <header id="fHeader">
+      <div>
+        <h1>
+          <a href="#none"><img src="../images/common/logo.png" alt="4:33 UNITED"> </a>
+        </h1>
+        <div>
+          <!--로그인 전-->
+          <p class="main_login" style="display:none;">
+            <a href="#none">로그인</a>
+          </p>
+          <!--로그인 후-->
+          <ul id="lnb">
+            <li><a href="#none">내 정보</a></li>
+            <li><a href="#none">알림</a></li>
+            <li class="last"><a href="#none">로그아웃</a></li>
+          </ul>
+        </div>
+
+        <ul id="top_menu">
+          <li><a href="#none" class="">계약 관리</a></li>
+          <li><a href="#none" class="">정산</a></li>
+          <li><a href="#none" class="">가이드</a></li>
+          <li><a href="#none" class="">권한 관리</a></li>
+        </ul>
+      </div>
+    </header>
+
+
+
+
+    <div id="fContainer_wide">
+      <div id="fContent">
+        <h2>로그인하기 </h2>
+        <p id="location">
+          <a href="#none">홈</a> <span class="img"><img src="../images/common/location.png" alt=">"></span> <strong>로그인</strong>
+        </p>
+        <div class="login_wrap">
+          <fieldset>
+            <legend>로그인하기</legend>
+            <div class="login">
+              <p class="tit_login">4:33 파트너스 포털에 오신 것을 환영합니다.</p>
+              <div class="login_form">
+                <div class="input_area">
+                  <div class="tooltip top" role="tooltip">
+                    <div class="tooltip-arrow"></div>
+                    <div class="tooltip-inner">
+                      아이디를 입력해주세요.
+                    </div>
+                  </div>
+                  <input type="text" class="form-control" placeholder="아이디">
+                </div>
+                <div class="input_area">
+                  <input type="text" class="form-control" placeholder="비밀번호">
+                  <div class="tooltip bottom" role="tooltip">
+                    <div class="tooltip-arrow"></div>
+                    <div class="tooltip-inner">
+                      비밀번호를 입력해주세요.
+                    </div>
+                  </div>
+                </div>
+                <div class="login_btn">
+                  <button type="button" class="btn btn-color" data-toggle="modal" data-target="#login_pop">로그인</button>
+                  <div class="tooltip bottom" role="tooltip">
+                    <div class="tooltip-arrow"></div>
+                    <div class="tooltip-inner">
+                      연속 10번 로그인 실패하셨습니다.<br>60분 후 재시도해주세요.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="login_noti">
+          <p class="tit">안내</p>
+          <ul>
+            <li>아이디/비밀번호를 잊으신 경우 담당 PM에게 문의해주시길 바랍니다. (4:33 직원은 4:33 admin 시스템을 통해서 문의하시길 바랍니다)</li>
+            <li>본 서비스는 4:33과 기 계약된 퍼블리싱 파트너사를 위한 서비스 입니다. 사전에 아이디를 발급받지 않으신 경우 이용할 수 없습니다.</li>
+            <li>퍼블리싱 제안 및 문의는 <a href="mailTo:sourcing@433.co.kr"><span class="point1">sourcing@433.co.kr</span></a>로 보내주시길 바랍니다.</li>
+            <li>본 서비스 사용을 위한 계정을 발급받고 최초로 로그인하시는 경우 4:33 파트너스 포털의 <a href="#none"><span class="point1">이용 정책</span></a>에 동의하신 것으로 간주합니다.</li>
+          </ul>
+        </div>
+
+      </div><!--fContent-->
+    </div><!--//fContainer-->
+    <div id="fFooter">
+      <div>
+        <p>Copyright © 4:33 Creative Lab. All Rights Reserved.</p>
+      </div>
+    </div>
+  </div><!--//ffWrap-->
+  <!--로그인팝업-->
+  <div id="login_pop" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="display:none;"><div class="modal-backdrop"></div>
+    <div class="modal-dialog pop_small">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="../images/common/pop_close.png" alt="close"></button>
+          <h4 class="modal-title" id="myModalLabel">로그인이 필요한 서비스입니다.</h4>
+        </div>
+        <div class="modal-body">
+          <div class="pop_tit">
+            <p>로그인이 필요한 서비스입니다.</p>
+          </div>
+          <div class="pop_noti1">
+            <ul>
+              <li>먼저 로그인 해주세요.</li>
+              <li class="last">OK 버튼을 클릭하시면 로그인 페이지로 이동합니다.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-black btn-xs"  data-dismiss="modal">OK</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+</body>
+</html>

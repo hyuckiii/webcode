@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="ko"> <!-- 한국어 -->
+<!-- <html lang="en"> 영어 -->
+<!-- <html lang="ja"> 일본어 -->
+<!-- <html lang="th"> 태국어 -->
+<!-- <html lang="zh-Hans"> 중국어(간체) -->
+<!-- <html lang="zh-Hant"> 중국어(번체) -->
+<head>
+<title>MonsterSuperLeague - USE ENERGY AND CHEER UP!</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=980">
+<meta name="format-detection" content="telephone=no">
+<script src="//static.four33.com/event/common/js/jquery-1.8.1.min.js"></script>
+
+</head>
+<!--
+  언어에 따라 #fwrap에 class추가
+    - ko(한국어)
+    - en(영어)
+    - ja(일본어)
+    - th(태국어)
+    - zh-CN(중국어 - 간체)
+    - zh-TW(중국어 - 번체)
+-->
+<body>
+<div id="fWrap" class="ko">
+
+  <link rel="stylesheet" href="//static.four33.com/event/game/monstersl/ingame/170811_catch/css/style.min.css" />
+
+  <div id="header"></div>
+  <!-- // #header -->
+
+  <div id="container">
+
+    <div id="roulette">
+      <div class="wrap_roulette">
+        <div class="bg"></div>
+        <div class="pointer"></div>
+        <button class="btn_start"><span>roulette<br/>Start!!!</span></button>
+        <div class="roulette_board">
+          <div class="cover"></div>
+          <div class="spinner"></div>
+        </div>
+        <div class="status">
+          <!-- 잔여 포인트 -->
+          <div class="wrap_left">
+            <div class="left_point">
+            </div>
+          </div>
+          <!-- 당일획득 포인트 -->
+          <div class="wrap_day">
+            <div class="day_point"></div>
+          </div>
+          <!-- 누적 사용 포인트 -->
+          <div class="wrap_use">
+            <div class="use_point"></div>
+          </div>
+          <!-- 누적 획득 포인트 -->
+          <div class="wrap_total">
+            <div class="total_point"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /#roulette -->
+
+    <div id="questInfo"></div>
+    <!-- #questInfo -->
+
+    <div id="questTotal">
+      <ul>
+        <li quest-num="0">
+          <span class="bg"></span>
+          <div class="wrap_reward">
+            <div class="reward-title"></div>
+          </div>
+          <div class="wrap_title">
+            <div class="quest-title"></div>
+          </div>
+          <div class="wrap_btn"><div class="btn"></div></div>
+        </li>
+        <li quest-num="1">
+          <span class="bg"></span>
+          <div class="wrap_reward">
+            <div class="reward-title"></div>
+          </div>
+          <div class="wrap_title">
+            <div class="quest-title"></div>
+          </div>
+          <div class="wrap_btn"><div class="btn"></div></div>
+        </li>
+        <li quest-num="2">
+          <span class="bg"></span>
+          <div class="wrap_reward">
+            <div class="reward-title"></div>
+          </div>
+          <div class="wrap_title">
+            <div class="quest-title"></div>
+          </div>
+          <div class="wrap_btn"><div class="btn"></div></div>
+        </li>
+        <li quest-num="3">
+          <span class="bg"></span>
+          <div class="wrap_reward">
+            <div class="reward-title"></div>
+          </div>
+          <div class="wrap_title">
+            <div class="quest-title"></div>
+          </div>
+          <div class="wrap_btn"><div class="btn"></div></div>
+        </li>
+        <li quest-num="4">
+          <span class="bg"></span>
+          <div class="wrap_reward">
+            <div class="reward-title"></div>
+          </div>
+          <div class="wrap_title">
+            <div class="quest-title"></div>
+          </div>
+          <div class="wrap_btn"><div class="btn"></div></div>
+        </li>
+      </ul>
+    </div>
+    <!-- // #questTotal -->
+
+  </div>
+  <!-- #container -->
+
+  <div id="footer"></div>
+
+  <!-- 확인 후 삭제해주세요 -->
+  <div class="test">
+    <button class="lang_ko" type="button" lang-data="ko">한국어</button>
+    <button class="lang_en" type="button" lang-data="en">영어</button>
+    <button class="lang_ja" type="button" lang-data="ja">일본어</button>
+    <button class="lang_th" type="button" lang-data="th">태국어</button>
+    <button class="lang_zh-CN" type="button" lang-data="zh-CN">중국어 - 간체</button>
+    <button class="lang_zh-TW" type="button" lang-data="zh-TW">중국어 - 번체</button>
+  </div>
+  <!-- // 확인 후 삭제해주세요 -->
+
+</div>
+<!-- // #fWrap -->
+<script type="text/javascript" src="//static.four33.com/event/common/js/webevent/ftt.webevent.0.3.js"></script>
+<script type="text/javascript" src="//static.four33.com/event/common/js/webevent/ftt.jquery.modalLayer.0.3.min.js"></script>
+<script type="text/javascript" src="//static.four33.com/event/common/js/webevent/ftt.jquery.fortune.0.2.min.js"></script>
+<script type="text/javascript" src="//static.four33.com/event/game/monstersl/ingame/common/js/commonLang.js"></script>
+<script type="text/javascript" src="//static.four33.com/event/game/monstersl/ingame/170811_catch/js/evLang.min.js"></script>
+
+<script type="text/javascript">
+
+// roulette opt
+var rollData = {
+  score: null,                // 룰렛 값 ( 0 ~ 9 )
+  point:{
+    day: 200,                 // 1일 최대 획득 가능 포인트
+    require: 50,              // 1회 룰렛 사용시 소모되는 포인트
+    current: 160,             // 룰렛을 돌리기 위한 잔여 포인트
+    use: 1800,                // 누적 사용 포인트
+    total: 2892,              // 누적 획득 포인트
+    lastScore: 0,             // 마지막 룰렛 값
+    chance: 1000              // 1일 참여 가능 횟수
+  },
+  element:{
+    wrap: $('#roulette'),
+    target: $('#roulette .spinner'),
+    btn: $('#roulette .btn_start'),
+    btnMsg: $('#roulette .btn_start span'),
+  },
+  options:{
+    prize: 10,              // 룰렛 목록 갯수
+    duration: 2000,         // 룰렛 애니메이션 시간
+    clockWise: false,       // 룰렛 방향
+    comma: true,            // 누적포인트에 일천단위 콤마
+    afterLayout: false,     // 룰렛이 돈후에 포인트 차감인지, 선차감 표시제어
+    itemDirection: 'right', // 룰렛 아이템 목록 순서
+    resetDelay: 600         // 룰렛동작후 모달팝업 표시동안 딜레이
+  },
+  callback:{
+    start: function (points) {
+      $("#roulette .roulette_board .cover").hide();   //룰렛 포인터 KeyFrame Animation
+    },
+    done: function (points) {
+      rollData.point.chance = points.chance;     // 일일 참여 횟수
+      rollData.point.current = points.current;   // 보유포인트
+      rollData.point.use = points.use;           // 사용포인트
+      rollData.point.total = points.total;       // 누적포인트
+
+      setTimeout(function(){
+        var layerMsg =langLayout.itemList[points.score]+'<br>'+langLayer.success,
+          rewardDepth = [200, 500, 1000, 2000, 3000];
+
+        $(rewardDepth).each(function (idx) {
+          if ( rollData.point.use >= rewardDepth[idx] && questStatus[idx] == 0) questStatus[idx] = 2;
+        });
+        $(quest).webEventUI(questData, langLayout);
+        modalLayer.openLayer(layerMsg, 'normal', langLayer);  // 보상획득
+        $('#roulette').removeClass('using');
+        $("#roulette .roulette_board .cover").show();
+      }, rollData.options.resetDelay);
+
+    }
+  }
+};
+
+// webEventUI.js options
+var quest = $('#container #questTotal'),
+  // 미션 상태 값 ( 0 / 2 / 3 )
+  questStatus = [ 0, 0, 0, 0, 0  ],
+  langLayout = evLang( $('#fWrap').attr('class') ),     // 이벤트 사용언어
+  langLayer = commonLang( $('#fWrap').attr('class') ),  // 공통사용(레이어) 언어
+  questData = {
+    questStatus: questStatus,
+    otherItem:{
+      btnName:{
+        target: $('#fWrap li .btn'),
+        once: true,
+        value: langLayout.btnName
+      },
+      dayPoint: {
+        target: $('#roulette .status .day_point'),
+        once: true,
+        value: rollData.point.day
+      },
+      footer:{
+        target: $('#footer'),
+        once: true,
+        value: langLayout.eventInfo
+      }
+    }
+  };
+
+// 초기실행(룰렛)
+var roulette = new roulette(rollData);
+
+// 초기실행(누적보상)
+$(quest).webEventUI(questData, langLayout);
+
+// 룰렛 버튼
+$('#roulette .btn_start').on('click', function(){
+  var isDisable = $(this).hasClass('disabled'),
+    isUsing = $('#roulette').hasClass('using');
+  if ( !isDisable && !isUsing) {
+    $('#roulette').addClass('using');
+    if ( 1 ) {
+      // ajax 성공 시
+      rollData.score = 3;       // 룰렛 값 ( 0 ~ 9 )
+      roulette.spin(rollData);  // 룰렛 실행
+    }else{
+      // ajax 실패 시
+      modalLayer.openLayer('fail', 'normal', langLayer);
+      //modalLayer.openLayer('error', 'normal', langLayer);
+    }
+  }
+});
+
+// 추가보상획득
+$(quest).on('click','li.ready',function () {
+  var questNum = $(this).attr('quest-num');   // quest-num 속성 값
+
+  if ( !$(this).hasClass('disabled') ){
+    // 중복 클릭 방지
+    $(this).addClass('disabled');
+
+    // 미션 상태 값 변경
+    questData.questStatus = [3, 3, 3, 3, 3, 3, 3, 3];
+
+    // 레이어 출력
+    if (1){  // 성공 시
+      modalLayer.openLayer('success', 'normal', langLayer);
+      $(quest).webEventUI(questData);
+    }else if (0){  // 실패 시
+      modalLayer.openLayer('fail', 'normal', langLayer);
+      $(quest).webEventUI(questData);
+    }else{  // 에러 발생 시(어뷰징)
+      modalLayer.openLayer('error', 'normal', langLayer);
+      $(quest).webEventUI(questData);
+    }
+  }
+});
+
+
+// 다국어 테스트
+$('.test button').bind('click', function () {
+  var langType = $(this).attr('lang-data');
+
+  langLayout = evLang(langType);
+  langLayer = commonLang(langType);
+  questData.otherItem.btnName.target = $('#container li .btn');
+  questData.otherItem.btnName.once = true;
+  questData.otherItem.btnName.value = langLayout.btnName;
+  questData.otherItem.footer.value = langLayout.eventInfo;
+
+  $('.test button').removeClass('active');
+  $(this).addClass('active');
+  $('#fWrap').attr('class', langType);
+  $(quest).webEventUI(questData, langLayout);
+});
+
+</script>
+
+</body>
+</html>

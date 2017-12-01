@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+/* web fonts(noto sans th) */
+@import url(http://fonts.googleapis.com/earlyaccess/notosansthai.css);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+
+/* reset */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;font-family:'Noto Sans Thai', 'Noto Sans', sans-serif;}
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {display:block}
+body {line-height:1}
+ol, ul {list-style:none}
+blockquote, q {quotes:none}
+blockquote:before, blockquote:after,
+q:before, q:after {content:'';content:none}
+table {border-collapse:collapse;border-spacing:0}
+input[type=checkbox], input[type=radio]{vertical-align:middle;position:relative}
+input[type=radio]{bottom:2px}
+#accessibility, .skip, hr, legend, caption{display:block;overflow:hidden;position:absolute;top:-1000em;left:0}
+.btn_comm{padding:0;margin:0;border:0;background:0;line-height:normal;cursor:pointer}
+.clearfix{*zoom:1}
+.clearfix:after{display:block;content:'';clear:both}
+button:focus,a:focus{outline:0}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body{font-size:0}
+#container button.btn_play,
+#container button.btn_reg,
+#container button.btn-type2,
+#container button.btn_play,
+#fLayer .video .list li button{padding:0;margin:0;border:0;background:0;line-height:normal;cursor:pointer}
+
+.th #fLayer .alert .cont .tit{display:none !important}
+
+/** mobile (320 ~ 767) **/
+
+#container .section .tit_section .tit{font-size:22px;}
+#container .section_event .tit_section .tit{font-size:22px;}
+
+/* #sectionReg(CBT신청) */
+#sectionReg #regForm .input_area .mobile_th dl{overflow:hidden;height:30px;}
+#sectionReg #regForm .input_area .mobile_th dl dt{float:left;width:65px;height:27px;padding-top:3px;background:#55575e;font-size:11px;color:#dddfe1; text-align:center;}
+#sectionReg #regForm .input_area .mobile_th dl dd{float:left;width:235px;line-height:30px;}
+#sectionReg #regForm .input_area .mobile_th dl dd input{width:215px;height:19px;padding:0 10px;border:0;border-radius:0;color:#868686;font-size:12px;line-height:19px;background:url(../images/common/text-mobile-th.gif) center top no-repeat;background-size:auto 100%;outline:none;vertical-align:middle;}
+#sectionReg #regForm .input_area .mobile_th dl dd input.active{background:none}
+
+#sectionReg #regForm .input_area.input_area_bottom{margin:10px auto 0 auto;}
+#sectionReg #regForm .input_area .email_th dl{overflow:hidden;height:30px;line-height:30px;}
+#sectionReg #regForm .input_area .email_th dl dt{float:left;width:65px;height:30px;background:#55575e;font-size:11px;color:#dddfe1; text-align:center;}
+#sectionReg #regForm .input_area .email_th dl dd{float:left;width:235px;line-height:30px;}
+#sectionReg #regForm .input_area .email_th dl dd input{width:215px;height:19px;padding:0 10px;border:0;border-radius:0;color:#868686;font-size:12px;line-height:19px;vertical-align:middle;outline:none;background:url(../images/common/text-email-th.gif) center top no-repeat;background-size:auto 100%;}
+#sectionReg #regForm .input_area .email_th dl dd input.active{background:none}
+#sectionReg #download a.btn_download{display:table;margin:0 auto;line-height:15px}
+#sectionReg #download a.btn_download span{display:table-cell;vertical-align:middle}
+
+/* .section_event(이벤트) */
+#container .section_event .reward div .tit3{display:table;width:100%;height:40px;background:#89d3e2}
+#container .section_event .reward div .tit3 .wrap_tit{overflow:hidden;display:table-cell;width:100%;height:37px;padding-top:3px;color:#26373a;font-size:9px;text-align:center;letter-spacing:-0.4px;vertical-align:middle}
+
+#fLayer .policy .tit{font-size:13px;font-weight:bold;}
+
+/* tablet (767 ~ 1024) */
+@media (min-width:767px){
+
+  /* common */
+  #container .section .tit_section .tit{font-size:43px}
+
+  /* #sectionReg */
+  #sectionReg #regForm .input_area .mobile_th dl{height:60px;}
+  #sectionReg #regForm .input_area .mobile_th dl dt{width:130px;height:52px;padding-top:8px;font-size:22px;}
+  #sectionReg #regForm .input_area .mobile_th dl dd{width:475px;line-height:60px;}
+  #sectionReg #regForm .input_area .mobile_th dl dd input{width:455px;height:38px;font-size:34px;line-height:38px;}
+
+  #sectionReg #regForm .input_area.input_area_bottom{margin:20px auto 0 auto;}
+  #sectionReg #regForm .input_area .email_th dl{height:60px;line-height:60px;}
+  #sectionReg #regForm .input_area .email_th dl dt{width:130px;height:60px;font-size:22px;}
+  #sectionReg #regForm .input_area .email_th dl dd{width:475px;line-height:60px;}
+  #sectionReg #regForm .input_area .email_th dl dd input{width:455px;height:38px;font-size:34px;line-height:38px;}
+  #sectionReg #download a.btn_download{line-height:30px}
+  
+  /* .section_event */
+  #container .section_event .tit_section .tit{font-size:43px;}
+  #container .section_event .reward div .tit3{height:80px;}
+  #container .section_event .reward div .tit3 .wrap_tit{height:80px;font-size:20px;}
+
+  #fLayer .policy .tit{font-size:23px;}
+}
+
+
+/* PC(1025~) */
+@media (min-width:1025px){
+    #container .section .tit_section .tit{font-size:70px;letter-spacing:-4px}
+    #container .section .tit_section .sub_tit{padding-top:20px;font-size:30px;letter-spacing:-0.5px}
+
+    /* #sectionReg */
+    #sectionReg #regForm .input_area .mobile_th dl{height:80px;}
+    #sectionReg #regForm .input_area .mobile_th dl dt{width:195px;height:75px;padding-top:5px;font-size:34px;}
+    #sectionReg #regForm .input_area .mobile_th dl dd{width:710px;line-height:80px;}
+    #sectionReg #regForm .input_area .mobile_th dl dd input{width:690px;height:57px;font-size:34px;line-height:57px;}
+
+    #sectionReg #regForm .input_area.input_area_bottom{margin:30px auto 0 auto;}
+    #sectionReg #regForm .input_area .email_th dl{height:80px;line-height:80px;}
+    #sectionReg #regForm .input_area .email_th dl dt{width:195px;height:80px;font-size:34px;}
+    #sectionReg #regForm .input_area .email_th dl dd{width:710px;line-height:80px;}
+    #sectionReg #regForm .input_area .email_th dl dd input{width:690px;height:57px;font-size:34px;line-height:57px;}
+    #sectionReg #regForm button.btn_submit, #sectionReg #download button.btn_download{line-height:48px;}
+    #sectionReg #download a.btn_download{line-height:43px}
+
+    /* .section_event */
+    #container .section_event .tit_section .tit{font-size:70px;line-height:80px;letter-spacing:-4px;}
+    #container .section_event .tit_section .tit .num{min-width:60px;height:74px;padding:0 39px;margin-left:5px;border-width:3px;border-radius:60px;font-size:50px;line-height:74px}
+    #container .section_event .tit_section .sub_tit{padding-top:20px;font-size:30px;letter-spacing:-0.5px}
+    #container .section_event .reward div .tit3{height:100px;}
+    #container .section_event .reward div .tit3 .wrap_tit{height:100px;font-size:29px;padding:0;letter-spacing:-1px}
+
+    #fLayer .policy .tit{font-size:35px;}
+}

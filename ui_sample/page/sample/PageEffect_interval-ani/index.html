@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>pageEffect - interval-ani</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<link rel="stylesheet" href="resource/css/style.css">
+<link rel="stylesheet" href="resource/css/animate.css">   <!-- animate.css (https://github.com/daneden/animate.css) -->
+<script src="http://static.four33.co.kr/event/common/js/jquery-1.8.1.min.js"></script>
+</head>
+<body>
+
+<div id="fWrap">
+
+  <div id="cartoon">
+
+    <div class="wrap_cartoon">
+      <div class="l_side">
+        <div class="char"></div>
+        <div class="msg">
+          <p></p>
+        </div>
+      </div>
+      <div class="r_side">
+        <div class="char"></div>
+        <div class="msg">
+          <p></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- // #cartoon -->
+
+</div>
+<!-- // #fWrap -->
+<script src="resource/js/ftt.intervalAni.js"></script>
+<script>
+var target = {
+  char1: $('#cartoon .l_side .char'),
+  msg1Wrap: $('#cartoon .l_side .msg'),
+  msg1Text: $('#cartoon .l_side .msg p'),
+  char2: $('#cartoon .r_side .char'),
+  msg2Wrap: $('#cartoon .r_side .msg'),
+  msg2Text: $('#cartoon .r_side .msg p')
+};
+
+var char1AniSet = [
+  {
+    aniName: 'bounceInUp, fadeIn',                  // css keyframe명 (생략 시 CSS애니메이션 미 실행, 인터벌은 그대로 실행) [animation-name]
+    duration: 1500,                                 // 재생 시간 (미 입력 시 실행되지 않음) [animation-duration]
+    delay: 500,                                    // 대기 시간
+    loop: false,                                    // 반복 여부 (기본값 false) [animation-iteration-count]
+    fillMode: true,                                 // 애니메이션 종료 후 CSS유지 여부 (기본 값 true) [animation-fill-mode]
+    beforeChange: function (currentIdx, nextIdx) {
+      console.log('현재 단계: ' + currentIdx);
+      console.log('다음 단계: ' + nextIdx);
+    },
+    afterChange: function (currentIdx, nextIdx) {
+      console.log('현재 단계: ' + currentIdx);
+      console.log('다음 단계: ' + nextIdx);
+    }
+  },
+  {
+    aniName: 'rotateOut',
+    duration: 1000,
+    delay: 8000
+  }
+], msg1AniSet = [
+  {
+    aniName: 'fadeIn',
+    duration: 1000,
+    delay: 2000,
+    beforeChange: function (currentIdx, nextIdx) {
+      msg(target.msg1Text, '테스트입니다.');
+    }
+  },
+  {
+    aniName: 'fadeOut',
+    duration: 500,
+    delay: 500
+  },
+  {
+    aniName: 'fadeIn',
+    duration: 1000,
+    delay: 3500,
+    beforeChange: function (currentIdx, nextIdx) {
+      msg(target.msg1Text, '테스트가 끝났으니 사라지겠습니다.');
+    }
+  },
+  {
+    aniName: 'fadeOut',
+    duration: 500,
+    delay: 500
+  }
+], char2AniSet = [
+    {
+      aniName: 'rubberBand',
+      duration: 1000,
+      delay: 4000
+    }
+], msg2AniSet = [
+  {
+    aniName: 'fadeIn',
+    duration: 1000,
+    delay: 5000,
+    beforeChange: function (currentIdx, nextIdx) {
+      msg(target.msg2Text, '테스트라고?!');
+    }
+  },
+  {
+    aniName: 'fadeOut',
+    duration: 500,
+    delay: 500,
+  },
+  {
+    aniName: 'fadeIn',
+    duration: 1000,
+    delay: 4500,
+    beforeChange: function (currentIdx, nextIdx) {
+      msg(target.msg2Text, '. . . ');
+    }
+  }
+];
+
+function msg(target, text){
+  $(target).empty().html(text);
+}
+
+$(target.char1).cssAniSet(char1AniSet);
+$(target.char2).cssAniSet(char2AniSet);
+$(target.msg1Wrap).cssAniSet(msg1AniSet);
+$(target.msg2Wrap).cssAniSet(msg2AniSet);
+
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>youtube - control sample</title>
+</head>
+<body>
+
+
+<style>
+  .container { margin:0px auto; max-width:640px;font-family:'Malgun Gothic', '막은 고딕', sans-serif;color:#666;}
+</style>
+<div class="container"  style="min-height:1670px;">
+    <h1>youtube - control sample</h1>
+
+
+  <link rel="stylesheet" href="resource/style.css" />
+  <div class="section">
+    <!-- js로 로드 -->
+    <div id="ytPlayer"></div>
+    <div class="btn_area">
+      <button class="btn_play" video-target="ytPlayer1" type="button">재생</button>
+      <button class="btn_pause" video-target="ytPlayer1" type="button">일시 정지</button>
+      <button class="btn_stop" video-target="ytPlayer1" type="button">정지</button>
+      <button class="btn_next" video-target="ytPlayer1" type="button">다음 영상</button>
+      <button class="btn_prev" video-target="ytPlayer1" type="button">이전 영상</button>
+      <button class="btn_prev10" video-target="ytPlayer1" type="button">10초 전</button>
+      <button class="btn_next10" video-target="ytPlayer1" type="button">10초 다음</button>
+      <button class="btn_slow" video-target="ytPlayer1" type="button">0.5배속</button>
+      <button class="btn_normal" video-target="ytPlayer1" type="button">정속</button>
+      <button class="btn_fast" video-target="ytPlayer1" type="button">2배속</button>
+      <button class="btn_mute" video-target="ytPlayer1" type="button">음소거</button>
+      <button class="btn_unmute" video-target="ytPlayer1" type="button">음소거해제</button>
+      <button class="btn_vol20" video-target="ytPlayer1" type="button">볼륨 20</button>
+      <button class="btn_vol100" video-target="ytPlayer1" type="button">볼륨 최대(100)</button>
+      <button class="btn_hd720" video-target="ytPlayer1" type="button">720p로 화질변경</button>
+      <button class="btn_hd1080" video-target="ytPlayer1" type="button">1080p로 화질변경</button>
+      <button class="btn_change" video-target="ytPlayer1" type="button">영상 변경</button>
+    </div>
+    <div class="info">
+      <ul>
+        <li class="status">
+          <div class="tit">재생상태</div>
+          <div class="val"></div>
+        </li>
+        <li class="format">
+          <div class="tit">화질</div>
+          <div class="val"></div>
+        </li>
+        <li class="duration">
+          <div class="tit">재생시간</div>
+          <div class="graph"><span></span></div>
+          <div class="val"></div>
+        </li>
+        <li class="url">
+          <div class="tit">영상 url</div>
+          <div class="val"></div>
+        </li>
+        <li class="list">
+          <div class="tit">재생목록</div>
+          <div class="val"></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- // .section -->
+  <script src="https://static.four33.co.kr/event/common/js/jquery-1.8.1.min.js"></script>
+  <script src="resource/youtube.js"></script>
+
+
+
+
+
+</div>
+
+<script>
+
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

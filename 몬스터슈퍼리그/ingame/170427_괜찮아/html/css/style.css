@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+/* reset */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
+body {line-height:1}
+ol, ul {list-style:none}
+blockquote, q {quotes:none}
+blockquote:before, blockquote:after,
+q:before, q:after {content:'';content:none}
+table {border-collapse:collapse;border-spacing:0}
+input[type=checkbox], input[type=radio]{vertical-align:middle;position:relative}
+input[type=radio]{bottom:2px}
+#accessibility, .skip, hr, legend, caption{display:block;overflow:hidden;position:absolute;top:-1000em;left:0}
+button{padding:0;margin:0;border:0;background:0;line-height:normal;cursor:pointer;outline:none;box-shadow:none}
+li,a,button{-webkit-tap-highlight-color:rgba(0,0,0,0)}
+.clearfix{*zoom:1}
+.clearfix:after{display:block;content:'';clear:both;}
+
+
+/* layout */
+img{max-width:980px !important}
+body{font-size:0}
+#fWrap{position:relative;width:980px;margin:0 auto}
+
+/* #header */
+#header{position:relative;width:100%;height:993px}
+#fWrap.ko #header{background:url(../images/bg-header-ko.jpg)}
+#fWrap.en #header{background:url(../images/bg-header-en.jpg)}
+#fWrap.ja #header{background:url(../images/bg-header-ja.jpg)}
+#fWrap.th #header{background:url(../images/bg-header-th.jpg)}
+#fWrap.zh-CN #header{background:url(../images/bg-header-hans.jpg)}
+#fWrap.zh-TW #header{background:url(../images/bg-header-hant.jpg)}
+
+/* #pointInfo */
+#header #pointInfo{display:table;position:absolute;right:110px;top:783px;width:546px;height:91px}
+#header #pointInfo .point{display:table-cell;color:#ffee5f;font-size:42px;font-weight:bold;text-align:right;vertical-align:middle}
+
+/* #totalQuest */
+#container{position:relative;height:766px;padding:0 20px;margin-top:-10px;background:url(../images/bg-quest.jpg) no-repeat}
+#container #quest1{height:390px;padding-top:10px}
+#container .quest{overflow:hidden}
+#container .quest ul{margin-bottom:44px}
+#container .quest:last-of-type ul{margin-bottom:0}
+#container .quest ul:after{display:block;content:'';clear:both}
+#container .quest ul li{float:left;position:relative;width:180px;height:346px;margin-right:10px}
+#container .quest ul li:nth-of-type(5n){float:right;margin-right:0}
+
+#container .quest ul li .wrap_title{display:table;width:100%;height:90px;}
+#container .quest ul li .quest-title{display:table-cell;color:#296727;font-size:26px;line-height:30px;text-align:center;letter-spacing:-1px;vertical-align:middle}
+#container .quest ul li .quest-title span{color:#fc665f;font-weight:bold}
+
+#container .quest ul li .wrap_reward{display:table;position:absolute;left:10px;top:210px;width:160px;height:60px}
+#container .quest ul li .wrap_reward .reward-title{display:table-cell;color:#b5ebc0;font-size:18px;line-height:22px;text-align:center;vertical-align:middle}
+
+#container .quest ul li .wrap_btn{display:table;position:absolute;left:10px;bottom:0;width:160px;height:68px}
+#container .quest ul li .wrap_btn .btn{display:table-cell;padding-bottom:10px;font-size:30px;text-align:center;font-weight:bold;vertical-align:middle}
+#container .quest ul li .wrap_btn .btn .btn_normal{color:#a2b372}
+#container .quest ul li .wrap_btn .btn .btn_end{display:none;color:#51754d}
+
+#container .quest ul li.ready .wrap_btn .btn{cursor:pointer;background:url(../images/btn-quest.png) no-repeat}
+#container .quest ul li.ready .wrap_btn .btn .btn_normal{color:#316154}
+
+#container .quest ul li.end .wrap_btn .btn{background:url(../images/btn-quest.png) left bottom no-repeat}
+#container .quest ul li.end .wrap_btn .btn .btn_normal{display:none}
+#container .quest ul li.end .wrap_btn .btn .btn_end{display:inline}
+
+#footer{display:table;clear:both;width:100%;height:121px;padding-top:10px;margin-top:-10px;background:url(../images/bg-footer.jpg) no-repeat}
+#footer ul{display:table-cell;padding:0 30px;margin:0 auto;vertical-align:middle}
+#footer li{position:relative;height:30px;color:#b0e387;font-size:20px;line-height:25px;text-align:left}
+#footer li .bu{overflow:visible;display:inline-block;width:24px;height:24px;margin-right:10px;vertical-align:middle;background:url(../images/bu-footer.png) no-repeat}
+
+
+/* lang font-size */
+#fWrap.en #container .quest ul li .wrap_btn .btn{font-size:25px}
+#fWrap.ja #container .quest ul li .quest-title{font-size:20px}
+#fWrap.ja #container .quest ul li .wrap_reward .reward-title{font-size:14px}
+#fWrap.th #container .quest ul li .quest-title{font-size:24px}
+#fWrap.th #container .quest ul li .wrap_reward .reward-title{font-size:13px}
+
+
+/* test */
+#fWrap .test{position:fixed;right:0;top:120px;}
+#fWrap .test button{display:block;width:120px;padding:10px 0;border-right:2px solid #000;border-bottom:2px solid #000;margin-bottom:5px;color:#000;font-size:13px;text-align:center;background:#ccc}
+#fWrap .test button.active{font-weight:bold;background:#fff}
+
+/* layer */
+#fLayer{display:none;position:absolute;left:0;top:0;width:100%;height:100%}
+#fLayer .bg_layer{position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:15}
+#fLayer .modal_layer{position:fixed;left:50%;top:0;width:609px;height:376px;margin:0 0 0 -304px;z-index:20;transition: transform 0.3s ease;transform: scale(0,0)}
+#fLayer.active .modal_layer{transform: scale(1,1)}
+#fLayer .modal_layer .wrap_layer{position:relative;padding-top:73px;border:2px solid #b64c2b;background:#1d0508}
+#fLayer .modal_layer .wrap_layer .title{display:none}
+#fLayer .modal_layer .wrap_layer .msg{position:relative;top:-1px;display:table;width:100%;min-height:115px;text-align:center;}
+#fLayer .modal_layer .wrap_layer .msg .wrap_msg{display:table-cell;padding:10px 20px 20px 20px;color:#ffb606;font-size:33px;line-height:40px;font-weight:bold;vertical-align:middle}
+#fLayer .modal_layer .wrap_layer .msg .wrap_msg span{display:block;padding-top:10px;color:#d0a94a;font-size:20px;letter-spacing:0}
+#fLayer .modal_layer .wrap_layer .btn_area{position:relative;top:-2px;height:145px;text-align:center}
+#fLayer .modal_layer .wrap_layer .btn_area button{display:inline-block;width:234px;height:90px;color:#e5ed00;font-size:30px;line-height:90px;font-weight:bold;text-align:center;background:url(../images/btn-layer.jpg) no-repeat}

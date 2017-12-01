@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+/* reset */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
+body {line-height:1}
+ol, ul {list-style:none}
+blockquote, q {quotes:none}
+blockquote:before, blockquote:after,
+q:before, q:after {content:'';content:none}
+table {border-collapse:collapse;border-spacing:0}
+input[type=checkbox], input[type=radio]{vertical-align:middle;position:relative}
+input[type=radio]{bottom:2px}
+#accessibility, .skip, hr, legend, caption{display:block;overflow:hidden;position:absolute;top:-1000em;left:0}
+button{padding:0;margin:0;border:0;background:0;line-height:normal;cursor:pointer}
+button:focus{outline:0}
+.clearfix{*zoom:1}
+.clearfix:after{display:block;content:'';clear:both}
+
+
+/* common */
+
+/* layout */
+img{max-width:960px !important}
+body{font-size:0;background:#fff}
+
+#fWrap{overflow:hidden;position:relative;width:980px;height:2080px;margin:0 auto;}
+
+#header{height:371px;background:url(../images/bg-header.jpg) center top no-repeat}
+
+#container{width:980px;margin:0 auto}
+
+/* #questMap(말판) */
+#container #quest1{position:relative;top:-4px;width:980px;height:1032px;padding-top:13px;background:url(../images/bg-map.jpg) center top no-repeat}
+#container #quest1 #questMap{position:relative;width:925px;height:1024px;margin-left:27px}
+#container #quest1 #questMap .wrap_map{position:relative}
+#container #quest1 #questMap .top{position:absolute;left:0;top:0;width:100%;height:204px}
+#container #quest1 #questMap .top .map{background-image:url(../images/btn-map-top.jpg)}
+#container #quest1 #questMap .r_side{position:absolute;right:0px;top:204px;width:185px;height:612px}
+#container #quest1 #questMap .r_side .map{background-image:url(../images/btn-map-right.jpg)}
+#container #quest1 #questMap .bottom{position:absolute;left:0;bottom:0;width:100%;height:204px}
+#container #quest1 #questMap .bottom .map{float:right;background-image:url(../images/btn-map-bottom.jpg)}
+#container #quest1 #questMap .l_side{position:absolute;left:0;top:204px;width:185px;height:612px}
+#container #quest1 #questMap .l_side .map{background-image:url(../images/btn-map-left.jpg)}
+#container #quest1 #questMap .map{display:inline-block;position:relative;width:185px;height:204px}
+#container #quest1 #questMap .map .bg{display:none}
+#container #quest1 #questMap .map.active .bg{display:block;position:absolute;left:0;top:0;width:100%;height:204px;background:url(../images/bg-active.png) left bottom no-repeat}
+#container #quest1 #questMap .btn_quest0.active .bg{background-position:left top}
+#container #quest1 #questMap .btn_quest4.active .bg{background-position:left -204px}
+#container #quest1 #questMap .btn_quest8.active .bg{background-position:left -408px}
+#container #quest1 #questMap .btn_quest12.active .bg{background-position:left -612px}
+#container #quest1 #questMap .map:nth-of-type(1){background-position:left top}
+#container #quest1 #questMap .map:nth-of-type(2){background-position:left -204px}
+#container #quest1 #questMap .map:nth-of-type(3){background-position:left -408px}
+#container #quest1 #questMap .map:nth-of-type(4){background-position:left -612px}
+#container #quest1 #questMap .map:nth-of-type(5){background-position:left bottom}
+#container #quest1 #questMap .l_side .wrap_map{position:relative;height:612px}
+#container #quest1 #questMap .l_side .map{position:absolute;}
+#container #quest1 #questMap .l_side .btn_quest13{bottom:0;border-bottom:0}
+#container #quest1 #questMap .l_side .btn_quest14{top:204px}
+#container #quest1 #questMap .l_side .btn_quest15{top:0}
+#fWrap.ready .map{background-image:none}
+
+
+/* #questInfo(포인트, 주사위정보) */
+#container #questInfo .status span{position:absolute;color:#ffde00;font-size:50px;text-align:center}
+#container #questInfo .status .left_point{left:525px;top:305px;width:150px;height:53px;line-height:54px}
+#container #questInfo .status .use_point{left:410px;top:397px;width:74px;height:40px;font-size:30px;line-height:43px}
+#container #questInfo .status .total_point{left:642px;top:397px;width:74px;height:40px;font-size:30px;line-height:43px}
+#container #questInfo .dice{position:absolute;right:252px;top:614px;height:142px}
+#container #questInfo .dice .img_dice{display:inline-block;width:135px;margin-right:31px;vertical-align:top}
+#container #questInfo .dice .img_dice .ani{display:none;width:141px;height:142px}
+#container #questInfo .dice.loading .img_dice .ani{display:block}
+#container #questInfo .dice.loading .img_dice .img{display:none}
+#container #questInfo .dice .img_dice .img{display:block;width:141px;height:142px;background:url(../images/img-dice.jpg) no-repeat}
+#container #questInfo .dice.val1 .img_dice .img{background-position:left top}
+#container #questInfo .dice.val2 .img_dice .img{background-position:left -142px}
+#container #questInfo .dice.val3 .img_dice .img{background-position:left -284px}
+#container #questInfo .dice.val4 .img_dice .img{background-position:left -426px}
+#container #questInfo .dice.val5 .img_dice .img{background-position:left -568px}
+#container #questInfo .dice.val6 .img_dice .img{background-position:left bottom}
+#container #questInfo .dice .btn_dice{width:303px;height:134px;margin-top:3px;background:url(../images/btn-dice.jpg) no-repeat;vertical-align:top;box-sizing:content-box}
+
+/* #reward(누적보상) */
+#container #reward{position:relative;top:-8px;height:672px;background:url(../images/bg-reward.jpg) no-repeat}
+#container #reward ul{width:925px;padding:155px 0 0 29px}
+#container #reward ul li{float:left;position:relative;width:178px;height:396px;margin-right:8px}
+#container #reward ul li.ready{cursor:pointer}
+#container #reward ul li.ready .btn{position:absolute;left:0;bottom:-1px;width:178px;height:72px;background:url(../images/btn-ready.png) no-repeat}
+#container #reward ul li.btn_reward4 .btn{left:2px}
+#container #reward ul li.end{background:url(../images/btn-reward1.jpg) no-repeat}
+#container #reward ul li.end.btn_reward0{background-position:left top}
+#container #reward ul li.end.btn_reward1{background-position:left -396px}
+#container #reward ul li.end.btn_reward2{background-position:left -792px}
+#container #reward ul li.btn_reward3{margin-right:5px;}
+#container #reward ul li.end.btn_reward3{background-position:left bottom}
+#container #reward ul li.btn_reward4{float:right;width:183px;height:396px;margin:0}
+#container #reward ul li.end.btn_reward4{background:url(../images/btn-reward2.jpg) no-repeat}
+
+/* ios */
+body.ios #container #questInfo .dice{right:252px;top:615px}
+body.ios #container #questInfo .dice .img_dice{margin-right:31px}
+body.ios #container #questInfo .status .left_point{line-height:62px}
+body.ios #container #questInfo .status .use_point{left:412px;top:402px;line-height:45px}
+body.ios #container #questInfo .status .total_point{left:645px;top:402px;line-height:45px}
+
+
+
+/* layer */
+#fLayer{display:none;position:absolute;left:0;top:0;width:100%;height:100%}
+#fLayer .wrap_layer{position:relative;width:100%;height:100%}
+#fLayer .bg_layer{position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:15;}
+#fLayer .layer_common{width:430px;height:276px;}
+#fLayer .layer_common .msg{display:table;width:100%;height:167px;padding:0 0 0 3px}
+#fLayer .layer_common .msg div{display:table-cell;color:#82d1ff;font-size:24px;line-height:30px;text-align:center;vertical-align:middle}
+#fLayer .layer_common .btn_area{display:block; text-align:center;}
+
+#fLayer .layer_alert{display:none;position:fixed;left:50%;width:444px;height:290px;margin:0 0 0 -222px;background:url(../images/popup-bg.png);z-index:20}

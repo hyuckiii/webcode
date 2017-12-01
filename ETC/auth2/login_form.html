@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Auth</title>
+
+  <link rel="stylesheet" type="text/css" href="http://auth2.webcook.de-php-api.fttinc.kr/res/user/css/register.css" />
+  <link rel="stylesheet" type="text/css" href="http://auth2.webcook.de-php-api.fttinc.kr/res/user/css/style.css" />
+<!-- <link href="https://static.four33.co.kr/external/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" /> -->
+
+  <script src="http://auth2.webcook.de-php-api.fttinc.kr/res/user/js/jquery.min.js"  type="text/javascript"></script>
+  <script src="http://auth2.webcook.de-php-api.fttinc.kr/res/user/js/bootstrap.min.js"  type="text/javascript"></script>
+
+
+
+<!--   <script language="javascript" src="https://auth2.webcook.de-php-api.fttinc.kr/res/user/js/jquery.min.js"></script>
+  <script language="javascript" src="https://auth2.webcook.de-php-api.fttinc.kr/res/user/js/jquery-ui.min.js"></script> -->
+<!--   <script language="javascript" src="https://auth2.webcook.de-php-api.fttinc.kr/res/user/js/bootstrap.min.js"></script> -->
+<!-- <script src="https://static.four33.co.kr/external/bootstrap/js/bootstrap.min.js" type="text/javascript"></script> -->
+
+
+  <style>
+
+  </style>
+</head>
+<body>
+  <div id="fWrap">
+    <div id="header">
+      <h1 class="logo"><img src="https://img.four33.co.kr/event/common/images/logo433.png" alt="433"></h1>
+      <h2 class="tit">사용자 등록</h2>
+    </div>
+    <!-- // #header -->
+
+    <!-- 모달박스 -->
+    <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Short modal</button>
+
+    <!-- 정보 보여주기 이외에 Form요소 또는 btn-primary있는 경우 data-keyboard="false" data-backdrop="static" 반드시 추가  --> 
+    <div class="modal fade auth_style" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static" style="display: none;">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title" id="myModalLabel">로그인</h4>
+          </div>
+          <div class="modal-body">
+            <div class="pop_tit">
+              <p>이메일 주소 인증이 되지 않은 계정입니다.</p>
+            </div>
+            <div class="pop_notice">
+              <div class="noti_txt">
+                <p>이메일 주소 인증을 하셔야만 이용하실 수 있습니다. <br/>인증메일을 보내시고 인증메일의 <span class="point">승인 링크</span>를 클릭해주세요.</p>
+              </div><!-- //noti_txt -->
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">인증메일 다시 보내기</button>
+            <!-- <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button> -->
+
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+
+    <div id="container">
+
+      <div class="steps_wrap steps_login">
+        <div class="steps ">
+          <ul>
+            <li class="active"><a>가입하기</a></li>
+            <li ><a>이메일 인증</a></li>
+            <li ><a>완료</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="content">
+
+        <span class="bg_top"></span>
+        <div class="form">
+          <div class="text">
+            <input type="text" id="id" placeholder="아이디를 입력해주세요.(4자이상)" />
+            <p class="error">사용중인 아이디 입니다.</p>
+          </div>
+          <div class="pw">
+            <input type="password" id="pw" placeholder="비밀번호를 입력해주세요.(8자이상,영문자+숫자+특수문자 2조합 이상)" />
+            <p class="error">비밀번호는 8자리 이상, 영문,숫자,특수문자 중 2가지 이상을 조합하여 입력해주세요.</p>
+          </div>
+          <div class="pw">
+            <input type="password" id="chkPw" placeholder="확인용 비밀번호를 입력해주세요." />
+            <p class="error">비밀번호가 같지 않습니다.</p>
+          </div>
+          <div class="text">
+            <input type="text" id="name" placeholder="이름을 입력해주세요." />
+          </div>
+          <div class="text">
+            <ul class="email_wrap">
+              <li>
+                <input type="text" id="email" placeholder="이메일 계정을 입력해주세요." />              
+              </li>
+              <li>@</li>
+              <li>
+                <select class="selectpicker">
+                  <option>433.co.kr</option>
+                  <option>qroad.net</option>
+                </select>
+              </li>
+            </ul>
+            <p class="error">이미 사용중인 이메일주소 입니다.</p>
+          </div>
+          <div class="text">
+            <input type="text" id="dept" placeholder="소속을 입력해주세요." />
+          </div>
+          <div class="btn_area">
+            <button id="registBtn">가입하기</button>
+          </div>
+          <input type='hidden' id='retUrl' value="" />
+        </div>
+        <div class="admin_info">
+          <p>* 가입 완료 후 승인 메일이 발송됩니다.</p>
+          <p>* 승인 URL을 클릭 후에 사용 가능합니다.</p>
+          <p>* 권한은 소속부서의 권한 담당자에게 요청하시면 됩니다.</p>
+        </div>
+      </div>
+      <!-- // #content -->
+
+
+
+
+
+
+    </div>
+    <!-- // #container -->
+  </div>
+  <!-- //#fWrap -->
+</body>
+<script>
+  (function() {
+    $("#registBtn").click(function() {
+      authSignup();
+    });
+  })();
+
+  function validatePw(pw)
+  {
+      if (pw.length < 8) {
+      
+        alert("비밀번호는 8자리 이상, 영문,숫자,특수문자 중 2가지 이상을 조합하여 입력해주세요.");
+        return false;
+      }
+
+      var specialChars = [
+        '!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-',
+        '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', '\'', ']', '^', 
+        '_', '`', '{', '|', '}', '~'];
+
+      var hasLowerCase = false;
+      //var hasUpperCase = false;
+      var hasNumber    = false;
+      var hasSpecialChar = false;
+
+      for (var i = 0; i < pw.length; i++)
+      {
+        var ch = pw.charAt(i);
+        if (!hasLowerCase && ( ('a' <= ch && ch <= 'z') || ('A' <= ch && ch <= 'Z'))) hasLowerCase = true;
+        //if (!hasUpperCase && 'A' <= ch && ch <= 'Z') hasUpperCase = true;
+        if (!hasNumber    && '0' <= ch && ch <= '9') hasNumber    = true;
+        if (!hasSpecialChar && $.inArray(ch, specialChars) >= 0) hasSpecialChar = true;
+      }
+	  
+      //if (hasLowerCase && hasUpperCase && hasNumber && hasSpecialChar) return true;
+      if ((hasLowerCase && hasNumber)||(hasLowerCase && hasSpecialChar)||(hasNumber && hasSpecialChar)) {
+		return true;
+	  }
+
+      alert("비밀번호는 8자리 이상, 영문,숫자,특수문자 중 2가지 이상을 조합하여 입력해주세요.");
+      return false;
+  }
+
+  function authSignup()
+  {
+    var id = $("#id").val().trim();
+    if (id == "" || id.length < 4)
+    {
+      alert("ID를 확인 해주세요");
+      return;
+    }
+
+    var pw = $("#pw").val().trim();
+    if (!validatePw(pw)) return;
+    if (pw != $("#chkPw").val().trim())
+    {
+      alert("비밀번호가 일치하지 않습니다.");
+      return;
+    }
+
+    var name = $("#name").val().trim();
+    if (name == "")
+    {
+      alert("이름을 확인 해주세요");
+      return;
+    }
+
+    var dept = $("#dept").val().trim();
+    if (dept == "")
+    {
+      alert("소속을 확인 해주세요");
+      return;
+    }
+
+    var email = $("#email").val().trim();
+    if (email == "" || email.indexOf("@") < 0)
+    {
+      alert("이메일 주소를 확인 해주세요.");
+      return;
+    }
+	
+    var success = function(resp) {
+      if (resp)
+      {
+        if (resp.result == 'OK')
+        {
+          alert(resp.message);
+
+                      location.href = "/user/notice";
+          
+
+        }
+        else
+        {
+          alert(resp.message);
+        }
+      }
+      else
+      {
+        alert("실패하였습니다. 다시 시도 해주세요.");
+      }
+    };
+
+    $.ajax({
+      type: "POST",
+      url: "/user/ajax/signup",
+      data: {"id":id, "pw":pw, "name":name, "dept":dept, "email":email},
+      success: success,
+      dataType: "json"
+    });
+
+  }
+</script>
+</html>

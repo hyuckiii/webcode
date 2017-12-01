@@ -1,0 +1,612 @@
+@charset "utf-8";
+
+/* web fonts(noto sans kr) */
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+/* reset */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;font-family:'Noto Sans KR','malgun gothic','dotum'}
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {display:block}
+body {line-height:1}
+ol, ul {list-style:none}
+blockquote, q {quotes:none}
+blockquote:before, blockquote:after,
+q:before, q:after {content:'';content:none}
+table {border-collapse:collapse;border-spacing:0}
+input[type=checkbox], input[type=radio]{vertical-align:middle;position:relative}
+input[type=radio]{bottom:2px}
+#accessibility, .skip, hr, legend, caption{display:block;overflow:hidden;position:absolute;top:-1000em;left:0}
+.btn_comm{padding:0;margin:0;border:0;background:0;line-height:normal;cursor:pointer}
+.clearfix{*zoom:1}
+.clearfix:after{display:block;content:'';clear:both}
+button:focus,a:focus{outline:0}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body{font-size:0}
+#container button.btn_play,
+#container button.btn_reg,
+#container button.btn-type2,
+#container button.btn_play,
+#fLayer .video .list li button{padding:0;margin:0;border:0;background:0;line-height:normal;cursor:pointer}
+
+
+
+/** mobile (320 ~ 767) **/
+
+/* common */
+#fWrap{position:relative;min-width:320px;padding-top:41px}
+#container .wrap_section{position:relative;width:320px;margin:0 auto;z-index:10}
+#container .section{padding:27px 0}
+#container .section .tit_section{text-align:center}
+#container .section .tit_section .tit{color:#17254a;font-size:23px;letter-spacing:-1px;font-weight:500}
+#container .section .tit_section .sub_tit{padding-top:8px;color:#585c61;font-size:10px;letter-spacing:-0.4px}
+
+
+/* #header */
+#header{position:fixed;left:0;top:0;width:100%;height:40px;background:#1e1e1e;border-bottom:1px solid #404040;z-index:20}
+#header .wrap_header{width:320px;margin:0 auto}
+#header .wrap_header:after{display:block;content:'';clear:both}
+#header .logo_433{float:left;width:30%;margin:12px 0 0 8px}
+#header .logo_433 img{width:auto;height:18px}
+#header .sns{float:right;width:30%;margin:10px 8px 0 0;text-align:right}
+#header .sns a{display:inline-block;width:20px;height:20px;background:url(../images/common/btn-sns.gif) no-repeat;background-size:auto 200%}
+#header .sns a.btn_facebook:active{background-position:left bottom}
+#header .sns a.btn_youtube{margin-left:8px;background-position:right top}
+#header .sns a.btn_youtube:active{background-position:right bottom}
+
+
+/** #sectionMain **/
+#sectionMain #typeNormal,
+#sectionMain #typeBg{display:none}
+/* normal type */
+#sectionMain.type_normal{height:439px;border-bottom:1px solid #cdd0d3;background-position:center top;background-repeat:no-repeat;background-size:auto 100%}
+#sectionMain.type_normal #typeNormal{display:block;height:439px;background-position:center top;background-repeat:no-repeat;background-size:auto 100%}
+#sectionMain.type_normal span.bg{position:absolute;left:0;top:0;width:100%;height:439px;background:url(../images/common/bg-main2.png) repeat;background-size:auto 100%;z-index:1}
+#sectionMain.type_normal .tit_main{padding-top:23px;color:#fff;font-size:14px;text-align:center}
+#sectionMain.type_normal .tit_main .logo_game img{width:auto;height:62px}
+#sectionMain.type_normal .tit_main .copy{padding-top:19px}
+#sectionMain.type_normal .tit_main .copy strong{display:block;padding-top:6px;color:#00deff;font-size:21px;font-weight:500}
+#sectionMain.type_normal .tit_main .date{padding-top:15px;font-size:12px}
+#sectionMain.type_normal .tit_main .reg{padding-top:14px}
+#sectionMain.type_normal .tit_main .reg button.btn_reg{height:26px;padding:0 13px;border:1px solid #fff}
+#sectionMain.type_normal .tit_main .reg button.btn_reg span{padding-right:17px;color:#fff;font-size:12px;letter-spacing:-0.4px;background:url(../images/common/bu-arrow.png) right center no-repeat;background-size:7px auto}
+#sectionMain.type_normal .tit_main .main_video{height:170px;padding:8px;margin-top:27px;border-radius:2px;background:#eee}
+#sectionMain.type_normal .tit_main .main_video .video_yt{width:100%;height:170px}
+
+/* bg_video type */
+#sectionMain.type_bg{height:350px;border-bottom:1px solid #cdd0d3;background:url(../images/common/bg-main-m.jpg) center top no-repeat;background-size:auto 100%}
+#sectionMain.type_bg #typeBg{display:block;height:350px;background-position:center top;background-repeat:no-repeat;background-size:auto 100%}
+#sectionMain.type_bg .tit_main{padding-top:22px;color:#fff;font-size:14px;text-align:center}
+#sectionMain.type_bg .tit_main .logo_game img{width:auto;height:69px}
+#sectionMain.type_bg .tit_main .copy{padding-top:14px}
+#sectionMain.type_bg .tit_main .copy strong{display:block;padding-top:4px;color:#f3a923;font-size:21px;font-weight:500}
+#sectionMain.type_bg .tit_main .date{padding-top:10px;font-size:12px}
+#sectionMain.type_bg .tit_main .video{padding-top:24px}
+#sectionMain.type_bg .tit_main .video button.btn_play{width:63px;height:63px;background:url(../images/common/btn-play.png) left bottom no-repeat;background-size:auto 200%}
+#sectionMain.type_bg .tit_main .reg{padding-top:24px}
+#sectionMain.type_bg .tit_main .reg button.btn_reg{height:39px;padding:0 18px 0 14px;border:1px solid #fff}
+#sectionMain.type_bg .tit_main .reg button.btn_reg span{padding-right:23px;color:#fff;font-size:15px;letter-spacing:-0.4px;background:url(../images/common/bu-arrow.png) right center no-repeat;background-size:13px auto}
+#sectionMain.type_bg .bg_video,
+#sectionMain.type_bg .bg_video .video_yt{display:none}
+
+
+
+/* #sectionReg(CBT신청) */
+#sectionReg{background:#dddfe1}
+#sectionReg .wrap_section{width:305px;margin:0 auto}
+#sectionReg #download{display:none}
+#sectionReg.type_open #reg{display:none}
+#sectionReg.type_open #download{display:block}
+#sectionReg #regForm{padding-top:10px}
+#sectionReg #regForm .input_area{width:303px;margin:0 auto;border:1px solid #9d9ea3;border-radius:2px;background:#fff}
+#sectionReg #regForm .input_area .mobile{height:30px;padding:3px;line-height:38px;}
+#sectionReg #regForm .input_area .mobile .inp_mobile1{display:inline-block;position:relative;width:52px;height:19px;vertical-align:middle;margin-top:-10px;}
+#sectionReg #regForm .input_area .mobile .inp_mobile1 label{position:absolute;left:0;top:0px;width:42px;height:19px;padding-left:10px;color:#868686;font-size:13px;line-height:19px;background:url(../images/common/bu-arrow2.png) 37px center no-repeat;background-size:auto 3px;z-index:1}
+#sectionReg #regForm .input_area .mobile .inp_mobile1 select{position:relative;width:100%;height:19px;min-height:19px;line-height:19px;padding:0 5px;opacity:0;filter:alpha(opacity=0);z-index:2}
+#sectionReg #regForm .input_area .mobile .inp_mobile2{display:inline-block;vertical-align:middle}
+#sectionReg #regForm .input_area .mobile .inp_mobile2 input{width:134px;height:19px;padding:0 10px;border:0;border-left:1px solid #bcbcbc;border-radius:0;color:#868686;font-size:13px;line-height:19px;background:url(../images/common/text-mobile.gif) left top no-repeat;background-size:auto 100%;outline:none}
+#sectionReg #regForm .input_area .mobile .inp_mobile2 input.active{background:none}
+#sectionReg #regForm .input_area .mobile .btn_area{display:inline-block;vertical-align:middle}
+#sectionReg #regForm .input_area .auth{height:30px;padding:3px;border-top:1px solid #d3d3d6}
+#sectionReg #regForm .input_area .auth .inp_auth{display:inline-block;vertical-align:middle}
+#sectionReg #regForm .input_area .auth .inp_auth input{width:187px;height:19px;padding:0 10px;border:0;color:#868686;font-size:13px;line-height:19px;background:url(../images/common/text-auth.gif) left top no-repeat;background-size:auto 100%;outline:none}
+#sectionReg #regForm .input_area .auth .inp_auth input.active{background:none}
+#sectionReg #regForm .input_area .auth .btn_area{display:inline-block;vertical-align:middle}
+#sectionReg #regForm .agree{padding:10px 0;border-bottom:1px solid #9d9ea3}
+#sectionReg #regForm .agree .ez-checkbox{display:inline-block;width:30px;height:30px;background:url(../images/common/img-checkbox.gif) no-repeat;background-size:auto 200%;vertical-align:middle}
+#sectionReg #regForm .agree .ez-hide{width:25px;height:25px;opacity:0;filter:alpha(opacity=0)}
+#sectionReg #regForm .agree .ez-checkbox.ez-checked{background-position:left bottom}
+#sectionReg #regForm .agree label{display:inline-block;margin-left:8px;color:#6e707a;font-size:11px;letter-spacing:-0.4px;vertical-align:middle}
+#sectionReg #regForm .agree button{margin-left:10px;vertical-align:middle}
+#sectionReg #regForm .agree .btn_detail img{width:69px;height:auto}
+#sectionReg #regForm .submit,
+#sectionReg #download .btn_area{padding-top:13px;text-align:center}
+#sectionReg #regForm .caution,
+#sectionReg #download .caution{padding-top:9px;text-align:center}
+#sectionReg #regForm .caution span,
+#sectionReg #download .caution span{display:inline-block;padding-left:5px;color:#585c61;font-size:9px;letter-spacing:-0.4px;background:url(../images/common/bu-point.png) left center no-repeat;background-size:2px auto}
+#sectionReg #regForm button.btn_send,
+#sectionReg #regForm button.btn_confirm{width:90px;height:29px;border-radius:1px;color:#fff;font-size:11px;letter-spacing:-0.4px;text-align:center;background:#7a7c87;box-shadow:0 1px 0 #e8e8e8}
+#sectionReg #regForm button.btn_detail{width:59px;height:20px;border:1px solid #868990;border-radius:1px;color:#6e707a;font-size:10px;letter-spacing:-0.4px;line-height:20px;text-align:center;background:#ebeced;box-shadow:0 1px 0 #c4c8cc}
+#sectionReg #regForm button.btn_submit,
+#sectionReg #download .btn_download{display:inline-block;width:167px;height:40px;border-radius:1px;color:#fff;font-size:15px;line-height:40px;text-decoration:none;letter-spacing:-0.4px;text-align:center;background:#242f4b;box-shadow:0 1px 0 #bcc0c4}
+
+
+/* #sectionPreview(게임 미리보기) */
+#sectionPreview{height:241px;border-top:1px solid #cdd0d3;background:url(../images/common/bg-preview.jpg) center center no-repeat;background-size:cover}
+#sectionPreview #slide{position:relative;height:192px;padding-top:13px}
+#sectionPreview #slide .wrap_slide{width:303px;height:170px;margin:0 auto;border:1px solid #9d9ea3}
+#sectionPreview #slide .bx-viewport{min-height:170px}
+#sectionPreview #slide .bx-viewport li{min-height:1px;min-width:1px}
+#sectionPreview #slide .bx-viewport li img{width:303px;height:170px}
+#sectionPreview #slide .bx-controls-direction a{display:none}
+#sectionPreview #slide .bx-wrapper .bx-pager{position:absolute;bottom:0px;left:0;width:100%;text-align:center}
+#sectionPreview #slide .bx-wrapper .bx-pager .bx-pager-item{display:inline-block;margin-right:3px}
+#sectionPreview #slide .bx-wrapper .bx-pager .bx-pager-item a {display:block;width:8px;height:8px;font-size:0;background:url(../images/common/btn-slide.png) no-repeat;background-size:auto 200%}
+#sectionPreview #slide .bx-wrapper .bx-pager .bx-pager-item a:hover,
+#sectionPreview #slide .bx-wrapper .bx-pager .bx-pager-item a.active{background-position:left bottom}
+
+
+/* .section_event(이벤트) */
+#container .section_event{padding:27px 0;border-top:1px solid #5b616e;background:#41454e}
+#container .section_event.even{background:#3a3e45}
+#container .section_event .tit_section{text-align:center}
+#container .section_event .tit_section .tit{color:#fff;font-size:23px;font-weight:500;line-height:28px;letter-spacing:-1px;}
+#container .section_event .tit_section .tit .num{display:inline-block;position:relative;min-width:30px;height:27px;padding:0 13px;border:1px solid #89d3e2;border-radius:20px; color:#89d3e2;font-size:17px;font-weight:normal;text-align:center;line-height:28px;vertical-align:top}
+#container .section_event .tit_section .sub_tit{padding-top:7px;color:#9d9ea3;font-size:10px;letter-spacing:-0.4px;}
+#container .section_event .reward{width:303px;padding-top:5px;margin:0 auto;text-align:center}
+#container .section_event .reward .item_list{overflow:hidden;display:inline-block;position:relative;min-height:106px;padding-bottom:1px;margin-top:7px;border-radius:1px;background:#242629;box-shadow:0 1px 0 #373a42}
+#container .section_event .reward .item_list.type1{width:100%;height:120px}
+#container .section_event .reward .item_list.type2{width:147px;margin-right:3px}
+#container .section_event .reward .item_list.type3{width:98px;margin-right:3px}
+#container .section_event .reward .item_list.type4{width:73px;margin-right:3px}
+#container .section_event .reward .item_list.side{margin-right:0 !important}
+#container .section_event .reward div .tit{display:table;width:100%;height:20px;background:#89d3e2}
+#container .section_event .reward div .tit .wrap_tit{overflow:hidden;display:table-cell;width:100%;height:17px;padding-top:3px;color:#26373a;font-size:9px;text-align:center;letter-spacing:-0.4px;vertical-align:middle}
+#container .section_event .reward div .img img{width:100%;height:auto;max-width:100%}
+#container .section_event .reward div .name{position:absolute;left:0;bottom:5px;width:100%;color:#a2abbf;font-size:7px;letter-spacing:-0.4px;text-align:center}
+#container .section_event .btn_area{padding-top:20px;text-align:center}
+#container .section_event .btn_area button.side{margin-left:5px}
+#container .section_event .btn-type2{display:inline-block;width:133px;height:40px;border-radius:1px;color:#f2f3f3;font-size:15px;letter-spacing:-0.4px;text-align:center;box-shadow:0 1px 0 #33373e}
+#container .section_event button.btn_facebook{background-color:#436eca}
+#container .section_event button.btn_kakao{color:#3b1e1e;background-color:#fbe000}
+#container .section_event .btn_cafe{text-decoration:none;background-color:#04b634;line-height:40px}
+#container .section_event .info{width:100%;padding-top:10px;text-align:center;}
+#container .section_event .info p{color:#9d9ea3;font-size:7px;line-height:11px;}
+#container .section_event .notice{width:100%;padding-top:10px;text-align:center;}
+#container .section_event .notice span{color:#89d3e2;font-size:9px;line-height:12px; vertical-align:middle;}
+#container .section_event .notice span.icon{display:inline-block;margin-right:3px;width:9px;height:9px;background:url(../images/common/icon-notice.png) no-repeat;background-size:100% auto;vertical-align:middle;}
+
+/* #sectionPromo(크로스프로모션) */
+#sectionPromo{padding:27px 0;text-align:center;background:#fff}
+#sectionPromo img{width:303px}
+
+
+/* #sectionInfo(CBT안내) */
+#sectionInfo{border-bottom:1px solid #cdd0d3;background:#dddfe1}
+#sectionInfo ul{padding-left:8px}
+#sectionInfo li{padding-left:5px;margin-bottom:3px;color:#41454e;font-size:8px;letter-spacing:-1px;line-height:13px;background:url(../images/common/bu-point.png) left 4px no-repeat;background-size:2px auto}
+#sectionInfo li a{color:#41454e;text-decoration:none}
+
+
+/* #footer */
+#footer{position:relative;border-top:1px solid #cdd0d3;padding:27px 0 17px 0}
+#footer .btn_top{position:absolute;left:50%;top:-39px;width:45px;height:23px;margin-left:-22px;background:url(../images/common/btn-top.png) no-repeat;background-size:100% auto}
+#footer .copyright{color:#41454e;font-size:7px;text-align:center}
+
+
+/** modal layer **/
+
+/* alert, common */
+#fLayer{display:none;position:absolute;left:0;top:0;width:100%;height:100%;z-index:50}
+#fLayer .bg_layer{position:absolute;left:0;top:0;width:100%;height:100%;background:#000}
+#fLayer .wrap_layer{position:relative;z-index:60}
+#fLayer .alert,
+#fLayer .policy,
+#fLayer .apply{display:none;width:300px;left:50%;margin-left:-150px;z-index:50}
+#fLayer .head{height:27px;background:#89d3e2}
+#fLayer .head .logo{float:left;margin:7px 0 0 10px}
+#fLayer .head .logo img{width:auto;height:12px}
+#fLayer .head .btn_close{float:right;margin:5px 10px 0 0}
+#fLayer .head .btn_close img{width:auto;height:16px}
+#fLayer .contain{padding:23px 10px 17px 10px;background:#fff}
+#fLayer .cont{padding-bottom:17px;color:#5a5a5b;text-align:center}
+#fLayer .cont .tit{font-size:18px; font-weight:bold}
+#fLayer .cont .msg{padding-top:7px;font-size:11px}
+#fLayer .foot{padding-top:17px;border-top:1px solid #9d9ea3;text-align:center}
+#fLayer .foot .btn_confirm,
+#fLayer .foot .btn_close{width:120px;height:33px;border-radius:1px;color:#fff;font-size:15px;text-align:center;background:#4d515c;box-shadow:0 1px 0 ##bcc0c4}
+
+/* video */
+#fLayer .video{display:none;position:absolute;left:50%;width:290px;margin-left:-145px;z-index:50}
+#fLayer .video .viewer{width:290px;height:163px}
+#fLayer .video .viewer iframe{width:290px;height:163px}
+#fLayer .video .list{padding-top:9px;text-align:center}
+#fLayer .video .list li{display:inline-block;position:relative;width:98px;height:55px;margin-right:4px}
+#fLayer .video .list li.side{margin-right:0}
+#fLayer .video .list li button{overflow:visible;display:inline-block;position:relative;width:98px;height:55px}
+#fLayer .video .list li button .bg{position:absolute;left:0;top:0;width:98px;height:55px;background:url(../images/common/bg-video2.png) no-repeat;background-size:100% auto;z-index:1}
+#fLayer .video .list li button img{
+  width:100%;height:auto;
+  filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
+  filter: gray;
+  -webkit-filter: grayscale(100%);
+}
+#fLayer .video .list li button.active img{
+  filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
+  -webkit-filter: grayscale(0%);
+}
+#fLayer .video .list li button.active .bg{top:-6px;height:61px;background-image:url(../images/common/bg-video3.png)}
+#fLayer .video .btn_close{position:absolute;right:0px;top:-26px;width:16px;height:16px}
+#fLayer .video .btn_close img{width:100%;height:auto}
+
+/* policy */
+#fLayer .policy .tit{font-size:13px;font-weight:bold}
+#fLayer .policy .cont .msg{padding-top:10px;font-size:10px;line-height:14px;text-align:left}
+
+/* apply */
+#fLayer .apply .cont .msg{padding-bottom:17px;font-size:12px}
+#fLayer .apply .cont .msg .caution{display:none;color:#e13c28}
+#fLayer .apply .cont .msg.error .normal{display:none}
+#fLayer .apply .cont .msg.error .caution{display:block}
+
+#fLayer .apply .cont .mobile{padding:3px;text-align:left;background:#e6e7e8}
+#fLayer .apply .cont .mobile .wrap_mobile{padding:8px;border:1px solid #9d9ea3;border-radius:1px;background:#fff}
+#fLayer .apply .cont .mobile .inp_mobile1{display:inline-block;position:relative;width:52px;height:19px;vertical-align:middle}
+#fLayer .apply .cont .mobile .inp_mobile1 label{position:absolute;left:0;top:0;width:42px;height:19px;padding-left:10px;color:#868686;font-size:13px;line-height:19px;background:url(../images/common/bu-arrow2.png) 37px center no-repeat;background-size:auto 3px;z-index:1}
+#fLayer .apply .cont .mobile .inp_mobile1 select{position:relative;width:100%;height:19px;min-height:19px;line-height:19px;opacity:0;filter:alpha(opacity=0);z-index:2}
+#fLayer .apply .cont .mobile .inp_mobile2{display:inline-block;vertical-align:middle}
+#fLayer .apply .cont .mobile .inp_mobile2 input{width:123px;height:19px;padding:0 10px;border:0;border-left:1px solid #bcbcbc;border-radius:0;color:#868686;font-size:13px;line-height:19px;background:url(../images/common/text-mobile.gif) left top no-repeat;background-size:auto 100%;outline:none}
+#fLayer .apply .cont .mobile .inp_mobile2 input.active{background:none}
+
+
+
+/* tablet (767 ~ 1024) */
+@media (min-width:767px){
+
+  /* common */
+  #fWrap{min-width:640px;padding-top:60px}
+  #fWrap .wrap_section{width:640px}
+  #container .section{padding:54px 0}
+  #container .section .tit_section .tit{font-size:46px}
+  #container .section .tit_section .sub_tit{padding-top:26px;font-size:20px}
+
+  /* #header */
+  #header{height:60px}
+  #header .wrap_header{width:640px}
+  #header .logo_433{margin:18px 0 0 24px}
+  #header .logo_433 img{height:27px}
+  #header .sns{margin:15px 24px 0 0}
+  #header .sns a{width:30px;height:30px}
+  #header .sns a.btn_youtube{margin-left:12px}
+
+  /* #sectionMain */
+  /* normal type */
+  #sectionMain.type_normal{height:878px}
+  #sectionMain.type_normal span.bg{height:878px}
+  #sectionMain.type_normal #typeNormal{height:878px}
+  #sectionMain.type_normal .tit_main{padding-top:46px;font-size:21px}
+  #sectionMain.type_normal .tit_main .logo_game img{height:124px}
+  #sectionMain.type_normal .tit_main .copy{padding-top:38px}
+  #sectionMain.type_normal .tit_main .copy strong{padding-top:12px;font-size:41px}
+  #sectionMain.type_normal .tit_main .date{padding-top:30px;font-size:24px}
+  #sectionMain.type_normal .tit_main .reg{padding-top:28px}
+  #sectionMain.type_normal .tit_main .reg button.btn_reg{height:52px;padding:0 36px}
+  #sectionMain.type_normal .tit_main .reg button.btn_reg span{padding-right:34px;font-size:24px;background-size:14px auto}
+  #sectionMain.type_normal .tit_main .main_video{height:340px;padding:16px;margin-top:54px}
+  #sectionMain.type_normal .tit_main .main_video .video_yt{height:340px}
+  /* bg_video type */
+  #sectionMain.type_bg{height:700px;border-width:2px}
+  #sectionMain.type_bg #typeBg{height:700px}
+  #sectionMain.type_bg .tit_main{padding-top:44px;font-size:21px}
+  #sectionMain.type_bg .tit_main .logo_game img{height:138px}
+  #sectionMain.type_bg .tit_main .copy{padding-top:28px}
+  #sectionMain.type_bg .tit_main .copy strong{padding-top:8px;font-size:41px}
+  #sectionMain.type_bg .tit_main .date{padding-top:20px;font-size:24px}
+  #sectionMain.type_bg .tit_main .video{padding-top:48px}
+  #sectionMain.type_bg .tit_main .video button.btn_play{width:126px;height:126px}
+  #sectionMain.type_bg .tit_main .reg{padding-top:48px}
+  #sectionMain.type_bg .tit_main .reg button.btn_reg{height:78px;padding:0 36px 0 28px}
+  #sectionMain.type_bg .tit_main .reg button.btn_reg span{padding-right:46px;font-size:30px;background-size:26px auto}
+
+
+  /* #sectionReg */
+  #sectionReg .wrap_section{width:610px}
+  #sectionReg #regForm{padding-top:20px}
+  #sectionReg #regForm .input_area{width:606px}
+  #sectionReg #regForm .input_area .mobile{height:60px;padding:6px;line-height:70px;}
+  #sectionReg #regForm .input_area .mobile .inp_mobile1{width:104px;height:38px}
+  #sectionReg #regForm .input_area .mobile .inp_mobile1 label{width:84px;height:38px;padding-left:20px;font-size:20px;line-height:38px;background-position:74px center;background-size:auto 6px}
+  #sectionReg #regForm .input_area .mobile .inp_mobile1 select{height:38px;min-height:38px;line-height:38px;padding:0 10px}
+  #sectionReg #regForm .input_area .mobile .inp_mobile2 input{width:269px;height:38px;padding:0 20px;font-size:19px;line-height:38px}
+  #sectionReg #regForm .input_area .auth{height:60px;padding:6px}
+  #sectionReg #regForm .input_area .auth .inp_auth input{width:374px;height:38px;padding:0 20px;font-size:19px;line-height:38px}
+  #sectionReg #regForm .agree{padding:20px 0}
+  #sectionReg #regForm .agree .ez-checkbox{width:60px;height:60px}
+  #sectionReg #regForm .agree .ez-hide{width:50px;height:50px}
+  #sectionReg #regForm .agree label{margin-left:16px;font-size:22px}
+  #sectionReg #regForm .agree button{margin-left:20px}
+  #sectionReg #regForm .agree .btn_detail img{width:138px}
+  #sectionReg #regForm .submit,
+  #sectionReg #download .btn_area{padding-top:26px}
+  #sectionReg #regForm .caution,
+  #sectionReg #download .caution{padding-top:18px}
+  #sectionReg #regForm .caution span,
+  #sectionReg #download .caution span{padding-left:10px;font-size:18px;background-size:4px auto}
+  #sectionReg #regForm button.btn_send,
+  #sectionReg #regForm button.btn_confirm{width:180px;height:58px;font-size:22px;line-height:22px}
+  #sectionReg #regForm button.btn_detail{width:118px;height:40px;font-size:20px;line-height:40px}
+  #sectionReg #regForm button.btn_submit,
+  #sectionReg #download .btn_download{width:334px;height:80px;font-size:28px;line-height:80px}
+
+
+  /* #sectionPreview */
+  #sectionPreview{height:480px;border-width:2px}
+  #sectionPreview #slide{height:384px;padding-top:26px}
+  #sectionPreview #slide .wrap_slide{width:606px;height:340px;border-width:2px}
+  #sectionPreview #slide .bx-viewport{min-height:340px}
+  #sectionPreview #slide .bx-viewport li img{width:606px;height:340px}
+  #sectionPreview #slide .bx-wrapper .bx-pager .bx-pager-item{margin-right:6px}
+  #sectionPreview #slide .bx-wrapper .bx-pager .bx-pager-item a {width:16px;height:16px}
+
+
+  /* .section_event */
+  #container .section_event{padding:54px 0}
+  #container .section_event .tit_section .tit{font-size:46px;line-height:56px}
+  #container .section_event .tit_section .tit .num{min-width:60px;height:54px;padding:0 26px;border-width:2px;border-radius:40px;font-size:34px;line-height:52px}
+  #container .section_event .tit_section .sub_tit{padding-top:14px;font-size:20px}
+  #container .section_event .reward{width:606px;padding-top:10px}
+  #container .section_event .reward .item_list{min-height:212px;padding-bottom:2px;margin-top:14px}
+  #container .section_event .reward .item_list.type1{height:240px}
+  #container .section_event .reward .item_list.type2{width:294px;margin-right:6px}
+  #container .section_event .reward .item_list.type3{width:196px;margin-right:6px}
+  #container .section_event .reward .item_list.type4{width:146px;margin-right:7px}
+  #container .section_event .reward div .tit{height:40px}
+  #container .section_event .reward div .tit .wrap_tit{height:40px;font-size:20px}
+  #container .section_event .reward div .name{bottom:15px;font-size:16px}
+  #container .section_event .btn_area{padding-top:40px}
+  #container .section_event .btn_area button.side{margin-left:10px}
+  #container .section_event .btn-type2{width:266px;height:80px;font-size:28px;line-height:80px}
+  #container .section_event .info{padding-top:20px;}
+  #container .section_event .info p{font-size:14px;line-height:16px;}
+  #container .section_event .notice{padding-top:20px;}
+  #container .section_event .notice span{font-size:18px;line-height:24px;}
+  #container .section_event .notice span.icon{width:18px;height:18px;margin-right:4px;}
+
+  /* #sectionInfo */
+  #sectionInfo ul{padding-left:16px}
+  #sectionInfo li{padding-left:10px;margin-bottom:6px;font-size:18px;line-height:23px;background-position:left 9px;background-size:4px auto}
+
+
+  /* #footer */
+  #footer{padding:54px 0 34px 0}
+  #footer .btn_top{top:-78px;width:90px;height:46px;margin-left:-45px}
+  #footer .copyright{font-size:14px;text-align:center}
+
+
+  /** modal layer **/
+
+  /* alert, common */
+  #fLayer .alert,
+  #fLayer .policy,
+  #fLayer .apply{width:480px;margin-left:-240px}
+  #fLayer .head{height:54px}
+  #fLayer .head .logo{margin:14px 0 0 20px}
+  #fLayer .head .logo img{height:24px}
+  #fLayer .head .btn_close{margin:10px 20px 0 0}
+  #fLayer .head .btn_close img{height:32px}
+  #fLayer .contain{padding:46px 20px 34px 20px}
+  #fLayer .cont{padding-bottom:34px}
+  #fLayer .cont .tit{font-size:36px}
+  #fLayer .cont .msg{padding-top:14px;font-size:22px}
+  #fLayer .foot{padding-top:34px}
+  #fLayer .foot .btn_confirm,
+  #fLayer .foot .btn_close{width:240px;height:66px;font-size:30px}
+
+  /* video */
+  #fLayer .video{width:580px;margin-left:-290px}
+  #fLayer .video .viewer{width:580px;height:326px}
+  #fLayer .video .viewer iframe{width:580px;height:326px}
+  #fLayer .video .list{padding-top:18px}
+  #fLayer .video .list li{width:196px;height:110px;margin-right:8px}
+  #fLayer .video .list li button{width:196px;height:110px}
+  #fLayer .video .list li button .bg{width:196px;height:110px}
+  #fLayer .video .list li button.active .bg{top:-12px;height:122px}
+  #fLayer .video .btn_close{right:0px;top:-52px;width:32px;height:32px}
+
+  /* policy */
+  #fLayer .policy .tit{font-size:26px}
+  #fLayer .policy .cont .msg{padding-top:20px;font-size:15px;letter-spacing:-1px;line-height:20px}
+
+  /* apply */
+  #fLayer .apply .cont .msg{padding-bottom:34px;font-size:22px}
+  #fLayer .apply .cont .mobile{padding:6px}
+  #fLayer .apply .cont .mobile .wrap_mobile{padding:16px}
+  #fLayer .apply .cont .mobile .inp_mobile1{width:104px;height:38px}
+  #fLayer .apply .cont .mobile .inp_mobile1 label{width:84px;height:38px;padding-left:20px;font-size:26px;line-height:38px;background-position:74px center;background-size:auto 6px}
+  #fLayer .apply .cont .mobile .inp_mobile1 select{height:38px;min-height:38px;line-height:38px}
+  #fLayer .apply .cont .mobile .inp_mobile2 input{width:246px;height:38px;padding:0 20px;font-size:26px;line-height:38px}
+}
+
+
+/* PC(1025~) */
+@media (min-width:1025px){
+
+    /* common */
+    #fWrap{min-width:1080px;padding-top:60px}
+    #fWrap .wrap_section{position:relative;width:1080px;margin:0 auto;z-index:10}
+    #container .section{padding:70px 0 80px 0}
+    #container .section .tit_section .tit{font-size:70px;letter-spacing:-4px}
+    #container .section .tit_section .sub_tit{padding-top:20px;font-size:30px;letter-spacing:-0.5px}
+
+
+    /* #header */
+    #header{height:60px}
+    #header .wrap_header{width:100%}
+    #header .logo_433{margin:17px 0 0 30px}
+    #header .logo_433 img{height:auto}
+    #header .sns{margin:15px 30px 0 0}
+    #header .sns a{width:30px;height:30px}
+    #header .sns a.btn_youtube{margin-left:10px}
+    #header .sns a.btn_facebook:hover{background-position:left bottom}
+    #header .sns a.btn_youtube:hover{background-position:right bottom}
+
+
+    /* #sectionMain */
+    /* normal type */
+    #sectionMain.type_normal{overflow:hidden;position:relative;height:1317px}
+    #sectionMain.type_normal #typeNormal{background:none !important}
+    #sectionMain.type_normal .wrap_section{position:static}
+    #sectionMain.type_normal span.bg{height:1317px}
+    #sectionMain.type_normal .tit_main{position:relative;padding-top:67px;font-size:42px;z-index:3}
+    #sectionMain.type_normal .tit_main .logo_game img{height:auto}
+    #sectionMain.type_normal .tit_main .copy{padding-top:45px}
+    #sectionMain.type_normal .tit_main .copy strong{padding-top:10px;font-size:60px}
+    #sectionMain.type_normal .tit_main .date{font-size:36px;padding-top:38px}
+    #sectionMain.type_normal .tit_main .main_video{height:512px;padding:25px;margin-top:80px}
+    #sectionMain.type_normal .tit_main .main_video .video_yt{height:512px}
+    #sectionMain.type_normal .tit_main .reg{padding-top:56px}
+    #sectionMain.type_normal .tit_main .reg button.btn_reg{height:76px;padding:0 38px;border-width:2px}
+    #sectionMain.type_normal .tit_main .reg button.btn_reg span{padding-right:50px;font-size:34px;letter-spacing:-0.7px;background-size:auto}
+
+    /* bg_video type */
+    #sectionMain.type_bg{overflow:hidden;position:relative;height:1050px;border-width:4px;background:url(../images/common/bg-main.jpg) center top no-repeat}
+    #sectionMain.type_bg #typeBg{background:none !important}
+    #sectionMain.type_bg .wrap_section{position:static}
+    #sectionMain.type_bg .tit_main{position:relative;padding-top:67px;font-size:42px;z-index:3}
+    #sectionMain.type_bg .tit_main .logo_game img{height:auto}
+    #sectionMain.type_bg .tit_main .copy{padding-top:36px}
+    #sectionMain.type_bg .tit_main .copy strong{padding-top:8px;font-size:60px}
+    #sectionMain.type_bg .tit_main .date{font-size:36px;padding-top:27px}
+    #sectionMain.type_bg .tit_main .video{padding-top:74px}
+    #sectionMain.type_bg .tit_main .video button.btn_play{width:189px;height:189px;background-position:left top}
+    #sectionMain.type_bg .tit_main .video button.btn_play:hover{background-position:left bottom}
+    #sectionMain.type_bg .tit_main .reg{padding-top:73px}
+    #sectionMain.type_bg .tit_main .reg button.btn_reg{height:118px;padding:0 51px 0 39px;border-width:2px}
+    #sectionMain.type_bg .tit_main .reg button.btn_reg span{padding-right:70px;font-size:44px;letter-spacing:-0.7px;background-size:auto}
+    #sectionMain.type_bg .bg_video{display:block;z-index:1}
+    #sectionMain.type_bg .bg_video{position:absolute;left:0;top:0;width:100%;height:1050px}
+    #sectionMain.type_bg .bg_video .video_yt{display:block;z-index:1}
+    #sectionMain.type_bg .bg_video .bg{position:absolute;left:0;top:0;width:100%;height:1050px;background:url(../images/common/bg-video.png) repeat;z-index:2}
+
+    /* #sectionReg */
+    #sectionReg .wrap_section{width:910px}
+    #sectionReg #regForm{padding-top:40px}
+    #sectionReg #regForm .input_area{width:908px}
+    #sectionReg #regForm .input_area .mobile{height:88px;padding:10px 9px;line-height:110px;}
+    #sectionReg #regForm .input_area .mobile .inp_mobile1{width:157px;height:60px;margin-top:-23px;}
+    #sectionReg #regForm .input_area .mobile .inp_mobile1 label{width:157px;height:60px;padding-left:30px;font-size:38px;line-height:60px;background-position:110px center;background-size:auto}
+    #sectionReg #regForm .input_area .mobile .inp_mobile1 select{height:60px;min-height:60px;line-height:60px;padding:0 10px}
+    #sectionReg #regForm .input_area .mobile .inp_mobile2 input{width:422px;height:60px;padding:0 20px;font-size:34px;line-height:60px;background-size:auto}
+    #sectionReg #regForm .input_area .auth{height:88px;padding:10px 9px}
+    #sectionReg #regForm .input_area .auth .inp_auth input{width:579px;height:60px;padding:0 20px;font-size:34px;line-height:60px;background-size:auto}
+    #sectionReg #regForm .agree{padding:30px 0}
+    #sectionReg #regForm .agree .ez-checkbox{width:60px;height:60px}
+    #sectionReg #regForm .agree .ez-hide{width:60px;height:60px}
+    #sectionReg #regForm .agree label{margin-left:15px;font-size:34px}
+    #sectionReg #regForm .agree button{margin-left:30px;letter-spacing:-0.5px;border-radius:2px}
+    #sectionReg #regForm .submit,
+    #sectionReg #download .btn_area{padding-top:40px}
+    #sectionReg #regForm .caution,
+    #sectionReg #download .caution{padding-top:20px}
+    #sectionReg #regForm .caution span,
+    #sectionReg #download .caution span{padding-left:16px;font-size:28px;background-size:auto}
+    #sectionReg #regForm button.btn_send,
+    #sectionReg #regForm button.btn_confirm{width:270px;height:88px;font-size:34px;line-height:88px;letter-spacing:-2px;border-radius:2px}
+    #sectionReg #regForm button.btn_detail{width:176px;height:58px;font-size:30px;line-height:58px;letter-spacing:-2px;border-radius:2px}
+    #sectionReg #regForm button.btn_submit,
+    #sectionReg #download .btn_download{width:500px;height:120px;font-size:44px;line-height:120px;letter-spacing:-2px;border-radius:2px}
+
+  /* #sectionPreview */
+    #sectionPreview{height:720px;border-width:1px}
+    #sectionPreview #slide{height:567px;padding-top:40px}
+    #sectionPreview #slide .wrap_slide{width:908px;height:510px;border-width:1px;margin:0 auto}
+    #sectionPreview #slide .bx-viewport{min-height:340px}
+    #sectionPreview #slide .bx-controls-direction a{display:block;position:absolute;top:212px;width:65px;height:170px;background:url(../images/common/btn-slide2.png) no-repeat}
+    #sectionPreview #slide .bx-wrapper .bx-prev{left:-19px;background-position:left top}
+    #sectionPreview #slide .bx-wrapper .bx-next{right:-19px;background-position:left bottom}
+    #sectionPreview #slide .bx-viewport li img{width:908px;height:510px}
+    #sectionPreview #slide .bx-wrapper .bx-pager .bx-pager-item{margin-right:10px}
+    #sectionPreview #slide .bx-wrapper .bx-pager .bx-pager-item a {width:24px;height:24px}
+
+    /* .section_event */
+    #container .section_event{padding:80px 0}
+    #container .section_event .tit_section .tit{font-size:70px;line-height:80px;letter-spacing:-4px;}
+    #container .section_event .tit_section .tit .num{min-width:60px;height:74px;padding:0 39px;margin-left:5px;border-width:3px;border-radius:60px;font-size:50px;line-height:74px}
+    #container .section_event .tit_section .sub_tit{padding-top:20px;font-size:30px;letter-spacing:-0.5px}
+    #container .section_event .reward{width:910px;padding-top:19px}
+    #container .section_event .reward .item_list{min-height:320px;margin-top:21px}
+    #container .section_event .reward .item_list.type1{height:360px}
+    #container .section_event .reward .item_list.type2{width:450px;margin-right:10px}
+    #container .section_event .reward .item_list.type3{width:294px;margin-right:14px}
+    #container .section_event .reward .item_list.type4{width:220px;margin-right:10px}
+    #container .section_event .reward div .tit{height:60px}
+    #container .section_event .reward div .tit .wrap_tit{height:60px;font-size:29px;padding:0;letter-spacing:-1px}
+    #container .section_event .reward div .name{bottom:25px;font-size:24px;line-height:28px}
+    #container .section_event .btn_area{padding-top:60px}
+    #container .section_event .btn_area button.side{margin-left:15px}
+    #container .section_event .btn-type2{width:400px;height:120px;font-size:44px;line-height:120px;letter-spacing:-5px;border-radius:2px}
+    #container .section_event .info{padding-top:30px;}
+    #container .section_event .info p{font-size:23px;line-height:26px;}
+    #container .section_event .notice{padding-top:30px;}
+    #container .section_event .notice span{font-size:27px;line-height:36px;}
+    #container .section_event .notice span.icon{width:27px;height:27px;margin-right:6px;}
+
+    /* #sectionInfo */
+    #sectionInfo.section{padding:55px 0}
+    #sectionInfo .wrap_section{width:920px}
+    #sectionInfo li{padding-left:18px;margin-bottom:6px;font-size:24px;line-height:29px;font-weight:300;background-position:3px 12px;background-size:auto}
+
+    /* #sectionPromo */
+    #sectionPromo{padding:60px 0 90px 0}
+    #sectionPromo img{width:auto}
+
+    /* #footer */
+    #footer{padding:84px 0 50px 0}
+    #footer .btn_top{top:-119px;width:136px;height:68px;margin-left:-68px}
+    #footer .copyright{font-size:20px;text-align:center;font-weight:300}
+
+    /* alert, common */
+    #fLayer .alert,
+    #fLayer .policy,
+    #fLayer .apply{width:720px;margin-left:-360px}
+    #fLayer .head{height:80px}
+    #fLayer .head .logo{margin:22px 0 0 30px}
+    #fLayer .head .logo img{height:auto}
+    #fLayer .head .btn_close{margin:15px 30px 0 0}
+    #fLayer .head .btn_close img{height:auto}
+    #fLayer .contain{padding:70px 30px 50px 30px}
+    #fLayer .cont{padding-bottom:70px}
+    #fLayer .cont .tit{font-size:54px}
+    #fLayer .cont .msg{padding-top:20px;font-size:34px}
+    #fLayer .foot{padding-top:50px}
+    #fLayer .foot .btn_confirm,
+    #fLayer .foot .btn_close{width:360px;height:100px;font-size:44px;letter-spacing:-2px;border-radius:2px}
+
+    /* video */
+    #fLayer .video{width:910px;margin-left:-455px}
+    #fLayer .video .viewer{width:910px;height:512px}
+    #fLayer .video .viewer iframe{width:910px;height:512px}
+    #fLayer .video .list{padding-top:38px}
+    #fLayer .video .list li{width:294px;height:165px;margin-right:14px}
+    #fLayer .video .list li button{width:294px;height:165px}
+    #fLayer .video .list li button .bg{width:294px;height:165px}
+    #fLayer .video .list li button.active .bg{top:-18px;height:183px}
+    #fLayer .video .btn_close{right:0;top:-64px;width:48px;height:48px}
+
+    /* policy */
+    #fLayer .policy .tit{font-size:38px}
+    #fLayer .policy .cont .msg{padding-top:30px;font-size:16px}
+
+    /* apply */
+    #fLayer .apply .cont .msg{padding-bottom:50px;font-size:34px;line-height:20px}
+    #fLayer .apply .cont .mobile{padding:10px}
+    #fLayer .apply .cont .mobile .wrap_mobile{padding:19px}
+    #fLayer .apply .cont .mobile .inp_mobile1{width:147px;height:58px}
+    #fLayer .apply .cont .mobile .inp_mobile1 label{width:127px;height:58px;padding-left:20px;font-size:38px;line-height:58px;background-position:119px center;background-size:auto}
+    #fLayer .apply .cont .mobile .inp_mobile1 select{height:58px;min-height:58px;line-height:58px}
+    #fLayer .apply .cont .mobile .inp_mobile2 input{width:412px;height:58px;padding:0 20px;font-size:38px;line-height:58px}
+}

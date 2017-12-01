@@ -1,0 +1,59 @@
+<!-- 4:33 메인 페이지 -->
+
+<!-- 공지 레이퍼 팝업 -->
+
+<script type="text/javascript">// <![CDATA[
+$(document).ready(function() {
+  function hideNotice() {
+    $('#layer-mask').hide();
+    $('#layer_popup').hide();
+  }
+  $(".b-close").click(function() {
+    hideNotice();
+  });
+  $('#layer-close').click(function() {
+    hideNotice();
+    return false;
+  });
+$("#layer-mask").height( $(document).height() );
+});
+// ]]></script>
+
+<style type="text/css">
+/* reset */
+#layer_popup{position:absolute;width:70%;left:15%;top:40px;z-index:100;padding:0px}
+#layer_popup,
+#layer_popup a {font-size:12px;font-faimly:dotum;line-height:20px}
+#wrap_layer {max-width:630px;margin:0 auto;background:#fff}
+#wrap_layer .section {float:left;font-size:0;padding:0;margin:0}
+#wrap_layer .section_small {display:block;padding-bottom:15px}
+#wrap_layer .tit {display:block;text-decoration:underline;padding-bottom:10px}
+#wrap_layer table {width:100%;border-collapse:collapse}
+#wrap_layer table th {width:50%;padding:5px 0;text-align:center;font-weight:bold;vertical-align:middle;background:#ccc;border:1px solid #999;word-break:break-all}
+#wrap_layer table td {padding:5px;border:1px solid #999;word-break:break-all}
+#wrap_layer .box {padding:5px;border:1px solid #999}
+#wrap_layer .caption {padding-bottom:5px}
+#wrap_layer .pop_header{padding:20px 30px;background:#8ed5e7}
+#wrap_layer .pop_header:after{display:block;content:'';clear:both}
+#wrap_layer .pop_header h1{float:right;}
+#wrap_layer .pop_header h2{float:left;color:#fff;font-size:18px;font-weight:bold;line-height:2.2}
+#wrap_layer .pop_header.notitle h1{float:left;}
+#wrap_layer .pop_header.notitle h2{display:none;}
+#wrap_layer #fContent{}
+#wrap_layer #fContent .btn_area{}
+#wrap_layer #fContent .btn_area #layer-close{cursor:pointer}
+</style>
+
+<div id="layer-mask"></div>
+<div id="layer_popup">
+  <div id="wrap_layer">
+    <!-- .pop_header내에 제목이 없는 경우 class="notitle" 추가 -->
+    <div id="fContent" style="line-height:0">
+      <div class="section"><img src="http://static.four33.co.kr/event/433/notice/images/160108_notice.jpg" alt="사과문" style="width:100%;height:auto" /></div>
+      <div id="layer-close"><img src="http://static.four33.co.kr/event/433/notice/images/160108_notice_close.jpg" alt="닫기" style="width:100%;height:auto" /></span></div>
+    </div>
+    <!-- // #fContent -->
+  </div>
+  <!-- // #wrap_layer -->
+</div>
+<!-- // #layer_popup -->

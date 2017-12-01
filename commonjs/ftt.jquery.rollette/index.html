@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>삼국블레이드 - 룰렛이벤트</title>
+<meta charset="utf-8">
+<meta id="viewport" name="viewport" content="width=980">
+<meta name="format-detection" content="telephone=no">
+<!-- <link rel="stylesheet" href="https://static.four33.co.kr/event/game/bladet/ingame/170405_rollette/css/style.css" /> -->
+<link rel="stylesheet" href="css/style.css" />
+<script src="https://static.four33.co.kr/event/common/js/jquery-1.8.1.min.js"></script>
+</head>
+
+<body>
+<div id="fWrap">
+
+  <div id="header"></div>
+  <!-- // #header -->
+
+  <div id="container">
+    <div id="roulette">
+
+        <div class="roulette_board">
+          <div class="spinner"></div>
+          <button class="btn_start"><span>roulette<br/>Start!!!</span></button>
+          <div class="pointer"></div>
+        </div>
+        <div class="status">
+          <span class="left_point"></span> <!-- 잔여 포인트 -->
+          <span class="use_point"></span>     <!-- 누적 사용 포인트 -->
+          <span class="total_point"></span>   <!-- 누적 획득 포인트 -->
+        </div>
+    </div><!-- /#roulette -->
+    <div id="reward">
+      <ul>
+        <li class="btn_reward1" quest-num="1"><span class="btn"></span></li>
+        <li class="btn_reward2" quest-num="2"><span class="btn"></span></li>
+        <li class="btn_reward3" quest-num="3"><span class="btn"></span></li>
+        <li class="btn_reward4" quest-num="4"><span class="btn"></span></li>
+      </ul>
+    </div>
+  </div>
+  <!-- #container -->
+  <div id="footer"></div>
+</div>
+<!-- // #fWrap -->
+<script type="text/javascript" src="https://static.four33.co.kr/event/common/js/webevent/ftt.webevent.0.2.js"></script>
+<script type="text/javascript" src="https://static.four33.co.kr/event/common/js/webevent/ftt.modalLayer.0.2.js"></script>
+<!--<script type="text/javascript" src="https://static.four33.co.kr/event/common/js/webevent/ftt.fortune.0.1.min.js"></script>-->
+<script type="text/javascript" src="js/ftt.fortune.0.1.min.js"></script>
+<script type="text/javascript">
+/* Page UI */
+var quest = $('#reward'),
+  questStatus = [2, 1, 1, 0],                  // 미션 상태(0/1/2)
+  layerMsg = {
+    success: '보상이 서신함으로 지급되었습니다.',
+    fail: '시스템 오류가 발생했습니다.<br>죄송합니다.',
+    error: '오류가 발생했습니다<br>고객센터에 문의해주세요',
+    end: '이벤트 기간이<br>종료되어 아이템을<br>교환하실 수 없습니다.',
+    notEnough: '포인트가 부족합니다.',
+    overPlay: '최대 참여 횟수를 초과하였습니다.'
+  };
+// webEventUI.js options
+var questData = {
+  questStatus: questStatus,
+  pageRefresh: false
+};
+// roulette opt
+var rollData = {
+  point:{
+    require: 200,                     // 1회 룰렛 사용시 소모되는 포인트
+    current: 800,                     // 룰렛을 돌리기 위한 잔여 포인트
+    use: 1800,                        // 누적 사용 포인트
+    total: 2892,                      // 누적 획득 포인트
+    lastScore: 0,                      // 마지막 룰렛 값
+  },
+  element:{
+    wrap: $('#roulette'),
+    target: $('#roulette .spinner'),
+    btn: $('#roulette .btn_start'),
+    btnMsg: $('#roulette .btn_start span'),
+  },
+  options:{
+    prices: 10,
+    duration: 2000,
+    clockWise: false,      //룰렛 방향
+    comma: true,          //누적포인트에 일천단위 콤마
+    afterLayout: true,     //룰렛이 돈후에 포인트 차감인지, 선차감 표시제어
+    resetDelay: 600       //룰렛동작후 모달팝업 표시동안 딜레이
+  },
+  callback:{
+    start: function (points) {
+      //$("#roulette .pointer").addClass("swing");   //룰렛 포인터 KeyFrame Animation
+    },
+    done: function (points) {
+      rollData.point.current = points.current;   // 보유포인트
+      rollData.point.use = points.use;             // 사용포인트
+      rollData.point.total = points.total;          // 누적포인트
+      setTimeout(function(){
+        modalLayer.openLayer("<p class='item'><strong>\"아이템명\"</strong><br/>보상이 지급되었습니다.<br/><span>서신함을 확인해 주세요.</span></p>", questData.pageRefresh);
+      },500); //룰렛이 돌고 0.5초뒤에 아이템 팝업출력
+      //$("#roulette .pointer").removeClass("swing"); //룰렛 Animation Remove
+    }
+  },
+  msg:{ // 메시지
+    point: function (shine) {
+      //modalLayer.openLayer(shine, questData.pageRefresh);  //포인트 부족 모달팝업
+      modalLayer.openLayer(layerMsg.notEnough, questData.pageRefresh);  //포인트 부족 모달팝업
+    },
+    ing: function () {
+      console.log('진행 중 입니다.');
+    }
+  }
+};
+
+$(quest).webEventUI(questData);          // 초기실행(누적보상)
+var roulette = new roulette(rollData);   // 초기실행(룰렛)
+$('#roulette .btn_start').on('click', function(){
+  roulette.spin(rollData);  // 룰렛 실행
+});
+
+// 추가보상획득
+$('#reward').on('click','li.ready',function () {
+  var questNum = $(this).attr('quest-num');   // quest-num 속성 값
+
+  if (!$(this).hasClass('disabled')){   // 중복 클릭 방지
+    $(this).addClass('disabled');
+
+    // 미션 상태 값 변경
+    questData.questStatus = [2, 2, 2, 2];
+    // 레이어 출력
+    if (1){  // 성공 시
+      modalLayer.openLayer("<p class='item'><strong>\"아이템명\"</strong><br/>보상이 지급되었습니다.<br/><span>서신함을 확인해 주세요.</span></p>", questData.pageRefresh);
+    }else if (0){  // 실패 시
+      modalLayer.openLayer(layerMsg.fail, questData.pageRefresh);
+    }else{  // 에러 발생 시(어뷰징)
+      modalLayer.openLayer(layerMsg.error, questData.pageRefresh);
+    }
+    if (questData.pageRefresh != true) $(quest).webEventUI(questData);
+
+    /*
+    // 레이어 출력
+    $.post(
+        "/ingame/main/rpc_get_reward/<?=$event_idx?>?<?=$param?>"
+        ,{
+          "pick_no": questNum
+         }
+        ,function(data, status) {
+          if (status == "success" && data.code == 0)
+          {
+             modalLayer.openLayer(layerMsg.success, 'refresh');
+          }
+          else if(status == "success" && data.code == 2)
+          {
+              modalLayer.openLayer(layerMsg.error, "refresh");
+          }
+          else
+          {
+              modalLayer.openLayer(layerMsg.fail, "refresh");
+          }
+        }
+    ); 
+    */
+
+  }
+});
+
+</script>
+
+<!-- Dev Request : 개발시에는 아래 코드는 삭제 부탁드립니다. -->
+<style>
+.test{position:absolute;right:0;width:10%;top:1000px;z-index:200}
+.test a,
+.test button {display:block;width:100%;padding:10px 0;margin-bottom:5px;text-align:center;font-size:12px;background:#ccc;cursor:pointer}
+.test br { font-size:12px;}
+</style>
+<div class="test">
+<script>
+ var temp = "<p class='item'><strong>\"아이템명\"</strong><br/>보상이 지급되었습니다.<br/><span>서신함을 확인해 주세요.</span></p>"
+</script>
+  <button class="success" type="button">지급완료</button>
+  <a onClick="modalLayer.openLayer(temp, questData.pageRefresh);">지급완료-아이템형</a>
+  <button class="fail" type="button">에러발생</button>
+  <button class="error" type="button">부정참여</button>
+  <br/>
+  <button data-fnc="reset" type="button">초기화</button>
+  <button data-fnc="ready" type="button">보상받기</button>
+  <button data-fnc="end" type="button">지급완료</button>
+</div>
+<script>
+$(document).ready(function(){
+  // Dev Request : 개발시 아래 코드는 반드시 삭제해주세요.
+  $(".test button").bind("click",function(){
+    var btnName = $(this).attr("class");
+    if(btnName) {
+      btnName = eval("layerMsg."+btnName);
+      modalLayer.openLayer(btnName);
+    }else {
+      var btnFnc = $(this).attr('data-fnc');
+          $('#reward li').removeClass('ready end').addClass(btnFnc);
+    }
+  });
+});
+</script>
+<!-- Dev Request : 요기까지 입니다. 미리 감사합니다. -->
+
+
+        
+
+</body>
+</html>

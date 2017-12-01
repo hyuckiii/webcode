@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+/* reset */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block}
+body{line-height:1}
+ol, ul{list-style:none}
+blockquote, q{quotes:none}
+blockquote:before, blockquote:after,
+q:before, q:after{content:'';content:none}
+table{border-collapse:collapse;border-spacing:0}
+input[type=checkbox], input[type=radio]{vertical-align:middle;position:relative}
+input[type=radio]{bottom:2px}
+#accessibility, .skip, hr, legend, caption{display:block;overflow:hidden;position:absolute;top:-1000em;left:0}
+.btn_comm{padding:0;margin:0;border:0;background:0;line-height:auto;cursor:pointer}
+.clearfix{*zoom:1}
+.clearfix:after{display:block;content:'';clear:both}
+button:focus,a:focus{outline:0}
+
+/* common */
+.wrap_section{position:relative;width:960px;margin:0 auto;z-index:40}
+
+/** layout **/
+body{font-family:dotum;background:#000}
+#fWrap{min-width:1200px;width:100%;padding-top:118px}
+
+/* #gnb */
+#gnb{position:fixed;left:0;top:0;width:100%;height:118px;background:url(../images/bg-gnb.jpg) repeat-x;z-index:50;box-shadow:0 0px 50px #000}
+#gnb ul{width:959px;height:118px;margin:0 auto}
+#gnb ul:after{display:block;content:'';clear:both}
+#gnb li{float:left;width:205px}
+#gnb li a{display:block;width:100%;height:118px;background:url(../images/btn-gnb.jpg) no-repeat}
+#gnb li.btn_home{width:139px}
+#gnb li.btn_home a{background-position:left top}
+#gnb li.btn_home a.active,
+#gnb li.btn_home a:hover{background-position:-205px top}
+#gnb li.btn_reward a{background-position:left -120px}
+#gnb li.btn_reward a.active,
+#gnb li.btn_reward a:hover{background-position:right -120px}
+#gnb li.btn_reg a{background-position:left -240px}
+#gnb li.btn_reg a.active,
+#gnb li.btn_reg a:hover{background-position:right -240px}
+#gnb li.btn_event a{background-position:left -360px}
+#gnb li.btn_event a.active,
+#gnb li.btn_event a:hover{background-position:right -360px}
+#gnb li.btn_gameinfo{float:right}
+#gnb li.btn_gameinfo a{background-position:left bottom}
+#gnb li.btn_gameinfo a.active,
+#gnb li.btn_gameinfo a:hover{background-position:right bottom}
+
+/* #header */
+#header{position:relative;height:1985px;background:url(../images/bg-header.jpg) center top no-repeat}
+#header .wrap_section{height:1922px}
+#header h1{padding-top:47px;text-align:center}
+#header .movie{position:absolute;left:15px;top:1045px;width:924px;height:538px;padding:3px}
+#header .movie .wrap_movie{overflow:hidden;position:relative;width:100%;height:538px}
+#header .movie .btn_play{position:absolute;left:50%;top:50%;width:307px;height:306px;margin:-153px 0 0 -153px}
+#header .movie .bg span{position:absolute;width:35px;height:35px;background:url(../images/bg-movie.png) no-repeat;z-index:2}
+#header .movie .bg .lt{left:-3px;top:-3px;background-position:left top}
+#header .movie .bg .rt{right:-3px;top:-3px;background-position:right top}
+#header .movie .bg .lb{left:-3px;bottom:-3px;background-position:left bottom}
+#header .movie .bg .rb{right:-3px;bottom:-3px;background-position:right bottom}
+#header .movie #videoMain{overflow:hidden;width:924px;height:538px;z-index:1}
+#header .btn_area{position:absolute;left:-1px;top:1679px;width:100%;text-align:center}
+
+
+/* #reward */
+#reward{position:relative;height:1059px;background:url(../images/bg-reward.jpg) center top no-repeat}
+
+/* #reg */
+#reg{position:relative;height:1237px;background:url(../images/bg-reg.jpg) center top no-repeat}
+#reg #regForm{width:840px;margin:0 auto;padding-top:415px}
+#reg .ez-checkbox{display:inline-block;width:86px;height:79px;background:url(../images/bu-checkbox.png) no-repeat}
+#reg .ez-hide{width:86px;height:79px;opacity:0;filter:alpha(opacity=0)}
+#reg .ez-checkbox.ez-checked{background-position:left bottom}
+#reg #regForm .inp_area .mobile{display:table;width:100%;height:149px}
+#reg #regForm .inp_area .mobile .wrap_mobile{display:table-cell;text-align:center;vertical-align:middle}
+#reg #regForm .inp_area .mobile .inp_mobile1{float:left;position:relative;width:200px;height:52px;border-right:2px solid #503129;text-align:left;background:url(../images/bu-triangle.png) 142px center no-repeat;}
+#reg #regForm .inp_area .mobile .inp_mobile1 label{height:52px;color:#c78257;font-size:40px;line-height:52px}
+#reg #regForm .inp_area .mobile .inp_mobile1 select{position:absolute;left:0;top:0;width:100%;height:52px;min-height:13px;line-height:13px;opacity:0;filter:alpha(opacity=0);}
+#reg #regForm .inp_area .mobile .inp_mobile2{float:left;padding-left:29px;border-left:2px solid #2d100b}
+#reg #regForm .inp_area .mobile .inp_mobile2 input{width:440px;height:52px;padding:0;border:0;margin:0;color:#c78257;font-size:40px;line-height:52px;background:transparent url(../images/text-mobile.png) 5px center no-repeat;background-size:auto 52px;outline:none}
+#reg #regForm .inp_area .mobile .inp_mobile2 input.active{background:transparent}
+#reg #regForm .agree{display:table;width:100%;height:150px}
+#reg #regForm .agree .wrap_agree{display:table-cell;position:relative;vertical-align:middle}
+#reg #regForm .agree label{display:inline-block;margin-left:15px;vertical-align:middle}
+#reg #regForm .agree .btn_detail{position:absolute;right:0;top:28px;width:236px;height:94px;background:url(../images/btn-detail.png) no-repeat}
+#reg #regForm .submit{padding-top:54px;text-align:center}
+
+/* #event */
+#event .event1{position:relative;height:2502px;background:url(../images/bg-event1.jpg) center top no-repeat}
+#event .event1.step1{background-image:url(../images/bg-event1-1.jpg)}
+#event .event1.step2{background-image:url(../images/bg-event1-2.jpg)}
+#event .event1.step3{background-image:url(../images/bg-event1-3.jpg)}
+#event .event1.step4{background-image:url(../images/bg-event1-4.jpg)}
+#event .event1.step5{background-image:url(../images/bg-event1-5.jpg)}
+
+#event .event1 .gauge{position:absolute;left:140px;top:536px}
+#event .event1 .gauge .large{width:736px;height:23px}
+#event .event1 .gauge .large span{display:block;width:0%;max-width:736px;height:23px;background:url(../images/bg-gauge-l.gif) no-repeat}
+#event .event1 .gauge .small{width:727px;padding:6px 0 0 1px}
+#event .event1 .gauge .small span{display:block;width:0%;max-width:727px;height:9px;background:url(../images/bg-gauge-s.gif) no-repeat}
+#event .event1 .btn_area{position:absolute;left:50%;top:1430px;width:887px;margin-left:-443px}
+#event .event1 .btn_area .btn_facebook{float:left}
+#event .event1 .btn_area .btn_kakao{float:right}
+
+#event .event2{position:relative;height:1841px;background:url(../images/bg-event2.jpg) center top no-repeat}
+#event .event2 .btn_cafe{position:absolute;left:200px;top:1392px;}
+
+/* #gameInfo */
+#gameInfo{position:relative;height:1083px;background:url(../images/bg-gameinfo.jpg) center top no-repeat}
+#gameInfo #slide{position:relative;width:926px;padding-top:272px;margin-left:17px}
+#gameInfo #slide .bg{position:absolute;left:0;top:272px;width:926px;height:540px;background:url(../images/bg-slide.png) no-repeat;z-index:2}
+#gameInfo #slide .bx-wrapper{position:relative;height:534px}
+#gameInfo #slide .bx-wrapper .bx-controls-direction a{display:block;position:absolute;top:186px;width:164px;height:163px;background:url(../images/btn-slide.png) no-repeat;z-index:200}
+#gameInfo #slide .bx-wrapper .bx-controls-direction a.bx-prev{left:-90px;background-position:left top}
+#gameInfo #slide .bx-wrapper .bx-controls-direction a.bx-next{right:-90px;background-position:left bottom}
+#gameInfo #slide .bx-wrapper .bx-pager{position:absolute;bottom:-70px;width:926px;text-align:center}
+#gameInfo #slide .bx-wrapper .bx-pager .bx-pager-item{display:inline-block;margin:0 3px}
+#gameInfo #slide .bx-wrapper .bx-pager .bx-pager-item a{display:block;width:39px;height:39px;font-size:0;background:url(../images/bu-slide.png) no-repeat}
+#gameInfo #slide .bx-wrapper .bx-pager .bx-pager-item a:hover,
+#gameInfo #slide .bx-wrapper .bx-pager .bx-pager-item a.active{background-position:left bottom}
+
+/* #footer */
+#footer{position:relative;height:250px;background:url(../images/bg-footer.jpg) center top no-repeat}
+#footer .btn_top{position:absolute;left:50%;top:-63px;margin-left:-127px;}
+#footer .copyright{padding-top:170px;text-align:center}
+
+/* #fLayer */
+#fLayer{display:none;position:absolute;left:0;top:0;width:100%;height:100%;z-index:50}
+#fLayer .bg_layer{position:absolute;left:0;top:0;width:100%;height:100%;background:#000}
+#fLayer .wrap_layer{position:relative;z-index:60}
+#fLayer .wrap_layer .btn_close2{display:none;position:absolute;right:0;top:-45px}
+#fLayer .layer_privacy{display:none;position:fixed;left:50%;top:0;margin-left:-447px;z-index:50}

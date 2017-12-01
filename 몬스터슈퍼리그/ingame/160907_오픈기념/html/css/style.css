@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+/* reset */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
+body {line-height:1}
+ol, ul {list-style:none}
+blockquote, q {quotes:none}
+blockquote:before, blockquote:after,
+q:before, q:after {content:'';content:none}
+table {border-collapse:collapse;border-spacing:0}
+input[type=checkbox], input[type=radio]{vertical-align:middle;position:relative}
+input[type=radio]{bottom:2px}
+#accessibility, .skip, hr, legend, caption{display:block;overflow:hidden;position:absolute;top:-1000em;left:0}
+button{padding:0;margin:0;border:0;background:0;line-height:normal;cursor:pointer;outline:none;box-shadow:none}
+li,a,button{-webkit-tap-highlight-color:rgba(0,0,0,0)}
+.clearfix{*zoom:1}
+.clearfix:after{display:block;content:'';clear:both;}
+
+
+/* layout */
+img{max-width:980px !important}
+body{font-size:0}
+#fWrap{width:980px;margin:0 auto}
+
+#header{position:relative;height:675px}
+#fWrap.ko #header{background:url(../images/bg-header-kr.jpg)}
+#fWrap.en #header{background:url(../images/bg-header-en.jpg)}
+#fWrap.ja #header{background:url(../images/bg-header-ja.jpg)}
+#fWrap.th #header{background:url(../images/bg-header-th.jpg)}
+#fWrap.zh-CN #header{background:url(../images/bg-header-hans.jpg)}
+#fWrap.zh-TW #header{background:url(../images/bg-header-hant.jpg)}
+
+#header > div{display:table;position:absolute;left:0;top:597px;width:100%;height:36px;}
+#header div .date{display:table-cell;color:#fcff9d;font-size:18px;text-align:center;vertical-align:middle}
+#fWrap.ko #header .date{letter-spacing:-1px}
+#fWrap.en #header .date{line-height:36px}
+#fWrap.ja #header .date{font-size:18px}
+#fWrap.th #header .date{font-size:17px}
+#fWrap.zh-CN #header .date{font-size:18px}
+#fWrap.zh-TW #header .date{font-size:18px}
+
+#fWrap.ios #header .date{font-size:22px}
+#fWrap.en.ios #header .date{font-size:23px}
+#fWrap.ja.ios #header .date{line-height:44px}
+#fWrap.th.ios #header .date{font-size:20px}
+#fWrap.zh-CN.ios #header .date{line-height:43px}
+#fWrap.zh-TW.ios #header .date{line-height:43px}
+
+#container{overflow:hidden;position:relative;height:811px;margin-top:-10px;background:url(../images/bg-container.jpg)}
+#fWrap.zh-TW #container{background-image:url(../images/bg-container-hant.jpg)}
+
+#quest{width:951px;padding-top:10px;margin-left:14px}
+#quest li{float:left;position:relative;width:190px;height:372px;margin-bottom:33px;}
+#quest li:nth-of-type(5n){float:right}
+#quest li .wrap_title{display:table;width:100%;height:72px}
+#quest li .wrap_title .quest-title{display:table-cell;padding:0 10px;color:#eff3ff;font-size:20px;line-height:26px;letter-spacing:-0.5px;text-align:center;vertical-align:middle}
+#quest li .wrap_title .quest-title span{color:#00ffd2}
+#quest li .status{color:#ffe700;font-size:20px;text-align:center;font-weight:bold}
+#quest li .wrap_reward{display:table;position:absolute;left:0;top:244px;width:100%;height:42px}
+#quest li .wrap_reward .reward-title{display:table-cell;padding:0 10px;color:#a0b4ff;font-size:18px;line-height:22px;text-align:center;vertical-align:middle}
+#quest li .btn{position:absolute;left:7px;top:297px;width:176px;height:68px}
+#quest li:nth-of-type(1) .btn,
+#quest li:nth-of-type(6) .btn{left:8px}
+#quest li .btn .btn_normal,
+#quest li .btn .btn_end{display:block;width:100%;height:68px;color:#0b1242;font-size:30px;font-weight:bold;text-align:center;line-height:64px;background-position:left top}
+#quest li .btn .btn_end{display:none}
+c .wrap_title .quest-title,
+#quest li:nth-of-type(7) .wrap_title .quest-title,
+#quest li:nth-of-type(8) .wrap_title .quest-title,
+#quest li:nth-of-type(9) .wrap_title .quest-title{color:#fce7ff}
+#quest li:nth-of-type(6) .wrap_title .quest-title span,
+#quest li:nth-of-type(7) .wrap_title .quest-title span,
+#quest li:nth-of-type(8) .wrap_title .quest-title span,
+#quest li:nth-of-type(9) .wrap_title .quest-title span{color:#ff00d8}
+#quest li:nth-of-type(1) .btn span,
+#quest li:nth-of-type(2) .btn span,
+#quest li:nth-of-type(3) .btn span,
+#quest li:nth-of-type(4) .btn span,
+#quest li:nth-of-type(5) .btn span{color:#0b1242;background-image:url(../images/btn-quest.png)}
+#quest li:nth-of-type(6) .btn span,
+#quest li:nth-of-type(7) .btn span,
+#quest li:nth-of-type(8) .btn span,
+#quest li:nth-of-type(9) .btn span{color:#33002c;background-image:url(../images/btn-quest2.png)}
+#quest li:nth-of-type(6) .btn_normal,
+#quest li:nth-of-type(7) .btn_normal,
+#quest li:nth-of-type(8) .btn_normal,
+#quest li:nth-of-type(9) .btn_normal{color:#33002c}
+
+#quest li.ready .btn_normal{color:#ffea00 !important;cursor:pointer;background-position:left -68px}
+
+#quest li.end .btn_normal{display:none}
+#quest li.end .btn_end{display:block;color:#9e9e9e !important;background-position:left bottom}
+
+
+
+#totalQuest li{position:absolute;right:16px;top:414px;width:190px;height:372px}
+#totalQuest li .wrap_title{display:table;width:100%;height:107px}
+#totalQuest li .wrap_title .quest-title{display:table-cell;padding:0 10px;color:#e9fffa;font-size:22px;line-height:26px;font-weight:bold;text-align:center;vertical-align:middle}
+#totalQuest li .wrap_reward{display:table;position:absolute;left:0;top:244px;width:100%;height:42px}
+#totalQuest li .wrap_reward .reward-title{display:table-cell;padding:0 10px;color:#51e8c3;font-size:18px;line-height:22px;text-align:center;vertical-align:middle}
+#totalQuest li .btn{position:absolute;left:8px;top:298px;width:176px;height:68px}
+#totalQuest li .btn .btn_normal,
+#totalQuest li .btn .btn_end{display:block;width:100%;height:68px;color:#003622;font-size:30px;font-weight:bold;text-align:center;line-height:64px}
+#totalQuest li .btn .btn_end{display:none}
+#totalQuest li .btn span{background:url(../images/btn-quest3.png) no-repeat}
+
+#totalQuest li.ready .btn_normal{color:#ffea00;background-position:left -68px;cursor:pointer}
+#totalQuest li.end .btn_normal{display:none}
+#totalQuest li.end .btn_end{display:block;color:#9e9e9e;background-position:left bottom}
+
+
+#footer{clear:both;height:155px;margin-top:-10px;background:url(../images/bg-footer.png) no-repeat}
+#footer ul{width:946px;padding-top:10px;margin:0 auto}
+#footer li{position:relative;padding:0 0 14px 32px;color:#8e50e1;font-size:17px;text-align:left}
+#footer li .bu{position:absolute;left:0px;top:-2px;width:17px;height:18px;background:url(../images/bu-footer.png) no-repeat}
+
+
+/* test */
+#fWrap .test{position:absolute;right:0;top:120px;}
+#fWrap .test button{display:block;width:120px;padding:10px 0;border-right:2px solid #000;border-bottom:2px solid #000;margin-bottom:5px;color:#000;font-size:13px;text-align:center;background:#ccc}
+#fWrap .test button.active{font-weight:bold;background:#fff}
+
+/* layer */
+#fLayer{display:none;position:absolute;left:0;top:0;width:100%;height:100%}
+#fLayer .bg_layer{position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:15}
+#fLayer .modal_layer{position:fixed;left:50%;top:0;width:609px;height:376px;margin:0 0 0 -304px;z-index:20;transition: transform 0.3s ease;transform: scale(0,0)}
+#fLayer.active .modal_layer{transform: scale(1,1)}
+#fLayer .modal_layer .wrap_layer{position:relative;padding-top:73px;border:2px solid #b64c2b;background:#1d0508}
+#fLayer .modal_layer .wrap_layer .title{display:none}
+#fLayer .modal_layer .wrap_layer .msg{position:relative;top:-1px;display:table;width:100%;min-height:115px;text-align:center;}
+#fLayer .modal_layer .wrap_layer .msg .wrap_msg{display:table-cell;padding:10px 20px 20px 20px;color:#ffb606;font-size:33px;line-height:40px;font-weight:bold;vertical-align:middle}
+#fLayer .modal_layer .wrap_layer .msg .wrap_msg span{display:block;padding-top:10px;color:#d0a94a;font-size:20px;letter-spacing:0}
+#fLayer .modal_layer .wrap_layer .btn_area{position:relative;top:-2px;height:145px;text-align:center}
+#fLayer .modal_layer .wrap_layer .btn_area button{display:inline-block;width:234px;height:90px;color:#e5ed00;font-size:30px;line-height:90px;font-weight:bold;text-align:center;background:url(../images/btn-layer.jpg) no-repeat}

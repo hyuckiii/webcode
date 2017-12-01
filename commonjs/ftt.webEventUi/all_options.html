@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>WebEvent.js - DEMO(All Options)</title>
+<meta charset="utf-8">
+<meta reward="viewport" content="width=980" />
+<meta reward="format-detection" content="telephone=no" />
+<link rel="stylesheet" href="css/style.css" />
+<script src="https://static.four33.com/event/common/js/jquery-1.8.1.min.js"></script>
+</head>
+
+<html>
+<!--
+  언어에 따라 #fwrap에 class추가
+    - en(영어)
+    - ja(일본어)
+    - th(태국어)
+    - zh-cn(중국어 - 간체)
+    - zh-tw(중국어 - 번체)
+-->
+<body>
+<div id="fWrap" class="en">
+
+  <div id="header">
+    <div class="date"></div>
+    <div class="my_coin">
+      <div class="tit"></div>
+      <div class="coin">
+        <span class="icon"></span>
+        <span class="value">1234</span>
+      </div>
+    </div>
+  </div>
+  <!-- // #header -->
+
+  <div id="content">
+    <div id="questList">
+      <div class="tit"></div>
+      <div class="info"></div>
+      <ul>
+        <li><div></div></li>
+        <li><div></div></li>
+        <li><div></div></li>
+        <li><div></div></li>
+        <li><div></div></li>
+        <li><div></div></li>
+        <li><div></div></li>
+        <li><div></div></li>
+      </ul>
+    </div>
+    <!-- // #questList -->
+
+    <div id="reward">
+      <ul>
+        <li quest-num="0">
+          <div class="tit">
+            <div class="quest-title"></div>
+          </div>
+          <div class="reward-title"></div>
+          <div class="status">
+            <span class="ing"></span> / <span class="max"></span>
+          </div>
+          <div class="btn"></div>
+          <div class="bg"></div>
+        </li>
+        <li quest-num="1">
+          <div class="tit">
+            <div class="quest-title"></div>
+          </div>
+          <div class="status">
+            <span class="ing"></span> / <span class="max"></span>
+          </div>
+          <div class="reward-title"></div>
+          <div class="btn"></div>
+          <div class="bg"></div>
+        </li>
+        <li quest-num="2">
+          <div class="tit">
+            <div class="quest-title"></div>
+          </div>
+          <div class="status">
+            <span class="ing"></span> / <span class="max"></span>
+          </div>
+          <div class="reward-title"></div>
+          <div class="btn"></div>
+          <div class="bg"></div>
+        </li>
+        <li quest-num="3">
+          <div class="tit">
+            <div class="quest-title"></div>
+          </div>
+          <div class="status">
+            <span class="ing"></span> / <span class="max"></span>
+          </div>
+          <div class="reward-title"></div>
+          <div class="btn"></div>
+          <div class="bg"></div>
+        </li>
+        <li quest-num="4">
+          <div class="tit">
+            <div class="quest-title"></div>
+          </div>
+          <div class="status">
+            <span class="ing"></span> / <span class="max"></span>
+          </div>
+          <div class="reward-title"></div>
+          <div class="btn"></div>
+          <div class="bg"></div>
+        </li>
+        <li quest-num="5">
+          <div class="tit">
+            <div class="quest-title"></div>
+          </div>
+          <div class="status">
+            <span class="ing"></span> / <span class="max"></span>
+          </div>
+          <div class="reward-title"></div>
+          <div class="btn"></div>
+          <div class="bg"></div>
+        </li>
+        <li quest-num="6">
+          <div class="tit">
+            <div class="quest-title"></div>
+          </div>
+          <div class="status">
+            <span class="ing"></span> / <span class="max"></span>
+          </div>
+          <div class="reward-title"></div>
+          <div class="btn"></div>
+          <div class="bg"></div>
+        </li>
+        <li quest-num="7">
+          <div class="tit">
+            <div class="quest-title"></div>
+          </div>
+          <div class="status">
+            <span class="ing"></span> / <span class="max"></span>
+          </div>
+          <div class="reward-title"></div>
+          <div class="btn"></div>
+          <div class="bg"></div>
+        </li>
+      </ul>
+    </div>
+    <!-- // #reward -->
+  </div>
+  <!-- // #content -->
+
+  <div id="footer">
+    <div class="remarks">
+      <div class="tit"></div>
+      <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+    </div>
+  </div>
+  <!-- // #footer -->
+
+  <!-- 확인 후 삭제해주세요 -->
+  <div class="test">
+    <button type="button" lang-data="en">영어</button>
+    <button type="button" lang-data="ja">일본어</button>
+    <button type="button" lang-data="th">태국어</button>
+    <button type="button" lang-data="zh-cn">중국어 - 간체</button>
+    <button type="button" lang-data="zh-tw">중국어 - 번체</button>
+  </div>
+  <!-- // 확인 후 삭제해주세요 -->
+
+</div>
+<!-- // #fWrap -->
+
+<script type="text/javascript" src="js/ftt.webevent.0.4.js"></script>     <!-- ftt.webevent.js(이벤트 레이아웃) -->
+<script type="text/javascript" src="https://static.four33.com/event/common/js/webevent/ftt.jquery.modalLayer.0.3.min.js"></script>   <!-- ftt.modalLayer.js(레이어) -->
+<script type="text/javascript" src="js/lang.js"></script>             <!-- 언어(다국어) -->
+<script type="text/javascript" src="js/common_lang.js"></script>      <!-- 공통사용 언어(레이어 등) -->
+
+<script type="text/javascript">
+var quest = $('#reward'),
+  coinNum = 999,
+  questStatus = [1, 1, 1, 1, 1, 1, 1, 1],               // 추가보상 미션 상태 값(0/1/2)
+  questIng = [10, 10, 10, 10, 10, 10, 10, 10],          // 일일 미션 현황(상태가 ready인 경우라도 값이 보정되지 않음)
+  questMax = [20, 20, 20, 20, 20, 20, 20, 20],          // 일일 미션 목표값
+  langLayer = commonLang($('#fWrap').attr('class')),    // 공통사용 언어(레이어)
+  langLayout = evLang($('#fWrap').attr('class'));       // 이벤트 사용언어
+
+var questData = {
+  questIng: questIng,
+  questMax: questMax,
+  questStatus: questStatus,
+  otherItem: {                                        // 날짜, 최종 포인트등 가변적으로 표기되는 항목의 값(클래스명, 적용될 값)
+    titleCoin: { target: $('#header .my_coin .tit') },
+    coinNum: {
+      target: $('#header .my_coin .value'),
+      value: coinNum
+    },
+    titleQuest: { target: $('#content #questList .tit') },
+    infoQuest: { target: $('#content #questList .info') },
+    listQuest: { target: $('#content #questList li div') },
+    titleRemark: { target: $('#footer .remarks .tit')},
+    listRemark: { target: $('#footer .remarks li')}
+  }
+};
+
+// 초기실행
+$(quest).webEventUI(questData, langLayout);
+
+// 보상수령
+$('#content').on('click','li.ready .btn',function () {
+  var questNum = $(this).parent('li').attr('quest-num');   // quest-num 속성 값
+
+  // 미션 상태 값 변경
+  questData.questStatus = [2, 2, 2, 2, 2, 2, 2, 2];
+
+  // 레이어 출력
+  if (questNum == 0){
+    /*
+      [ 사용 예 ]
+      modalLayer.openLayer('success', 'normal', commonLang);
+
+      1> 한국어는 첫번째 인자에 직접 str을 넣어서 사용해도 무방
+      2> 다국어는 첫번째 인자에 상태에 따라 'confirm', 'error', 'fail'로 입력
+      3> 두 번째 인자는 레이어를 닫을 때의 이벤트를 선언
+        1) 새로고침 없이 닫을 경우 - 'normal'
+        2) 새로고침 - 'refresh'
+        3) 다른 페이지로 리다이렉션 - {type:'redirect', url:'이동할 url'}
+      4> 세 번째 인자는 다국어 객체(미사용 시 생략)
+
+    */
+    modalLayer.openLayer('success', 'refresh' , langLayer);  // openLayer
+    $(quest).webEventUI(questData, langLayout);              // page Layout change(page refresh를 사용하는 경우 필요 X)
+  }else if (questNum == 1){
+    //modalLayer.openLayer('fail', langLayer, 'refresh');  // openLayer
+    modalLayer.openLayer('fail', {type:'redirect', url: 'http://www.naver.com'}, langLayer)
+  }else{
+    modalLayer.openLayer('error', langLayer);         // openLayer
+    $(quest).webEventUI(questData, langLayout);       // pageRefresh
+  }
+})
+
+// test
+$('.test button').bind('click', function () {
+  var langType = $(this).attr('lang-data');
+  langLayout = evLang(langType);
+
+  $('.test button').removeClass('active');
+  $(this).addClass('active');
+  $('#fWrap').attr('class', langType);
+  $(quest).webEventUI(questData, langLayout);
+});
+// test
+
+</script>
+
+</body>
+
+</html>

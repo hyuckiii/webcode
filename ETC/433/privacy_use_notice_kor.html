@@ -1,0 +1,186 @@
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+<title>네시삼십삼분 개인정보 이용내역 통지</title>
+<style type="text/css">
+  /* reset */
+  @charset "utf-8";
+  body,h1,h2,h3,h4,th,td,input,select.textarea {font-family:"돋움",dotum,sans-serif;font-size:12px;font-weight:normal; color:#000000; }
+  html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin:0;padding:0;border:0;font-family:"돋움",dotum,sans-serif;font-size:12px;font-weight:normal; color:#000000;font:inherit;vertical-align:baseline}
+  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
+  body {line-height:1}
+  strong{font-weight:bold}
+  blockquote, q, hr {quotes:none}
+  blockquote:before, blockquote:after, q:before, q:after {content:'';content:none}
+  table {border-collapse:collapse;border-spacing:0}
+  img,fieldset {border:0}
+  ul,ol,li {list-style:none}
+  img,input,select,textarea {vertical-align:middle}
+  a {color:#787878;text-decoration:none}
+  a:hover {color:#787878;text-decoration:underline}
+  a.user {position:relative}
+  input[type=checkbox], input[type=radio] {vertical-align:middle;position:relative}
+  input[type=radio] {bottom:2px}
+  #accessibility, .skip, hr, legend, caption {display:block;overflow:hidden;position:absolute;top:-1000em;left:0}
+  .btn_comm {padding:0;margin:0;border:0;background:0;line-height:auto;cursor:pointer}
+  .clearfix {*zoom:1}
+  .clearfix:after {display:block;content:'';clear:both}
+  .section{padding-bottom:20px}
+  .btn_print {position:absolute;top:4px;right:4px;margin:0;padding:0;border:0;background:none;cursor:pointer;}
+  .btn_comm{display:inline-block;min-width:100px;height:38px;margin:0 auto;color:#fff;font-size:15px;font-weight:bold;line-height:38px;text-align:center;background:#434b4e;cursor:pointer}
+  .mt_top{margin-top:20px;}
+  .underline{display:inline-block;border-bottom:1px solid #000000;}
+  body{font-faimly:dotum;font-size:12px;line-height:22px}
+  #wrap{padding:84px 20px 20px 20px}
+  #header{position:fixed;top:0;left:0;width:100%}
+  #header .wrap_header{position:relative;height:64px;padding:0 20px;background:#88d4e2}
+  #header .wrap_header .btn_print{position:absolute;right:20px;top:13px;}
+  #header h1{position:absolute;right:20px;top:20px}
+  #header h2{color:#fff;font-size:18px;line-height:64px;font-weight:bold}
+  #content{}
+  #content .history{padding-bottom:20px;text-align:right}
+  #content ul,ol{margin:10px 0 10px 20px}
+  #content ol > li{list-style-type: decimal}
+  #content ol, #content ol>li {list-style:decimal !important}
+  #content ul, #content ul>li {list-style:disc !important}
+  #content li{padding-bottom:5px}
+  #content h3,
+  #content .tit{font-size:18px;font-weight:bold;padding-bottom:15px}
+  #content h4{font-size:16px;font-weight:bold;padding-bottom:10px}
+  #content .table-gray{margin-top:10px;border-collapse:collapse;border:1px solid #999}
+  #content .table-gray.center td,
+  #content .table-gray.center th{text-align:center}
+  #content .table-gray th{padding:10px 0;font-weight:bold;background:#ccc;border:1px solid #999}
+  #content .table-gray td{padding:5px 0;border:1px solid #999}
+  #content .box_border{margin-top:10px;padding:10px;border:1px solid #000000;}
+  #content .box_border dl{}
+  #content .box_border dt{ font-weight:bold;}
+  #footer{padding-top:20px}
+  #footer .btn_area{padding-top:20px;text-align:center;border-top:1px solid #ccc}
+</style>
+<!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.2.min.js"></script> -->
+<script type="text/javascript" src="http://www.433.co.kr/wp-content/uploads/2015/11/jquery-1.11.2.min_.js"></script>
+<script type="text/javascript">
+  $("document").ready(function() {
+    $("#history_select").change(function(){
+      var val = $("#history_select option:selected").val();
+      if (val != "") window.location.href = "http://www.433.co.kr/" + val;
+    });
+  });
+</script>
+</head>
+<body>
+<div id="wrap">
+  <!--header-->
+  <div id="header">
+    <div class="wrap_header">
+      <h2>개인정보 이용내역 통지</h2>
+      <!--인쇄하기버튼
+      <p><button type="button" class="btn_print btn_comm" onclick="window.print();return false;">인쇄하기</button></p>
+      -->
+    </div>
+  </div>
+  <div id="content">
+
+    <div class="section">
+      <p>안녕하세요. ㈜네시삼십삼분입니다.<br>항상 저희 게임을 믿고 이용해주시는 회원님께 깊은 감사를 드립니다.</p>
+      <p class="mt_top">당사는 <strong>‘정보통신망 이용촉진 및 정보보호 등에 관한 법률’ </strong> 제 30조 2 및 <strong>동법 시행령</strong> 제 17조에 의거하여 연1회 회원님의 개인정보 이용내역에 대하여 아래와 같이 안내 드립니다.</p>
+    </div>
+
+    <div class="section">
+      <p class="underline">▣ 정보통신망 이용촉진 및 정보보호 등에 관한 법률</p>
+      <div class="box_border">
+        <dl>
+          <dt>제 30조의 2(개인정보 이용내역의 통지)</dt>
+          <dd>① 정보통신서비스 제공자 등으로서 대통령령으로 정하는 기준에 해당하는 자는 제22조 및 제23조제1항 단서에 따라 수집한 이용자 개인정보의 이용내역(제24조의2에 따른 제공 및 제25조에 따른 개인정보 취급위탁을 포함한다)을 주기적으로 이용자에게 통지하여야 한다. 다만, 연락처 등 이용자에게 통지할 수 있는 개인정보를 수집하지 아니한 경우에는 그러하지 아니하다.</dd>
+          <dd>② 제1항에 따라 이용자에게 통지하여야 하는 정보의 종류, 통지 주기 및 방법, 그 밖에 이용내역 통지에 필요한 사항은 대통령령으로 정한다.</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="section">
+      <p class="underline"><strong>▣ 개인정보 수집항목 및 이용목적</strong></p>
+      <table class="table-gray center" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <colgroup>
+          <col width="30%">
+          <col width="70%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>수집 정보</th>
+            <th>이용 목적</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>핸드폰 번호</td>
+          <td rowspan="2">
+            본인식별, 불량회원의 부정한 이용 방지 및 서비스 이용에 따른 문의처리,
+            새로운 정보와 고지사항의 안내, 본 서비스 관련 각종 이벤트 및 정보 안내를 위한 SMS 발송, 접속빈도 파악, 회원의 서비스이용에 대한 통계
+
+          </td>
+        </tr>
+        <tr>
+          <td>카카오회원번호<br><span>(카카오를 통하여 서비스하는 경우)</span></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <p class="underline"><strong>▣ 개인정보 취급 및 위탁 내역</strong></p>
+      <table class="table-gray center" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <colgroup>
+          <col width="10%">
+          <col width="25%">
+          <col width="25%">
+          <col width="40%">
+        </colgroup>
+        <thead>
+        <tr>
+          <th>번호</th>
+          <th>수탁업체</th>
+          <th>위탁 업무 내용</th>
+          <th>개인정보의 보유 및 이용기간</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>1</td>
+          <td>㈜QRoad</td>
+          <td>게임서비스 운영</td>
+          <td>회원탈퇴 시 또는 위탁계약 종료 시</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>㈜LG유플러스</td>
+          <td>SMS/LMS 발송 업무</td>
+          <td>위탁계약 종료 시</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>㈜슈어엠</td>
+          <td>SMS/LMS 발송 업무</td>
+          <td>위탁계약 종료 시</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>㈜한주홀딩스</td>
+          <td>SMS 수신거부 업무</td>
+          <td>위탁계약 종료 시</td>
+        </tr>
+        </tbody>
+      </table>
+      <p>  * 게임가입시 동의한 약관 및 개인정보처리방침에 따름 </p>
+    </div>
+
+    <div class="section">
+      <p>㈜네시삼십삼분은 앞으로도 회원님의 소중한 개인정보를 보호하기 위해 언제나 최선을 다하겠습니다. </p>
+      <p class="mt_top">감사합니다.</p>
+    </div>
+
+
+
+  </div>
+</div>

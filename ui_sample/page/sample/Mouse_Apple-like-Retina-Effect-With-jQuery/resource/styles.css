@@ -1,0 +1,82 @@
+*{
+	/* A universal CSS reset */
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-size:14px;
+	color:#222;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#iphone{
+	/* The iphone frame div */
+	width:640px;
+	height:310px;
+	position:relative;
+}
+
+#webpage{
+	/* Contains the webpage screenshot */
+	width:499px;
+	height:283px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-141px 0 0 -249px;
+}
+
+#retina{
+	/* The Retina effect */
+	background:url('./webpage.png') no-repeat center center white;
+	border:2px solid white;
+
+	/* Positioned absolutely, so we can move it around */
+	position:absolute;
+	height:180px;
+	width:180px;
+
+	/* Hidden by default */
+	display:none;
+
+	/* A blank cursor, notice the default fallback */
+	cursor:url('./blank.cur'),default;
+	
+	/* CSS3 Box Shadow */
+	-moz-box-shadow:0 0 5px #777, 0 0 10px #aaa inset;
+	-webkit-box-shadow:0 0 5px #777;
+	box-shadow:0 0 5px #777, 0 0 10px #aaa inset;
+	
+	/* CSS3 rounded corners */
+	-moz-border-radius:90px;
+	-webkit-border-radius:90px;
+	border-radius:90px;
+}
+
+#retina.chrome{
+	/* A special chrome version of the cursor */
+	cursor:url('./blank_google_chrome.cur'),default;
+	z-index:100;
+}
+
+#main{
+	/* The main div */
+	margin:0px auto;
+	position:relative;
+}
+
+/* The styles below are only needed by the demo page */
+a, a:visited {
+	color:#0196e3;
+	text-decoration:none;
+	outline:none;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+a img{
+	border:none;
+}

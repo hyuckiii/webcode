@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+/* reset */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
+body {line-height:1}
+ol, ul {list-style:none}
+blockquote, q {quotes:none}
+blockquote:before, blockquote:after,
+q:before, q:after {content:'';content:none}
+table {border-collapse:collapse;border-spacing:0}
+input[type=checkbox], input[type=radio]{vertical-align:middle;position:relative}
+input[type=radio]{bottom:2px}
+#accessibility, .skip, hr, legend, caption{display:block;overflow:hidden;position:absolute;top:-1000em;left:0}
+button{padding:0;margin:0;border:0;background:0;line-height:normal;cursor:pointer;outline:none;box-shadow:none}
+li,a,button{-webkit-tap-highlight-color:rgba(0,0,0,0)}
+.clearfix{*zoom:1}
+.clearfix:after{display:block;content:'';clear:both;}
+
+
+/* layout */
+img{max-width:980px !important}
+body{font-size:0}
+#fWrap{position:relative;width:980px;margin:0 auto}
+
+
+/* #header */
+#header{position:relative;width:100%;height:628px}
+#fWrap.ko #header{background:url(../images/bg-header-ko.jpg)}
+#fWrap.en #header{background:url(../images/bg-header-en.jpg)}
+#fWrap.ja #header{background:url(../images/bg-header-ja.jpg)}
+#fWrap.th #header{background:url(../images/bg-header-th.jpg)}
+#fWrap.zh-CN #header{background:url(../images/bg-header-hans.jpg)}
+#fWrap.zh-TW #header{background:url(../images/bg-header-hant.jpg)}
+
+
+/* quest-list common */
+#container #questStep > div,
+#container #questNormal{position:relative}
+#container #questStep ul,
+#container #questNormal ul{width:950px;height:371px;padding:41px 0 39px 30px;margin:0 auto}
+#container #questStep li.normal .wrap_list,
+#container #questNormal li.normal .wrap_list{display:none !important}
+#container #questStep li,
+#container #questNormal li{float:left;width:200px;margin-right:40px}
+#container #questStep li .wrap_list,
+#container #questNormal li .wrap_list{display:block;position:relative;height:371px;text-align:center}
+#container #questStep li .wrap_title,
+#container #questNormal li .wrap_title{overflow:hidden;display:table;width:100%;height:58px;padding-top:12px;font-size:24px;line-height:27px}
+#container #questStep li .wrap_title .quest-title,
+#container #questNormal li .wrap_title .quest-title{display:table-cell;height:58px;vertical-align:middle}
+#container #questStep li .wrap_status,
+#container #questNormal li .wrap_status{height:31px;padding-top:5px;color:#ffe700;font-size:20px;line-height:20px}
+#container #questStep li .wrap_reward,
+#container #questNormal li .wrap_reward{display:table;position:absolute;left:0;top:250px;width:100%;height:47px;font-size:19px;line-height:23px;text-align:center}
+#container #questStep li .wrap_reward .reward-title,
+#container #questNormal li .wrap_reward .reward-title{display:table-cell;vertical-align:middle}
+#container #questStep li .wrap_btn,
+#container #questNormal li .wrap_btn{display:table;position:absolute;left:13px;top:301px;width:176px;height:60px;background:#4a1900;border-radius:5px;box-shadow:0 1px 0 #240700}
+#container #questStep li .wrap_btn .btn,
+#container #questNormal li .wrap_btn .btn{display:table-cell;font-size:28px;vertical-align:middle}
+#container #questStep li .wrap_btn .btn_end,
+#container #questNormal li .wrap_btn .btn_end{display:none}
+#container #questStep li.ready .wrap_btn .btn_normal,
+#container #questNormal li.ready .wrap_btn .btn_normal{cursor:pointer}
+#container #questStep li.end .wrap_btn .btn_normal,
+#container #questNormal li.end .wrap_btn .btn_normal{display:none}
+#container #questStep li.end .wrap_btn .btn_end,
+#container #questNormal li.end .wrap_btn .btn_end{display:block}
+#container #questStep li:nth-of-type(4n),
+#container #questNormal li:nth-of-type(4n){margin-right:0}
+
+#fWrap.en #container #questStep li .wrap_title,
+#fWrap.en #container #questNormal li .wrap_title{font-size:21px;word-spacing:-1px}
+#fWrap.en #container #questStep li .wrap_reward,
+#fWrap.en #container #questNormal li .wrap_reward{font-size:18px}
+#fWrap.ja #container #questStep li .wrap_title,
+#fWrap.ja #container #questNormal li .wrap_title{font-size:19px}
+#fWrap.ja #container #questStep li .wrap_reward,
+#fWrap.ja #container #questNormal li .wrap_reward{font-size:16px}
+#fWrap.zh-CN #container #questStep li .wrap_title,
+#fWrap.zh-CN #container #questNormal li .wrap_title{font-size:21px}
+#fWrap.zh-TW #container #questStep li .wrap_title,
+#fWrap.zh-TW #container #questNormal li .wrap_title{font-size:21px}
+
+
+/* #questStep(.quest_list1 ~ 4) */
+#fWrap.ko #questStep .quest_list1 ul{background:url(../images/bg-quest1-kr.jpg) center top no-repeat}
+#fWrap.en #questStep .quest_list1 ul{background:url(../images/bg-quest1-en.jpg) center top no-repeat}
+#fWrap.ja #questStep .quest_list1 ul{background:url(../images/bg-quest1-ja.jpg) center top no-repeat}
+#fWrap.th #questStep .quest_list1 ul{background:url(../images/bg-quest1-th.jpg) center top no-repeat}
+#fWrap.zh-CN #questStep .quest_list1 ul{background:url(../images/bg-quest1-hans.jpg) center top no-repeat}
+#fWrap.zh-TW #questStep .quest_list1 ul{background:url(../images/bg-quest1-hant.jpg) center top no-repeat}
+#container #questStep .quest_list1 ul li .wrap_list{background:url(../images/bg-quest1-2.jpg) no-repeat}
+#container #questStep .quest_list1 ul li .quest-title{color:#4d1f01}
+#container #questStep .quest_list1 ul li .quest-title span{color:#0a5881}
+#container #questStep .quest_list1 ul li .reward-title{color:#ffb482}
+#container #questStep .quest_list1 ul li .wrap_btn{color:#6e2c00;background:#4a1900;box-shadow:0 1px 0 #240700}
+#container #questStep .quest_list1 ul li.ready .wrap_btn{color:#ffea00;background:#fa4c00;box-shadow:0 1px 0 #791300}
+#container #questStep .quest_list1 ul li.end .wrap_btn{color:#6e2c00;background:#281508;box-shadow:0 1px 0 #140501}
+
+#container #questStep .quest_list2 ul{background:url(../images/bg-quest2.jpg) center top no-repeat}
+#container #questStep .quest_list2 .icon{position:absolute;top:-35px;right:200px;width:96px;height:115px;background:url(../images/icon-char1.png) no-repeat;z-index:1}
+#container #questStep .quest_list2 ul li .wrap_list{background:url(../images/bg-quest2-2.jpg) no-repeat}
+#container #questStep .quest_list2 ul li .quest-title{color:#4d1f01}
+#container #questStep .quest_list2 ul li .quest-title span{color:#980000}
+#container #questStep .quest_list2 ul li .reward-title{color:#ffcd74}
+#container #questStep .quest_list2 ul li .wrap_btn{color:#5b3a00;background:#3f2902;box-shadow:0 1px 0 #130900}
+#container #questStep .quest_list2 ul li.ready .wrap_btn{color:#ffea00;background:#a56d00;box-shadow:0 1px 0 #301900}
+#container #questStep .quest_list2 ul li.end .wrap_btn{color:#5b3a00;background:#221703;box-shadow:0 1px 0 #0a0600}
+
+#container #questStep .quest_list3 ul{height:370px;background:url(../images/bg-quest3.jpg) center top no-repeat}
+#container #questStep .quest_list3 .icon{position:absolute;top:-50px;left:193px;width:119px;height:127px;background:url(../images/icon-char2.png) no-repeat;z-index:1}
+#container #questStep .quest_list3 ul li .wrap_list{background:url(../images/bg-quest3-2.jpg) no-repeat}
+#container #questStep .quest_list3 ul li .quest-title{color:#052037}
+#container #questStep .quest_list3 ul li .quest-title span{color:#9d2479}
+#container #questStep .quest_list3 ul li .reward-title{color:#70beff}
+#container #questStep .quest_list3 ul li .wrap_btn{color:#084171;background:#012a4d;box-shadow:0 1px 0 #000917}
+#container #questStep .quest_list3 ul li.ready .wrap_btn{color:#ffea00;background:#1089f1;box-shadow:0 1px 0 #021e4a}
+#container #questStep .quest_list3 ul li.end .wrap_btn{color:#084171;background:#031423;box-shadow:0 1px 0 #00040b}
+
+#container #questStep .quest_list4 ul{height:370px;background:url(../images/bg-quest4.jpg) center top no-repeat}
+#container #questStep .quest_list4 ul li .wrap_list{background:url(../images/bg-quest4-2.jpg) no-repeat}
+#container #questStep .quest_list4 ul li .quest-title{color:#012e25}
+#container #questStep .quest_list4 ul li .quest-title span{color:#004db5}
+#container #questStep .quest_list4 ul li .reward-title{color:#45e1c2}
+#container #questStep .quest_list4 ul li .wrap_btn{color:#02524f;background:#043735;box-shadow:0 1px 0 #000b0b}
+#container #questStep .quest_list4 ul li.ready .wrap_btn{color:#ffea00;background:#009c96;box-shadow:0 1px 0 #00201e}
+#container #questStep .quest_list4 ul li.end .wrap_btn{color:#02524f;background:#031b1a;box-shadow:0 1px 0 #000505}
+
+#container #questStep ul li:nth-of-type(1) div{background-position:left top !important;}
+#container #questStep ul li:nth-of-type(2) div{background-position:-200px top !important}
+#container #questStep ul li:nth-of-type(3) div{background-position:-400px top !important}
+#container #questStep ul li:nth-of-type(4) div{background-position:right top !important}
+
+
+/* #questNormal */
+#container #questNormal ul{background:url(../images/bg-quest5.jpg) center top no-repeat}
+#container #questNormal .icon{position:absolute;top:-50px;right:185px;width:102px;height:177px;background:url(../images/icon-char3.png) no-repeat;z-index:1}
+#container #questNormal ul li .quest-title{color:#380610}
+#container #questNormal ul li .quest-title span{color:#6c188f}
+#container #questNormal ul li .reward-title{color:#ff98ae}
+#container #questNormal ul li .wrap_btn{color:#7e2435;background:#5a1020;box-shadow:0 1px 0 #1d0206}
+#container #questNormal ul li.ready .wrap_btn{color:#ffea00;background:#e83b60;box-shadow:0 1px 0 #4d0a13}
+#container #questNormal ul li.end .wrap_btn{color:#7e2435;background:#330810;box-shadow:0 1px 0 #110203}
+
+
+/* #footer */
+#footer{clear:both;height:230px;background:url(../images/bg-footer.jpg) center top no-repeat}
+#footer ul{padding:37px 0 0 58px}
+#footer li{height:34px;color:#897979;font-size:20px}
+
+
+/* test */
+#fWrap .test{position:absolute;right:0;top:120px;}
+#fWrap .test button{display:block;width:120px;padding:10px 0;border-right:2px solid #000;border-bottom:2px solid #000;margin-bottom:5px;color:#000;font-size:13px;text-align:center;background:#ccc}
+#fWrap .test button.active{font-weight:bold;background:#fff}
+
+
+/* layer */
+#fLayer{display:none;position:absolute;left:0;top:0;width:100%;height:100%}
+#fLayer .bg_layer{position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:15}
+#fLayer .modal_layer{position:fixed;left:50%;top:0;width:609px;height:376px;margin:0 0 0 -304px;z-index:20;transition: transform 0.3s ease;transform: scale(0,0)}
+#fLayer.active .modal_layer{transform: scale(1,1)}
+#fLayer .modal_layer .wrap_layer{position:relative;padding-top:73px;border:2px solid #b64c2b;background:#1d0508}
+#fLayer .modal_layer .wrap_layer .title{display:none}
+#fLayer .modal_layer .wrap_layer .msg{position:relative;top:-1px;display:table;width:100%;min-height:115px;text-align:center;}
+#fLayer .modal_layer .wrap_layer .msg .wrap_msg{display:table-cell;padding:10px 20px 20px 20px;color:#ffb606;font-size:33px;line-height:40px;font-weight:bold;vertical-align:middle}
+#fLayer .modal_layer .wrap_layer .msg .wrap_msg span{display:block;padding-top:10px;color:#d0a94a;font-size:20px;letter-spacing:0}
+#fLayer .modal_layer .wrap_layer .btn_area{position:relative;top:-2px;height:145px;text-align:center}
+#fLayer .modal_layer .wrap_layer .btn_area button{display:inline-block;width:234px;height:90px;color:#e5ed00;font-size:30px;line-height:90px;font-weight:bold;text-align:center;background:url(../images/btn-layer.jpg) no-repeat}

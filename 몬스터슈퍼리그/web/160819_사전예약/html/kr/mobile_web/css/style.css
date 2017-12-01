@@ -1,0 +1,233 @@
+@charset "utf-8";
+
+/* reset */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block}
+body{line-height:1}
+ol, ul{list-style:none}
+blockquote, q{quotes:none}
+blockquote:before, blockquote:after,
+q:before, q:after{content:'';content:none}
+table{border-collapse:collapse;border-spacing:0}
+input[type=checkbox], input[type=radio]{vertical-align:middle;position:relative}
+input[type=radio]{bottom:2px}
+#accessibility, .skip, hr, legend, caption{display:block;overflow:hidden;position:absolute;top:-1000em;left:0}
+.btn_comm{padding:0;margin:0;border:0;background:0;line-height:auto;cursor:pointer}
+.clearfix{*zoom:1}
+.clearfix:after{display:block;content:'';clear:both}
+button:focus,a:focus{outline:0}
+
+/* mobile (0 ~ 767) */
+
+
+/* common */
+.wrap_section{position:relative;width:320px;margin:0 auto;z-index:40}
+
+/** layout **/
+body{font-family:dotum;background:#000}
+#fWrap{min-width:320px;padding-top:49px}
+
+/* #gnb */
+#gnb{position:fixed;left:0;top:0;width:100%;height:49px;background:url(../images/bg-gnb.png) center top repeat-x;z-index:50;box-shadow:0 0px 17px #000}
+#gnb ul{width:320px;height:49px;margin:0 auto}
+#gnb ul:after{display:block;content:'';clear:both}
+#gnb li{float:left;width:69px}
+#gnb li a{display:block;width:100%;height:49px;background:url(../images/btn-gnb.png) no-repeat;background-size:auto 500%}
+#gnb li.btn_home{width:46px}
+#gnb li.btn_home a{background-position:left top}
+#gnb li.btn_home a.active{background-position:75% top}
+#gnb li.btn_reward{width:68px}
+#gnb li.btn_reward a{background-position:left 25%}
+#gnb li.btn_reward a.active{background-position:right 25%}
+#gnb li.btn_reg{width:68px}
+#gnb li.btn_reg a{background-position:left 50%}
+#gnb li.btn_reg a.active{background-position:right 50%}
+#gnb li.btn_event a{background-position:left 75%}
+#gnb li.btn_event a.active{background-position:right 75%}
+#gnb li.btn_gameinfo{float:right}
+#gnb li.btn_gameinfo a{background-position:left bottom}
+#gnb li.btn_gameinfo a.active{background-position:right bottom}
+
+/* #header */
+#header{position:relative;height:579px;background:url(../images/bg-header.jpg) center top no-repeat;background-size:auto 100%}
+#header .wrap_section{height:579px}
+#header h1{padding-top:16px;text-align:center}
+#header h1 img{width:144px;height:auto}
+#header .movie .btn_play{position:absolute;left:50%;top:333px;margin-left:-60px}
+#header .movie .btn_play img{width:121px;height:auto}
+#header .btn_area{position:absolute;left:-1px;bottom:46px;width:100%;text-align:center}
+#header .btn_area a img{width:183px;height:auto}
+/*
+#header .btn_area a.btn_reg{float:left}
+#header .btn_area a.btn_google{float:right}
+*/
+
+/* #reward */
+#reward{position:relative;height:352px;background:url(../images/bg-reward.jpg) center top no-repeat;background-size:auto 100%}
+
+/* #reg */
+#reg{position:relative;height:413px;background:url(../images/bg-reg.jpg) center top no-repeat;background-size:auto 100%}
+#reg #regForm{width:280px;margin:0 auto;padding-top:138px}
+#reg .ez-checkbox{display:inline-block;width:29px;height:26px;background:url(../images/bu-checkbox.png) no-repeat;background-size:auto 200%}
+#reg .ez-hide{width:29px;height:26px;opacity:0;filter:alpha(opacity=0);margin:0}
+#reg .ez-checkbox.ez-checked{background-position:left bottom}
+#reg #regForm .inp_area .mobile{display:table;width:100%;height:50px}
+#reg #regForm .inp_area .mobile .wrap_mobile{display:table-cell;vertical-align:middle}
+#reg #regForm .inp_area .mobile .inp_mobile1{float:left;position:relative;width:67px;height:17px;border-right:1px solid #503129;text-align:left;background:url(../images/bu-triangle.png) 47px center no-repeat;background-size:auto 5px}
+#reg #regForm .inp_area .mobile .inp_mobile1 label{height:17px;color:#c78257;font-size:10px;line-height:17px}
+#reg #regForm .inp_area .mobile .inp_mobile1 select{position:absolute;left:0;top:0;width:100%;height:17px;min-height:13px;line-height:13px;opacity:0;filter:alpha(opacity=0);}
+#reg #regForm .inp_area .mobile .inp_mobile2{display:inline-block;padding-left:10px;border-left:1px solid #2d100b}
+#reg #regForm .inp_area .mobile .inp_mobile2 input{width:147px;height:17px;padding:0;border:0;margin:0;color:#c78257;font-size:12px;line-height:17px;background:transparent url(../images/text-mobile.png) 5px center no-repeat;background-size:auto 17px;outline:none}
+#reg #regForm .inp_area .mobile .inp_mobile2 input.active{background:transparent}
+#reg #regForm .agree{display:table;width:100%;height:50px}
+#reg #regForm .agree .wrap_agree{display:table-cell;position:relative;vertical-align:middle}
+#reg #regForm .agree label{display:inline-block;margin-left:2px;vertical-align:middle}
+#reg #regForm .agree label img{width:157px;height:auto}
+#reg #regForm .agree .btn_detail{position:absolute;top:10px;right:0;width:79px;height:31px;background:url(../images/btn-detail.png) no-repeat;background-size:auto 100%}
+#reg #regForm .submit{padding-top:18px;text-align:center}
+#reg #regForm .submit img{width:182px;height:auto}
+
+/* #event */
+#event .event1{position:relative;height:830px;background:url(../images/bg-event1.jpg) center top no-repeat;background-size:auto 100%}
+#event .event1.step1{background-image:url(../images/bg-event1-1.jpg)}
+#event .event1.step2{background-image:url(../images/bg-event1-2.jpg)}
+#event .event1.step3{background-image:url(../images/bg-event1-3.jpg)}
+#event .event1.step4{background-image:url(../images/bg-event1-4.jpg)}
+#event .event1.step5{background-image:url(../images/bg-event1-5.jpg)}
+#event .event1 .gauge{position:absolute;left:47px;top:178px}
+#event .event1 .gauge .large{width:245px;height:8px}
+#event .event1 .gauge .large span{display:block;width:100%;max-width:245px;height:8px;background:url(../images/bg-gauge-l.gif) no-repeat;background-size:auto 7.64px}
+#event .event1 .gauge .small{width:242px;padding-top:2px}
+#event .event1 .gauge .small span{display:block;width:0%;max-width:242px;height:9px;background:url(../images/bg-gauge-s.gif) no-repeat;background-size:auto 3px}
+#event .event1 .btn_area{position:absolute;left:50%;top:476px;width:296px;margin-left:-148px;text-align:center}
+#event .event1 .btn_area a img{width:136px;height:auto}
+#event .event1 .btn_area .btn_facebook{float:left}
+#event .event1 .btn_area .btn_kakao{float:right}
+
+#event .event2{position:relative;height:613px;background:url(../images/bg-event2.jpg) center top no-repeat;background-size:auto 100%}
+#event .event2 .btn_cafe{position:absolute;left:66px;top:463px;}
+#event .event2 .btn_cafe img{width:183px;height:auto}
+
+/* #gameInfo */
+#gameInfo{position:relative;height:364px;background:url(../images/bg-gameinfo.jpg) center top no-repeat;background-size:auto 100%}
+#gameInfo #slide{position:relative;width:306px;padding-top:91px;margin-left:6px}
+#gameInfo #slide .bx-wrapper{overflow:visible;position:relative;padding:2px;background:#3e1b12;border-radius:10px;}
+#gameInfo #slide .bx-viewport{height:176px !important;border-radius:8px;z-index:2}
+#gameInfo #slide .bx-wrapper li img{width:100%;height:auto}
+
+#gameInfo #slide .bx-wrapper .bx-controls-direction a{display:block;position:absolute;top:0px;width:40px;height:178px;background:url(../images/btn-slide.png) no-repeat;background-size:200% auto;z-index:3}
+#gameInfo #slide .bx-wrapper .bx-controls-direction a.bx-prev{left:0px;background-position:left top}
+#gameInfo #slide .bx-wrapper .bx-controls-direction a.bx-next{right:0px;background-position:right top}
+#gameInfo #slide .bx-wrapper .bx-pager{position:absolute;left:0;bottom:-20px;width:306px;text-align:center;z-index:3}
+#gameInfo #slide .bx-wrapper .bx-pager .bx-pager-item{display:inline-block;margin:0 1px}
+#gameInfo #slide .bx-wrapper .bx-pager .bx-pager-item a{display:block;width:13px;height:13px;font-size:0;background:url(../images/bu-slide.png) no-repeat;background-size:auto 200%}
+#gameInfo #slide .bx-wrapper .bx-pager .bx-pager-item a:hover,
+#gameInfo #slide .bx-wrapper .bx-pager .bx-pager-item a.active{background-position:left bottom}
+
+/* #footer */
+#footer{position:relative;height:83px;background:url(../images/bg-footer.jpg) center top no-repeat;background-size:auto 100%}
+#footer .btn_top{position:absolute;left:50%;top:-21px;margin-left:-42px;}
+#footer .btn_top img{width:85px;height:auto}
+#footer .copyright{padding-top:57px;text-align:center}
+#footer .copyright img{width:242px;height:auto}
+
+/* #fLayer */
+#fLayer{display:none;position:absolute;left:0;top:0;width:100%;height:100%;z-index:50}
+#fLayer .bg_layer{position:absolute;left:0;top:0;width:100%;height:100%;background:#000}
+#fLayer .wrap_layer{position:relative;z-index:60}
+#fLayer .wrap_layer .btn_close2{position:absolute;right:0;top:-45px}
+#fLayer .layer_privacy{display:none;position:fixed;left:50%;top:0;margin-left:-149px;z-index:50}
+#fLayer .layer_privacy img{width:298px;height:auto}
+#fLayer .layer_movie{display:none;position:absolute;left:50%;height:200px;margin-top:20px;z-index:40}
+#fLayer .layer_movie .wrap_layer{position:relative;width:315px;height:171px;margin-left:-160px;padding-left:5px;z-index:60}
+#fLayer .layer_movie .btn_close{position:absolute;right:5px;top:-29px;cursor:pointer}
+#fLayer .layer_movie .btn_close img{width:20px;height:20px;}
+
+/* tablet (767 ~ 1024) */
+@media (min-width:767px){
+
+  /* common */
+  .wrap_section{width:640px}
+
+  /** layout **/
+  #fWrap{min-width:640px;padding-top:98px}
+
+  /* #gnb */
+  #gnb{height:98px;box-shadow:0 0px 34px #000}
+  #gnb ul{width:640px;height:98px}
+  #gnb li{width:138px}
+  #gnb li a{height:98px}
+  #gnb li.btn_home{width:92px}
+  #gnb li.btn_reward{width:136px}
+  #gnb li.btn_reg{width:136px}
+
+  /* #header */
+  #header{height:1158px}
+  #header .wrap_section{height:1158px}
+  #header h1{padding-top:32px}
+  #header h1 img{width:288px}
+  #header .movie .btn_play{top:666px;margin-left:-120px}
+  #header .movie .btn_play img{width:242px}
+  #header .btn_area{left:-1px;bottom:93px}
+  #header .btn_area a img{width:366px}
+
+  /* #reward */
+  #reward{height:704px}
+
+  /* #reg */
+  #reg{height:826px}
+  #reg #regForm{width:560px;padding-top:276px}
+  #reg .ez-checkbox{width:58px;height:52px}
+  #reg .ez-hide{width:58px;height:52px}
+  #reg #regForm .inp_area .mobile{height:102px}
+  #reg #regForm .inp_area .mobile .inp_mobile1{width:134px;height:34px;border-widht:2px;background:url(../images/bu-triangle.png) 94px center no-repeat;background-size:auto 10px}
+  #reg #regForm .inp_area .mobile .inp_mobile1 label{height:34px;font-size:30px;line-height:34px}
+  #reg #regForm .inp_area .mobile .inp_mobile1 select{height:34px;min-height:26px;line-height:34px}
+  #reg #regForm .inp_area .mobile .inp_mobile2{padding-left:20px;border-width:2px}
+  #reg #regForm .inp_area .mobile .inp_mobile2 input{width:294px;height:34px;font-size:30px;line-height:34px;background:transparent url(../images/text-mobile.png) 10px center no-repeat;background-size:auto 34px}
+  #reg #regForm .agree{height:102px}
+  #reg #regForm .agree label{margin-left:4px}
+  #reg #regForm .agree label img{width:314px}
+  #reg #regForm .agree .btn_detail{top:17px;width:158px;height:62px}
+  #reg #regForm .submit{padding-top:36px}
+  #reg #regForm .submit img{width:364px}
+
+  /* #event */
+  #event .event1{height:1660px}
+  #event .event1 .gauge{left:94px;top:357px}
+  #event .event1 .gauge .large{width:490px;height:16px}
+  #event .event1 .gauge .large span{max-width:490px;height:16px;background-size:auto 15.28px}
+  #event .event1 .gauge .small{width:484px;padding-top:3px}
+  #event .event1 .gauge .small span{max-width:484px;height:6px;background-size:auto 6px}
+  #event .event1 .btn_area{top:952px;width:592px;margin-left:-296px;text-align:center}
+  #event .event1 .btn_area a img{width:272px}
+  #event .event2{position:relative;height:1228px}
+  #event .event2 .btn_cafe{left:132px;top:926px}
+  #event .event2 .btn_cafe img{width:366px}
+
+  /* #gameInfo */
+  #gameInfo{height:730px}
+  #gameInfo #slide{width:612px;padding-top:182px;margin-left:12px}
+  #gameInfo #slide .bx-wrapper{padding:4px;border-radius:20px}
+  #gameInfo #slide .bx-viewport{height:352px !important;border-radius:16px}
+  #gameInfo #slide .bx-wrapper .bx-controls-direction a{width:80px;height:356px}
+  #gameInfo #slide .bx-wrapper .bx-pager{bottom:-40px;width:612px}
+  #gameInfo #slide .bx-wrapper .bx-pager .bx-pager-item{margin:0 2px}
+  #gameInfo #slide .bx-wrapper .bx-pager .bx-pager-item a{width:26px;height:26px}
+
+  /* #footer */
+  #footer{height:166px}
+  #footer .btn_top{top:-42px;margin-left:-84px;}
+  #footer .btn_top img{width:170px}
+  #footer .copyright{padding-top:114px}
+  #footer .copyright img{width:484px}
+
+  #fLayer .layer_privacy{display:none;position:fixed;left:50%;top:0;margin-left:-298px;z-index:50}
+  #fLayer .layer_privacy img{width:596px;height:auto}
+  #fLayer .layer_movie{width:610px;height:382px;margin-top:40px}
+  #fLayer .layer_movie .wrap_layer{width:610px;height:342px;margin-left:-305px;padding-left:5px;}
+  #fLayer .layer_movie .wrap_layer iframe{width:610px;height:342px}
+  #fLayer .layer_movie .btn_close{right:0px;top:-40px}
+  #fLayer .layer_movie .btn_close img{width:30px;height:30px}
+}

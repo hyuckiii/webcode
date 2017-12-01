@@ -1,0 +1,7 @@
+body, html {height: 100%;margin:0;padding:0;}
+.bg-wrap { position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;}
+.mouse-bg {left: 0;right: 0;bottom: 0;top: 0;position:absolute;}
+#background {background: url('bg-preview2-2.png')  center top no-repeat;}
+#foreground {background: url('instagram.png');}
+#fore-foreground {background: url('bg-preview2-1.png') left top no-repeat;}
+#fore-fore-foreground {background: url('tit-preview1.png') center center no-repeat;}

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>WebEvent.js - 포인트 획득 이벤트(point)</title>
+<meta charset="utf-8">
+<meta reward="viewport" content="width=980" />
+<meta reward="format-detection" content="telephone=no" />
+<script src="http://static.four33.co.kr/event/common/js/jquery-1.8.1.min.js"></script>
+<style>
+*{margin:0;border:0;padding:0;font-size:12px;list-style:none}
+#quest1{width:300px;margin:0 auto;padding:50px 0}
+#quest1 div{padding:10px 0;font-weight:bold}
+#quest1 button{width:200px;height:30px;cursor:pointer}
+#quest2{width:900px;margin:0 auto}
+#quest2 li{float:left;position:relative;width:216px;height:150px;margin:0 9px 10px 0;border:1px solid red}
+#quest2 li.ready{cursor:pointer}
+#quest2 li.ready .btn{position:absolute;left:0;bottom:0;width:100%;height:30px;color:#fff;text-align:center;line-height:30px;background:#444}
+#quest2 li.end .bg{position:absolute;left:0;top:0;width:100%;height:150px;background:#000;opacity:0.8}
+#quest2 li:nth-of-type(4n){float:left;margin-right:0}
+/* layer */
+#fLayer{display:none;position:absolute;left:0;top:0;width:100%;height:100%}
+#fLayer .bg_layer{position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:15}
+#fLayer .modal_layer{position:fixed;left:50%;top:0;width:541px;height:359px;margin:0 0 0 -270px;z-index:20}
+#fLayer .modal_layer .wrap_layer{position:relative;padding-top:73px;background:url(images/bg-layer.png) no-repeat}
+#fLayer .modal_layer .wrap_layer .msg{position:relative;top:-1px;display:table;width:100%;min-height:115px;text-align:center;background:url(images/bg-layer2.png) repeat-y;}
+#fLayer .modal_layer .wrap_layer .msg .wrap_msg{display:table-cell;padding:10px 55px 40px 45px;color:#3d2b2b;font-size:30px;line-height:40px;vertical-align:middle}
+#fLayer .modal_layer .wrap_layer .btn_area{position:relative;top:-2px;height:171px;text-align:center;background:url(images/bg-layer3.png) no-repeat}
+#fLayer .modal_layer .wrap_layer .btn_area button{display:inline-block;width:243px;height:104px;color:#ffd8ca;font-size:30px;line-height:93px;font-weight:bold;text-align:center;background:url(images/btn-layer.png) no-repeat;cursor:pointer}
+</style>
+</head>
+
+<html>
+
+<body>
+<div id="fWrap" class="zh-tw">
+
+  <div id="header"></div>
+  <!-- // #header -->
+
+  <div id="content">
+
+    <div id="quest1">
+      <div class="point">
+        <div class="my-point">현재 포인트: <span class="num"></span></div>
+        <div class="use-point">사용 포인트: <span class="num"></span></div>
+        <div class="unit-point">1회당 소모 포인트: <span class="num"></span></div>
+        <div class="max-chance">최대 가능 참여 횟수: <span class="num"></span></div>
+      </div>
+      <button class="btn_quest">포인트사용</button>
+    </div>
+
+    <div id="quest2">
+      <ul>
+        <li quest-num="0"></li>
+        <li quest-num="1"></li>
+        <li quest-num="2"></li>
+        <li quest-num="3"></li>
+      </ul>
+    </div>
+    <!-- // #reward -->
+  </div>
+  <!-- // #content -->
+
+</div>
+<!-- // #fWrap -->
+
+<!-- <script type="text/javascript" src="js/ftt.webevent.point.js"></script> <!-- webevent.js-->
+<script type="text/javascript" src="js/ftt.modalLayer.js"></script> <!-- webevent.js-->
+<script type="text/javascript">
+var myPoint = 200,        // 현재 사용가능 포인트
+  usePoint = 1000,        // 내가 사용한 총 포인트
+  unitPoint = 10,         // 보상 버튼을 누르는데 필요한 포인트
+  maxChance = 15,         // 최대 참여가능 횟수
+  questStatus = [1, 1, 1, 1];
+
+// 레이아웃 출력
+function layoutSet(){
+  $('.my-point .num').html(myPoint);
+  $('.use-point .num').html(usePoint);
+  $('.unit-point .num').html(unitPoint);
+  $('.max-chance .num').html(maxChance);
+  $('#quest2 li').each(function (i, questList) {
+    $(questList).removeClass('ready end');
+    if (questStatus[i] == 1){
+      $(questList).addClass('ready');
+    }else if (questStatus[i] == 2){
+      $(questList).addClass('end');
+    }
+  });
+}
+layoutSet();
+
+// 이벤트
+$('.btn_quest').on('click', function () {
+  if (myPoint >= unitPoint){
+    myPoint = myPoint - maxChance;
+    layoutSet();
+  }else{
+    alert('포인트가 부족합니다')
+  }
+
+})
+
+
+
+/*
+
+// 초기실행
+$(quest).webEventUI(questData);
+
+// 보상수령
+$('#quest1').on('click','li.ready',function () {
+  var questNum = $(this).attr('quest-num');   // quest-num 속성 값
+
+  // 미션 상태 값 변경
+  questData.questStatus = [2, 2, 2, 2, 2, 2, 2];
+
+  // 레이어 출력
+  if (questNum < 2){
+    // openLayer값이 string으로 들어가도 무방
+    modalLayer.openLayer(layerMsg.success, 'refresh');
+  }else if (questNum < 4){
+    modalLayer.openLayer(layerMsg.fail, 'refresh');
+  }else{
+    modalLayer.openLayer(layerMsg.error, 'refresh');
+  }
+  if (questData.pageRefresh != true) $(quest).webEventUI(questData);
+})
+
+*/
+
+</script>
+
+</body>
+
+</html>

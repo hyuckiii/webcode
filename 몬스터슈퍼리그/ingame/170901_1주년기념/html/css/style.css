@@ -1,0 +1,176 @@
+@charset "utf-8";
+
+/* reset */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
+body {line-height:1}
+ol, ul {list-style:none}
+blockquote, q {quotes:none}
+blockquote:before, blockquote:after,
+q:before, q:after {content:'';content:none}
+table {border-collapse:collapse;border-spacing:0}
+input[type=checkbox], input[type=radio]{vertical-align:middle;position:relative}
+input[type=radio]{bottom:2px}
+#accessibility, .skip, hr, legend, caption{display:block;overflow:hidden;position:absolute;top:-1000em;left:0}
+button{padding:0;margin:0;border:0;background:0;line-height:normal;cursor:pointer;outline:none;box-shadow:none}
+li,a,button{-webkit-tap-highlight-color:rgba(0,0,0,0)}
+.clearfix{*zoom:1}
+.clearfix:after{display:block;content:'';clear:both;}
+
+
+/*
+   .type1 한글, 간체, 번체
+   .type2 영어, 일어, 태국어
+*/
+
+
+/* layout */
+img{max-width:980px !important}
+body{font-size:0}
+#fWrap{position:relative;width:980px;margin:0 auto}
+
+
+/* #header */
+#header{position:relative;padding-bottom:406px;background-position:center top;background-repeat:no-repeat}
+#fWrap.ko #header{height:552px;background-image:url(../images/bg-header-ko.jpg)}
+#fWrap.en #header{height:592px;background-image:url(../images/bg-header-en.jpg)}
+#fWrap.ja #header{height:592px;background-image:url(../images/bg-header-ja.jpg)}
+#fWrap.th #header{height:592px;background-image:url(../images/bg-header-th.jpg)}
+#fWrap.zh-CN #header{height:552px;background-image:url(../images/bg-header-hans.jpg)}
+#fWrap.zh-TW #header{height:552px;background-image:url(../images/bg-header-hant.jpg)}
+
+
+/* #totalQuest */
+#container #totalQuest{position:absolute;left:0;width:100%;height:416px}
+#fWrap.ko #totalQuest{top:542px;background:url(../images/bg-quest4-ko.jpg)}
+#fWrap.en #totalQuest{top:582px;background:url(../images/bg-quest4-en.jpg)}
+#fWrap.ja #totalQuest{top:582px;background:url(../images/bg-quest4-ja.jpg)}
+#fWrap.th #totalQuest{top:582px;background:url(../images/bg-quest4-th.jpg)}
+#fWrap.zh-CN #totalQuest{top:542px;background:url(../images/bg-quest4-hans.jpg)}
+#fWrap.zh-TW #totalQuest{top:542px;background:url(../images/bg-quest4-hant.jpg)}
+
+#container #totalQuest ul{width:920px;padding-top:10px;margin:0 auto}
+#container #totalQuest ul:after{display:block;content:'';clear:both}
+#container #totalQuest ul li{float:left;position:relative;width:288px;height:356px;margin-right:28px}
+#container #totalQuest ul li:last-of-type{float:right;margin:0}
+
+#container #totalQuest ul li .wrap_title,
+#container #totalQuest ul li .wrap_reward{display:none}
+
+#container #totalQuest ul li.ready .bg{position:absolute;left:50%;top:-73px;width:105px;height:73px;margin-left:-52.5px;background:url(../images/img-light.png) no-repeat}
+#container #totalQuest ul li.ready .wrap_btn{position:absolute;left:0;bottom:0;width:100%;height:75px;cursor:pointer}
+#fWrap.ko #container #totalQuest ul li.ready .wrap_btn{background:url(../images/btn-quest4-ko.png) no-repeat}
+#fWrap.en #container #totalQuest ul li.ready .wrap_btn{background:url(../images/btn-quest4-en.png) no-repeat}
+#fWrap.ja #container #totalQuest ul li.ready .wrap_btn{background:url(../images/btn-quest4-ja.png) no-repeat}
+#fWrap.th #container #totalQuest ul li.ready .wrap_btn{background:url(../images/btn-quest4-th.png) no-repeat}
+#fWrap.zh-CN #container #totalQuest ul li.ready .wrap_btn{background:url(../images/btn-quest4-hans.png) no-repeat}
+#fWrap.zh-TW #container #totalQuest ul li.ready .wrap_btn{background:url(../images/btn-quest4-hant.png) no-repeat}
+
+#container #totalQuest ul li.end .bg{position:absolute;left:-8px;top:0px;width:304px;height:351px;z-index:2}
+
+#fWrap.ko #container #totalQuest ul li.end .bg{background:url(../images/btn-quest4-2-ko.png) no-repeat}
+#fWrap.en #container #totalQuest ul li.end .bg{background:url(../images/btn-quest4-2-en.png) no-repeat}
+#fWrap.ja #container #totalQuest ul li.end .bg{background:url(../images/btn-quest4-2-ja.png) no-repeat}
+#fWrap.th #container #totalQuest ul li.end .bg{background:url(../images/btn-quest4-2-th.png) no-repeat}
+#fWrap.zh-CN #container #totalQuest ul li.end .bg{background:url(../images/btn-quest4-2-hans.png) no-repeat}
+#fWrap.zh-TW #container #totalQuest ul li.end .bg{background:url(../images/btn-quest4-2-hant.png) no-repeat}
+
+
+/* #normalQuest */
+#container #normalQuest ul:after{display:block;content:'';clear:both}
+
+#container #normalQuest #quest1,
+#container #normalQuest #quest2{position:relative;height:480px;margin-top:-10px}
+
+#fWrap.ko #container #normalQuest #quest1,
+#fWrap.zh-CN #container #normalQuest #quest1,
+#fWrap.zh-TW #container #normalQuest #quest1{background:url(../images/bg-quest1-1.jpg) center top no-repeat}
+#fWrap.en #container #normalQuest #quest1,
+#fWrap.ja #container #normalQuest #quest1,
+#fWrap.th #container #normalQuest #quest1{background:url(../images/bg-quest1-2.jpg) center top no-repeat}
+
+#fWrap.ko #container #normalQuest #quest2,
+#fWrap.zh-CN #container #normalQuest #quest2,
+#fWrap.zh-TW #container #normalQuest #quest2{background:url(../images/bg-quest2-1.jpg) center top no-repeat}
+#fWrap.en #container #normalQuest #quest2,
+#fWrap.ja #container #normalQuest #quest2,
+#fWrap.th #container #normalQuest #quest2{background:url(../images/bg-quest2-2.jpg) center top no-repeat}
+
+#container #normalQuest #quest1 ul,
+#container #normalQuest #quest2 ul{width:910px;padding-top:15px;margin:0 auto}
+#container #normalQuest li{float:left;position:relative;width:178px;height:430px;margin-right:5px}
+#container #normalQuest li:last-of-type{float:right;margin:0}
+#container #normalQuest li .wrap_title{display:table;position:absolute;left:0;top:67px;width:178px;height:129px}
+#container #normalQuest li .wrap_title .title{display:table-cell;color:#b7bce2;font-size:20px;line-height:25px;text-align:center;vertical-align:middle}
+#container #normalQuest li .wrap_title .title .status{color:#f78f02}
+
+#fWrap.ja #container #normalQuest li .wrap_title .title{font-size:19px}
+
+#container #normalQuest li .wrap_reward{display:table;position:absolute;left:0;bottom:82px;width:178px;height:57px;text-align:center}
+#container #normalQuest li .wrap_reward .reward-title{display:table-cell;color:#8089ff;font-size:20px;line-height:25px;text-align:center;vertical-align:middle}
+#fWrap.ja #container #normalQuest li .wrap_reward .reward-title{font-size:18px}
+#fWrap.th #container #normalQuest li .wrap_reward .reward-title{font-size:17px}
+#container #normalQuest li .wrap_btn{display:table;position:absolute;left:0;bottom:0;width:178px;height:77px;}
+#container #normalQuest li .wrap_btn .btn{display:table-cell;font-size:34px;text-align:center;font-weight:bold;vertical-align:middle;background:url(../images/btn-quest.png) -9999px -9999px no-repeat}
+#fWrap.en #container #normalQuest li .wrap_btn .btn{font-size:27px;word-spacing:-1px;text-transform:uppercase}
+#container #normalQuest li .wrap_btn .btn .btn_normal{color:#5573ff}
+#container #normalQuest li .wrap_btn .btn .btn_end{display:none;color:#5573ff}
+#container #normalQuest li.ready .wrap_btn .btn{cursor:pointer;background-position:left top !important}
+#container #normalQuest li.ready .wrap_btn .btn .btn_normal{color:#ffde00}
+#container #normalQuest li.end .wrap_btn .btn{background-position:left bottom !important}
+#container #normalQuest li.end .wrap_btn .btn .btn_normal{display:none}
+#container #normalQuest li.end .wrap_btn .btn .btn_end{display:inline}
+
+#container #normalQuest #quest3{position:relative;height:414px;margin-top:-10px}
+#fWrap.ko #container #normalQuest #quest3,
+#fWrap.zh-CN #container #normalQuest #quest3,
+#fWrap.zh-TW #container #normalQuest #quest3{background:url(../images/bg-quest3-1.jpg) center top no-repeat}
+#fWrap.en #container #normalQuest #quest3,
+#fWrap.ja #container #normalQuest #quest3,
+#fWrap.th #container #normalQuest #quest3{background:url(../images/bg-quest3-2.jpg) center top no-repeat}
+
+#container #normalQuest #quest3 .img_balloon{position:absolute;left:290px;top:-28px;width:99px;height:135px;background:url(../images/img-balloon.png) no-repeat}
+#container #normalQuest #quest3 ul{width:910px;padding-top:15px;margin:0 auto}
+#container #normalQuest #quest3 ul li{float:left;position:relative;width:280px;height:354px;padding:0 10px;margin-right:5px}
+#container #normalQuest #quest3 ul li:last-of-type{float:right;margin:0}
+#container #normalQuest #quest3 ul li .wrap_title{left:0px;top:67px;width:300px;height:107px}
+#container #normalQuest #quest3 ul li .wrap_title .title{color:#d2b7e2}
+#container #normalQuest #quest3 ul li .wrap_reward{left:auto;right:0px;bottom:77px;width:179px;height:103px}
+#container #normalQuest #quest3 ul li .wrap_reward .reward-title{display:table-cell;color:#b080ff;font-size:20px;line-height:25px;text-align:center;vertical-align:middle}
+#container #normalQuest #quest3 ul li .wrap_btn{width:300px}
+#container #normalQuest #quest3 ul li .wrap_btn .btn{background:url(../images/btn-quest2.png) -9999px -9999px no-repeat}
+
+
+/* #footer */
+#footer{clear:both;height:158px;margin-top:-10px}
+#fWrap.ko #footer,
+#fWrap.zh-CN #footer,
+#fWrap.zh-TW #footer{background:url(../images/bg-footer-1.jpg) center top no-repeat}
+#fWrap.en #footer,
+#fWrap.ja #footer,
+#fWrap.th #footer{background:url(../images/bg-footer-2.jpg) center top no-repeat}
+
+#footer ul{width:760px;padding-top:10px;margin-left:30px}
+#footer li{position:relative;padding:0 0 5px 15px;color:#94b1fe;font-size:17px;line-height:25px;text-align:left}
+#footer li .bu{position:absolute;left:0;top:0px;width:10px;height:20px;font-size:0;background:url(../images/bu-footer.png) center center no-repeat}
+
+
+/* test */
+#fWrap .test{position:fixed;right:0;top:120px;}
+#fWrap .test button{display:block;width:120px;padding:10px 0;border-right:2px solid #000;border-bottom:2px solid #000;margin-bottom:5px;color:#000;font-size:13px;text-align:center;background:#ccc}
+#fWrap .test button.active{font-weight:bold;background:#fff}
+
+/* layer */
+#fLayer{visibility:hidden;position:absolute;left:0;top:0;width:100%;height:100%}
+#fLayer .bg_layer{position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:15}
+#fLayer .modal_layer{position:fixed;left:50%;top:0;width:609px;height:376px;margin:0 0 0 -304px;z-index:20;transition: transform 0.3s ease;transform: scale(0,0)}
+#fLayer.active{visibility:visible}
+#fLayer.active .modal_layer{transform: scale(1,1)}
+#fLayer .modal_layer .wrap_layer{position:relative;padding-top:73px;border:2px solid #b64c2b;background:#1d0508}
+#fLayer .modal_layer .wrap_layer .title{display:none}
+#fLayer .modal_layer .wrap_layer .msg{position:relative;top:-1px;display:table;width:100%;min-height:115px;text-align:center;}
+#fLayer .modal_layer .wrap_layer .msg .wrap_msg{display:table-cell;padding:10px 20px 20px 20px;color:#ffb606;font-size:33px;line-height:40px;font-weight:bold;vertical-align:middle}
+#fLayer .modal_layer .wrap_layer .msg .wrap_msg span{display:block;padding-top:10px;color:#d0a94a;font-size:20px;letter-spacing:0}
+#fLayer .modal_layer .wrap_layer .btn_area{position:relative;top:-2px;height:145px;text-align:center}
+#fLayer .modal_layer .wrap_layer .btn_area button{display:inline-block;width:234px;height:90px;color:#e5ed00;font-size:30px;line-height:90px;font-weight:bold;text-align:center;background:url(../images/btn-layer.jpg) no-repeat}

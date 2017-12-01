@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+/*************************************************
+
+ [ blade of three kingdom reg(PC) style.css ]
+
+*************************************************/
+
+/* reset */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+{margin:0;padding:0;border:0;font-size:100%;font-family:"Malgun Gothic", "Nanum Gothic", Dotum;vertical-align:baseline}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
+body {line-height:1}
+ol, ul {list-style:none}
+blockquote, q {quotes:none}
+blockquote:before, blockquote:after,
+q:before, q:after {content:'';content:none}
+table {border-collapse:collapse;border-spacing:0}
+input[type=checkbox], input[type=radio]{vertical-align:middle;position:relative}
+input[type=radio]{bottom:2px}
+#accessibility, .skip, hr, legend, caption{display:block;overflow:hidden;position:absolute;top:-1000em;left:0}
+.btn_comm{padding:0;margin:0;border:0;background:0;line-height:normal;cursor:pointer}
+.clearfix{*zoom:1}
+.clearfix:after{display:block;content:'';clear:both}
+button{padding:0;margin:0;border:0;background:0; cursor:pointer}
+button:focus,a:focus{outline:0}
+
+body,html{height:100%;background:#000}
+
+/** common-layout **/
+#fWrap{overflow:hidden;width:100%;background:#000}
+
+/* #header */
+#header{}
+
+/* #container */
+#container{height:100%}
+
+/* #fLayer */
+#fLayer{display:none;position:absolute;left:0;top:0;width:100%;height:100%;z-index:50}
+#fLayer .bg_layer{position:absolute;left:0;top:0;width:100%;height:100%;background:#000}
+#fLayer .wrap_layer{position:relative;z-index:60}
+#fLayer .wrap_layer .policy{display:none}
+#fLayer .video{display:none;position:absolute;left:50%;width:800px;height:674px;margin-left:-400px;z-index:50}
+#fLayer .video .video_wrap{width:800px;height:450px}
+#fLayer .video .viewer div iframe{width:100%;height:450px}
+#fLayer .video .share{padding:30px 0;background:#000309;text-align:center}
+#fLayer .video .share a,
+#fLayer .video .share button{display:inline-block;width:244px;height:80px;background:url(../images/btn-sns.gif) no-repeat}
+#fLayer .video .share .btn_facebook{background-position:left top}
+#fLayer .video .share .btn_twitter{margin:0 10px;background-position:left -80px}
+#fLayer .video .share .btn_blog{background-position:left bottom}
+#fLayer .video .banner{padding-top:16px}
+#fLayer .video .btn_close{position:absolute;right:-80px;top:0px}
+
+#fLayer .image{display:none;position:absolute;left:50%;width:1000px;height:682px;margin-left:-500px}
+#fLayer .image .wrap_image{position:relative;height:630px}
+#fLayer .image .viewer{width:1000px;height:562px;text-align:center}
+#fLayer .image .viewer div{width:1000px;height:562px;text-align:center}
+#fLayer .image .viewer div img{width:auto;height:100%}
+#fLayer .image .paging{padding-top:41px;text-align:center}
+#fLayer .image .paging span{display:inline-block;width:22px;height:22px;margin-right:20px;background:url(../images/bu-circle.png) no-repeat;cursor:pointer}
+#fLayer .image .paging span.active{background-position:left bottom}
+#fLayer .image .btn_area button{position:absolute;top:195px;width:87px;height:173px;background:url(../images/btn-cursor.png) no-repeat}
+#fLayer .image .btn_area button.btn_prev{left:-157px;background-position:left top}
+#fLayer .image .btn_area button.btn_next{right:-157px;background-position:left bottom}
+#fLayer .image .banner{padding-top:20px}
+#fLayer .image .btn_close{position:absolute;right:-100px;top:0px}
+
+#fLayer .image-v{display:none;position:absolute;left:50%;width:1000px;height:818px;margin-left:-500px}
+#fLayer .image-v .wrap_image{position:relative;height:818px}
+#fLayer .image-v .viewer{width:1000px;height:750px;text-align:center}
+#fLayer .image-v .viewer div{width:1000px;height:750px;text-align:center}
+#fLayer .image-v .viewer div img{width:auto;height:100%}
+#fLayer .image-v .paging{padding-top:41px;text-align:center}
+#fLayer .image-v .paging span{display:inline-block;width:22px;height:22px;margin-right:20px;background:url(../images/bu-circle.png) no-repeat;cursor:pointer}
+#fLayer .image-v .paging span.active{background-position:left bottom}
+#fLayer .image-v .btn_area button{position:absolute;top:288px;width:87px;height:173px;background:url(../images/btn-cursor.png) no-repeat}
+#fLayer .image-v .btn_area button.btn_prev{left:-157px;background-position:left top}
+#fLayer .image-v .btn_area button.btn_next{right:-157px;background-position:left bottom}
+#fLayer .image-v .banner{padding-top:20px}
+#fLayer .image-v .btn_close{position:absolute;right:-100px;top:0px}
+
+#fLayer .wrap_layer .policy{display:none;position:absolute;left:50%;width:779px;margin-left:-389px}
+#fLayer .wrap_layer .mobile{display:none;position:absolute;left:50%;width:698px;margin-left:-349px;border:1px solid #794f2c;background:#210303}
+#fLayer .wrap_layer .mobile .wrap_mobile{padding:49px}
+#fLayer .wrap_layer .mobile .tit{color:#a86f40;font-size:34px;line-height:42px;font-weight:bold;text-align:center}
+#fLayer .wrap_layer .mobile .inp_area{padding:30px 0}
+#fLayer .wrap_layer .mobile .inp_area input{width:598px;height:68px;border:1px solid #5a391e;color:#6e4526;font-size:36px;line-height:68px;text-align:center;background:#140101}
+#fLayer .wrap_layer .mobile .btn_area{text-align:center}
+
+#fLayer .wrap_layer .complete{display:none;position:absolute;left:50%;width:700px;margin-left:-350px}
+#fLayer .wrap_layer .complete .wrap_complete{position:relative;height:785px}
+#fLayer .wrap_layer .complete .wrap_complete .btn_area{position:absolute;left:90px;bottom:51px;width:520px}
+#fLayer .wrap_layer .complete .wrap_complete .btn_area .btn_cafe{float:left}
+#fLayer .wrap_layer .complete .wrap_complete .btn_area .btn_close{float:right}
+
+
+/** pageLayout **/
+
+/* #main */
+#main{min-width:960px}
+#main .bg_page{position:fixed;left:0;top:0;}
+#main .icon_scroll{position:absolute;left:50%;bottom:47px;width:37px;height:89px;margin-left:-15px;background:url(../images/icon-scroll.png) no-repeat}
+#main #fullPage{position:relative;z-index:3}
+
+#main .banner{position:fixed;left:80px;bottom:220px;z-index:5}
+#main .banner div{position:relative;width:416px;height:537px}
+#main .banner div .btn_close{position:absolute;right:40px;top:0}
+
+#main .section{background:#000}
+#main .section .section_wrap{width:1000px;margin:0 auto}
+#main .section .slide{}
+#main .section .cont1{position:relative;width:100%;height:200px;margin-bottom:50px;background:red}
+#main .section .cont2{float:left;position:relative;width:30%;height:500px;background:#ccc}
+#main .section .cont3{float:right;position:relative;width:65%;height:500px;background:#fff}
+
+/*
+#main .section .step1{
+  opacity:0;
+  transform: translate(0, 300px);
+  transition-duration:1.5s;
+}
+#main .section .step2{
+  opacity:0;
+  transform: translate(0, 100px);
+  transition-delay: .5s;
+  transition-duration:1s;
+}
+*/
+
+#main #sectionTitle{background:none}
+
+#main #sectionEvent4{}
+#main #sectionEvent4 .section_wrap{padding:100px 0;height:1500px}
+
+
+
+/** common-animation **/
+.ani-fade .step1,
+.ani-fade .step2{
+  transition-property:transform, opacity;
+  transform: translate(0, 0) !important;
+  opacity:1 !important;
+}

@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ko"> <!-- 한국어 -->
+<!-- <html lang="en"> 영어 -->
+<!-- <html lang="ja"> 일본어 -->
+<!-- <html lang="th"> 태국어 -->
+<!-- <html lang="zh-Hans"> 중국어(간체) -->
+<!-- <html lang="zh-Hant"> 중국어(번체) -->
+<head>
+<title>MonsterSuperLeague - 2017 calendar Event</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=960">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="https://static.four33.co.kr/event/game/monstersl/ingame/170111_calendar2/css/style.css">
+<script src="https://static.four33.co.kr/event/common/js/jquery-1.8.1.min.js"></script>
+</head>
+
+<body>
+<!--
+  [ msl calendar event - Result(global) ]
+
+  언어에 따라 #fwrap에 class추가
+    - ko(한국어)
+    - en(영어)
+    - ja(일본어)
+    - th(태국어)
+    - zh-CN(중국어 - 간체)
+    - zh-TW(중국어 - 번체)
+-->
+<div id="fWrap" class="ko">
+
+  <div id="header">
+    <h2 class="title1"></h2>
+    <h1 class="title2"></h1>
+    <div class="date">
+      <div></div>
+    </div>
+  </div>
+  <!-- // #header -->
+
+  <div id="container">
+    <div id="sectionInfo">
+      <div class="info"></div>
+    </div>
+    <!-- #sectionInfo -->
+
+    <div id="sectionReg">
+      <div class="check"><button class="btn_check" type="button"></button></div>
+    </div>
+    <!-- // #sectionReg -->
+
+    <div id="sectionAddress">
+      <div id="formAddress">
+        <div class="type_common">
+          <div class="tit_form"></div>
+          <ul>
+            <li class="name">
+              <div class="wrap_inp">
+                <span class="tit_name"></span>
+                <input class="inp_name" type="text" placeholder="">
+                <div class="caution1"></div>
+              </div>
+            </li>
+            <li class="mobile">
+              <div class="wrap_inp">
+                <span class="tit_mobile"></span>
+                <input type="tel" class="inp_mobile" placeholder="">
+              </div>
+            </li>
+            <li class="address">
+              <span class="tit_address"></span>
+              <div class="wrap_address">
+                <div class="code">
+                  <div class="wrap_inp"><input type="tel" class="inp_code" placeholder=""></div>
+                </div>
+                <div class="address1">
+                  <div class="wrap_inp"><input class="inp_address" type="text" placeholder=""></div>
+                </div>
+                <div class="address2">
+                  <div class="wrap_inp"><input class="inp_city" type="text" placeholder=""></div>
+                </div>
+                <div class="address3">
+                  <div class="wrap_inp"><input class="inp_country" type="text" placeholder=""></div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="caution2"></div>
+          <div class="btn_area">
+            <button class="btn_submit" type="submit"></button>
+          </div>
+        </div>
+        <!-- // .type_common(주소입력 - 한국 외) -->
+      </div>
+      <!-- // #formAddress -->
+    </div>
+    <!-- // #sectionAddress -->
+
+    <div id="sectionItem"></div>
+    <!-- // #sectionItem -->
+
+    <div id="sectionCaution">
+      <div class="caution"></div>
+    </div>
+    <!-- // #sectionCaution -->
+
+  </div>
+  <!-- // #container -->
+
+  <div id="fLayer">
+
+    <div class="modal_layer">
+      <div class="wrap_layer">
+        <div class="layer_cont">
+          <div class="msg">
+            <div class="wrap_msg"></div>
+          </div>
+          <div class="btn_area">
+            <button class="btn_close" type="button" close-type="normal"></button>
+            <button class="btn_address" type="button"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // .modal_layer -->
+
+    <div class="inp_layer">
+      <div class="wrap_layer">
+        <div class="layer_cont">
+        </div>
+        <button class="btn_close" type="button"></button>
+      </div>
+    </div>
+    <!-- // .modal_layer -->
+
+    <div class="bg_layer"></div>
+  </div>
+  <!-- // #fLayer -->
+
+  <!-- 확인 후 삭제해주세요 -->
+  <div class="test">
+    <button class="lang_ko" type="button" lang-data="ko">한국어</button>
+    <button class="lang_en" type="button" lang-data="en">영어</button>
+    <button class="lang_ja" type="button" lang-data="ja">일본어</button>
+    <button class="lang_th" type="button" lang-data="th">태국어</button>
+    <button class="lang_zh-CN" type="button" lang-data="zh-CN">중국어 - 간체</button>
+    <button class="lang_zh-TW" type="button" lang-data="zh-TW">중국어 - 번체</button>
+  </div>
+
+  <div class="test_layer">
+    <button class="win" type="button">당첨</button>
+    <button class="fail" type="button">미당첨</button>
+    <button class="end" type="button">미응모</button>
+    <button class="shipMsg.name" type="button">배송: 이름 미입력</button>
+    <button class="shipMsg.emptyMobile" type="button">배송: 휴대폰번호 미입력</button>
+    <button class="shipMsg.wrongMobile" type="button">배송: 휴대폰 잘못입력</button>
+    <button class="shipMsg.emptyAddress" type="button">배송: 주소미입력</button>
+    <button class="shipMsg.agree" type="button">배송: 개인정보 수집 미동의</button>
+    <button class="shipMsg.success" type="button">배송: 배송정보 등록 성공</button>
+    <button class="shipMsg.modify" type="button">배송: 배송정보 수정 성공</button>
+  </div>
+   <!-- // 확인 후 삭제해주세요 -->
+
+</div>
+<!-- // #fWrap -->
+
+<script type="text/javascript" src="https://static.four33.co.kr/event/game/monstersl/ingame/170111_calendar2/js/commonLang.js"></script>
+<script type="text/javascript" src="https://static.four33.co.kr/event/game/monstersl/ingame/170111_calendar2/js/evLang.js"></script>
+<script type="text/javascript" src="https://static.four33.co.kr/event/game/monstersl/ingame/170111_calendar2/js/ui.js"></script>
+
+
+<script type="text/javascript">
+var lang = {
+  layout: evLang( $('#fWrap').attr('class') ),
+  layer: commonLang( $('#fWrap').attr('class') )
+};
+
+// layoutSet
+layoutSet(lang);
+//regAddress();  // 당첨자가 재 방문한 경우
+
+// policy popup
+$('#fWrap #sectionAddress .btn_detail').on('click', function(){
+  layerOpen(lang.layer.policy, 'policy');
+});
+
+// 당첨확인 버튼
+$('#container .check .btn_check').on('click', function () {
+  var isDisabled = $(this).hasClass('disabled');
+
+  if (!isDisabled) {
+    // btnLock
+    $(this).addClass('disabled');
+
+    /*
+     [layer msgList]
+
+     - 당첨확인 -
+     layerOpen(lang.layer.win, 'win');   // 당첨
+     layerOpen(lang.layer.fail)          // 미당첨
+     layerOpen(lang.layer.end)           // 응모하지 않은 경우
+
+     - 에러 -
+     layerOpen(lang.layer.error)         // 에러 발생
+
+     - 배송관련 -
+     layerOpen(lang.layer.shipMsg.name)         // 이름을 입력하지 않은 경우
+     layerOpen(lang.layer.shipMsg.emptyMobile)  // 휴대폰 번호를 입력하지 않은 경우
+     layerOpen(lang.layer.shipMsg.wrongMobile)  // 휴대폰 번호가 잘못된경우
+     layerOpen(lang.layer.shipMsg.emptyAddress) // 배송 주소가 입력되지 않은 경우
+     layerOpen(lang.layer.shipMsg.agree)        // 개인정보 수집 미동의
+     layerOpen(lang.layer.shipMsg.success)      // 배송정보 등록 성공
+     layerOpen(lang.layer.shipMsg.modify)       // 배송정보 수정 성공
+     */
+    layerOpen(lang.layer.error);
+    //layerOpen(lang.layer.win, 'win');
+
+    // 이벤트가 정상적으로 작동한 경우
+    if ( 1 ) $('#container .check .btn_check').removeClass('disabled');
+  }
+});
+
+// 배송주소 입력 버튼
+$('#container #sectionAddress .btn_area .btn_submit').on('click', function() {
+  layerOpen(lang.layer.shipMsg.success);  // 배송등록
+  //layerOpen(lang.layer.shipMsg.modify)  // 배송수정
+});
+
+// test buttons(확인 후 삭제)
+$('.test button').bind('click', function () {
+  var langType = $(this).attr('lang-data');
+  lang.layout = evLang(langType);
+  lang.layer = commonLang(langType);
+
+  $('#fWrap').attr('class', langType);
+  layoutSet(lang);
+  $('.test button').removeClass('active');
+  $(this).addClass('active');
+});
+$('.test_layer button').bind('click', function () {
+  if ( $(this).hasClass('active') ) $(this).removeClass('active');
+  var layerType = 'lang.layer.'+$(this).attr('class');
+
+  if ( layerType == 'lang.layer.win' ) {
+    layerOpen( eval(layerType) , 'win');  // openLayer
+  }else{
+    layerOpen( eval(layerType) );  // openLayer
+  }
+  $('.test_layer button').removeClass('active');
+  $(this).addClass('active');
+});
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <title>4:33 포인트사이트</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/bootstrap-expend.min.css" rel="stylesheet">
+  <link href="../css/ui.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="../js/jquery-1.11.3.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/bootstrap-expend.js"></script>
+  <script src="../js/jquery.expend.js"></script>
+  <script src="../js/ui.js"></script>
+</head>
+<body>
+
+<!-- 
+  Description : 첫로그인시 비밀번호 변경 및 비밀번호 재발급시 
+  첫로그인 비밀번호 변경시 기존 로그인 상태 유지
+  비밀번호 재발급시 로그인 창으로 리프레쉬가 어떨까요?
+-->
+
+<div id="fWrap">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 ftt-header">
+        <nav class="navbar navbar-default ftt-navbar" role="navigation">
+          <div class="pull-left">
+            <a href="#" class="ftt-point-logo ftt-blind">4:33 Point logo</a>
+          </div>
+          <ul class="list-inline list-unstyled pull-right">
+            <li>
+              <!-- <a href="#">로그인</a> -->
+              <a href="#">로그아웃</a>
+            </li>
+            <li>
+              <a href="#">문의</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div><!-- //row -->
+  </div><!-- //container-fluid -->
+  <div class="container">
+    <div class="row ftt-login-wrap">
+      <div class="col-md-8 col-md-offset-2">
+        <h2 class="ftt-play433 ftt-fitimg"><img src="../images/common/logo-play433.png"  alt="Play 433 포인트"/></h2>
+        <fieldset>
+          <legend>로그인하기</legend>
+           <div class="row">
+              <div class="col-md-12 text-center">
+                <h1 class="ftt-subtit">4:33 포인트 사이트에 오신 것을 환영합니다.</h1>
+              </div>
+           </div>
+           <div class="row ftt-logform">
+              <div class="col-md-8">
+                <input type="text" class="form-control" placeholder="이름" data-placement="top" data-toggle="tooltip" title="이름을 입력해주세요."><!-- 아이디 미입력시 data-toggle 동적호출 -->
+                <input type="text" class="form-control" placeholder="4:33 메일주소" data-placement="top" data-toggle="tooltip" title="등록된 메일주소"><!-- 메일주소 미입력시 data-toggle 동적호출 -->
+              </div>
+              <div class="col-md-4">
+                <button type="button" class="btn ftt-btn-login" data-toggle="modal" data-target="#login_pop">비밀번호 재발급</button>
+              </div>
+           </div><!-- //row -->
+          </fieldset>
+          
+          <!-- <div class="row">
+            <div class="col-md-8 text-center ftt-logfnc">
+              <ul class="list-inline list-unstyled">
+                <li>
+                  <a href="#">계정발급 안내</a>
+                </li>
+                <li>
+                  <a href="#">비밀번호 재발급</a>
+                </li>
+               </ul>
+            </div>
+          </div> -->
+
+          <div class="row ftt-lognotice">
+            <div class="col-md-10 col-md-offset-1">
+              <h3>계정발급 안내</h3>
+              <ul>
+                <li>신규입사자의 경우 정직원 승인절차에 따라 계정이 활성화됩니다.</li>
+                <li>433포인트 사이트 계정은 임직원 <span class="ftt-point">이메일 주소</span>를 사용합니다.</li>
+                <li><span class="ftt-point">최초 로그인 후 반드시 비밀번호</span>를 변경해주세요.</li>
+              </ul>
+            </div>
+          </div>
+
+      </div>
+     </div><!-- //row -->
+  </div><!-- //container -->
+</div><!-- #fWrap -->
+<div class="container-fluid ftt-footer">
+  <div class="row">
+    <div class="col-md-12">
+      <p>Copyright © 4:33 Creative Lab. All Rights Reserved.</p>          
+    </div>
+  </div>
+</div>
+</body>
+</html>

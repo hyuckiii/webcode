@@ -1,0 +1,180 @@
+@charset "utf-8";
+
+
+/* reset */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block}
+body{line-height:1}
+ol, ul{list-style:none}
+blockquote, q{quotes:none}
+blockquote:before, blockquote:after,
+q:before, q:after{content:'';content:none}
+table{border-collapse:collapse;border-spacing:0}
+input[type=checkbox], input[type=radio]{vertical-align:middle;position:relative}
+input[type=radio]{bottom:2px}
+#accessibility, .skip, hr, legend, caption{display:block;overflow:hidden;position:absolute;top:-1000em;left:0}
+button{padding:0;margin:0;border:0;background:0;line-height:normal;cursor:pointer;outline:none;box-shadow:none}
+li,a,button{-webkit-tap-highlight-color:rgba(0,0,0,0)}
+.clearfix{*zoom:1}
+.clearfix:after{display:block;content:'';clear:both}
+
+
+/* layout */
+img{max-width:980px !important}
+body{font-size:0}
+#fWrap{position:relative;width:980px;margin:0 auto}
+
+/* #header */
+#header{position:relative;width:100%;height:458px}
+#fWrap.ko #header{background:url(../images/bg-header-ko.jpg)}
+#fWrap.en #header{background:url(../images/bg-header-en.jpg)}
+#fWrap.ja #header{background:url(../images/bg-header-ja.jpg)}
+#fWrap.th #header{background:url(../images/bg-header-th.jpg)}
+#fWrap.zh-CN #header{background:url(../images/bg-header-hans.jpg)}
+#fWrap.zh-TW #header{background:url(../images/bg-header-hant.jpg)}
+
+/* #container */
+#container{position:relative}
+
+
+/* #info(포인트 등 정보) */
+#container #info{position:absolute;left:213px;top:202px;width:555px;height:579px;z-index:10}
+#fWrap.ko #container #info{background:url(../images/img-marble-ko.jpg) center top no-repeat}
+#fWrap.en #container #info{background:url(../images/img-marble-en.jpg) center top no-repeat}
+#fWrap.ja #container #info{background:url(../images/img-marble-ja.jpg) center top no-repeat}
+#fWrap.th #container #info{background:url(../images/img-marble-th.jpg) center top no-repeat}
+#fWrap.zh-CN #container #info{background:url(../images/img-marble-hans.jpg) center top no-repeat}
+#fWrap.zh-TW #container #info{background:url(../images/img-marble-hant.jpg) center top no-repeat}
+
+#container #info .wrap_info{position:relative;width:100%;height:100%}
+#container #info div{display:table;position:absolute}
+#container #info div span{display:table-cell;text-align:center}
+
+#container #info #currentPoint{left:297px;top:48px;width:198px;height:46px}
+#container #info #currentPoint span{text-align:right}
+#fWrap.en #container #info #currentPoint{left:310px}
+#container #info #currentPoint .value{color:#fff;font-size:46px;font-weight:bold}
+
+#container #info #usePoint{left:15px;top:193px;width:262px;height:55px}
+#container #info #totalPoint{right:15px;top:193px;width:262px;height:55px}
+#container #info #usePoint .value,
+#container #info #totalPoint .value{color:#fccb65;font-size:33px;font-weight:bold;text-align:center}
+
+#container #info #btnDice{position:absolute;right:34px;bottom:61px;width:462px;height:110px;cursor:pointer;z-index:10}
+#container #info #btnDice .wrap_dice{display:block;position:relative;width:100%;height:100%}
+#container #info #btnDice .wrap_dice .bg{position:absolute;left:3px;top:7px;width:88px;height:97px;background:url(../images/img-dice.jpg) no-repeat}
+#container #info #btnDice .wrap_dice .bg img{width:100%;height:auto}
+#container #info #btnDice .wrap_dice .bg.dice1{background-position:left top}
+#container #info #btnDice .wrap_dice .bg.dice2{background-position:left -97px}
+#container #info #btnDice .wrap_dice .bg.dice3{background-position:left -194px}
+#container #info #btnDice .wrap_dice .bg.dice4{background-position:left -291px}
+#container #info #btnDice .wrap_dice .bg.dice5{background-position:left -388px}
+#container #info #btnDice .wrap_dice .bg.dice6{background-position:left bottom}
+
+
+/* #questMap(마블맵) */
+#container #questMap{position:relative;margin-top:-9px;height:1043px;padding-top:9px;background:url(../images/bg-marble.jpg) center top no-repeat}
+#container #questMap .wrap_quest{position:relative;width:925px;height:965px;margin-left:28px}
+#container #questMap ul:after{display:block;content:'';clear:both}
+#container #questMap .map{display:inline-block;position:relative;width:185px;height:193px}
+#container #questMap .map .reward{display:table;position:absolute;left:50%;bottom:20px;width:161px;height:47px;margin-left:-80.5px}
+#container #questMap .map .reward-title{display:table-cell;position:relative;color:#352a12;font-size:20px;font-weight:bold;line-height:25px;text-align:center;vertical-align:bottom}
+#container #questMap .map:nth-of-type(2n) .reward-title{color:#2b170d}
+
+#fWrap.ja #container #questMap .map{font-size:18px;letter-spacing:-1.2px;word-spacing:-1.2px}
+#fWrap.zh-CN #container #questMap .map,
+#fWrap.zh-TW #container #questMap .map{font-size:20px}
+
+#container #questMap .top{position:absolute;left:185px;top:0;width:740px;height:193px}
+#container #questMap .top .map{float:left}
+#container #questMap .top .map:last-of-type{float:right}
+
+#container #questMap .r_side{position:absolute;right:0;top:194px;width:185px;height:579px}
+
+#container #questMap .bottom{position:absolute;left:0;bottom:0;width:100%;height:193px}
+#container #questMap .bottom .map{float:right}
+#container #questMap .bottom .map:last-of-type{float:left}
+
+#container #questMap .l_side{position:absolute;left:0;top:0;width:193px;height:771px}
+#container #questMap .l_side .wrap_map{position:relative;height:100%}
+#container #questMap .l_side .map{position:absolute}
+#container #questMap .l_side .btn_quest13{bottom:0}
+#container #questMap .l_side .btn_quest14{bottom:192px}
+#container #questMap .l_side .btn_quest15{bottom:385px}
+#container #questMap .l_side .btn_quest16{top:0}
+
+/* #questMap.play, .active */
+#container #questMap.play .map,
+#container #questMap .map.active{background:url(../images/bg-marble-active.jpg) no-repeat}
+#container #questMap .map.active .bg{position:absolute;left:0;top:0;width:100%;height:100%;background:url(../images/bg-marble-active2.png) left top no-repeat}
+#container #questMap .top .map:last-of-type .bg{background-position:left -193px}
+#container #questMap .bottom .map:first-of-type .bg{background-position:left -386px}
+#container #questMap .bottom .map:last-of-type .bg{background-position:left -579px}
+#container #questMap .l_side .map:last-of-type .bg{background-position:left bottom}
+
+#container #questMap .top .map{background-position-y:top}
+#container #questMap .r_side .map{background-position-y:-194px}
+#container #questMap .bottom .map{background-position-y:-386px}
+#container #questMap .l_side .map{background-position-y:bottom}
+
+#container #questMap div .map:nth-of-type(1){background-position-x:left}
+#container #questMap div .map:nth-of-type(2){background-position-x:-185px}
+#container #questMap div .map:nth-of-type(3){background-position-x:-370px}
+#container #questMap div .map:nth-of-type(4){background-position-x:-555px}
+#container #questMap div .map:nth-of-type(5){background-position-x:right}
+#container #questMap .l_side .btn_quest16.active .reward-title{color:#fff !important}
+
+
+/* #questTotal(최종보상) */
+#container #questTotal{position:relative;height:618px;margin-top:-10px}
+#fWrap.ko #container #questTotal{background:url(../images/bg-quest2-ko.jpg) center top no-repeat}
+#fWrap.en #container #questTotal{background:url(../images/bg-quest2-en.jpg) center top no-repeat}
+#fWrap.ja #container #questTotal{background:url(../images/bg-quest2-ja.jpg) center top no-repeat}
+#fWrap.th #container #questTotal{background:url(../images/bg-quest2-th.jpg) center top no-repeat}
+#fWrap.zh-CN #container #questTotal{background:url(../images/bg-quest2-hans.jpg) center top no-repeat}
+#fWrap.zh-TW #container #questTotal{background:url(../images/bg-quest2-hant.jpg) center top no-repeat}
+
+#container #questTotal ul{width:602px;padding-top:135px;margin-left:188px}
+#container #questTotal ul:after{display:block;content:'';clear:both}
+#container #questTotal li{float:left;position:relative;width:262px;height:422px;font-size:0}
+#container #questTotal li:last-of-type{float:right;margin:0}
+#container #questTotal li .wrap_btn{position:absolute;left:0;bottom:0;width:262px;height:88px}
+#container #questTotal li .wrap_btn .btn{visibility:hidden;display:block;width:100%;height:100%}
+#fWrap.ko #container #questTotal li .wrap_btn .btn{background:url(../images/btn-quest2-ko.jpg) no-repeat}
+#fWrap.en #container #questTotal li .wrap_btn .btn{background:url(../images/btn-quest2-en.jpg) no-repeat}
+#fWrap.ja #container #questTotal li .wrap_btn .btn{background:url(../images/btn-quest2-ja.jpg) no-repeat}
+#fWrap.th #container #questTotal li .wrap_btn .btn{background:url(../images/btn-quest2-th.jpg) no-repeat}
+#fWrap.zh-CN #container #questTotal li .wrap_btn .btn{background:url(../images/btn-quest2-hans.jpg) no-repeat}
+#fWrap.zh-TW #container #questTotal li .wrap_btn .btn{background:url(../images/btn-quest2-hant.jpg) no-repeat}
+
+#container #questTotal li.ready .wrap_btn .btn,
+#container #questTotal li.end .wrap_btn .btn{visibility:visible}
+#container #questTotal li.ready .wrap_btn .btn{cursor:pointer}
+#container #questTotal li:first-of-type.ready .wrap_btn .btn{background-position:left top !important}
+#container #questTotal li:last-of-type.ready .wrap_btn .btn{background-position:right top !important}
+#container #questTotal li:first-of-type.end .wrap_btn .btn{background-position:left bottom !important}
+#container #questTotal li:last-of-type.end .wrap_btn .btn{background-position:right bottom !important}
+
+
+/* #footer */
+#footer{display:table;clear:both;width:100%;height:158px;padding-top:10px;margin-top:-10px;background:url(../images/bg-footer.jpg) no-repeat}
+#footer ul{overflow:hidden;display:block;padding:0 30px;margin:0 auto;vertical-align:middle;}
+#footer li{position:relative;margin-bottom:7px;color:#89524b;font-size:16px;line-height:20px;text-align:center;letter-spacing:-0.1px;word-spacing:-0.8px;text-shadow: 0px 0px 4px #000}
+#footer li .bu{overflow:visible;display:inline-block;width:4px;height:4px;margin-right:6px;vertical-align:middle;background:url(../images/bu-footer.png) center center no-repeat}
+#footer li strong{color:#68ffdb}
+
+
+/* layer */
+#fLayer{visibility:hidden;position:absolute;left:0;top:0;width:100%;height:100%}
+#fLayer .bg_layer{position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:15}
+#fLayer .modal_layer{position:fixed;left:50%;top:0;width:609px;height:376px;margin:0 0 0 -304px;z-index:20;transition: transform 0.3s ease;transform: scale(0,0)}
+#fLayer.active{visibility:visible}
+#fLayer.active .modal_layer{transform: scale(1,1)}
+#fLayer .modal_layer .wrap_layer{position:relative;padding-top:73px;border:2px solid #b64c2b;background:#1d0508}
+#fLayer .modal_layer .wrap_layer .title{display:none}
+#fLayer .modal_layer .wrap_layer .msg{position:relative;top:-1px;display:table;width:100%;min-height:115px;text-align:center;}
+#fLayer .modal_layer .wrap_layer .msg .wrap_msg{display:table-cell;padding:10px 20px 20px 20px;color:#ffb606;font-size:33px;line-height:40px;font-weight:bold;vertical-align:middle}
+#fLayer .modal_layer .wrap_layer .msg .wrap_msg span{display:block;padding-top:10px;color:#d0a94a;font-size:20px;letter-spacing:0}
+#fLayer .modal_layer .wrap_layer .btn_area{position:relative;top:-2px;height:145px;text-align:center}
+#fLayer .modal_layer .wrap_layer .btn_area button{display:inline-block;width:234px;height:90px;color:#e5ed00;font-size:30px;line-height:90px;font-weight:bold;text-align:center;background:url(../images/btn-layer.jpg) no-repeat}

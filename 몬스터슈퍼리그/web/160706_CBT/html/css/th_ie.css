@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+/* ie */
+
+#container .section .tit_section .tit{font-size:70px;letter-spacing:-4px}
+#container .section .tit_section .sub_tit{padding-top:20px;font-size:30px;letter-spacing:-0.5px}
+
+/* #sectionReg */
+#sectionReg #regForm .input_area .mobile_th dl{height:80px;}
+#sectionReg #regForm .input_area .mobile_th dl dt{width:195px;height:75px;padding-top:5px;font-size:34px;}
+#sectionReg #regForm .input_area .mobile_th dl dd{width:710px;line-height:80px;}
+#sectionReg #regForm .input_area .mobile_th dl dd input{width:690px;height:57px;font-size:34px;line-height:57px;}
+
+#sectionReg #regForm .input_area.input_area_bottom{margin:30px auto 0 auto;}
+#sectionReg #regForm .input_area .email_th dl{height:80px;line-height:80px;}
+#sectionReg #regForm .input_area .email_th dl dt{width:195px;height:80px;font-size:34px;}
+#sectionReg #regForm .input_area .email_th dl dd{width:710px;line-height:80px;}
+#sectionReg #regForm .input_area .email_th dl dd input{width:690px;height:57px;font-size:34px;line-height:57px;}
+#sectionReg #regForm button.btn_submit, #sectionReg #download button.btn_download{line-height:48px;}
+#sectionReg #download a.btn_download{line-height:43px}
+
+/* .section_event */
+#container .section_event .tit_section .tit{font-size:70px;line-height:80px;letter-spacing:-4px;}
+#container .section_event .tit_section .tit .num{min-width:60px;height:74px;padding:0 39px;margin-left:5px;border-width:3px;border-radius:60px;font-size:50px;line-height:74px}
+#container .section_event .tit_section .sub_tit{padding-top:20px;font-size:30px;letter-spacing:-0.5px}
+#container .section_event .reward div .tit3{height:100px;}
+#container .section_event .reward div .tit3 .wrap_tit{height:100px;font-size:29px;padding:0;letter-spacing:-1px}
+
+#fLayer .policy .tit{font-size:35px;}

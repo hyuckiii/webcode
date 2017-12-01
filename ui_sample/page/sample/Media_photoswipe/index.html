@@ -1,0 +1,149 @@
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>media - photoSwipe.js</title>
+<link href="resource/js/PhotoSwipe-master/PhotoSwipe/photoswipe.css" rel="stylesheet" type="text/css">
+<link href="resource/js/PhotoSwipe-master/PhotoSwipe/default-skin/default-skin.css" rel="stylesheet" type="text/css">
+<link href="resource/css/style.css" rel="stylesheet" type="text/css">
+<script src="http://static.four33.co.kr/event/common/js/jquery-1.8.1.min.js"></script>
+<script src="resource/js/PhotoSwipe-master/PhotoSwipe/photoswipe.js"></script>
+<script src="resource/js/PhotoSwipe-master/PhotoSwipe/photoswipe-ui-default.js"></script>
+<script src="resource/js/script.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+  <div id="photoSwipe">
+
+    <h1>
+      photoSwipe.js<br>
+      <a href="https://github.com/dimsemenov/photoswipe" target="_blank">(https://github.com/dimsemenov/photoswipe)</a>
+    </h1>
+
+    <div class="battle">
+      <h2 class="tit">전투</h2>
+      <ul>
+        <li media-type="video" media-src="https://www.youtube.com/embed/Ozu-ubMLH4g?rel=0&amp;controls=0&amp;showinfo=0">
+          <img src="resource/images/img-battle0.jpg" alt="이미지1">
+        </li>
+        <li media-type="video" media-src="https://www.youtube.com/embed/q2MHzC-VWMQ?rel=0&amp;controls=0&amp;showinfo=0">
+          <img src="resource/images/img-battle0.jpg" alt="이미지1">
+        </li>
+        <!--<li><img src="resource/images/img-battle2.jpg" alt="이미지2"></li>-->
+        <li><img src="resource/images/img-battle3.jpg" alt="이미지3"></li>
+        <li><img src="resource/images/img-battle4.jpg" alt="이미지4"></li>
+        <li><img src="resource/images/img-battle5.jpg" alt="이미지5"></li>
+        <li><img src="resource/images/img-battle6.jpg" alt="이미지6"></li>
+      </ul>
+    </div>
+
+    <div class="class">
+      <h2 class="tit">클래스</h2>
+      <ul>
+        <li><img src="resource/images/img-class1.jpg" alt="클래스1"></li>
+        <li><img src="resource/images/img-class2.jpg" alt="클래스2"></li>
+        <li><img src="resource/images/img-class3.jpg" alt="클래스3"></li>
+      </ul>
+    </div>
+
+    <div class="god">
+      <h2 class="tit">수호신</h2>
+      <ul>
+        <li><img src="resource/images/img-god1.jpg" alt="수호신1"></li>
+        <li><img src="resource/images/img-god2.jpg" alt="수호신2"></li>
+        <li><img src="resource/images/img-god3.jpg" alt="수호신3"></li>
+        <li><img src="resource/images/img-god4.jpg" alt="수호신4"></li>
+        <li><img src="resource/images/img-god5.jpg" alt="수호신5"></li>
+        <li><img src="resource/images/img-god6.jpg" alt="수호신6"></li>
+      </ul>
+    </div>
+
+    <div class="god">
+      <h2 class="tit">머신</h2>
+      <ul>
+        <li><img src="resource/images/img-machine1.jpg" alt="머신1"></li>
+        <li><img src="resource/images/img-machine2.jpg" alt="머신2"></li>
+        <li><img src="resource/images/img-machine3.jpg" alt="머신3"></li>
+        <li><img src="resource/images/img-machine4.jpg" alt="머신4"></li>
+        <li><img src="resource/images/img-machine5.jpg" alt="머신5"></li>
+        <li><img src="resource/images/img-machine6.jpg" alt="머신6"></li>
+        <li><img src="resource/images/img-machine7.jpg" alt="머신7"></li>
+        <li><img src="resource/images/img-machine8.jpg" alt="머신8"></li>
+        <li><img src="resource/images/img-machine9.jpg" alt="머신9"></li>
+      </ul>
+    </div>
+
+    <div class="world">
+      <h2 class="tit">세계관</h2>
+      <ul>
+        <li><img src="resource/images/img-world1.jpg" alt="세계관1"></li>
+        <li><img src="resource/images/img-world2.jpg" alt="세계관2"></li>
+        <li><img src="resource/images/img-world3.jpg" alt="세계관3"></li>
+        <li><img src="resource/images/img-world4.jpg" alt="세계관4"></li>
+        <li><img src="resource/images/img-world5.jpg" alt="세계관5"></li>
+        <li><img src="resource/images/img-world6.jpg" alt="세계관6"></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+      <!-- Container that holds slides.
+          PhotoSwipe keeps only 3 of them in the DOM to save memory.
+          Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+        <div class="pswp__top-bar">
+          <!--  Controls are self-explanatory. Order can be changed. -->
+          <div class="pswp__counter"></div>
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+        </button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+        </button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- // .pswp(default photoswipe element) -->
+
+
+</div>
+<!-- // .container -->
+
+</body>
+</html>
