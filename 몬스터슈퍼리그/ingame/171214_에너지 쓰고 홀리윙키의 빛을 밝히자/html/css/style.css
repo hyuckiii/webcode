@@ -117,7 +117,12 @@ body{font-size:0;background:#131339;}
 #fWrap.zh-CN #container #questTotal li.ready .btn{background:url(../images/btn-ready3-hans.jpg)}
 #fWrap.zh-TW #container #questTotal li.ready .btn{background:url(../images/btn-ready3-hant.jpg)}
 
-#container #questTotal li.end{background:url(../images/btn-end3-ko.jpg)}
+#fWrap.ko #container #questTotal li.end{background:url(../images/btn-end3-ko.jpg)}
+#fWrap.en #container #questTotal li.end{background:url(../images/btn-end3-en.jpg)}
+#fWrap.ja #container #questTotal li.end{background:url(../images/btn-end3-ja.jpg)}
+#fWrap.th #container #questTotal li.end{background:url(../images/btn-end3-th.jpg)}
+#fWrap.zh-CN #container #questTotal li.end{background:url(../images/btn-end3-hans.jpg)}
+#fWrap.zh-TW #container #questTotal li.end{background:url(../images/btn-end3-hant.jpg)}
 #container #questTotal li.end .btn{display:none}
 
 
