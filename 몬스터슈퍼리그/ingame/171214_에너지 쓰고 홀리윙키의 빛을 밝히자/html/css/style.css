@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+/* reset */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
+body {line-height:1}
+ol, ul {list-style:none}
+blockquote, q {quotes:none}
+blockquote:before, blockquote:after,
+q:before, q:after {content:'';content:none}
+table {border-collapse:collapse;border-spacing:0}
+input[type=checkbox], input[type=radio]{vertical-align:middle;position:relative}
+input[type=radio]{bottom:2px}
+#accessibility, .skip, hr, legend, caption{display:block;overflow:hidden;position:absolute;top:-1000em;left:0}
+button{padding:0;margin:0;border:0;background:0;line-height:normal;cursor:pointer;outline:none;box-shadow:none}
+li,a,button{-webkit-tap-highlight-color:rgba(0,0,0,0)}
+.clearfix{*zoom:1}
+.clearfix:after{display:block;content:'';clear:both;}
+
+
+/* layout */
+img{max-width:980px !important}
+body{font-size:0;background:#131339;}
+#fWrap{position:relative;width:980px;margin:0 auto}
+
+/* #header */
+#header{position:relative;height:543px;background-position:center top;background-repeat:no-repeat}
+#fWrap.ko #header{background-image:url(../images/bg-header-ko.jpg)}
+#fWrap.en #header{background-image:url(../images/bg-header-en.jpg)}
+#fWrap.ja #header{background-image:url(../images/bg-header-ja.jpg)}
+#fWrap.th #header{background-image:url(../images/bg-header-th.jpg)}
+#fWrap.zh-CN #header{background-image:url(../images/bg-header-hans.jpg)}
+#fWrap.zh-TW #header{background-image:url(../images/bg-header-hant.jpg)}
+
+
+/* #container */
+#container{position:relative;height:1785px;padding-top:10px;margin-top:-10px}
+#fWrap.ko #container{background-image:url(../images/bg-contents-ko.jpg)}
+#fWrap.en #container{background-image:url(../images/bg-contents-en.jpg)}
+#fWrap.ja #container{background-image:url(../images/bg-contents-ja.jpg)}
+#fWrap.th #container{background-image:url(../images/bg-contents-th.jpg)}
+#fWrap.zh-CN #container{background-image:url(../images/bg-contents-hans.jpg)}
+#fWrap.zh-TW #container{background-image:url(../images/bg-contents-hant.jpg)}
+
+/* #quest1 */
+#container #quest1 li{position:absolute;width:272px;height:325px;z-index:0}
+#container #quest1 li .wrap_list{position:relative;height:100%}
+#container #quest1 li .status{position:absolute;left:0;top:108px;width:100%;color:#f3f3f3;font-size:18px;text-align:center}
+#container #quest1 li.ready .btn{position:absolute;left:19px;bottom:6px;width:235px;height:79px;cursor:pointer}
+#fWrap.ko #container #quest1 li.ready .btn{background-image:url(../images/btn-ready-ko.png)}
+#fWrap.en #container #quest1 li.ready .btn{background-image:url(../images/btn-ready-en.png)}
+#fWrap.ja #container #quest1 li.ready .btn{background-image:url(../images/btn-ready-ja.png)}
+#fWrap.th #container #quest1 li.ready .btn{background-image:url(../images/btn-ready-th.png)}
+#fWrap.zh-CN #container #quest1 li.ready .btn{background-image:url(../images/btn-ready-hans.png)}
+#fWrap.zh-TW #container #quest1 li.ready .btn{background-image:url(../images/btn-ready-hant.png)}
+
+#container #quest1 li.end{background-image:url(../images/btn-end.jpg);background-repeat:no-repeat}
+#container #quest1 li.end .status{display:none}
+
+#container #quest1 li:nth-of-type(1){left:83px;top:299px;background-position:left top}
+#container #quest1 li:nth-of-type(1) .btn{left:18px;bottom:4px}
+#container #quest1 li:nth-of-type(2){left:354px;top:411px;background-position:left -325px}
+#container #quest1 li:nth-of-type(3){right:80px;top:302px;background-position:left -650px}
+#container #quest1 li:nth-of-type(3) .btn{bottom:5px}
+#container #quest1 li:nth-of-type(4){left:83px;top:679px;background-position:left -975px}
+#container #quest1 li:nth-of-type(4) .btn{left:18px;bottom:4px}
+#container #quest1 li:nth-of-type(5){left:354px;top:792px;background-position:left -1300px}
+#container #quest1 li:nth-of-type(6){right:80px;top:682px;background-position:left -1625px}
+#container #quest1 li:nth-of-type(7){left:83px;top:1057px;background-position:left -1950px}
+#container #quest1 li:nth-of-type(7) .btn{left:18px;bottom:4px}
+#container #quest1 li:nth-of-type(8){left:354px;top:1178px;background-position:left -2275px}
+#container #quest1 li:nth-of-type(9){right:80px;top:1057px;background-position:left bottom}
+#container #quest1 li:nth-of-type(9) .btn{bottom:3px}
+
+
+/* #quest2 */
+#container #quest2 li{position:absolute;width:233px;height:277px}
+#container #quest2 li .wrap_list{position:relative;height:100%}
+#container #quest2 li .status{position:absolute;left:0;top:92px;width:100%;color:#f3f3f3;font-size:18px;text-align:center}
+
+#container #quest2 li.ready .btn{position:absolute;left:18px;bottom:4px;width:197px;height:66px;cursor:pointer}
+#fWrap.ko #container #quest2 li.ready .btn{background-image:url(../images/btn-ready2-ko.png)}
+#fWrap.en #container #quest2 li.ready .btn{background-image:url(../images/btn-ready2-en.png)}
+#fWrap.ja #container #quest2 li.ready .btn{background-image:url(../images/btn-ready2-ja.png)}
+#fWrap.th #container #quest2 li.ready .btn{background-image:url(../images/btn-ready2-th.png)}
+#fWrap.zh-CN #container #quest2 li.ready .btn{background-image:url(../images/btn-ready2-hans.png)}
+#fWrap.zh-TW #container #quest2 li.ready .btn{background-image:url(../images/btn-ready2-hant.png)}
+
+#container #quest2 li.end{background-image:url(../images/btn-end2.png);background-repeat:no-repeat}
+#container #quest2 li.end .status{display:none}
+#container #quest2 li:nth-of-type(1){left:27px;bottom:105px;background-position:left top;z-index:1}
+#container #quest2 li:nth-of-type(2){left:253px;bottom:10px;background-position:left -277px}
+#container #quest2 li:nth-of-type(2) .btn{left:17px;bottom:3px}
+#container #quest2 li:nth-of-type(3){left:496px;bottom:10px;background-position:left -554px}
+#container #quest2 li:nth-of-type(3) .btn{bottom:3px}
+#container #quest2 li:nth-of-type(4){right:26px;bottom:105px;background-position:left bottom;z-index:1}
+#container #quest2 li:nth-of-type(4) .btn{left:16px}
+
+/* #questTotal */
+#container #questTotal{z-index:2}
+#container #questTotal li{position:absolute;left:333px;top:10px;width:308px;height:369px}
+#container #questTotal li .wrap_list{position:relative;height:100%}
+#container #questTotal li .btn{position:absolute;left:0;bottom:0;width:100%;height:89px}
+#fWrap.ko #container #questTotal li .btn{background:url(../images/btn-normal-ko.jpg)}
+#fWrap.en #container #questTotal li .btn{background:url(../images/btn-normal-en.jpg)}
+#fWrap.ja #container #questTotal li .btn{background:url(../images/btn-normal-ja.jpg)}
+#fWrap.th #container #questTotal li .btn{background:url(../images/btn-normal-th.jpg)}
+#fWrap.zh-CN #container #questTotal li .btn{background:url(../images/btn-normal-hans.jpg)}
+#fWrap.zh-TW #container #questTotal li .btn{background:url(../images/btn-normal-hant.jpg)}
+
+#container #questTotal li.ready .btn{cursor:pointer}
+#fWrap.ko #container #questTotal li.ready .btn{background:url(../images/btn-ready3-ko.jpg)}
+#fWrap.en #container #questTotal li.ready .btn{background:url(../images/btn-ready3-en.jpg)}
+#fWrap.ja #container #questTotal li.ready .btn{background:url(../images/btn-ready3-ja.jpg)}
+#fWrap.th #container #questTotal li.ready .btn{background:url(../images/btn-ready3-th.jpg)}
+#fWrap.zh-CN #container #questTotal li.ready .btn{background:url(../images/btn-ready3-hans.jpg)}
+#fWrap.zh-TW #container #questTotal li.ready .btn{background:url(../images/btn-ready3-hant.jpg)}
+
+#container #questTotal li.end{background:url(../images/btn-end3-ko.jpg)}
+#container #questTotal li.end .btn{display:none}
+
+
+/* #footer */
+#footer {display:table;position:relative;width:100%;height:310px;margin-top:-10px;background:url(../images/bg-footer.jpg) 0 0 no-repeat;}
+#footer ul{display:table-cell;text-align:center;vertical-align:middle}
+#footer ul li{padding-bottom:5px;color:#a4a4a4;font-size:20px;line-height:25px;letter-spacing:-1px;word-spacing:-0.5px;text-align:center}
+
+/* layer */
+#fLayer{display:none;position:absolute;left:0;top:0;width:100%;height:100%}
+#fLayer .bg_layer{position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:15}
+#fLayer .modal_layer{position:fixed;left:50%;top:0;width:609px;height:376px;margin:0 0 0 -304px;z-index:20;transition: transform 0.3s ease;transform: scale(0,0)}
+#fLayer.active .modal_layer{transform: scale(1,1)}
+#fLayer .modal_layer .wrap_layer{position:relative;padding-top:73px;border:2px solid #b64c2b;background:#1d0508}
+#fLayer .modal_layer .wrap_layer .title{display:none}
+#fLayer .modal_layer .wrap_layer .msg{position:relative;top:-1px;display:table;width:100%;min-height:115px;text-align:center;}
+#fLayer .modal_layer .wrap_layer .msg .wrap_msg{display:table-cell;padding:10px 20px 20px 20px;color:#ffb606;font-size:33px;line-height:40px;font-weight:bold;vertical-align:middle}
+#fLayer .modal_layer .wrap_layer .msg .wrap_msg span{display:block;padding-top:10px;color:#d0a94a;font-size:20px;letter-spacing:0}
+#fLayer .modal_layer .wrap_layer .btn_area{position:relative;top:-2px;height:145px;text-align:center}
+#fLayer .modal_layer .wrap_layer .btn_area button{display:inline-block;width:234px;height:90px;color:#e5ed00;font-size:30px;line-height:90px;font-weight:bold;text-align:center;background:url(https://static.four33.com/event/game/monstersl/ingame/common/images/btn-layer.jpg) no-repeat}
