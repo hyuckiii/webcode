@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* reset */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
+body {line-height:1}
+ol, ul {list-style:none}
+blockquote, q {quotes:none}
+blockquote:before, blockquote:after,
+q:before, q:after {content:'';content:none}
+table {border-collapse:collapse;border-spacing:0}
+input[type=checkbox], input[type=radio]{vertical-align:middle;position:relative}
+input[type=radio]{bottom:2px}
+#accessibility, .skip, hr, legend, caption{display:block;overflow:hidden;position:absolute;top:-1000em;left:0}
+button{padding:0;margin:0;border:0;background:0;line-height:normal;cursor:pointer;outline:none;box-shadow:none}
+li,a,button{-webkit-tap-highlight-color:rgba(0,0,0,0)}
+.clearfix{*zoom:1}
+.clearfix:after{display:block;content:'';clear:both;}
+
+
+/* layout */
+img{max-width:980px !important}
+body{font-size:0}
+#fWrap{position:relative;width:980px;margin:0 auto}
+
+/* #header */
+#header{position:relative;width:100%;height:635px}
+#fWrap.ko #header{background:url(../images/bg-header-ko.jpg)}
+#fWrap.en #header{background:url(../images/bg-header-en.jpg)}
+#fWrap.ja #header{background:url(../images/bg-header-ja.jpg)}
+#fWrap.zh-CN #header{background:url(../images/bg-header-hans.jpg)}
+#fWrap.zh-TW #header{background:url(../images/bg-header-hant.jpg)}
+#header .point{color:#ffd57c;font-size:33px;}
+#header .point .total{position: absolute;top: 502px;left: 545px;font-size: 44px;width: 100px;text-align: center;}
+#header .point .use{position: absolute;top: 593px;left: 365px;width: 100px;text-align: center;}
+#header .point .acquire{position: absolute;top: 593px;right: 200px;width: 100px;text-align: center;}
+#fWrap.en .point .total{left: 550px;}
+#fWrap.en .point .use{left:380px}
+#fWrap.en .point .acquire{right:190px}
+
+/* #point */
+#point{position:relative;width:100%;height:716px;margin-top:-10px;}
+#fWrap.ko #point{  background:url(../images/bg-point-ko.jpg) no-repeat}
+#fWrap.en #point{  background:url(../images/bg-point-en.jpg) no-repeat}
+#fWrap.ja #point{  background:url(../images/bg-point-ja.jpg) no-repeat}
+#fWrap.zh-CN #point{background:url(../images/bg-point-hans.jpg)}
+#fWrap.zh-TW #point{background:url(../images/bg-point-hant.jpg)}
+#point .btn{position:absolute;top:10px;left:50%;margin-left: -230px;width: 460px;height: 300px;cursor:pointer}
+
+/* #quest */
+#quest{width:100%;height:295px;margin-top:-10px;}
+#fWrap.ko #quest{background:url(../images/bg-quest-ko.jpg) no-repeat}
+#fWrap.en #quest{background:url(../images/bg-quest-en.jpg) no-repeat}
+#fWrap.ja #quest{background:url(../images/bg-quest-ja.jpg) no-repeat}
+#fWrap.zh-CN #quest{background:url(../images/bg-quest-hans.jpg)}
+#fWrap.zh-TW #quest{background:url(../images/bg-quest-hant.jpg)}
+
+#quest ul {width:860px;margin:0 auto;}
+#quest ul li{position:relative;float:left;width:275px;height:275px;}
+#quest ul li:firsth-child{width:276px}
+#quest ul li:nth-of-type(2){margin:0 17px}
+#quest ul li.ready .btn{position:absolute;bottom:-5px;left:26px;width:226px;height:62px;cursor:pointer}
+#quest ul li.end .btn{position:absolute;bottom:-5px;left:26px;width:226px;height:62px;}
+
+#fWrap.ko #quest ul li.ready .btn{background:url(../images/btn-quest-ko.png) no-repeat;}
+#fWrap.ko #quest ul li.end .btn{background:url(../images/btn-quest-ko.png) no-repeat left bottom;}
+#fWrap.en #quest ul li.ready .btn{background:url(../images/btn-quest-en.png) no-repeat;}
+#fWrap.en #quest ul li.end .btn{background:url(../images/btn-quest-en.png) no-repeat left bottom;}
+#fWrap.ja #quest ul li.ready .btn{background:url(../images/btn-quest-ja.png) no-repeat;}
+#fWrap.ja #quest ul li.end .btn{background:url(../images/btn-quest-ja.png) no-repeat left bottom;}
+#fWrap.zh-CN #quest ul li.ready .btn{background:url(../images/btn-quest-hans.png) no-repeat;}
+#fWrap.zh-CN #quest ul li.end .btn{background:url(../images/btn-quest-hans.png) no-repeat left bottom;}
+#fWrap.zh-TW #quest ul li.ready .btn{background:url(../images/btn-quest-hant.png) no-repeat;}
+#fWrap.zh-TW #quest ul li.end .btn{background:url(../images/btn-quest-hant.png) no-repeat left bottom;}
+
+/* #footer */
+#footer {width:100%;height:230px;margin-top:-10px;}
+#fWrap.ko #footer { background:url(../images/bg-footer-ko.jpg) no-repeat}
+#fWrap.en #footer { background:url(../images/bg-footer-en.jpg) no-repeat}
+#fWrap.ja #footer { background:url(../images/bg-footer-ja.jpg) no-repeat}
+#fWrap.zh-CN #footer { background:url(../images/bg-footer-hans.jpg) no-repeat}
+#fWrap.zh-TW #footer { background:url(../images/bg-footer-hant.jpg) no-repeat}
+
+/* layer */
+#fLayer{display:none;position:absolute;left:0;top:0;width:100%;height:100%}
+#fLayer .bg_layer{position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:15}
+#fLayer .modal_layer{position:fixed;left:50%;top:0;width:609px;height:376px;margin:0 0 0 -304px;z-index:20;transition: transform 0.3s ease;transform: scale(0,0)}
+#fLayer.active .modal_layer{transform: scale(1,1)}
+#fLayer .modal_layer .wrap_layer{position:relative;padding-top:73px;border:2px solid #b64c2b;background:#1d0508}
+#fLayer .modal_layer .wrap_layer .title{display:none}
+#fLayer .modal_layer .wrap_layer .msg{position:relative;top:-1px;display:table;width:100%;min-height:115px;text-align:center;}
+#fLayer .modal_layer .wrap_layer .msg .wrap_msg{display:table-cell;padding:10px 20px 20px 20px;color:#ffb606;font-size:33px;line-height:40px;font-weight:bold;vertical-align:middle}
+#fLayer .modal_layer .wrap_layer .msg .wrap_msg span{display:block;padding-top:10px;color:#d0a94a;font-size:20px;letter-spacing:0}
+#fLayer .modal_layer .wrap_layer .btn_area{position:relative;top:-2px;height:145px;text-align:center}
+#fLayer .modal_layer .wrap_layer .btn_area button{display:inline-block;width:234px;height:90px;color:#e5ed00;font-size:30px;line-height:90px;font-weight:bold;text-align:center;background:url(../images/btn-layer.jpg) no-repeat}
