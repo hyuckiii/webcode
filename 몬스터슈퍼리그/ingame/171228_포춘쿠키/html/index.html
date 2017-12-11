@@ -36,6 +36,7 @@
   <!-- // #header -->
   <div id="point">
     <div class="btn"></div>
+	<div class="bg"></div>
   </div>
   <!--// #point -->
 
@@ -69,8 +70,8 @@
 </div>
 <!-- // #fWrap -->
 
-<script type="text/javascript" src="//static.four33.com/event/common/js/webevent/ftt.webevent.0.3.js"></script>
-<script type="text/javascript" src="//static.four33.com/event/common/js/webevent/ftt.jquery.modalLayer.0.3.min.js"></script>
+<script type="text/javascript" src="://static.four33.com/event/common/js/webevent/ftt.webevent.0.3.js"></script>
+<script type="text/javascript" src="://static.four33.com/event/common/js/webevent/ftt.jquery.modalLayer.0.3.min.js"></script>
 <script type="text/javascript" src="//static.four33.com/event/game/monstersl/ingame/common/js/commonLang.js"></script>
 <script type="text/javascript" src="js/evLang.js"></script>
 <script type="text/javascript">
@@ -111,13 +112,13 @@
   (function(){
     // 선물받기
     if ( totalPoint >= 1) {
-      $('#header').addClass("ready");
+      $('#point').addClass("ready");
     }
   })();
 
   // 뽑기
-  $("#container").on("click", "#event1.ready .btn", function(){
-    $("#event1.ready").removeClass("ready").addClass('loading');
+  $("#fWrap").on("click", "#point.ready .btn", function(){
+    $("#point.ready").removeClass("ready").addClass('loading');
 
     if (!$(this).hasClass('disabled')){   // 중복 클릭 방지
       $(this).addClass('disabled');
@@ -126,21 +127,21 @@
         if (1){
           
           // ## 메세지 표시후 refresh만 필요한 경우
-          modalLayer.openLayer(layerMsg.success, 'refresh');
+          modalLayer.openLayer('success','normal', langLayer);
 
           // ## 메세지 표시후 redirect필요한 경우
           //modalLayer.openLayer(layerMsg.success, {type:'redirect', url:'http://www.naver.com'});
 
           // ## 아이템명이 표시되어야하는 경우 아래처럼 호출해주세요.
-          //modalLayer.openLayer("<p class='item'><strong>\"아이템명\"</strong><br/>보상이 지급되었습니다.<br/><span>서신함을 확인해 주세요.</span></p>", 'refresh');
+          //modalLayer.openLayer("<p class='item'><strong>\"아이템명\"</strong><br/>보상이 지급되었습니다.<br/><span>우편함을 확인해 주세요.</span></p>",'normal', langLayer);
 
         }else if (0){
-          modalLayer.openLayer(layerMsg.fail, 'refresh');
+          modalLayer.openLayer('fail', 'normal', langLayer);
         }else{
-          modalLayer.openLayer(layerMsg.error, 'refresh');
+          modalLayer.openLayer('error', 'normal', langLayer);
         }
         // 통신 성공 후
-        $("#event1.ready").removeClass('loading');
+        $("#point").removeClass('loading');
       }, 2000);
     }
   });
