@@ -255,6 +255,6 @@ function evLang (langType) {
   }else if (langType == 'zh-TW'){
     return langHant
   }else{
-    return '존재하지 않는 언어입니다.'
+    return langEn
   }
 }
