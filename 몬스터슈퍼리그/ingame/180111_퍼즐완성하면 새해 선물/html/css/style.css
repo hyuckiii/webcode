@@ -68,6 +68,7 @@ body{font-size:0}
 
 #fWrap.ja #normalQuest1.quest ul li .status,
 #fWrap.ja #normalQuest4.quest ul li .status{height:55px}
+#fWrap.ja #normalQuest1.quest ul li.quest4 .status{height:30px;}
 #fWrap.ja .quest ul li .wrap_title .quest-title{letter-spacing:-1px}
 
 #fWrap.zh-CN #normalQuest1.quest ul li .status,
