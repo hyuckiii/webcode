@@ -3,6 +3,10 @@ if(typeof jQuery !== 'undefined'){
   $(document).ready(function(){
 
     $('a[data-layer], button[data-layer], img.slick[data-layer]').modalLayer();
+
+    // init ezMark
+    $('#register #regForm input[type=checkbox], #register #regForm input[type=radio]').ezMark();
+
     ezForm();
 
     $('#videoMain').cover({
@@ -17,6 +21,7 @@ if(typeof jQuery !== 'undefined'){
     }); 
   }); //document.ready
 }
+
 
 function ezForm(){
   if ( $('#regForm').length > 0 ){

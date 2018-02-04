@@ -75,6 +75,7 @@ body{font-family:"Nanum Gothic", dotum, Helvetica, "Apple SD Gothic Neo",sans-se
 #register h2 { position:absolute;top:150px;left:0;width:100%;height:65px;text-indent:-1080px;background:url(../images/tit-preorder.png) center top no-repeat;}
 #register h3 { position:absolute;top:232px;left:0;width:100%;text-align:center;font-size:30px;font-weight:400;color:#455d78;line-height:1.3;letter-spacing:-1px;word-spacing:-1px;}
 #register .btn_gift { position:absolute;top:238px;left:50%;height:57px;line-height:57px;padding:0 46px 0 28px;margin-left:345px;border:1px solid #757e99;background:url(../images/bg-gift.png) 85% 50% no-repeat #dde5f0;font-size:30px;color:#444f6e;letter-spacing:-1px;word-spacing:-1px;}
+/*
 .inp_os { position:relative;height:116px;}
 .inp_os > div { float:left;position:relative;width:334px;}
 .inp_os > div:first-of-type { margin-right:10px;}
@@ -101,12 +102,38 @@ body{font-family:"Nanum Gothic", dotum, Helvetica, "Apple SD Gothic Neo",sans-se
 #regForm .form_checkbox label span { position:absolute;top:8px;width:470px;margin-left:58px;vertical-align:top;font-size:22px;color:#162d49;line-height:1.3;letter-spacing:-1px;word-spacing:-1px;}
 #regForm .form_checkbox input[type=checkbox] {visibility:hidden;width:100%;height:100%;opacity:0;}
 #regForm .form_checkbox input[type=checkbox]:checked ~ label { background:url(../images/bg-checkbox.png) 0 100% no-repeat;}
+
+*/
+.inp_os { position:relative;height:126px;}
+#regForm .inp_os .os1{float:left}
+#regForm .inp_os .os2{float:right}
+#regForm .inp_os input[type="radio"]{opacity: 0;-webkit-appearance: none;display: inline-block;vertical-align: middle;z-index:100;margin:0;padding:0;width:100%;height:100%;position: absolute;left: 0;top:0;cursor: pointer}
+
+#regForm .inp_os div .ez-radio{position:relative;width:334px;height:116px}
+#regForm .inp_os .os1 .ez-radio{background:url(../images/tab-aos.png) no-repeat}
+#regForm .inp_os .os2 .ez-radio{background:url(../images/tab-ios.png) no-repeat}
+#regForm .inp_os .os1 .ez-radio.ez-selected{background:url(../images/tab-aos-active.png) no-repeat}
+#regForm .inp_os .os2 .ez-radio.ez-selected{background:url(../images/tab-ios-active.png) no-repeat}
+
+#regForm { position:absolute;top:360px;left:50%;margin-left:-150px;width:678px;}
+#regForm form { width:100%;}
+#regForm .inp_area1 {position:relative;width:100%;border:1px solid #b2bac3;background-color:#f2f7fc;}
+#regForm .inp_area1 .mail {display:table;width:100%;}
+#regForm .inp_area1 .mail .mail_wrap {display:table-cell;padding:0;vertical-align:middle}
+#regForm .inp_area1 .mail .inp_mail {position:relative;vertical-align:middle;background:transparent;padding-left:0px;}
+#regForm .inp_area1 .mail .inp_mail input {width:100%;height:92px;padding:0 8px;color:#34629b;font-size:35px;border:none;background:url(../images/txt-email.png) center center no-repeat transparent;outline:none;padding-top:1px;text-align:center;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+#regForm .inp_area1 .mail .inp_mail input.active{background:none}
+#regForm .policy { position:relative;display:block;height:113px;margin-top:29px;}
+#regForm .form_checkbox{display:inline-block;position:relative;width:43px;height:43px;}
+#regForm .form_checkbox .ez-checkbox{width:100%;height:100%;background:url(../images/bg-checkbox.png) no-repeat}
+#regForm .form_checkbox .ez-checkbox.ez-checked{background-position:left bottom}
+#regForm .form_checkbox .ez-checkbox input[type=checkbox] {width:100%;height:100%;opacity:0;}
 #regForm .policy .btn_detail {position:absolute;right:0px;top:0px;display:block;min-width:142px;height:43px;background-color:#a4b3c6;color:#0b1828;font-size:18px;}
 #regForm .submit { position:relative;display:block;}
 #regForm .submit .btn_submit {position:absolute;right:0px;top:0px;min-width:385px;height:94px;font-size:32px;color:#ffdd00;font-weight:400;background:url(../images/common/ico-arrow-submit.png) 92.21% center no-repeat #3075cb;padding-right:12px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
 #regForm .preorder_wrap { position:absolute;top:683px;}
 #regForm .preorder_wrap:after { display:block;content:'';clear:both}
-#regForm .preorder_wrap > a { float:left;width:329px;height:94px;} 
+#regForm .preorder_wrap > a { float:left;width:329px;height:94px;}
 #regForm .preorder_wrap > a:first-of-type { margin-right:20px;}
 #regForm .preorder_wrap > a.ios { background:url(../images/btn-bb-ios.png) no-repeat;}
 #regForm .preorder_wrap > a.aos { background:url(../images/btn-bb-aos.png) no-repeat;}
@@ -185,9 +212,9 @@ background:url(../images/common/ico-arrow-submit.png) 92.21% center no-repeat #3
 
 #fLayer .wrap_layer .complete{display:none;position:absolute;left:50%;width:698px;height:398px;padding:0px;margin-left:-349px;z-index:50;background-color:#001630;border:1px solid #005cc7;}
 #fLayer .wrap_layer .complete .wrap_complete {padding:0;}
-#fLayer .wrap_layer .complete .wrap_complete .message { display:table;width:100%;}
-#fLayer .wrap_layer .complete .wrap_complete .message > div { display:table-cell;height:268px;font-size:38px;color:#92bae9;text-align:center;padding:0 12px;vertical-align:middle;line-height:1.3;}
-#fLayer .wrap_layer .complete .wrap_complete .message > div p { font-size:24px;padding-top:24px;}
+#fLayer .wrap_layer .complete .wrap_complete .viewer { display:table;width:100%;}
+#fLayer .wrap_layer .complete .wrap_complete .viewer > div { display:table-cell;height:268px;font-size:24px;color:#92bae9;text-align:center;padding:0 12px;vertical-align:middle;line-height:1.3;}
+#fLayer .wrap_layer .complete .wrap_complete .viewer > div strong {display:block;font-size:38px;padding-bottom:24px;}
 #fLayer .wrap_layer .complete .btn_area {text-align:center;margin-top:0px;}
 
 #fLayer .wrap_layer .policy {display:none;position:absolute;left:50%;width:800px;height:750px;margin-left:-400px;z-index:50;} /* background:url(../images/bg-privacy.jpg) no-repeat; */

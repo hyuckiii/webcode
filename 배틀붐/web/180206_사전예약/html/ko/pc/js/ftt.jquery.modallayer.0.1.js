@@ -248,7 +248,9 @@
       $(options.viewerEle).slick( 'slickAdd', imgEle );
 
     }else{    // type image & ETC
-      var contEle = ( options.layerUrl === null ) ? ''  : '<img src="' + options.layerUrl + '" alt="' + options.layerMsg + '">';
+      var contEle = ( options.layerUrl === null ) ? options.layerMsg  : '<img src="' + options.layerUrl + '" alt="' + options.layerMsg + '">';
+
+      console.log($(options.layerEle).find('.viewer div').length);
 
       if ( !options.fixed ) $(options.layerEle).find('.viewer div').empty().append( contEle );
     }

@@ -23,6 +23,7 @@
 <script src="https://static.four33.com/event/common/js/jquery.actual.min.js"></script>
 <script src="https://static.four33.com/event/common/js/slick-1.6.0/slick.min.js"></script>
 <script src="https://static.four33.com/event/common/js/clipboard.js"></script>
+<script src="https://static.four33.com/event/common/js/jquery.ezmark.min.js"></script>
 
 <script src="js/ftt.jquery.modallayer.0.1.js"></script>
 <script src="js/jquery.sticky-kit.min.js"></script>
@@ -76,14 +77,15 @@
             <legend>PRE-REGISTER Now</legend>
             <div class="inp_os">
               <div class="os1">
-                <input name="os" id="ios" class="ios" type="radio" title="Google PlayStore"><!-- //checked="checked" -->
-                <label for="ios"><span class="skip">Google PlayStore</span></label>
+                <input name="os" id="aos" class="aos" type="radio" title="Apple AppStore" checked>
+                <label for="aos"><span class="skip">Google PlayStore</span></label>
               </div>
               <div class="os2">
-                <input name="os" id="aos" class="aos" type="radio" title="Apple AppStore">
-                <label for="aos"><span class="skip">Apple AppStore</span></label>
+                <input name="os" id="ios" class="ios" type="radio" title="Google PlayStore">
+                <label for="ios"><span class="skip">Apple AppStore</span></label>
               </div>
             </div>
+
             <div class="inp_area1">
               <div class="mail">
                 <div class="mail_wrap">
@@ -95,14 +97,16 @@
             <div class="policy">
               <div class="form_checkbox">
                 <input type="checkbox" value="None" id="chk_agree" name="check" /><!-- checked -->
-                <label for="chk_agree"  title="Privacy Policy Agreement">
-                  <span>(필수) 개인 정보 수집 및 이용 동의</span>
-                </label>
               </div>
+              <label for="chk_agree"  title="Privacy Policy Agreement">
+                <span>(필수) 개인 정보 수집 및 이용 동의</span>
+              </label>
               <button id="policy" class="btn_comm btn_detail" type="button" data-layer="policy"><span>자세히 보기</span></button>
             </div>
+
             <div class="submit">
               <button class="btn_comm btn_submit" type="button"><span>사전등록 신청하기</span></button>
+              <span class="bg"></span>
             </div>
           </fieldset>
         </form>
@@ -273,7 +277,7 @@
 
       <div class="complete">
         <div class="wrap_complete">
-          <div class="message">
+          <div class="viewer">
             <div>
               사전등록 신청 완료!<br/>
               참여해 주셔서 감사합니다.
@@ -304,7 +308,7 @@
 
 
 <!-- <script src="js/web_ui.min.js"></script> -->
-<script src="js/web_ui.min.js"></script>
+<script src="js/web_ui.js"></script>
 <script>
 var videoMain;
 var tag = document.createElement('script');
@@ -357,13 +361,25 @@ function onPlayerStateChange(event) {
 
 // preregister process
 $('.submit').on('click', function () {
-  if ( 1 ) {
+  var submitMSG = {
+    success: '<strong>사전등록 신청 완료!<br>참여해 주셔서 감사합니다.</strong>*사전등록 보상은 정식 출시 후 일괄 지급됩니다.',
+    market: '<strong>마켓을 선택해 주세요.</strong>',
+    policy: '<strong>개인정보 수집 ∙ 이용에<br>동의해주세요.</strong>',
+    already: '<strong>이미 사전등록을<br>완료하셨습니다.\n</strong>'
+  };
+
+  if ( 0 ) {
     $('#fLayer .complete').modalLayer({
       layerEle: '#fLayer .complete',
-      fixed: true
+      layerType: 'alert',
+      layerMsg: submitMSG.success
     });
   }else{
-    alert('실패 메시지');
+    $('#fLayer .complete').modalLayer({
+      layerEle: '#fLayer .complete',
+      layerType: 'alert',
+      layerMsg: submitMSG.market
+    });
   }
 });
 </script>
