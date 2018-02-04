@@ -1,9 +1,3 @@
-/*
-  [ mad rocket : fog of war ]
-    subject - brand Site
-    date    - 17/11/22
-*/
-
 // layer open func
 function layerOpen(data){
   var docHeight = $(document).height(),
@@ -32,7 +26,7 @@ function layerOpen(data){
   // rSetList (str->arr)
   function rSetList(str) {
     return str.replace(/ /gi, "").split(',');
-  };
+  }
 
   // init layer
   if( layerType === 'video' ){
@@ -72,16 +66,16 @@ function layerOpen(data){
         src: target,
         alt: $(contMsg)[idx]
       };
-      imgEle+= '<div><span><img src="' + imgData.src + '" alt="' + imgData.alt + '"></span></div>';
+      imgEle += '<div><span><img src="' + imgData.src + '" alt="' + imgData.alt + '"></span></div>';
     });
     $(targetSlide).slick(slickOpts);
-    $(targetSlide).slick( 'slickAdd', imgEle );
-  }else {
-    // type image
+    $(targetSlide).slick('slickAdd', imgEle);
+  }else{
+    // type image or text
     if (contUrl !== undefined) {
       $(target).find('.viewer div').append('<img src="' + contUrl + '" alt="' + contMsg + '">');
     } else if ( contMsg !== undefined ) {
-      $(target).find('.viewer div').append(contMsg);
+      $(target).find('.viewer div').empty().append(contMsg);
     }
   }
 
@@ -110,7 +104,7 @@ function layerOpen(data){
   }
 
   // bind close
-  $('#fLayer .btn_close, #fLayer .bg_layer').on('click', layerClose);
+  $('#fLayer .btn_close, #fLayer .btn_close2, #fLayer .bg_layer').on('click', layerClose);
 }
 
 
@@ -124,7 +118,7 @@ $(document).ready(function () {
 
   // init slide(slick.js)
     var slides = (function(){
-      var slides = $('#fWrap .section .wrap_slide ul');
+      var slides = $('#fWrap .section .carousel');
 
       slides.on('init', function(event, slick){
         var target = slick.$list;
@@ -137,8 +131,9 @@ $(document).ready(function () {
 
   // detect videoBg
   (function(){
-    if ( !!document.createElement('video').canPlayType ) {
+    if ( !!document.createElement('video').canPlayType && document.getElementsByTagName('video').length) {
       var video = $('#bgVideo video')[0];
+
       video.onloadstart = function () {
         $(video).css('opacity', 1);
       };
@@ -146,7 +141,7 @@ $(document).ready(function () {
   })();
 
   // init ezMark
-  $('#sectionReg #regForm .os input, #sectionReg #regForm .policy input[type=checkbox]').ezMark();
+  $('#register #regForm input[type=checkbox], #register #regForm input[type=radio]').ezMark();
 
   // bind layerOpen
   $('button[data-layer]').on('click', function () {
@@ -171,6 +166,17 @@ $(document).ready(function () {
         slickIdx: slideIdx
       });
     }
+  });
+
+  // move to #register
+  $('button.btn_reg').on('click', function () {
+    var headerHeight = $('#header').height();
+    var targetPos = $('#register').offset().top - headerHeight;
+
+    $('html, body').animate({
+      scrollTop: targetPos
+    });
+    return false
   });
 
 });
